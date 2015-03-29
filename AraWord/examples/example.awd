@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+  <preferences>
+    <documentLanguage>Castellano</documentLanguage>
+    <imagesSize>110</imagesSize>
+    <font>
+      <name>Verdana</name>
+      <size>14</size>
+      <bold>yes</bold>
+      <italic>no</italic>
+    </font>
+  </preferences>
+  <content>
+    <AWElement type="pictogram">
+      <word>Bienvenido</word>
+    </AWElement>
+    <AWElement type="separator">ws</AWElement>
+    <AWElement type="pictogram">
+      <word>hola</word>
+    </AWElement>
+    <AWElement type="separator">ws</AWElement>
+    <AWElement type="pictogram">
+      <word>amigos</word>
+      <numPictogram>1</numPictogram>
+      <visibleBorder>no</visibleBorder>
+    </AWElement>
+    <AWElement type="separator">ws</AWElement>
+    <AWElement type="pictogram">
+      <word>esto</word>
+    </AWElement>
+    <AWElement type="separator">ws</AWElement>
+    <AWElement type="pictogram">
+      <word>es</word>
+    </AWElement>
+    <AWElement type="separator">ws</AWElement>
+    <AWElement type="pictogram">
+      <word>una</word>
+    </AWElement>
+    <AWElement type="separator">ws</AWElement>
+    <AWElement type="pictogram">
+      <word>prueba</word>
+      <visibleImage>no</visibleImage>
+    </AWElement>
+    <AWElement type="separator">ws</AWElement>
+    <AWElement type="pictogram">
+      <word>cepillo de dientes</word>
+    </AWElement>
+    <AWElement type="separator">ws</AWElement>
+    <AWElement type="pictogram">
+      <word>tumbarse</word>
+      <numPictogram>3</numPictogram>
+    </AWElement>
+    <AWElement type="separator">ws</AWElement>
+    <AWElement type="pictogram">
+      <word>Julián López García</word>
+      <wordSearchBD>niño</wordSearchBD>
+    </AWElement>
+    <AWElement type="separator">ws</AWElement>
+    <AWElement type="pictogram">
+      <word>ha estudiado</word>
+    </AWElement>
+    <AWElement type="separator">ws</AWElement>
+    <AWElement type="pictogram">
+      <word>mucho</word>
+      <numPictogram>1</numPictogram>
+    </AWElement>
+    <AWElement type="separator">ws</AWElement>
+    <AWElement type="pictogram">
+      <word>este</word>
+      <visibleImage>no</visibleImage>
+    </AWElement>
+    <AWElement type="separator">ws</AWElement>
+    <AWElement type="pictogram">
+      <word>año</word>
+    </AWElement>
+  </content>
+</document>
+

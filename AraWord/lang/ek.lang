@@ -1,0 +1,137 @@
+# Translation into Euskara 
+# Author: Aritz Orbegozo 
+# Sourceforge developer: 
+# Email: aritzorbegozo@gmail.com 
+# Date: 17/03/2013 
+# Comments: 
+#
+ 
+LANG_NAME=Euskara
+
+// Common
+ERROR=Errorea
+WARNING=Oharra
+INFO=Informazioa
+OK=Ados
+CANCEL=Utzi
+CLOSE=Itxi
+
+// Menus
+
+FILE_MENU=Fitxategia
+FILE_MENU_NEW=Berria
+FILE_MENU_LOAD=Ireki
+FILE_MENU_SAVE=Gorde
+FILE_MENU_SAVE_AS=Gorde honela...
+FILE_MENU_EXPORT=Esportatu honela...
+FILE_MENU_EXIT=Irten
+
+EDIT_MENU=Edizioa
+EDIT_MENU_UNDO=Desegin
+EDIT_MENU_REDO=Berregin
+EDIT_MENU_CUT=Ebaki
+EDIT_MENU_COPY=Kopiatu
+EDIT_MENU_PASTE=Itsatsi
+EDIT_MENU_FIND=Bilatu
+EDIT_MENU_SELECT_ALL=Hautatu dena
+TEXT_MENU=Testua
+TEXT_MENU_FONT=Letra-tipoa
+TEXT_MENU_COLOR=Kolorea
+TEXT_MENU_PLACEMENT=Kokalekua
+TEXT_MENU_PLACEMENT_ABOVE_PICTOGRAM=Piktogramaren gainean
+TEXT_MENU_PLACEMENT_BELOW_PICTOGRAM=Piktogramaren behean
+TEXT_MENU_TO_UPPER_CASE=Testua maiuskulara...
+TEXT_MENU_TO_UPPER_CASE_ACTIVE_ELEMENT=Uneko elementua
+TEXT_MENU_TO_UPPER_CASE_ALL_ELEMENTS=Elementu guztiak
+TEXT_MENU_TO_LOWER_CASE=Testua minuskulara...
+TEXT_MENU_TO_LOWER_CASE_ACTIVE_ELEMENT=Uneko elementua
+TEXT_MENU_TO_LOWER_CASE_ALL_ELEMENTS=Elementu guztiak
+TEXT_MENU_DOCUMENT_LANGUAGE=Dokumentuaren hizkuntza
+
+PICTOGRAMS_MENU=Piktogramak
+PICTOGRAMS_MENU_SIZE=Tamaina
+PICTOGRAMS_MENU_NEXT_IMAGE=Hurrengo irudia
+PICTOGRAMS_MENU_COMPOUND_SPLIT_WORD=Hitza Konposatu/deskonposatu
+PICTOGRAMS_MENU_CHANGE_NAME=Izena aldatu
+PICTOGRAMS_MENU_HIDE=Ezkutatu...
+PICTOGRAMS_MENU_HIDE_BORDER=Ertza
+PICTOGRAMS_MENU_HIDE_BORDER_ACTIVE_ELEMENT=Uneko elementuarena
+PICTOGRAMS_MENU_HIDE_BORDER_ALL_ELEMENTS=Elementu guztiena
+PICTOGRAMS_MENU_HIDE_IMAGE=Irudia
+PICTOGRAMS_MENU_HIDE_IMAGE_ACTIVE_ELEMENT=Uneko elementuarena
+PICTOGRAMS_MENU_HIDE_IMAGE_ALL_ELEMENTS=Elementu guztiena
+PICTOGRAMS_MENU_SHOW=Erakutsi...
+PICTOGRAMS_MENU_SHOW_BORDER=Ertza
+PICTOGRAMS_MENU_SHOW_BORDER_ACTIVE_ELEMENT=Uneko elementuarena
+PICTOGRAMS_MENU_SHOW_BORDER_ALL_ELEMENTS=Elementu guztiena
+PICTOGRAMS_MENU_SHOW_IMAGE=Irudia
+PICTOGRAMS_MENU_SHOW_IMAGE_ACTIVE_ELEMENT=Uneko elementuarena
+PICTOGRAMS_MENU_SHOW_IMAGE_ALL_ELEMENTS=Elementu guztiena
+
+TOOLS_MENU=Tresnak
+TOOLS_MENU_RESOURCE_MANAGER=Baliabideen kudeatzailea
+TOOLS_MENU_ADD_IMAGE=Irudia gehitu
+TOOLS_MENU_EXPORT_DATABASE=Esportatu DB
+TOOLS_MENU_IMPORT_DATABASE=Inportatu DB
+TOOLS_MENU_FIND_IMAGE=Irudia editatu
+TOOLS_MENU_GENERAL_PREFERENCES=Hobespen orokorrak
+
+HELP_MENU=Laguntza
+HELP_MENU_SHOW_HELP=Laguntza erakutsi
+HELP_MENU_ABOUT=Programari buruz....
+
+// Inner ones
+
+FILE_MENU_NEW_WARNING_DISCARD=Uneko dokumentua baztertu nahi duzu?
+FILE_MENU_SAVE_UNABLE_SAVE_EMPTY_FILE=Ezinezkoa da fitxategi hutsa gordetzea.
+FILE_MENU_EXIT_WARNING=Irtetea nahi?
+EDIT_MENU_UNDO_UNABLE_MORE_UNDO=Ezinezkoa da gehiago desegitea.
+EDIT_MENU_REDO_UNABLE_MORE_REDO=Ezinezkoa da gehiago berregitea.
+EDIT_MENU_CUT_UNABLE_CUT_ALL=Testu osoa ebakitzea ezinezkoa da.\n Testua ebakitzean, utzi mesedez gutxienez hitz bat aukeratu gabe.\n
+EDIT_MENU_FIND_UNABLE_EMPTY_STRING_SEARCH=Idatzi ezazu bilatu nahi duzun testua mesedez.\n
+EDIT_MENU_FIND_NOT_FOUND_TEXT=Ez da testua aurkitu.\n
+
+GENERAL_PREFERENCES_DIALOG_TITLE=Hobespen orokorrak
+DOCUMENT_PREFERENCES_DIALOG_TITLE=Dokumentuaren hobespenak
+ABOUT_DIALOG_TITLE=AraWord-i buruz
+
+GENERAL_PREFERENCES_DIALOG_APPLICATION_LANGUAGE_LABEL=Aplikazioaren hizkuntza
+GENERAL_PREFERENCES_DIALOG_DOCUMENT_LANGUAGE_LABEL=Dokumentuaren hizkuntza
+GENERAL_PREFERENCES_DIALOG_IMAGES_SIZE_LABEL=Irudien tamaina
+GENERAL_PREFERENCES_DIALOG_MAX_LENGTH_COMPOUND_WORDS_LABEL=Luzera maximoa autokonposatu
+GENERAL_PREFERENCES_DIALOG_MAX_UNDO_LEVEL_LABEL=Desegiteeko maila maximoa
+GENERAL_PREFERENCES_DIALOG_PICTOGRAMS_PATH_LABEL=Piktogrametara bide-izena
+GENERAL_PREFERENCES_DIALOG_PICTOGRAMS_PATH_CHOOSE_BUTTON=Aukeratu
+GENERAL_PREFERENCES_DIALOG_TEXT_FONT_LABEL=Letra-tipoa
+GENERAL_PREFERENCES_DIALOG_TEXT_FONT_CHOOSE_BUTTON=Aukeratu
+GENERAL_PREFERENCES_DIALOG_TEXT_COLOR_LABEL=Testuaren kolorea
+GENERAL_PREFERENCES_DIALOG_TEXT_COLOR_CHOOSE_BUTTON=Aukeratu
+GENERAL_PREFERENCES_DIALOG_TEXT_PLACEMENT_LABEL=Testuaren kokapena
+
+DOCUMENT_LANGUAGE_DIALOG_TITLE=Dokumentuaren hizkuntza
+DOCUMENT_LANGUAGE_DIALOG_DOCUMENT_LANGUAGE_LABEL=Dokumentuaren hizkuntza
+
+IMAGES_SIZE_DIALOG_TITLE=Irudien tamaina
+IMAGES_SIZE_DIALOG_IMAGES_SIZE_LABEL=Irudien tamaina
+
+UNABLE_DELETE_ALL_TEXT=Ezinezkoa da testu guztia ezabatzea
+ARAWORD_DOCUMENTS=AraWord-eko dokumentuak
+PDF_FILES=PDF fitxategiak
+BMP_FILES=BMP fitxategiak
+JPG_FILES=JPG fitxategiak
+
+SPINNER_TEXT_BELOW_PICTOGRAM=Piktogramaren behean
+SPINNER_TEXT_ABOVE_PICTOGRAM=Piktogramaren gainean
+
+// About dialog
+
+TAboutDialog.DEVELOPERS=Garatzaileak
+TAboutDialog.DIRECTOR=Zuzendaria
+TAboutDialog.COLLABORATORS=Laguntzaileak
+TAboutDialog.ORGANIZATIONS=ErakundeakTAboutDialog.
+YEAR=Urtea
+TAboutDialog.LICENSE=Lizentzia
+
+// Related to conjugated databases
+VERB_DATABASE_CREATION_MESSAGE=Aditz konjungatuen datu basea sortzen. Hurrengo mezuaren zain egon mesedez
+VERB_DATABASE_CREATION_MESSAGE_END=Bukatua. Orain aditz konjugatuak erabili ditzazkezu.

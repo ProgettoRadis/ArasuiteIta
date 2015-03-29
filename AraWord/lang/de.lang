@@ -1,0 +1,140 @@
+LANG_NAME=Aleman
+ 
+// Common
+ERROR=Fehler
+WARNING=Warnung
+INFO=Information
+OK=OK
+CANCEL=L�schen
+CLOSE=Schlie�en
+ 
+// Menus
+ 
+FILE_MENU=Datei
+FILE_MENU_NEW=Neu
+FILE_MENU_LOAD=�ffnen
+FILE_MENU_SAVE=Speichern
+FILE_MENU_SAVE_AS=Speichern unter 
+FILE_MENU_EXPORT=Exportieren 
+FILE_MENU_EXIT=Exit
+ 
+EDIT_MENU=Editieren
+EDIT_MENU_UNDO=R�ckg�ngig
+EDIT_MENU_REDO=Wiederholen
+EDIT_MENU_CUT=Ausschneiden
+EDIT_MENU_COPY=Kopieren
+EDIT_MENU_PASTE=Einf�gen
+EDIT_MENU_FIND=Finden
+EDIT_MENU_SELECT_ALL=Alles markieren
+ 
+TEXT_MENU=Text
+TEXT_MENU_FONT=Schriftart
+TEXT_MENU_COLOR=Farbe
+TEXT_MENU_PLACEMENT=Platzierung
+TEXT_MENU_PLACEMENT_ABOVE_PICTOGRAM=�ber dem Piktogramm
+TEXT_MENU_PLACEMENT_BELOW_PICTOGRAM=Unter dem Piktogramm
+TEXT_MENU_TO_UPPER_CASE=Gro�schreibung
+TEXT_MENU_TO_UPPER_CASE_ACTIVE_ELEMENT=Aktuelles Element
+TEXT_MENU_TO_UPPER_CASE_ALL_ELEMENTS=Alle Elemente
+TEXT_MENU_TO_LOWER_CASE=Text in Kleinbuchstaben...
+TEXT_MENU_TO_LOWER_CASE_ACTIVE_ELEMENT=Aktuelles Element
+TEXT_MENU_TO_LOWER_CASE_ALL_ELEMENTS=Alle Elemente
+TEXT_MENU_DOCUMENT_LANGUAGE=Sprache des Dokuments
+ 
+PICTOGRAMS_MENU=Piktogramme
+PICTOGRAMS_MENU_SIZE=Gr��e
+PICTOGRAMS_MENU_NEXT_IMAGE=N�chstes Bild
+PICTOGRAMS_MENU_COMPOUND_SPLIT_WORD=Zusammenf�gen/zerlegen Wort
+PICTOGRAMS_MENU_CHANGE_NAME=Umbenennen
+PICTOGRAMS_MENU_HIDE=Verstecken
+PICTOGRAMS_MENU_HIDE_BORDER=Rahmen
+PICTOGRAMS_MENU_HIDE_BORDER_ACTIVE_ELEMENT=Des aktuellen Elements
+PICTOGRAMS_MENU_HIDE_BORDER_ALL_ELEMENTS=Von allen Elementen
+PICTOGRAMS_MENU_HIDE_IMAGE=Bild
+PICTOGRAMS_MENU_HIDE_IMAGE_ACTIVE_ELEMENT=Des aktuellen Elements
+PICTOGRAMS_MENU_HIDE_IMAGE_ALL_ELEMENTS=Von allen Elementen
+PICTOGRAMS_MENU_SHOW=Zeigen...
+PICTOGRAMS_MENU_SHOW_BORDER=Rahmen
+PICTOGRAMS_MENU_SHOW_BORDER_ACTIVE_ELEMENT=Des aktuellen Elements
+PICTOGRAMS_MENU_SHOW_BORDER_ALL_ELEMENTS=Von allen Elementen
+PICTOGRAMS_MENU_SHOW_IMAGE=Bild
+PICTOGRAMS_MENU_SHOW_IMAGE_ACTIVE_ELEMENT=Des aktuellen Elements
+PICTOGRAMS_MENU_SHOW_IMAGE_ALL_ELEMENTS=Von allen Elementen
+ 
+TOOLS_MENU=Tools
+TOOLS_MENU_RESOURCE_MANAGER=Ressourcen Manager
+TOOLS_MENU_GENERAL_PREFERENCES=Generelle Pr�ferenzen
+ 
+HELP_MENU=Hilfe
+HELP_MENU_SHOW_HELP=Hilfe zeigen
+HELP_MENU_ABOUT=�ber�
+ 
+// Inner ones
+ 
+FILE_MENU_NEW_WARNING_DISCARD=M�chten Sie das aktuelle Dokument abbrechen?
+FILE_MENU_SAVE_UNABLE_SAVE_EMPTY_FILE=Leeres Dokument nicht m�glich zu speichern
+FILE_MENU_EXIT_WARNING=M�chten Sie beenden?
+ 
+EDIT_MENU_UNDO_UNABLE_MORE_UNDO=Unm�glich mehr r�ckg�ngig zu machen.
+EDIT_MENU_REDO_UNABLE_MORE_REDO=Unm�glich mehr r�ckg�ngig zu machen.
+EDIT_MENU_CUT_UNABLE_CUT_ALL=Unm�glich alles zu schneiden/k�rzen.\n Bitte, lassen Sie mindestens ein Wort unmarkiert zum Text schneiden.\n
+EDIT_MENU_FIND_UNABLE_EMPTY_STRING_SEARCH=Unm�glich leeren Text zu suchen.\n
+EDIT_MENU_FIND_NOT_FOUND_TEXT=Text nicht gefunden\n
+ 
+GENERAL_PREFERENCES_DIALOG_TITLE=Generelle Pr�ferenzen
+DOCUMENT_PREFERENCES_DIALOG_TITLE=Pr�ferenzen des Dokuments
+ABOUT_DIALOG_TITLE=�ber AraWord
+ 
+GENERAL_PREFERENCES_DIALOG_APPLICATION_LANGUAGE_LABEL=Sprache der Anwendung
+GENERAL_PREFERENCES_DIALOG_DOCUMENT_LANGUAGE_LABEL=Dokumentensprache
+GENERAL_PREFERENCES_DIALOG_IMAGES_SIZE_LABEL=Bildergr��e
+GENERAL_PREFERENCES_DIALOG_MAX_LENGTH_COMPOUND_WORDS_LABEL=Maximale L�nge Autokomposition
+GENERAL_PREFERENCES_DIALOG_MAX_UNDO_LEVEL_LABEL=Maximales Niveau des R�ckg�ngigmachens
+GENERAL_PREFERENCES_DIALOG_PICTOGRAMS_PATH_LABEL=Pfad der Pictogramme
+GENERAL_PREFERENCES_DIALOG_PICTOGRAMS_PATH_CHOOSE_BUTTON=Ausw�hlen
+GENERAL_PREFERENCES_DIALOG_TEXT_FONT_LABEL=Schriftart
+GENERAL_PREFERENCES_DIALOG_TEXT_FONT_CHOOSE_BUTTON=Ausw�hlen
+GENERAL_PREFERENCES_DIALOG_TEXT_COLOR_LABEL=Textfarbe
+GENERAL_PREFERENCES_DIALOG_TEXT_COLOR_CHOOSE_BUTTON=Ausw�hlen
+GENERAL_PREFERENCES_DIALOG_TEXT_PLACEMENT_LABEL=Textplatzierung
+ 
+DOCUMENT_LANGUAGE_DIALOG_TITLE=Dokumentsprache
+DOCUMENT_LANGUAGE_DIALOG_DOCUMENT_LANGUAGE_LABEL=Dokumentsprache
+ 
+IMAGES_SIZE_DIALOG_TITLE=Bildgr��e
+IMAGES_SIZE_DIALOG_IMAGES_SIZE_LABEL=Bildgr��e
+UNABLE_DELETE_ALL_TEXT=Das ganze Dokument kann icht gel�scht werden.
+ARAWORD_DOCUMENTS=AraWord Dokumente
+PDF_FILES=PDF Datei
+BMP_FILES=BMP Datei
+JPG_FILES=JPG Datei
+
+SPINNER_TEXT_BELOW_PICTOGRAM=Unter dem Piktogramm
+SPINNER_TEXT_ABOVE_PICTOGRAM=�ber dem Piktogramm
+
+// Related to conjugated databases
+VERB_DATABASE_CREATION_MESSAGE=Creating conjugated verbs database. Wait for my next message
+VERB_DATABASE_CREATION_MESSAGE_END=Finish! Now, you can use English conjugated verb forms!
+
+//NEW. en otros idiomas añadir PO al comiezo del texto (pending Of Translation)
+FILE_MENU_EXPORT_IMAGE=*POT*como imagen
+FILE_MENU_EXPORT_PDF=*POT*como PDF
+EXPORT_PDF_DIALOG_TITLE=*POT*Exportar PDF
+EXPORT_PDF_BUTTON=*POT*Exportar PDF
+EXPORT_PDF_PICTOS_LINE=*POT*Nº pictos por linea
+EXPORT_PDF_ARASAAC_LICENSE=*POT*Añadir licencia de ARASAAC
+EXPORT_PDF_PAGE=*POT*Página
+EXPORT_PDF_PREVISUALIZATION=*POT*Previsualización
+EXPORT_PDF_LICENCIA=*POT*Autor Pictos: Sergio Palao. Procedencia: ARASAAC (http://catedu.es/arasaac/). Licencia: CC(BY-NC-SA)
+EXPORT_PDF_LICENCIA2=*POT*Material generado con AraWord: http://sourceforge.net/projects/arasuite/
+TOOLS_MENU_VOICE_SINTESYS=*POT*Sintesis de voz
+CUSTOM_DESEA_ADD_PICTO=*POT*¿Desea añadir este nuevo picto?
+CUSTOM_IMPORTAR=*POT*Importar
+CUSTOM_RECHAZAR=*POT*Rechazar
+
+//----------------------------------------------------
+//Import custom picto
+//----------------------------------------------------
+CUSTOM.DESEA_ADD_PICTO=*POT*¿Desea añadir este nuevo picto?
+CUSTOM.IMPORTAR=*POT*Importar
+CUSTOM.RECHAZAR=*POT*Rechazar

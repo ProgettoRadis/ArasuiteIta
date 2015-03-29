@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="release-zip" name="Create Runnable Jar for Project galleryManager">
+
+	<property file="build.properties"/>
+	<property name="dir.lib" value="libs"/>
+
+	<target name="release-zip">
+		<antcall target="-clean-all" />
+		<antcall target="-init" />
+		<antcall target="-build" />
+		<antcall target="-bin-zip" />
+	</target>
+
+	<target name="-clean-all">
+		<delete dir="${dest-path}" />
+	</target>
+
+	<target name="-init">
+		<mkdir dir="${dest-path}" />
+	</target>
+
+	<target name="-bin-zip">
+		<zip destfile="${dest-path}/GalleryManager.zip">
+			<fileset dir="${dest-path}" />
+		</zip>
+	</target>
+
+	<!--this file was created by Eclipse Runnable JAR Export Wizard-->
+	<!--ANT 1.7 is required                                        -->
+	<target name="-build">
+		<!-- Classpath creation -->
+	    <path id="libraries">
+	        <fileset dir="${dir.lib}">
+	            <include name="**${file.separator}*.jar" />
+	        </fileset>
+	    </path>
+
+	    <pathconvert property="jar.classpath" pathsep=" ">
+	        <mapper>
+	            <chainedmapper>
+	                <globmapper from="${basedir}${file.separator}*" to="*"/>
+	            </chainedmapper>
+	        </mapper>
+	        <path refid="libraries"/>
+	    </pathconvert>
+		
+		<jar destfile="${dest-path}${filename}" filesetmanifest="mergewithoutmain">
+			<manifest>
+				<attribute name="Main-Class" value="dialogs.mainFrame"/>
+				<attribute name="Class-Path" value=". ${jar.classpath}"/>
+			</manifest>
+			<fileset dir="./bin" />
+		</jar>
+		<copy todir="${dest-path}libs">
+    		<fileset dir="libs" />	
+    	</copy>
+		<copy todir="${dest-path}lang">
+			<fileset dir="src/lang" />	
+		</copy>
+		
+	</target>
+
+</project>

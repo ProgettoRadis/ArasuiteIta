@@ -1,0 +1,7 @@
+<ivy-module version="2.0">
+    <info organisation="com.tico" module="mainwindow"/>
+    <dependencies>
+		<dependency org="com.jgoodies" name="forms" rev="1.2.1"/>
+		<dependency org="com.sun.xml.bind" name="jaxb-impl" rev="2.1.9"/>
+    </dependencies>
+</ivy-module>

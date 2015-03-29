@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="release" name="Create Runnable Jar for Project galleryManager" basedir=".">
+
+	<!-- Properties -->
+	<property name="src.dir" value="src" />
+	<property name="build.dir" value="classes" />
+	<property name="lib.dir" value="libs" />
+	<property name="dist.dir" value="release" />
+	<property name="jar.name" value="GalleryManager.jar" />
+	<property name="test.src.dir" value="test" />
+	<property name="junit.report" value="junit-report" />
+	<property name="junit.report.html" value="junit-report-html" />
+
+	<!-- Path -->
+	<path id="libraries">
+		<fileset dir="${lib.dir}">
+			<include name="**/*.jar" />
+		</fileset>
+		<pathelement location="forms-1.3.0.jar" />
+	</path>
+
+	<path id="libraries-test">
+		<fileset dir="${lib.dir}">
+			<include name="**/*junit*.jar" />
+			<include name="**/*hamcrest*.jar" />
+		</fileset>
+		<pathelement location="${build.dir}" />
+	</path>
+
+	<pathconvert property="jar.classpath" pathsep=" ">
+		<path refid="libraries"/>
+		<chainedmapper>
+			<flattenmapper/>
+			<globmapper from="*" to="libs/*"/>
+			<mapper>
+				<globmapper from="*" to="*"/>
+			</mapper>
+		</chainedmapper>
+	</pathconvert>
+
+	<!-- Target -->
+	<target name="clean">
+		<delete dir="${build.dir}" />
+		<delete dir="${dist.dir}" />
+		<delete dir="${junit.report}" />
+		<delete dir="${junit.report.html}" />
+	</target>
+
+	<target name="init" depends="clean">
+		<mkdir dir="${build.dir}" />
+		<mkdir dir="${dist.dir}" />
+		<mkdir dir="${junit.report}" />
+		<mkdir dir="${junit.report.html}" />
+	</target>
+
+	<target name="compile" depends="init">
+		<javac srcdir="${src.dir}" destdir="${build.dir}">
+			<include name="**/*.java" />
+			<classpath refid="libraries" />
+		</javac>
+	</target>
+
+	<target name="release" depends="compile">
+
+		<!-- Create JAR -->
+		<jar destfile="${dist.dir}/${jar.name}">
+			<manifest>
+				<attribute name="Main-Class" value="dialogs.mainFrame"/>
+				<attribute name="Class-Path" value=". ${jar.classpath}"/>
+			</manifest>
+			<fileset dir="${build.dir}">
+				<include name="**/*.class" />
+			</fileset>
+		</jar>
+
+		<!-- Copy properties -->
+		<copy todir="${dist.dir}">
+			<fileset dir="${src.dir}">
+				<include name="**/*.properties" />
+			</fileset>
+		</copy>
+
+		<!-- Copy libs except JUnit -->
+		<copy todir="${dist.dir}/libs">
+			<fileset dir="${lib.dir}">
+				<exclude name="**/*junit*.jar" />
+				<exclude name="**/*hamcrest*.jar" />
+			</fileset>
+		</copy>
+	</target>
+
+	<target name="test" depends="compile">
+
+		<!-- Compile test files -->
+		<javac srcdir="${test.src.dir}" destdir="${build.dir}">
+			<include name="**/*.java" />
+			<classpath refid="libraries-test" />
+		</javac>
+
+		<!-- Execute test -->
+		<junit haltonerror="false" haltonfailure="true">
+	        <classpath refid="libraries" />
+	        <classpath refid="libraries-test" />
+	        <formatter type="xml"/>
+	        <batchtest todir="${junit.report}">
+				<fileset dir="${test.src.dir}">
+					<include name="**/*Test*.java"/>
+				</fileset>
+            </batchtest>
+	    </junit>
+
+	    <!-- Generate HTML report -->
+	    <junitreport todir="${junit.report.html}">
+			<fileset dir="${junit.report}">
+				<include name="TEST-*.xml"/>
+			</fileset>
+			<report format="frames" todir="${junit.report.html}"/>
+		</junitreport>
+	</target>
+
+	<!-- Installer -->
+<!-- 	<taskdef name="install4j" -->
+<!--                classname="com.install4j.Install4JTask" -->
+<!--                classpath="/Applications/install4j 5/bin/ant.jar"/> -->
+               
+<!-- 	<target name="installer"> -->
+<!-- 		<install4j projectfile="/Users/agl/Dropbox/PFC/Instalador/AraSuiteInstaller.install4j"/> -->
+<!-- 	</target> -->
+</project>

@@ -1,0 +1,141 @@
+LANG_NAME=Frances
+ 
+// Common
+ERROR=Erreur
+WARNING=Attention
+INFO=Information
+OK=OK
+CANCEL=Annuler
+CLOSE=Fermer
+ 
+// Menus
+ 
+FILE_MENU=Fichier
+FILE_MENU_NEW=Nouveau
+FILE_MENU_LOAD=Ouvrir
+FILE_MENU_SAVE=Enregistrer
+FILE_MENU_SAVE_AS=Enregistrer sous
+FILE_MENU_EXPORT=Exporter
+FILE_MENU_EXIT=Quitter
+ 
+EDIT_MENU=Editer
+EDIT_MENU_UNDO=Annuler
+EDIT_MENU_REDO=Refaire
+EDIT_MENU_CUT=Couper
+EDIT_MENU_COPY=Copier
+EDIT_MENU_PASTE=Coller
+EDIT_MENU_FIND=Rechercher
+EDIT_MENU_SELECT_ALL=Sélectionner tout
+ 
+TEXT_MENU=Texte
+TEXT_MENU_FONT=Police
+TEXT_MENU_COLOR=Couleur
+TEXT_MENU_PLACEMENT=Emplacement
+TEXT_MENU_PLACEMENT_ABOVE_PICTOGRAM=Au-dessus du pictogramme
+TEXT_MENU_PLACEMENT_BELOW_PICTOGRAM=En-dessous du pictogramme
+TEXT_MENU_TO_UPPER_CASE=Texte en majuscules...
+TEXT_MENU_TO_UPPER_CASE_ACTIVE_ELEMENT=Élément actuel
+TEXT_MENU_TO_UPPER_CASE_ALL_ELEMENTS=Tous les éléments
+TEXT_MENU_TO_LOWER_CASE=Texte en minuscules...
+TEXT_MENU_TO_LOWER_CASE_ACTIVE_ELEMENT=Elément actuel
+TEXT_MENU_TO_LOWER_CASE_ALL_ELEMENTS=Tous les éléments
+TEXT_MENU_DOCUMENT_LANGUAGE=Langue du document
+ 
+PICTOGRAMS_MENU=Pictogrammes
+PICTOGRAMS_MENU_SIZE=Taille
+PICTOGRAMS_MENU_NEXT_IMAGE=Image suivante
+PICTOGRAMS_MENU_COMPOUND_SPLIT_WORD=Composer/décomposer mot
+PICTOGRAMS_MENU_CHANGE_NAME=Changer nom
+PICTOGRAMS_MENU_HIDE=Cacher...
+PICTOGRAMS_MENU_HIDE_BORDER=Bord
+PICTOGRAMS_MENU_HIDE_BORDER_ACTIVE_ELEMENT=De l'élément actuel
+PICTOGRAMS_MENU_HIDE_BORDER_ALL_ELEMENTS=De tous les éléments
+PICTOGRAMS_MENU_HIDE_IMAGE=Image
+PICTOGRAMS_MENU_HIDE_IMAGE_ACTIVE_ELEMENT=De l'élément actuel
+PICTOGRAMS_MENU_HIDE_IMAGE_ALL_ELEMENTS=De tous les éléments
+PICTOGRAMS_MENU_SHOW=Montrer...
+PICTOGRAMS_MENU_SHOW_BORDER=Bord
+PICTOGRAMS_MENU_SHOW_BORDER_ACTIVE_ELEMENT=De l'élément actuel
+PICTOGRAMS_MENU_SHOW_BORDER_ALL_ELEMENTS=De tous les éléments
+PICTOGRAMS_MENU_SHOW_IMAGE=Image
+PICTOGRAMS_MENU_SHOW_IMAGE_ACTIVE_ELEMENT=De l'élément actuel
+PICTOGRAMS_MENU_SHOW_IMAGE_ALL_ELEMENTS=De tous les éléments
+ 
+TOOLS_MENU=Outils
+TOOLS_MENU_RESOURCE_MANAGER=Gestion des Ressources
+TOOLS_MENU_GENERAL_PREFERENCES=Préférences générales
+ 
+HELP_MENU=Aide
+HELP_MENU_SHOW_HELP=Afficher l'aide
+HELP_MENU_ABOUT=A propos de...
+ 
+// Inner ones
+ 
+FILE_MENU_NEW_WARNING_DISCARD=Souhaitez-vous fermer le document sans l'enregistrer?
+FILE_MENU_SAVE_UNABLE_SAVE_EMPTY_FILE=Impossible d'enregistrer un fichier vide.
+FILE_MENU_EXIT_WARNING=Souhaitez-vous quitter?
+ 
+EDIT_MENU_UNDO_UNABLE_MORE_UNDO=Impossible d'annuler plus.
+EDIT_MENU_REDO_UNABLE_MORE_REDO=Impossible de refaire plus.
+EDIT_MENU_CUT_UNABLE_CUT_ALL=Impossible de couper le texte complet.\n Merci de bien vouloir déselectionner au moins un mot lorsque vous coupez du texte .\n
+EDIT_MENU_FIND_UNABLE_EMPTY_STRING_SEARCH=Merci de bien vouloir entrer le texte à rechercher.\n
+EDIT_MENU_FIND_NOT_FOUND_TEXT=Le texte n'a pas été trouvé.\n
+ 
+GENERAL_PREFERENCES_DIALOG_TITLE=Préférences générales
+DOCUMENT_PREFERENCES_DIALOG_TITLE=Préférences du document
+ABOUT_DIALOG_TITLE=A propos de AraWord
+ 
+GENERAL_PREFERENCES_DIALOG_APPLICATION_LANGUAGE_LABEL=Langue de l'application
+GENERAL_PREFERENCES_DIALOG_DOCUMENT_LANGUAGE_LABEL=Langue du document
+GENERAL_PREFERENCES_DIALOG_IMAGES_SIZE_LABEL=Taille des images
+GENERAL_PREFERENCES_DIALOG_MAX_LENGTH_COMPOUND_WORDS_LABEL=Long. max. des mots composés
+GENERAL_PREFERENCES_DIALOG_MAX_UNDO_LEVEL_LABEL=Niveau max. d'annulation
+GENERAL_PREFERENCES_DIALOG_PICTOGRAMS_PATH_LABEL=Chemin vers les pictogrammes
+GENERAL_PREFERENCES_DIALOG_PICTOGRAMS_PATH_CHOOSE_BUTTON=Choisir
+GENERAL_PREFERENCES_DIALOG_TEXT_FONT_LABEL=Police du texte
+GENERAL_PREFERENCES_DIALOG_TEXT_FONT_CHOOSE_BUTTON=Choisir
+GENERAL_PREFERENCES_DIALOG_TEXT_COLOR_LABEL=Couleur du texte
+GENERAL_PREFERENCES_DIALOG_TEXT_COLOR_CHOOSE_BUTTON=Choisir
+GENERAL_PREFERENCES_DIALOG_TEXT_PLACEMENT_LABEL=Emplacement du texte
+ 
+DOCUMENT_LANGUAGE_DIALOG_TITLE=Langue du document
+DOCUMENT_LANGUAGE_DIALOG_DOCUMENT_LANGUAGE_LABEL=Langue du document
+ 
+IMAGES_SIZE_DIALOG_TITLE=Taille des images
+IMAGES_SIZE_DIALOG_IMAGES_SIZE_LABEL=Taille des images
+ 
+UNABLE_DELETE_ALL_TEXT=Impossible d'effacer tout le texte
+ARAWORD_DOCUMENTS=Documents de AraWord
+PDF_FILES=Fichiers PDF
+BMP_FILES=Fichiers BMP
+JPG_FILES=Fichiers JPG
+ 
+SPINNER_TEXT_BELOW_PICTOGRAM=En-dessous du pictogramme
+SPINNER_TEXT_ABOVE_PICTOGRAM=Au-dessus du pictogramme
+
+// Related to conjugated databases
+VERB_DATABASE_CREATION_MESSAGE=Creating conjugated verbs database. Wait for my next message
+VERB_DATABASE_CREATION_MESSAGE_END=Finish! Now, you can use English conjugated verb forms!
+
+//NEW. en otros idiomas añadir PO al comiezo del texto (pending Of Translation)
+FILE_MENU_EXPORT_IMAGE=*POT*como imagen
+FILE_MENU_EXPORT_PDF=*POT*como PDF
+EXPORT_PDF_DIALOG_TITLE=*POT*Exportar PDF
+EXPORT_PDF_BUTTON=*POT*Exportar PDF
+EXPORT_PDF_PICTOS_LINE=*POT*Nº pictos por linea
+EXPORT_PDF_ARASAAC_LICENSE=*POT*Añadir licencia de ARASAAC
+EXPORT_PDF_PAGE=*POT*Página
+EXPORT_PDF_PREVISUALIZATION=*POT*Previsualización
+EXPORT_PDF_LICENCIA=*POT*Autor Pictos: Sergio Palao. Procedencia: ARASAAC (http://catedu.es/arasaac/). Licencia: CC(BY-NC-SA)
+EXPORT_PDF_LICENCIA2=*POT*Material generado con AraWord: http://sourceforge.net/projects/arasuite/
+TOOLS_MENU_VOICE_SINTESYS=*POT*Sintesis de voz
+CUSTOM_DESEA_ADD_PICTO=*POT*¿Desea añadir este nuevo picto?
+CUSTOM_IMPORTAR=*POT*Importar
+CUSTOM_RECHAZAR=*POT*Rechazar
+
+//----------------------------------------------------
+//Import custom picto
+//----------------------------------------------------
+CUSTOM.DESEA_ADD_PICTO=*POT*¿Desea añadir este nuevo picto?
+CUSTOM.IMPORTAR=*POT*Importar
+CUSTOM.RECHAZAR=*POT*Rechazar

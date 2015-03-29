@@ -1,0 +1,7 @@
+Los pictogramas no vienen incluidos, hay que descargarlos desde la web de Proyecto Tico: http://www.proyectotico.es/wiki/dirPictogramas/Pictogramas_Color_101006.zip
+
+Con F1 mostramos este archivo de ayuda.
+
+Con F3 podemos ir cambiando el pictograma que mostramos (siguiente, al llegar al último volvemos al primero) si la palabra posee varios pictogramas distintos asociados (ejemplo: "tumbarse").
+
+Con F4 podemos componer/descomponer palabras a nuestro gusto, siempre que sea posible.

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="release-zip" name="Create Runnable Jar for Project galleryManager" xmlns:ivy="antlib:org.apache.ivy.ant">
+
+	<property file="build.properties"/>
+	<property name="dir.lib" value="libs"/>
+	<property name="src" location="src"/>
+	<property name="build" location="build"/>
+
+	<target name="release-zip">
+		<antcall target="-clean-all" />
+		<antcall target="-init" />
+		<antcall target="-init-ivy" />
+		<antcall target="-resolve" />
+		<antcall target="-build" />
+		<antcall target="-bin-zip" />
+	</target>
+
+	<target name="-clean-all">
+		<delete dir="${dest-path}" />
+		<delete dir="${build}" />
+	</target>
+
+	<target name="-init">
+		<mkdir dir="${dest-path}" />
+		<mkdir dir="${build}" />
+	</target>
+
+	<target name="-bin-zip">
+		<zip destfile="${dest-path}/GalleryManager.zip">
+			<fileset dir="${dest-path}" />
+		</zip>
+	</target>
+
+	<!--this file was created by Eclipse Runnable JAR Export Wizard-->
+	<!--ANT 1.7 is required                                        -->
+	<target name="-build">
+		<!-- Classpath creation -->
+		<path id="libraries">
+			<fileset dir="${dir.lib}">
+				<include name="**${file.separator}*.jar" />
+			</fileset>
+		</path>
+
+		<pathconvert property="jar.classpath" pathsep=" ">
+			<mapper>
+				<chainedmapper>
+					<globmapper from="${basedir}${file.separator}*" to="*"/>
+				</chainedmapper>
+			</mapper>
+			<path refid="libraries"/>
+		</pathconvert>
+
+		<javac srcdir="${src}" destdir="${build}">
+			<classpath refid="libraries" />
+		</javac>
+
+		<copy todir="${dest-path}">
+			<fileset dir="${src}">
+				<include name="**/*.properties" />
+			</fileset>
+		</copy>
+
+		<jar destfile="${dest-path}${filename}" filesetmanifest="mergewithoutmain">
+			<manifest>
+				<attribute name="Main-Class" value="dialogs.mainFrame"/>
+				<attribute name="Class-Path" value=". ${jar.classpath}"/>
+			</manifest>
+			<fileset dir="${build}"/>
+		</jar>
+		<copy todir="${dest-path}libs">
+			<fileset dir="libs" />
+		</copy>
+	</target>
+
+	<property name="ivy.install.version" value="2.1.0-rc2" />
+	<condition property="ivy.home" value="${env.IVY_HOME}">
+		<isset property="env.IVY_HOME" />
+	</condition>
+	<property name="ivy.home" value="${user.home}/.ant" />
+	<property name="ivy.jar.dir" value="${ivy.home}/lib" />
+	<property name="ivy.jar.file" value="${ivy.jar.dir}/ivy.jar" />
+
+	<target name="download-ivy" unless="offline">
+
+		<mkdir dir="${ivy.jar.dir}"/>
+		<!-- download Ivy from web site so that it can be used even without any special installation -->
+		<get src="http://repo2.maven.org/maven2/org/apache/ivy/ivy/${ivy.install.version}/ivy-${ivy.install.version}.jar" 
+             dest="${ivy.jar.file}" usetimestamp="true"/>
+	</target>
+
+	<target name="-init-ivy" depends="download-ivy">
+		<!-- try to load ivy here from ivy home, in case the user has not already dropped
+              it into ant's lib dir (note that the latter copy will always take precedence).
+              We will not fail as long as local lib dir exists (it may be empty) and
+              ivy is in at least one of ant's lib dir or the local lib dir. -->
+		<path id="ivy.lib.path">
+			<fileset dir="${ivy.jar.dir}" includes="*.jar"/>
+
+		</path>
+		<taskdef resource="org/apache/ivy/ant/antlib.xml"
+                 uri="antlib:org.apache.ivy.ant" classpathref="ivy.lib.path"/>
+	</target>
+
+	<target name="-resolve" description="--> retrieve dependencies with ivy">
+		<ivy:resolve/>
+		<ivy:resolve file="${ivy.dep.file}" conf="${ivy.configurations}" />
+		<ivy:retrieve pattern="${dir.lib}/[artifact]-[type]-[revision].[ext]" conf="${ivy.configurations}" />
+	</target>
+</project>

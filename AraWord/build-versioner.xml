@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="release-zip" name="Create Runnable Jar for Project AraWord">
+	
+	<property file="build.properties"/>
+	<property name="dir.lib" value="lib"/>
+	<property name="dir.bin" value="bin"/>
+	<property name="dir.src" value="src"/>
+	<property name="dir.galleryManager" value="../galleryManager"/>
+	<property name="dir.gui.resources" value="${dir.src}${file.separator}araword${file.separator}gui${file.separator}resources" />
+
+	
+	<target name="release-zip">
+		<antcall target="-clean-all" />
+		<antcall target="-init" />
+		<antcall target="-build" />
+		<antcall target="-bin-zip" />
+	</target>
+	
+	<target name="-clean-all">
+		<delete dir="${dest-path}" />
+		<delete dir="${dir.bin}"/>
+	</target>
+	
+	<target name="-init">
+		<mkdir dir="${dest-path}" />
+	</target>
+	
+	<target name="-bin-zip">
+        <zip destfile="${dest-path}/araword-bin-${dist-version}.zip">
+            <fileset dir="${dest-path}" />
+        </zip>
+    </target>
+	
+    <!--this file was created by Eclipse Runnable JAR Export Wizard-->
+    <!--ANT 1.7 is required                                        -->
+    <target name="-build">
+    	
+    	<!-- Classpath creation -->
+	    <path id="libraries">
+	        <fileset dir="${dir.lib}">
+	            <include name="**${file.separator}*.jar" />
+	        	<exclude name="GalleryManager.jar" />
+	        </fileset>
+	    </path>
+    	
+    	<path id="libraries-all">
+	        <fileset dir="${dir.lib}">
+	            <include name="**${file.separator}*.jar" />
+	        	<exclude name="GalleryManager.jar" />
+	        </fileset>
+    		<fileset dir="${dir.galleryManager}/release">
+    			<include name="**${file.separator}*.jar" />
+    		</fileset>
+	    </path>
+
+	    <pathconvert property="jar.classpath" pathsep=" ">
+	        <mapper>
+	            <chainedmapper>
+	                <globmapper from="${basedir}${file.separator}*" to="*"/>
+	            </chainedmapper>
+	        </mapper>
+	        <path refid="libraries"/>
+	    </pathconvert>
+    	
+    	<mkdir dir="${dir.bin}"/>
+        <javac encoding="utf-8" srcdir="${dir.src}" destdir="${dir.bin}">
+            <classpath refid="libraries-all"/>
+        </javac>
+    	
+    	<copy todir="${dir.bin}${file.separator}araword${file.separator}gui${file.separator}resources">
+			<fileset dir="${dir.gui.resources}" />
+    	</copy>
+	
+        <jar destfile="${dest-path}${filename}">
+            <manifest>
+                <attribute name="Main-Class" value="araword.AraWordApp"/>
+                <attribute name="Class-Path" value=". ${jar.classpath} ../GalleryManager/GalleryManager.jar"/>
+            </manifest>
+            <fileset dir="./bin"/>
+        </jar>
+    	<copy todir="${dest-path}conf">
+    		<fileset dir="conf" />	
+    	</copy>
+    	<copy todir="${dest-path}examples">
+    		<fileset dir="examples" />	
+    	</copy>
+    	<copy todir="${dest-path}lang">
+    		<fileset dir="lang" />	
+    	</copy>
+    	<copy todir="${dest-path}lib">
+    		<fileset dir="lib" />	
+    	</copy>
+    	<copy todir="${dest-path}resources">
+    		<fileset dir="resources" />	
+    	</copy>
+    	
+    	<copy todir="${dest-path}" file="LICENSE.txt" />
+    	<copy todir="${dest-path}" file="AraWord.exe" />
+    	<copy todir="${dest-path}" file=".classpath" />
+    </target>
+</project>

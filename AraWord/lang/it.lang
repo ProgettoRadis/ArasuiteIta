@@ -1,0 +1,147 @@
+LANG_NAME=Italiano
+
+// Common
+ERROR=Errore
+WARNING=Avviso
+INFO=Informazione
+OK=OK
+CANCEL=Annulla
+CLOSE=Chiudi
+
+// Menus
+
+FILE_MENU=File
+FILE_MENU_NEW=Nuovo
+FILE_MENU_LOAD=Apri
+FILE_MENU_SAVE=Salva
+FILE_MENU_SAVE_AS=Salva come...
+FILE_MENU_EXPORT=Esporta come...
+FILE_MENU_EXIT=Esci
+
+EDIT_MENU=Modifica
+EDIT_MENU_UNDO=Annulla
+EDIT_MENU_REDO=Ripeti
+EDIT_MENU_CUT=Taglia
+EDIT_MENU_COPY=Copia
+EDIT_MENU_PASTE=Incolla
+EDIT_MENU_FIND=Cerca
+EDIT_MENU_SELECT_ALL=Seleziona tutto
+
+TEXT_MENU=Text
+TEXT_MENU_FONT=Font
+TEXT_MENU_COLOR=Colore
+TEXT_MENU_PLACEMENT=Localizzazione
+TEXT_MENU_PLACEMENT_ABOVE_PICTOGRAM=Sopra al pittogramma 
+TEXT_MENU_PLACEMENT_BELOW_PICTOGRAM=Sotto al pittogramma 
+TEXT_MENU_TO_UPPER_CASE=Testo in maiuscolo...
+TEXT_MENU_TO_UPPER_CASE_ACTIVE_ELEMENT=Elemento Attivo
+TEXT_MENU_TO_UPPER_CASE_ALL_ELEMENTS=Tutti gli Elementi
+TEXT_MENU_TO_LOWER_CASE=Testo in minuscolo...
+TEXT_MENU_TO_LOWER_CASE_ACTIVE_ELEMENT=Elemento Attivo
+TEXT_MENU_TO_LOWER_CASE_ALL_ELEMENTS=Tutti gli Elementi
+TEXT_MENU_DOCUMENT_LANGUAGE=Linguaggio del Documento
+
+PICTOGRAMS_MENU=Pittogramma
+PICTOGRAMS_MENU_SIZE=Dimensione
+PICTOGRAMS_MENU_NEXT_IMAGE=Immagine successiva
+PICTOGRAMS_MENU_COMPOUND_SPLIT_WORD=Componi/Separa parole
+PICTOGRAMS_MENU_CHANGE_NAME=Cambia il nome
+PICTOGRAMS_MENU_HIDE=Nascondi...
+PICTOGRAMS_MENU_HIDE_BORDER=Bordo
+PICTOGRAMS_MENU_HIDE_BORDER_ACTIVE_ELEMENT=Elemento corrente
+PICTOGRAMS_MENU_HIDE_BORDER_ALL_ELEMENTS=Tutti gli elementi
+PICTOGRAMS_MENU_HIDE_IMAGE=Immagine
+PICTOGRAMS_MENU_HIDE_IMAGE_ACTIVE_ELEMENT=Elemento corrente
+PICTOGRAMS_MENU_HIDE_IMAGE_ALL_ELEMENTS=Tutti gli elementi
+PICTOGRAMS_MENU_SHOW=Mostra...
+PICTOGRAMS_MENU_SHOW_BORDER=Bordo
+PICTOGRAMS_MENU_SHOW_BORDER_ACTIVE_ELEMENT=Elemento corrente
+PICTOGRAMS_MENU_SHOW_BORDER_ALL_ELEMENTS=Tutti gli elementi
+PICTOGRAMS_MENU_SHOW_IMAGE=Immagine
+PICTOGRAMS_MENU_SHOW_IMAGE_ACTIVE_ELEMENT=Elemento corrente
+PICTOGRAMS_MENU_SHOW_IMAGE_ALL_ELEMENTS=Tutti gli elementi
+
+TOOLS_MENU=Strumenti
+TOOLS_MENU_RESOURCE_MANAGER=Gestione Risorse
+TOOLS_MENU_GENERAL_PREFERENCES=Preferenze Generali
+
+HELP_MENU=Aiuto
+HELP_MENU_SHOW_HELP=Mostra Aiuto
+HELP_MENU_ABOUT=About...
+
+// Inner ones
+
+FILE_MENU_NEW_WARNING_DISCARD=Vuoi abbandonare il documento corrente?
+FILE_MENU_SAVE_UNABLE_SAVE_EMPTY_FILE=Impossibile salvare un file vuoto.
+FILE_MENU_EXIT_WARNING=Confermi l'uscita?
+
+EDIT_MENU_UNDO_UNABLE_MORE_UNDO=Impossibile annullare oltre.
+EDIT_MENU_REDO_UNABLE_MORE_REDO=Impossibile ripristinare oltre.
+EDIT_MENU_CUT_UNABLE_CUT_ALL=Impossibile tagliare tutto il testo.\n lascia almeno una parola non selezionata prima di tagliare.\n
+EDIT_MENU_FIND_UNABLE_EMPTY_STRING_SEARCH=Inserisci il testo da cercare.
+EDIT_MENU_FIND_NOT_FOUND_TEXT=Testo non trovato.
+
+GENERAL_PREFERENCES_DIALOG_TITLE=Preferenze Generali
+DOCUMENT_PREFERENCES_DIALOG_TITLE=Preferenze Documento
+ABOUT_DIALOG_TITLE=About AraWord
+
+GENERAL_PREFERENCES_DIALOG_APPLICATION_LANGUAGE_LABEL=Linguaggio Applicazione
+GENERAL_PREFERENCES_DIALOG_DOCUMENT_LANGUAGE_LABEL=Linguaggio Documento
+GENERAL_PREFERENCES_DIALOG_IMAGES_SIZE_LABEL=Dimensione dei Pittogrammi
+GENERAL_PREFERENCES_DIALOG_MAX_LENGTH_COMPOUND_WORDS_LABEL=Max. Lun. autocomposizione
+GENERAL_PREFERENCES_DIALOG_MAX_UNDO_LEVEL_LABEL=Max. livello annullo
+GENERAL_PREFERENCES_DIALOG_PICTOGRAMS_PATH_LABEL=Percorso dei Pittogrammi
+GENERAL_PREFERENCES_DIALOG_PICTOGRAMS_PATH_CHOOSE_BUTTON=Scegli
+GENERAL_PREFERENCES_DIALOG_TEXT_FONT_LABEL=Font del Testo
+GENERAL_PREFERENCES_DIALOG_TEXT_FONT_CHOOSE_BUTTON=Scegli
+GENERAL_PREFERENCES_DIALOG_TEXT_COLOR_LABEL=Colore del testo
+GENERAL_PREFERENCES_DIALOG_TEXT_COLOR_CHOOSE_BUTTON=Scegli
+GENERAL_PREFERENCES_DIALOG_TEXT_PLACEMENT_LABEL=Posizione del Testo
+
+DOCUMENT_LANGUAGE_DIALOG_TITLE=Lingua del Documento
+DOCUMENT_LANGUAGE_DIALOG_DOCUMENT_LANGUAGE_LABEL=Lingua del Documento
+
+IMAGES_SIZE_DIALOG_TITLE=Dimensione Immagini
+IMAGES_SIZE_DIALOG_IMAGES_SIZE_LABEL=Dimensione Immagini
+
+UNABLE_DELETE_ALL_TEXT=Cancellazione di tutto il testo non consentita 
+ARAWORD_DOCUMENTS=Documents AraWord
+PDF_FILES=PDF Files
+BMP_FILES=BMP Files
+JPG_FILES=JPG Files
+
+SPINNER_TEXT_BELOW_PICTOGRAM=Sotto il pittogramma
+SPINNER_TEXT_ABOVE_PICTOGRAM=Sopra il pittogramma
+
+// About dialog
+
+TAboutDialog.DEVELOPERS=Sviluppo
+TAboutDialog.DIRECTOR=Direttore
+TAboutDialog.COLLABORATORS=Collaboratori
+TAboutDialog.ORGANIZATIONS=Organizzazioni
+TAboutDialog.YEAR=Anno
+TAboutDialog.LICENSE=Licenza
+
+
+//NEW. en otros idiomas añadir PO al comiezo del texto (pending Of Translation)
+FILE_MENU_EXPORT_IMAGE=*POT*como imagen
+FILE_MENU_EXPORT_PDF=*POT*como PDF
+EXPORT_PDF_DIALOG_TITLE=*POT*Exportar PDF
+EXPORT_PDF_BUTTON=*POT*Exportar PDF
+EXPORT_PDF_PICTOS_LINE=*POT*Nº pictos por linea
+EXPORT_PDF_ARASAAC_LICENSE=*POT*Añadir licencia de ARASAAC
+EXPORT_PDF_PAGE=*POT*Página
+EXPORT_PDF_PREVISUALIZATION=*POT*Previsualización
+EXPORT_PDF_LICENCIA=*POT*Autor Pictos: Sergio Palao. Procedencia: ARASAAC (http://catedu.es/arasaac/). Licencia: CC(BY-NC-SA)
+EXPORT_PDF_LICENCIA2=*POT*Material generado con AraWord: http://sourceforge.net/projects/arasuite/
+TOOLS_MENU_VOICE_SINTESYS=*POT*Sintesis de voz
+CUSTOM_DESEA_ADD_PICTO=*POT*¿Desea añadir este nuevo picto?
+CUSTOM_IMPORTAR=*POT*Importar
+CUSTOM_RECHAZAR=*POT*Rechazar
+
+//----------------------------------------------------
+//Import custom picto
+//----------------------------------------------------
+CUSTOM.DESEA_ADD_PICTO=*POT*¿Desea añadir este nuevo picto?
+CUSTOM.IMPORTAR=*POT*Importar
+CUSTOM.RECHAZAR=*POT*Rechazar

@@ -1,0 +1,1329 @@
+<?xml version="1.1" encoding="UTF-8" ?>
+
+<Form version="1.5" maxVersion="1.7">
+  <NonVisualComponents>
+    <Container class="javax.swing.JPanel" name="mainPanel">
+      <Properties>
+        <Property name="name" type="java.lang.String" value="mainPanel" noResource="true"/>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="scrollTextZone" pref="859" max="32767" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="scrollTextZone" pref="524" max="32767" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Container class="javax.swing.JScrollPane" name="scrollTextZone">
+          <Properties>
+            <Property name="name" type="java.lang.String" value="scrollTextZone" noResource="true"/>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+          </AuxValues>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Component class="javax.swing.JTextPane" name="textZone">
+              <Properties>
+                <Property name="contentType" type="java.lang.String" resourceKey="textZone.contentType"/>
+                <Property name="editable" type="boolean" value="false"/>
+                <Property name="focusable" type="boolean" value="false"/>
+                <Property name="highlighter" type="javax.swing.text.Highlighter" editor="org.netbeans.modules.form.ComponentChooserEditor">
+                  <ComponentRef name="null"/>
+                </Property>
+                <Property name="margin" type="java.awt.Insets" editor="org.netbeans.beaninfo.editors.InsetsEditor">
+                  <Insets value="[10, 10, 10, 10]"/>
+                </Property>
+                <Property name="name" type="java.lang.String" value="textZone" noResource="true"/>
+                <Property name="requestFocusEnabled" type="boolean" value="false"/>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JMenuBar" name="menuBar">
+      <Properties>
+        <Property name="name" type="java.lang.String" value="menuBar" noResource="true"/>
+      </Properties>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+        <Property name="useNullLayout" type="boolean" value="true"/>
+      </Layout>
+      <SubComponents>
+        <Menu class="javax.swing.JMenu" name="menuFile">
+          <Properties>
+            <Property name="text" type="java.lang.String" resourceKey="menuFile.text"/>
+            <Property name="name" type="java.lang.String" value="menuFile" noResource="true"/>
+          </Properties>
+          <SubComponents>
+            <MenuItem class="javax.swing.JMenuItem" name="menuFileNew">
+              <Properties>
+                <Property name="text" type="java.lang.String" resourceKey="menuFileNew.text"/>
+                <Property name="name" type="java.lang.String" value="menuFileNew" noResource="true"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="menuFileNewActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="menuFileOpen">
+              <Properties>
+                <Property name="text" type="java.lang.String" resourceKey="menuFileOpen.text"/>
+                <Property name="name" type="java.lang.String" value="menuFileOpen" noResource="true"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="menuFileOpenActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="menuFileSave">
+              <Properties>
+                <Property name="text" type="java.lang.String" resourceKey="menuFileSave.text"/>
+                <Property name="name" type="java.lang.String" value="menuFileSave" noResource="true"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="menuFileSaveActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="menuFileSaveAs">
+              <Properties>
+                <Property name="text" type="java.lang.String" resourceKey="menuFileSaveAs.text"/>
+                <Property name="name" type="java.lang.String" value="menuFileSaveAs" noResource="true"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="menuFileSaveAsActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="menuFileExport">
+              <Properties>
+                <Property name="text" type="java.lang.String" resourceKey="menuFileExport.text"/>
+                <Property name="name" type="java.lang.String" value="menuFileExport" noResource="true"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="menuFileExportActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="menuFileExit">
+              <Properties>
+                <Property name="text" type="java.lang.String" resourceKey="menuFileExit.text"/>
+                <Property name="name" type="java.lang.String" value="menuFileExit" noResource="true"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="menuFileExitActionPerformed"/>
+              </Events>
+            </MenuItem>
+          </SubComponents>
+        </Menu>
+        <Menu class="javax.swing.JMenu" name="menuEdit">
+          <Properties>
+            <Property name="text" type="java.lang.String" resourceKey="menuEdit.text"/>
+            <Property name="name" type="java.lang.String" value="menuEdit" noResource="true"/>
+          </Properties>
+          <SubComponents>
+            <MenuItem class="javax.swing.JMenuItem" name="menuEditUndo">
+              <Properties>
+                <Property name="text" type="java.lang.String" resourceKey="menuEditUndo.text"/>
+                <Property name="name" type="java.lang.String" value="menuEditUndo" noResource="true"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="menuEditUndoActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="menuEditRedo">
+              <Properties>
+                <Property name="text" type="java.lang.String" resourceKey="menuEditRedo.text"/>
+                <Property name="name" type="java.lang.String" value="menuEditRedo" noResource="true"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="menuEditRedoActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JPopupMenu$Separator" name="jSeparator1">
+              <Properties>
+                <Property name="name" type="java.lang.String" value="jSeparator1" noResource="true"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="menuEditCut">
+              <Properties>
+                <Property name="text" type="java.lang.String" resourceKey="menuEditCut.text"/>
+                <Property name="name" type="java.lang.String" value="menuEditCut" noResource="true"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="menuEditCutActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="menuEditCopy">
+              <Properties>
+                <Property name="text" type="java.lang.String" resourceKey="menuEditCopy.text"/>
+                <Property name="name" type="java.lang.String" value="menuEditCopy" noResource="true"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="menuEditCopyActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="menuEditPaste">
+              <Properties>
+                <Property name="text" type="java.lang.String" resourceKey="menuEditPaste.text"/>
+                <Property name="name" type="java.lang.String" value="menuEditPaste" noResource="true"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="menuEditPasteActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JPopupMenu$Separator" name="jSeparator2">
+              <Properties>
+                <Property name="name" type="java.lang.String" value="jSeparator2" noResource="true"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="menuEditFind">
+              <Properties>
+                <Property name="text" type="java.lang.String" resourceKey="menuEditFind.text"/>
+                <Property name="name" type="java.lang.String" value="menuEditFind" noResource="true"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="menuEditFindActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="menuEditSelectAll">
+              <Properties>
+                <Property name="text" type="java.lang.String" resourceKey="menuEditSelectAll.text"/>
+                <Property name="name" type="java.lang.String" value="menuEditSelectAll" noResource="true"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="menuEditSelectAllActionPerformed"/>
+              </Events>
+            </MenuItem>
+          </SubComponents>
+        </Menu>
+        <Menu class="javax.swing.JMenu" name="menuText">
+          <Properties>
+            <Property name="text" type="java.lang.String" resourceKey="menuText.text"/>
+            <Property name="name" type="java.lang.String" value="menuText" noResource="true"/>
+          </Properties>
+          <SubComponents>
+            <MenuItem class="javax.swing.JMenuItem" name="menuTextFont">
+              <Properties>
+                <Property name="text" type="java.lang.String" resourceKey="menuTextFont.text"/>
+                <Property name="name" type="java.lang.String" value="menuTextFont" noResource="true"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="menuTextFontActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="menuTextColor">
+              <Properties>
+                <Property name="text" type="java.lang.String" resourceKey="menuTextColor.text"/>
+                <Property name="name" type="java.lang.String" value="menuTextColor" noResource="true"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="menuTextColorActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <Menu class="javax.swing.JMenu" name="menuTextPlacement">
+              <Properties>
+                <Property name="text" type="java.lang.String" resourceKey="menuTextPlacement.text"/>
+                <Property name="name" type="java.lang.String" value="menuTextPlacement" noResource="true"/>
+              </Properties>
+              <SubComponents>
+                <MenuItem class="javax.swing.JMenuItem" name="menuTextPlacementAbovePictogram">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" resourceKey="menuTextPlacementAbovePictogram.text"/>
+                    <Property name="name" type="java.lang.String" value="menuTextPlacementAbovePictogram" noResource="true"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="menuTextPlacementAbovePictogramActionPerformed"/>
+                  </Events>
+                </MenuItem>
+                <MenuItem class="javax.swing.JMenuItem" name="menuTextPlacementBelowPictogram">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" resourceKey="menuTextPlacementBelowPictogram.text"/>
+                    <Property name="name" type="java.lang.String" value="menuTextPlacementBelowPictogram" noResource="true"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="menuTextPlacementBelowPictogramActionPerformed"/>
+                  </Events>
+                </MenuItem>
+              </SubComponents>
+            </Menu>
+            <Menu class="javax.swing.JMenu" name="menuTextToUpperCase">
+              <Properties>
+                <Property name="text" type="java.lang.String" resourceKey="menuTextToUpperCase.text"/>
+                <Property name="name" type="java.lang.String" value="menuTextToUpperCase" noResource="true"/>
+              </Properties>
+              <SubComponents>
+                <MenuItem class="javax.swing.JMenuItem" name="menuTextToUpperCaseActiveElement">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" resourceKey="menuTextToUpperCaseActiveElement.text"/>
+                    <Property name="name" type="java.lang.String" value="menuTextToUpperCaseActiveElement" noResource="true"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="menuTextToUpperCaseActiveElementActionPerformed"/>
+                  </Events>
+                </MenuItem>
+                <MenuItem class="javax.swing.JMenuItem" name="menuTextToUpperCaseAllElements">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" resourceKey="menuTextToUpperCaseAllElements.text"/>
+                    <Property name="name" type="java.lang.String" value="menuTextToUpperCaseAllElements" noResource="true"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="menuTextToUpperCaseAllElementsActionPerformed"/>
+                  </Events>
+                </MenuItem>
+              </SubComponents>
+            </Menu>
+            <Menu class="javax.swing.JMenu" name="menuTextToLowerCase">
+              <Properties>
+                <Property name="text" type="java.lang.String" resourceKey="menuTextToLowerCase.text"/>
+                <Property name="name" type="java.lang.String" value="menuTextToLowerCase" noResource="true"/>
+              </Properties>
+              <SubComponents>
+                <MenuItem class="javax.swing.JMenuItem" name="menuTextToLowerCaseActiveElement">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" resourceKey="menuTextToLowerCaseActiveElement.text"/>
+                    <Property name="name" type="java.lang.String" value="menuTextToLowerCaseActiveElement" noResource="true"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="menuTextToLowerCaseActiveElementActionPerformed"/>
+                  </Events>
+                </MenuItem>
+                <MenuItem class="javax.swing.JMenuItem" name="menuTextToLowerCaseAllElements">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" resourceKey="menuTextToLowerCaseAllElements.text"/>
+                    <Property name="name" type="java.lang.String" value="menuTextToLowerCaseAllElements" noResource="true"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="menuTextToLowerCaseAllElementsActionPerformed"/>
+                  </Events>
+                </MenuItem>
+              </SubComponents>
+            </Menu>
+            <MenuItem class="javax.swing.JMenuItem" name="menuTextDocumentLanguage">
+              <Properties>
+                <Property name="text" type="java.lang.String" resourceKey="menuTextDocumentLanguage.text"/>
+                <Property name="name" type="java.lang.String" value="menuTextDocumentLanguage" noResource="true"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="menuTextDocumentLanguageActionPerformed"/>
+              </Events>
+            </MenuItem>
+          </SubComponents>
+        </Menu>
+        <Menu class="javax.swing.JMenu" name="menuPictograms">
+          <Properties>
+            <Property name="text" type="java.lang.String" resourceKey="menuPictograms.text"/>
+            <Property name="name" type="java.lang.String" value="menuPictograms" noResource="true"/>
+          </Properties>
+          <SubComponents>
+            <MenuItem class="javax.swing.JMenuItem" name="menuPictogramsSize">
+              <Properties>
+                <Property name="text" type="java.lang.String" resourceKey="menuPictogramsSize.text"/>
+                <Property name="name" type="java.lang.String" value="menuPictogramsSize" noResource="true"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="menuPictogramsSizeActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="menuPictogramsNextImage">
+              <Properties>
+                <Property name="text" type="java.lang.String" resourceKey="menuPictogramsNextImage.text"/>
+                <Property name="name" type="java.lang.String" value="menuPictogramsNextImage" noResource="true"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="menuPictogramsNextImageActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="menuPictogramsCompoundSplitWord">
+              <Properties>
+                <Property name="text" type="java.lang.String" resourceKey="menuPictogramsCompoundSplitWord.text"/>
+                <Property name="name" type="java.lang.String" value="menuPictogramsCompoundSplitWord" noResource="true"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="menuPictogramsCompoundSplitWordActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="menuPictogramsChangeName">
+              <Properties>
+                <Property name="text" type="java.lang.String" resourceKey="menuPictogramsChangeName.text"/>
+                <Property name="name" type="java.lang.String" value="menuPictogramsChangeName" noResource="true"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="menuPictogramsChangeNameActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <Menu class="javax.swing.JMenu" name="menuPictogramsShow">
+              <Properties>
+                <Property name="text" type="java.lang.String" resourceKey="menuPictogramsShow.text"/>
+                <Property name="name" type="java.lang.String" value="menuPictogramsShow" noResource="true"/>
+              </Properties>
+              <SubComponents>
+                <Menu class="javax.swing.JMenu" name="menuPictogramsShowImage">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" resourceKey="menuPictogramsShowImage.text"/>
+                    <Property name="name" type="java.lang.String" value="menuPictogramsShowImage" noResource="true"/>
+                  </Properties>
+                  <SubComponents>
+                    <MenuItem class="javax.swing.JMenuItem" name="menuPictogramsShowImageActiveElement">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" resourceKey="menuPictogramsShowImageActiveElement.text"/>
+                        <Property name="name" type="java.lang.String" value="menuPictogramsShowImageActiveElement" noResource="true"/>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="menuPictogramsShowImageActiveElementActionPerformed"/>
+                      </Events>
+                    </MenuItem>
+                    <MenuItem class="javax.swing.JMenuItem" name="menuPictogramsShowImageAllElements">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" resourceKey="menuPictogramsShowImageAllElements.text"/>
+                        <Property name="name" type="java.lang.String" value="menuPictogramsShowImageAllElements" noResource="true"/>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="menuPictogramsShowImageAllElementsActionPerformed"/>
+                      </Events>
+                    </MenuItem>
+                  </SubComponents>
+                </Menu>
+                <Menu class="javax.swing.JMenu" name="menuPictogramsShowBorder">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" resourceKey="menuPictogramsShowBorder.text"/>
+                    <Property name="name" type="java.lang.String" value="menuPictogramsShowBorder" noResource="true"/>
+                  </Properties>
+                  <SubComponents>
+                    <MenuItem class="javax.swing.JMenuItem" name="menuPictogramsShowBorderActiveElement">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" resourceKey="menuPictogramsShowBorderActiveElement.text"/>
+                        <Property name="name" type="java.lang.String" value="menuPictogramsShowBorderActiveElement" noResource="true"/>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="menuPictogramsShowBorderActiveElementActionPerformed"/>
+                      </Events>
+                    </MenuItem>
+                    <MenuItem class="javax.swing.JMenuItem" name="menuPictogramsShowBorderAllElements">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" resourceKey="menuPictogramsShowBorderAllElements.text"/>
+                        <Property name="name" type="java.lang.String" value="menuPictogramsShowBorderAllElements" noResource="true"/>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="menuPictogramsShowBorderAllElementsActionPerformed"/>
+                      </Events>
+                    </MenuItem>
+                  </SubComponents>
+                </Menu>
+              </SubComponents>
+            </Menu>
+            <Menu class="javax.swing.JMenu" name="menuPictogramsHide">
+              <Properties>
+                <Property name="text" type="java.lang.String" resourceKey="menuPictogramsHide.text"/>
+                <Property name="name" type="java.lang.String" value="menuPictogramsHide" noResource="true"/>
+              </Properties>
+              <SubComponents>
+                <Menu class="javax.swing.JMenu" name="menuPictogramsHideImage">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" resourceKey="menuPictogramsHideImage.text"/>
+                    <Property name="name" type="java.lang.String" value="menuPictogramsHideImage" noResource="true"/>
+                  </Properties>
+                  <SubComponents>
+                    <MenuItem class="javax.swing.JMenuItem" name="menuPictogramsHideImageActiveElement">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" resourceKey="menuPictogramsHideImageActiveElement.text"/>
+                        <Property name="name" type="java.lang.String" value="menuPictogramsHideImageActiveElement" noResource="true"/>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="menuPictogramsHideImageActiveElementActionPerformed"/>
+                      </Events>
+                    </MenuItem>
+                    <MenuItem class="javax.swing.JMenuItem" name="menuPictogramsHideImageAllElements">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" resourceKey="menuPictogramsHideImageAllElements.text"/>
+                        <Property name="name" type="java.lang.String" value="menuPictogramsHideImageAllElements" noResource="true"/>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="menuPictogramsHideImageAllElementsActionPerformed"/>
+                      </Events>
+                    </MenuItem>
+                  </SubComponents>
+                </Menu>
+                <Menu class="javax.swing.JMenu" name="menuPictogramsHideBorder">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" resourceKey="menuPictogramsHideBorder.text"/>
+                    <Property name="name" type="java.lang.String" value="menuPictogramsHideBorder" noResource="true"/>
+                  </Properties>
+                  <SubComponents>
+                    <MenuItem class="javax.swing.JMenuItem" name="menuPictogramsHideBorderActiveElement">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" resourceKey="menuPictogramsHideBorderActiveElement.text"/>
+                        <Property name="name" type="java.lang.String" value="menuPictogramsHideBorderActiveElement" noResource="true"/>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="menuPictogramsHideBorderActiveElementActionPerformed"/>
+                      </Events>
+                    </MenuItem>
+                    <MenuItem class="javax.swing.JMenuItem" name="menuPictogramsHideBorderAllElements">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" resourceKey="menuPictogramsHideBorderAllElements.text"/>
+                        <Property name="name" type="java.lang.String" value="menuPictogramsHideBorderAllElements" noResource="true"/>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="menuPictogramsHideBorderAllElementsActionPerformed"/>
+                      </Events>
+                    </MenuItem>
+                  </SubComponents>
+                </Menu>
+              </SubComponents>
+            </Menu>
+          </SubComponents>
+        </Menu>
+        <Menu class="javax.swing.JMenu" name="menuTools">
+          <Properties>
+            <Property name="text" type="java.lang.String" resourceKey="menuTools.text"/>
+          </Properties>
+          <SubComponents>
+            <MenuItem class="javax.swing.JMenuItem" name="menuToolsResourceManager">
+              <Properties>
+                <Property name="text" type="java.lang.String" resourceKey="menuToolsResourceManager.text"/>
+                <Property name="name" type="java.lang.String" value="menuToolsResourceManager" noResource="true"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="menuToolsResourceManagerActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="menuToolsGeneralPreferences">
+              <Properties>
+                <Property name="text" type="java.lang.String" resourceKey="menuToolsGeneralPreferences.text"/>
+                <Property name="name" type="java.lang.String" value="menuToolsGeneralPreferences" noResource="true"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="menuToolsGeneralPreferencesActionPerformed"/>
+              </Events>
+            </MenuItem>
+          </SubComponents>
+        </Menu>
+        <Menu class="javax.swing.JMenu" name="menuHelp">
+          <Properties>
+            <Property name="text" type="java.lang.String" resourceKey="menuHelp.text"/>
+            <Property name="name" type="java.lang.String" value="menuHelp" noResource="true"/>
+          </Properties>
+          <SubComponents>
+            <MenuItem class="javax.swing.JMenuItem" name="menuHelpShowHelp">
+              <Properties>
+                <Property name="text" type="java.lang.String" resourceKey="menuHelpShowHelp.text"/>
+                <Property name="name" type="java.lang.String" value="menuHelpShowHelp" noResource="true"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="menuHelpShowHelpActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="menuHelpAbout">
+              <Properties>
+                <Property name="text" type="java.lang.String" resourceKey="menuHelpAbout.text"/>
+                <Property name="name" type="java.lang.String" value="menuHelpAbout" noResource="true"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="menuHelpAboutActionPerformed"/>
+              </Events>
+            </MenuItem>
+          </SubComponents>
+        </Menu>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JDialog" name="aboutDialog">
+      <Properties>
+        <Property name="title" type="java.lang.String" resourceKey="aboutDialog.title"/>
+        <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+          <Color id="Cursor predeterminado"/>
+        </Property>
+        <Property name="modal" type="boolean" value="true"/>
+        <Property name="name" type="java.lang.String" value="aboutDialog" noResource="true"/>
+        <Property name="resizable" type="boolean" value="false"/>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="1" attributes="0">
+                          <Component id="aboutDialogCloseButton" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Component id="jPanel1" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jScrollPane1" alignment="1" pref="702" max="32767" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                  <Component id="jScrollPane1" min="-2" pref="480" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="aboutDialogCloseButton" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JButton" name="aboutDialogCloseButton">
+          <Properties>
+            <Property name="text" type="java.lang.String" resourceKey="aboutDialogCloseButton.text"/>
+            <Property name="name" type="java.lang.String" value="aboutDialogCloseButton" noResource="true"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="aboutDialogCloseButtonActionPerformed"/>
+          </Events>
+        </Component>
+        <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+          <Properties>
+            <Property name="name" type="java.lang.String" value="jScrollPane1" noResource="true"/>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+          </AuxValues>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Component class="javax.swing.JTextArea" name="aboutDialogTextArea">
+              <Properties>
+                <Property name="columns" type="int" value="20"/>
+                <Property name="editable" type="boolean" value="false"/>
+                <Property name="rows" type="int" value="5"/>
+                <Property name="focusable" type="boolean" value="false"/>
+                <Property name="name" type="java.lang.String" value="aboutDialogTextArea" noResource="true"/>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JPanel" name="jPanel1">
+          <Properties>
+            <Property name="name" type="java.lang.String" value="jPanel1" noResource="true"/>
+          </Properties>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="aboutDialogImage" alignment="0" pref="702" max="32767" attributes="1"/>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="aboutDialogImage" alignment="1" pref="234" max="32767" attributes="0"/>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JLabel" name="aboutDialogImage">
+              <Properties>
+                <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="text" type="java.lang.String" resourceKey="aboutDialogImage.text"/>
+                <Property name="name" type="java.lang.String" value="aboutDialogImage" noResource="true"/>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JDialog" name="findDialog">
+      <Properties>
+        <Property name="title" type="java.lang.String" resourceKey="findDialog.title"/>
+        <Property name="name" type="java.lang.String" value="findDialog" noResource="true"/>
+        <Property name="resizable" type="boolean" value="false"/>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Component id="findDialogFindTextLabel" alignment="0" min="-2" pref="73" max="-2" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="findDialogFindButton" min="-2" pref="65" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="findDialogExitButton" min="-2" pref="62" max="-2" attributes="0"/>
+                      </Group>
+                      <Component id="findDialogTextField" alignment="0" max="32767" attributes="1"/>
+                  </Group>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="findDialogFindTextLabel" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="findDialogTextField" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="findDialogFindButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="findDialogExitButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="findDialogFindTextLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" resourceKey="findDialogFindTextLabel.text"/>
+            <Property name="name" type="java.lang.String" value="findDialogFindTextLabel" noResource="true"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="findDialogTextField">
+          <Properties>
+            <Property name="text" type="java.lang.String" resourceKey="findDialogTextField.text"/>
+            <Property name="name" type="java.lang.String" value="findDialogTextField" noResource="true"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="findDialogFindButton">
+          <Properties>
+            <Property name="text" type="java.lang.String" resourceKey="findDialogFindButton.text"/>
+            <Property name="name" type="java.lang.String" value="findDialogFindButton" noResource="true"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="findDialogFindButtonActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="findDialogExitButton">
+          <Properties>
+            <Property name="text" type="java.lang.String" resourceKey="findDialogExitButton.text"/>
+            <Property name="name" type="java.lang.String" value="findDialogExitButton" noResource="true"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="findDialogExitButtonActionPerformed"/>
+          </Events>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JDialog" name="generalPreferencesDialog">
+      <Properties>
+        <Property name="modal" type="boolean" value="true"/>
+        <Property name="name" type="java.lang.String" value="generalPreferencesDialog" noResource="true"/>
+        <Property name="resizable" type="boolean" value="false"/>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="generalPreferencesDialogImagesSizeLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="generalPreferencesDialogMaxUndoLevelLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="generalPreferencesDialogApplicationLanguageLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="generalPreferencesDialogPictogramsPathLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="generalPreferencesDialogDocumentLanguageLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="generalPreferencesDialogMaxLengthCompoundWordsLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="generalPreferencesDialogSpinnerImagesSize" pref="151" max="32767" attributes="0"/>
+                              <Component id="generalPreferencesDialogChoosePictogramsPathButton" alignment="0" pref="151" max="32767" attributes="1"/>
+                              <Component id="generalPreferencesDialogSpinnerDocumentLanguage" alignment="0" pref="151" max="32767" attributes="1"/>
+                              <Component id="generalPreferencesDialogSpinnerApplicationLanguage" alignment="0" pref="151" max="32767" attributes="1"/>
+                              <Component id="generalPreferencesDialogSpinnerMaxLengthCompoundWords" alignment="0" pref="151" max="32767" attributes="1"/>
+                              <Component id="generalPreferencesDialogSpinnerMaxUndoLevel" alignment="0" pref="151" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <Component id="generalPreferencesDialogTextFontLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="generalPreferencesDialogTextColorLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="generalPreferencesDialogOKButton" alignment="0" min="-2" pref="131" max="-2" attributes="0"/>
+                              <Component id="generalPreferencesDialogTextPlacementLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="generalPreferencesDialogChooseTextColorButton" alignment="1" pref="153" max="32767" attributes="0"/>
+                              <Component id="generalPreferencesDialogChooseTextFontButton" alignment="1" pref="153" max="32767" attributes="0"/>
+                              <Component id="generalPreferencesDialogSpinnerTextPlacement" alignment="1" pref="153" max="32767" attributes="1"/>
+                              <Component id="generalPreferencesDialogCancelButton" alignment="0" pref="153" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="generalPreferencesDialogImagesSizeLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="generalPreferencesDialogSpinnerImagesSize" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="generalPreferencesDialogMaxUndoLevelLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="generalPreferencesDialogSpinnerMaxUndoLevel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="generalPreferencesDialogMaxLengthCompoundWordsLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="generalPreferencesDialogSpinnerMaxLengthCompoundWords" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="generalPreferencesDialogApplicationLanguageLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="generalPreferencesDialogSpinnerApplicationLanguage" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="generalPreferencesDialogDocumentLanguageLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="generalPreferencesDialogSpinnerDocumentLanguage" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="generalPreferencesDialogPictogramsPathLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="generalPreferencesDialogChoosePictogramsPathButton" alignment="3" max="32767" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="generalPreferencesDialogTextFontLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="generalPreferencesDialogChooseTextFontButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="generalPreferencesDialogTextColorLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="generalPreferencesDialogChooseTextColorButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="generalPreferencesDialogTextPlacementLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="generalPreferencesDialogSpinnerTextPlacement" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="generalPreferencesDialogOKButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="generalPreferencesDialogCancelButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JSpinner" name="generalPreferencesDialogSpinnerImagesSize">
+          <Properties>
+            <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
+              <SpinnerModel initial="100" maximum="500" minimum="25" numberType="java.lang.Integer" stepSize="5" type="number"/>
+            </Property>
+            <Property name="name" type="java.lang.String" value="generalPreferencesDialogSpinnerImagesSize" noResource="true"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="generalPreferencesDialogImagesSizeLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" resourceKey="generalPreferencesDialogImagesSizeLabel.text"/>
+            <Property name="name" type="java.lang.String" value="generalPreferencesDialogImagesSizeLabel" noResource="true"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="generalPreferencesDialogMaxUndoLevelLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" resourceKey="generalPreferencesDialogMaxUndoLevelLabel.text"/>
+            <Property name="name" type="java.lang.String" value="generalPreferencesDialogMaxUndoLevelLabel" noResource="true"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JSpinner" name="generalPreferencesDialogSpinnerMaxUndoLevel">
+          <Properties>
+            <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
+              <SpinnerModel initial="5" maximum="20" minimum="1" numberType="java.lang.Integer" stepSize="1" type="number"/>
+            </Property>
+            <Property name="name" type="java.lang.String" value="generalPreferencesDialogSpinnerMaxUndoLevel" noResource="true"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="generalPreferencesDialogMaxLengthCompoundWordsLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" resourceKey="generalPreferencesDialogMaxLengthCompoundWordsLabel.text"/>
+            <Property name="name" type="java.lang.String" value="generalPreferencesDialogMaxLengthCompoundWordsLabel" noResource="true"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JSpinner" name="generalPreferencesDialogSpinnerMaxLengthCompoundWords">
+          <Properties>
+            <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
+              <SpinnerModel initial="3" maximum="5" minimum="0" numberType="java.lang.Integer" stepSize="1" type="number"/>
+            </Property>
+            <Property name="name" type="java.lang.String" value="generalPreferencesDialogSpinnerMaxLengthCompoundWords" noResource="true"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="generalPreferencesDialogApplicationLanguageLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" resourceKey="generalPreferencesDialogApplicationLanguageLabel.text"/>
+            <Property name="name" type="java.lang.String" value="generalPreferencesDialogApplicationLanguageLabel" noResource="true"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JSpinner" name="generalPreferencesDialogSpinnerApplicationLanguage">
+          <Properties>
+            <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
+              <SpinnerModel type="list">
+                <ListItem value="Espa&#xf1;ol"/>
+                <ListItem value="English"/>
+                <ListItem value="Fran&#xe7;ais"/>
+                <ListItem value="Deutsch"/>
+                <ListItem value="Catal&#xe0;"/>
+              </SpinnerModel>
+            </Property>
+            <Property name="name" type="java.lang.String" value="generalPreferencesDialogSpinnerApplicationLanguage" noResource="true"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="generalPreferencesDialogDocumentLanguageLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" resourceKey="generalPreferencesDialogDocumentLanguageLabel.text"/>
+            <Property name="name" type="java.lang.String" value="generalPreferencesDialogDocumentLanguageLabel" noResource="true"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JSpinner" name="generalPreferencesDialogSpinnerDocumentLanguage">
+          <Properties>
+            <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
+              <SpinnerModel type="list">
+                <ListItem value="(todos)"/>
+                <ListItem value="Espa&#xf1;ol"/>
+                <ListItem value="English"/>
+                <ListItem value="Fran&#xe7;ais"/>
+                <ListItem value="Deutsch"/>
+                <ListItem value="Catal&#xe0;"/>
+              </SpinnerModel>
+            </Property>
+            <Property name="name" type="java.lang.String" value="generalPreferencesDialogSpinnerDocumentLanguage" noResource="true"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="generalPreferencesDialogOKButton">
+          <Properties>
+            <Property name="text" type="java.lang.String" resourceKey="generalPreferencesDialogOKButton.text"/>
+            <Property name="name" type="java.lang.String" value="generalPreferencesDialogOKButton" noResource="true"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="generalPreferencesDialogOKButtonActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="generalPreferencesDialogCancelButton">
+          <Properties>
+            <Property name="text" type="java.lang.String" resourceKey="generalPreferencesDialogCancelButton.text"/>
+            <Property name="name" type="java.lang.String" value="generalPreferencesDialogCancelButton" noResource="true"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="generalPreferencesDialogCancelButtonActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="generalPreferencesDialogPictogramsPathLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" resourceKey="generalPreferencesDialogPictogramsPathLabel.text"/>
+            <Property name="name" type="java.lang.String" value="generalPreferencesDialogPictogramsPathLabel" noResource="true"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="generalPreferencesDialogChoosePictogramsPathButton">
+          <Properties>
+            <Property name="text" type="java.lang.String" resourceKey="generalPreferencesDialogChoosePictogramsPathButton.text"/>
+            <Property name="name" type="java.lang.String" value="generalPreferencesDialogChoosePictogramsPathButton" noResource="true"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="generalPreferencesDialogChoosePictogramsPathButtonActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="generalPreferencesDialogTextFontLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" resourceKey="generalPreferencesDialogTextFontLabel.text"/>
+            <Property name="name" type="java.lang.String" value="generalPreferencesDialogTextFontLabel" noResource="true"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="generalPreferencesDialogChooseTextFontButton">
+          <Properties>
+            <Property name="text" type="java.lang.String" resourceKey="generalPreferencesDialogChooseTextFontButton.text"/>
+            <Property name="name" type="java.lang.String" value="generalPreferencesDialogChooseTextFontButton" noResource="true"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="generalPreferencesDialogChooseTextFontButtonActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="generalPreferencesDialogTextColorLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" resourceKey="generalPreferencesDialogTextColorLabel.text"/>
+            <Property name="name" type="java.lang.String" value="generalPreferencesDialogTextColorLabel" noResource="true"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="generalPreferencesDialogChooseTextColorButton">
+          <Properties>
+            <Property name="text" type="java.lang.String" resourceKey="generalPreferencesDialogChooseTextColorButton.text"/>
+            <Property name="name" type="java.lang.String" value="generalPreferencesDialogChooseTextColorButton" noResource="true"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="generalPreferencesDialogChooseTextColorButtonActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="generalPreferencesDialogTextPlacementLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" resourceKey="generalPreferencesDialogTextPlacementLabel.text"/>
+            <Property name="name" type="java.lang.String" value="generalPreferencesDialogTextPlacementLabel" noResource="true"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JSpinner" name="generalPreferencesDialogSpinnerTextPlacement">
+          <Properties>
+            <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
+              <SpinnerModel type="list">
+                <ListItem value="Encima del pictograma"/>
+                <ListItem value="Debajo del pictograma"/>
+              </SpinnerModel>
+            </Property>
+            <Property name="name" type="java.lang.String" value="generalPreferencesDialogSpinnerTextPlacement" noResource="true"/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JToolBar" name="toolBar">
+      <Properties>
+        <Property name="floatable" type="boolean" value="false"/>
+        <Property name="rollover" type="boolean" value="true"/>
+        <Property name="name" type="java.lang.String" value="toolBar" noResource="true"/>
+      </Properties>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBoxLayout"/>
+      <SubComponents>
+        <Component class="javax.swing.JButton" name="toolBarButtonFileNew">
+          <Properties>
+            <Property name="text" type="java.lang.String" resourceKey="toolBarButtonFileNew.text"/>
+            <Property name="focusable" type="boolean" value="false"/>
+            <Property name="horizontalTextPosition" type="int" value="0"/>
+            <Property name="name" type="java.lang.String" value="toolBarButtonFileNew" noResource="true"/>
+            <Property name="verticalTextPosition" type="int" value="3"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="toolBarButtonFileNewActionPerformed"/>
+          </Events>
+        </Component>    
+        <Component class="javax.swing.JButton" name="toolBarButtonFileOpen">
+          <Properties>
+            <Property name="focusable" type="boolean" value="false"/>
+            <Property name="horizontalTextPosition" type="int" value="0"/>
+            <Property name="name" type="java.lang.String" value="toolBarButtonFileOpen" noResource="true"/>
+            <Property name="verticalTextPosition" type="int" value="3"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="toolBarButtonFileOpenActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="toolBarButtonFileSave">
+          <Properties>
+            <Property name="focusable" type="boolean" value="false"/>
+            <Property name="horizontalTextPosition" type="int" value="0"/>
+            <Property name="name" type="java.lang.String" value="toolBarButtonFileSave" noResource="true"/>
+            <Property name="verticalTextPosition" type="int" value="3"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="toolBarButtonFileSaveActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JToolBar$Separator" name="jSeparator3">
+          <Properties>
+            <Property name="name" type="java.lang.String" value="jSeparator3" noResource="true"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="toolBarButtonEditUndo">
+          <Properties>
+            <Property name="focusable" type="boolean" value="false"/>
+            <Property name="horizontalTextPosition" type="int" value="0"/>
+            <Property name="name" type="java.lang.String" value="toolBarButtonEditUndo" noResource="true"/>
+            <Property name="verticalTextPosition" type="int" value="3"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="toolBarButtonEditUndoActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="toolBarButtonEditRedo">
+          <Properties>
+            <Property name="focusable" type="boolean" value="false"/>
+            <Property name="horizontalTextPosition" type="int" value="0"/>
+            <Property name="name" type="java.lang.String" value="toolBarButtonEditRedo" noResource="true"/>
+            <Property name="verticalTextPosition" type="int" value="3"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="toolBarButtonEditRedoActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="toolBarButtonEditCut">
+          <Properties>
+            <Property name="focusable" type="boolean" value="false"/>
+            <Property name="horizontalTextPosition" type="int" value="0"/>
+            <Property name="name" type="java.lang.String" value="toolBarButtonEditCut" noResource="true"/>
+            <Property name="verticalTextPosition" type="int" value="3"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="toolBarButtonEditCutActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="toolBarButtonEditCopy">
+          <Properties>
+            <Property name="focusable" type="boolean" value="false"/>
+            <Property name="horizontalTextPosition" type="int" value="0"/>
+            <Property name="name" type="java.lang.String" value="toolBarButtonEditCopy" noResource="true"/>
+            <Property name="verticalTextPosition" type="int" value="3"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="toolBarButtonEditCopyActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="toolBarButtonEditPaste">
+          <Properties>
+            <Property name="focusable" type="boolean" value="false"/>
+            <Property name="horizontalTextPosition" type="int" value="0"/>
+            <Property name="name" type="java.lang.String" value="toolBarButtonEditPaste" noResource="true"/>
+            <Property name="verticalTextPosition" type="int" value="3"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="toolBarButtonEditPasteActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JToolBar$Separator" name="jSeparator4">
+          <Properties>
+            <Property name="name" type="java.lang.String" value="jSeparator4" noResource="true"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="toolBarButtonPictogramsNextImage">
+          <Properties>
+            <Property name="text" type="java.lang.String" resourceKey="toolBarButtonPictogramsNextImage.text"/>
+            <Property name="focusable" type="boolean" value="false"/>
+            <Property name="horizontalTextPosition" type="int" value="0"/>
+            <Property name="name" type="java.lang.String" value="toolBarButtonPictogramsNextImage" noResource="true"/>
+            <Property name="verticalTextPosition" type="int" value="3"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="toolBarButtonPictogramsNextImageActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="toolBarButtonPictogramsCompoundSplitWord">
+          <Properties>
+            <Property name="text" type="java.lang.String" resourceKey="toolBarButtonPictogramsCompoundSplitWord.text"/>
+            <Property name="focusable" type="boolean" value="false"/>
+            <Property name="horizontalTextPosition" type="int" value="0"/>
+            <Property name="name" type="java.lang.String" value="toolBarButtonPictogramsCompoundSplitWord" noResource="true"/>
+            <Property name="verticalTextPosition" type="int" value="3"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="toolBarButtonPictogramsCompoundSplitWordActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="toolBarButtonPictogramsChangeName">
+          <Properties>
+            <Property name="text" type="java.lang.String" resourceKey="toolBarButtonPictogramsChangeName.text"/>
+            <Property name="focusable" type="boolean" value="false"/>
+            <Property name="horizontalTextPosition" type="int" value="0"/>
+            <Property name="name" type="java.lang.String" value="toolBarButtonPictogramsChangeName" noResource="true"/>
+            <Property name="verticalTextPosition" type="int" value="3"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="toolBarButtonPictogramsChangeNameActionPerformed"/>
+          </Events>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JDialog" name="documentLanguageDialog">
+      <Properties>
+        <Property name="modal" type="boolean" value="true"/>
+        <Property name="name" type="java.lang.String" value="documentLanguageDialog" noResource="true"/>
+        <Property name="resizable" type="boolean" value="false"/>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Component id="documentLanguageDialogDocumentLanguageLabel" max="32767" attributes="1"/>
+                          <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                          <Component id="documentLanguageDialogSpinnerDocumentLanguage" pref="154" max="32767" attributes="1"/>
+                      </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <Component id="documentLanguageDialogOKButton" min="-2" pref="138" max="-2" attributes="1"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="documentLanguageDialogCancelButton" pref="154" max="32767" attributes="1"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="documentLanguageDialogSpinnerDocumentLanguage" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="documentLanguageDialogDocumentLanguageLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="documentLanguageDialogCancelButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="documentLanguageDialogOKButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="documentLanguageDialogDocumentLanguageLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" resourceKey="documentLanguageDialogDocumentLanguageLabel.text"/>
+            <Property name="name" type="java.lang.String" value="documentLanguageDialogDocumentLanguageLabel" noResource="true"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JSpinner" name="documentLanguageDialogSpinnerDocumentLanguage">
+          <Properties>
+            <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
+              <SpinnerModel type="list">
+                <ListItem value="(todos)"/>
+                <ListItem value="Espa&#xf1;ol"/>
+                <ListItem value="English"/>
+                <ListItem value="Fran&#xe7;ais"/>
+                <ListItem value="Deutsch"/>
+                <ListItem value="Catal&#xe0;"/>
+              </SpinnerModel>
+            </Property>
+            <Property name="name" type="java.lang.String" value="documentLanguageDialogSpinnerDocumentLanguage" noResource="true"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="documentLanguageDialogOKButton">
+          <Properties>
+            <Property name="text" type="java.lang.String" resourceKey="documentLanguageDialogOKButton.text"/>
+            <Property name="name" type="java.lang.String" value="documentLanguageDialogOKButton" noResource="true"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="documentLanguageDialogOKButtonActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="documentLanguageDialogCancelButton">
+          <Properties>
+            <Property name="text" type="java.lang.String" resourceKey="documentLanguageDialogCancelButton.text"/>
+            <Property name="name" type="java.lang.String" value="documentLanguageDialogCancelButton" noResource="true"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="documentLanguageDialogCancelButtonActionPerformed"/>
+          </Events>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JDialog" name="imagesSizeDialog">
+      <Properties>
+        <Property name="modal" type="boolean" value="true"/>
+        <Property name="name" type="java.lang.String" value="imagesSizeDialog" noResource="true"/>
+        <Property name="resizable" type="boolean" value="false"/>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Component id="imagesSizeDialogOKButton" alignment="0" max="32767" attributes="1"/>
+                      <Component id="imagesSizeDialogImagesSizeLabel" alignment="0" max="32767" attributes="1"/>
+                  </Group>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="imagesSizeDialogSpinnerImagesSize" pref="93" max="32767" attributes="1"/>
+                      <Component id="imagesSizeDialogCancelButton" alignment="0" pref="93" max="32767" attributes="1"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="imagesSizeDialogImagesSizeLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="imagesSizeDialogSpinnerImagesSize" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="imagesSizeDialogOKButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="imagesSizeDialogCancelButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="imagesSizeDialogImagesSizeLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" resourceKey="imagesSizeDialogImagesSizeLabel.text"/>
+            <Property name="name" type="java.lang.String" value="imagesSizeDialogImagesSizeLabel" noResource="true"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JSpinner" name="imagesSizeDialogSpinnerImagesSize">
+          <Properties>
+            <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
+              <SpinnerModel initial="100" maximum="500" minimum="25" numberType="java.lang.Integer" stepSize="5" type="number"/>
+            </Property>
+            <Property name="name" type="java.lang.String" value="imagesSizeDialogSpinnerImagesSize" noResource="true"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="imagesSizeDialogCancelButton">
+          <Properties>
+            <Property name="text" type="java.lang.String" resourceKey="imagesSizeDialogCancelButton.text"/>
+            <Property name="name" type="java.lang.String" value="imagesSizeDialogCancelButton" noResource="true"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="imagesSizeDialogCancelButtonActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="imagesSizeDialogOKButton">
+          <Properties>
+            <Property name="text" type="java.lang.String" resourceKey="imagesSizeDialogOKButton.text"/>
+            <Property name="name" type="java.lang.String" value="imagesSizeDialogOKButton" noResource="true"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="imagesSizeDialogOKButtonActionPerformed"/>
+          </Events>
+        </Component>
+      </SubComponents>
+    </Container>
+  </NonVisualComponents>
+  <Properties>
+    <Property name="component" type="javax.swing.JComponent" editor="org.netbeans.modules.form.ComponentChooserEditor">
+      <ComponentRef name="mainPanel"/>
+    </Property>
+  </Properties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="2"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="2"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+    <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,2,34,0,0,3,111"/>
+  </AuxValues>
+</Form>
