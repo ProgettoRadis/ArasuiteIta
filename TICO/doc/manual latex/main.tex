@@ -1,0 +1,56 @@
+\documentclass[a4paper,11pt,spanish]{article}
+\usepackage [spanish] {babel}
+%\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+
+% Definición del formato
+% Basic packages
+\usepackage{graphicx}	% Needed to include figures in the document
+\usepackage[body={0.6in, 8.2in},left=1.25in,right=1.25in]{geometry}
+					% Geometry package for easy page margin
+\usepackage{fancyhdr}
+\usepackage[nottoc,notlof,notlot]{tocbibind}	% Show Bibliography in table of contents
+\usepackage{listings}
+
+\usepackage{color}
+
+\usepackage{hyperref}
+
+% Paragraph structure
+\parindent=0.5cm
+\parskip=5mm
+
+% Document
+\begin{document}
+
+% Página de tí­tulo
+\title{\vskip 170pt
+	TICO \\
+	\Huge \bfseries \strut{Manual de usuario} \strut
+	\vskip 30pt
+}
+\date{}
+
+\maketitle
+
+\thispagestyle{empty}
+% Licencia
+\newpage
+\begin{flushright}
+Este manual está publicado bajo licencia \\
+\textit{Creative Commons Attibution-NonCommercial-ShareAlike 2.5}. \\ 
+Para más información, dirigirse a  \\
+\texttt{http://creativecommons.org/licenses/by-nc-sa/2.5/es/}.
+\end{flushright}
+
+% Índices
+\newpage
+\tableofcontents
+\listoffigures
+
+% Manual
+\newpage
+\include{manual}        % Manual de usuario
+
+\end{document}

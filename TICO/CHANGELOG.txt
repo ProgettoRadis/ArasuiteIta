@@ -1,0 +1,38 @@
+Tico - an application to create and perform interactive communication
+       boards to be used by people with severe motor disabilities.
+
+Change-log file
+
+1.0.0 11-2005 
+    * First complete version.
+
+2.0.0 11-2006
+    * Full revision of previous version.
+    * Major code substitution.
+    * Interpreter still beta.
+
+2.1.0 06-2007
+    * Interpreter complete.
+    
+2.2.0 11-2007
+    * Added accessibility checking patterns.
+
+2.3.0 11-2008
+    * Added plug-ins interface.
+    * Added image gallery plug-in.
+    
+e1.0  05-2010
+    * Full revision of previous version.
+    * Added video visualization.
+    * Major Interpreter code substitution.
+    
+e1.1 04-2013
+    *Fullscreen in the interpreter
+    *SAPI4 and 5 Voice sithesizer
+    *Fixed bugs with sound in cells
+    *Google voice sithesizer
+    *Copy control cell
+    *Replaced mouseClicked events for mousePressed to improve compatibility with touchscreens
+    *Changed the behavior of SendText: now the text is accumulated in the textArea
+    *Modified the behavior of Read control cell: now it synthesizes the accumulated cells or read the content of textAreas if there is not sound present.
+    *Added enviroment actions

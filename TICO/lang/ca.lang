@@ -1,0 +1,865 @@
+# Translation into Catalán
+# Author: Carlota Canet
+# Sourceforge developer:
+# Email:
+# Date: 8 de marzo de 2010
+# Comments:
+#
+
+LANG_NAME=Catalan
+
+# Common
+ERROR=Errada
+WARNING=Avís
+INFO=Informació
+
+# tico
+TLauncher.LANGUAGE_ERROR=S’ha produit un error carregant l’idioma.
+TLauncher.NOT_EXIST_FILE_ERROR=Errada al llegir el projecte, el fitxer seleccionat no existeix.
+ TLauncher.INVALID_FILE_ERROR=Errada al llegir el projecte el fitxer seleccionat no és un fitxar de projecte per a Tico.
+
+# tico.board.components
+TCellView.INSERT_INTO=Inserir en
+TLabel.DEFAULT_TEXT=Etiqueta
+TTextArea.DEFAULT_TEXT=Àrea de text
+
+# tico.components
+TBackgroundSelectionPanel.TITLE=Fons
+TBackgroundSelectionPanel.COLOR=Color
+TBackgroundSelectionPanel.GRADIENT=Gradient
+TBackgroundSelectionPanel.LIGHTNESS=Lluminositat
+
+TBoardOrderPanel.TITLE=Ordre
+TBoardOrderPanel.WITHOUT_ORDER=Sense ordre
+TBoardOrderPanel.WITH_ORDER=Amb ordre
+TBoardOrderPanel.ADD_TO_ORDER_TOOLTIP=Afegir a l’orde d’escombrada.
+TBoardOrderPanel.REMOVE_FROM_ORDER_TOOLTIP=Eliminar de l’ordre d’escombrada
+
+TBorderSelectionPanel.TITLE=Vora
+TAnotherBorderSelectionPanel.TITLE=Efectes d’escombrada
+TBorderSelectionPanel.COLOR=Color
+TBorderSelectionPanel.SIZE=Tamany
+TBorderSelectionPanel.LIGHTNESS=Lluminositat
+
+TClickCellActionsPanel.TITLE=Accions
+TClickCellActionsPanel.GO_TO=Anar a
+TClickCellActionsPanel.ACCUMULATE_CELL=Acumular cel·la
+
+TClickControllerCellActionsPanel.TITLE=Accions
+TClickControllerCellActionsPanel.ACTION=Acció
+
+TColorComboBox.CHOOSE_BACKGROUND_COLOR=Escollir un color de fons
+TColorComboBox.COLOR=Color
+TColorComboBox.TRANSPARENT=Transparent
+TColorComboBox.OTHER=Un altre
+
+TFontModelChooser.TITLE=Font
+TFontModelChooser.SAMPLE_TEXT=.;147AaCcEeGgIiKkMm
+TFontModelChooser.COLOR=Color
+TFontModelChooser.LIGHTNESS=Lluminositat
+TFontModelChooser.SIZE=Tamany
+TFontModelChooser.BOLD=Negreta
+TFontModelChooser.ITALIC=Cursiva
+
+TGridOrderPanel.TITLE=Ordre
+TGridOrderPanel.ORDER_SEQUENTIAL=Seqüencial
+TGridOrderPanel.ORDER_COLUMNS=Columnes
+TGridOrderPanel.ORDER_ROWS=Files
+TGridOrderPanel.ORDER_CUSTOM=Personalitzat
+
+TImageChooser.TITLE=Imatge
+TImageChooser.TOP_TEXT_TOOLTIP=Text sobre la imatge
+TImageChooser.CENTER_TEXT_TOOLTIP=Text centrat en la imatge
+TImageChooser.BOTTOM_TEXT_TOOLTIP=Text sota la imatge
+TImageChooser.CENTER_RESIZE_TOOLTIP=Centrada
+TImageChooser.SCALE_RESIZE_TOOLTIP=Ampliada
+TImageChooser.FIT_RESIZE_TOOLTIP=Ajustada
+TImageChooser.BUTTON_SELECT=Seleccionar
+TImageChooser.BUTTON_CLEAR=Esborrar
+TImageChooser.BUTTON_OPEN=Des de Galeria
+TImageChooser.PREVIEW_EMPTY=Sense imatge
+TImageChooser.CHOOSE_IMAGE=Escull una imatge
+TImageChooser.CHOOSE_IMAGE_ERROR=Errada al llegir la imatge.
+
+TInitialBoardSelectionPanel.TITLE=Tauler inicial
+TInitialBoardSelectionPanel.INITIAL_BOARD=Tauler inicial
+
+TLineSelectionPanel.TITLE=Línia
+TLineSelectionPanel.COLOR=Color
+TLineSelectionPanel.LIGHTNESS=Lluminositat
+TLineSelectionPanel.SIZE=Tamany
+
+TOrderList.UP_TOOLTIP=Pujar
+TOrderList.DOWN_TOOLTIP=Baixar
+
+TSendTextChooser.TITLE=Enviar text
+TSendTextChooser.SEND=Enviar
+TSendTextChooser.TO=a
+TSendTextChooser.DURING=durant
+TSendTextChooser.SECONDS=segs.
+
+TSizeChooser.TITLE=Tamany
+TSizeChooser.WIDTH=Amplada
+TSizeChooser.HEIGHT=Altura
+
+TSoundChooser.TITLE=So
+TAnotherSoundChosser.TITLE=So d’escombrada
+TSoundChooser.NAME=Nom
+TSoundChooser.PLAY_TOOLTIP=Reproduir
+TSoundChooser.STOP_TOOLTIP=Parar reproducció
+TSoundChooser.BUTTON_SELECT=Seleccionar
+TSoundChooser.BUTTON_CLEAR=Esborrar
+TSoundChooser.INVALID_FORMAT_ERROR=Format de fitxer de so no reconegut.
+TSoundChooser.PLAY_FAILURE_ERROR=Errada al intentar reproduir el fitxer de so.
+TSoundChooser.OPEN_FILE_ERROR=Errada al llegir el fitxer de so. 
+TSoundChooser.CHOOSE_SOUND=Escollir un fitxer de so
+TSoundChooser.RECORD=Gravar
+
+TRecordSound.SAVE=Guardar
+TRecordSound.PLAY=Reproduir
+TRecordSound.RECORD=Gravar
+TRecordSound.PAUSE=Pausa
+TRecordSound.STOP=Parar
+TRecordSound.RESUME=Tornar
+TRecordSound.EXIT=Sortir
+TRecordSound.TITLE=Guardar fitxer de so
+
+TVideoChooser.TITLE=Vídeo
+TVideoChooser.NAME=Fitxer
+TVideoChooser.URL=URL
+TVideoChooser.BUTTON_SELECT=Seleccionar
+TVideoChooser.BUTTON_CLEAR=Esborrar
+TVideoChooser.BUTTON_INSERT_URL=Introduir
+TVideoChooser.OPEN_FILE_ERROR=Errada al llegir el fitxer de vídeo
+TVideoChooser.CHOOSE_VIDEO=Escollir un fitxer de vídeo
+TVideoChooser.INSERT_URL_VIDEO=Introduir la URL d'un vídeo
+TVideoChooser.INSERT_URL_ACCEPT=Acceptar
+
+TTextAlignSelectorPanel.TITLE=Alineació
+TTextAlignSelectorPanel.LEFT_HALIGN_TOOLTIP=Alinear a l’esquerra
+TTextAlignSelectorPanel.CENTER_HALIGN_TOOLTIP=Centrat
+TTextAlignSelectorPanel.RIGHT_HALIGN_TOOLTIP=Alinear a la dreta
+TTextAlignSelectorPanel.TOP_VALIGN_TOOLTIP=Ajustar amunt
+TTextAlignSelectorPanel.CENTER_VALIGN_TOOLTIP=Centrat
+TTextAlignSelectorPanel.BOTTOM_VALIGN_TOOLTIP=Ajustar avall
+
+# tico.components.resources
+BoardFilter.DESCRIPTION=Taulers de Tico
+CustomFilter.DESCRIPTION=Fitxers
+ImageFilter.DESCRIPTION=Fitxers d’imatges
+ProjectFilter.DESCRIPTION=Projectes de Tico
+SoundFilter.DESCRIPTION=Fitxers de so
+VideoFilter.DESCRIPTION=Fitxers de vídeo
+TicoFilter.DESCRIPTION=Fitxers de Tico
+
+# tico.editor
+TEditor.EDITOR_WINDOW_TITLE=Editor Tico
+TEditor.CELL_ORDER=Ordre de cel·les
+
+TEditorMenuBar.FILE_MENU=Arxiu
+TEditorMenuBar.EXPORT_MENU=Exportar
+TEditorMenuBar.EDIT_MENU=Edició
+TEditorMenuBar.VIEW_MENU=Veure
+TEditorMenuBar.TOOLS_MENU=Eines
+TEditorMenuBar.BOARD_MENU=Tauler
+TEditorMenuBar.PROJECT_MENU=Projecte
+TEditorMenuBar.GALLERY_MENU=Galeria de pictogrames
+TEditorMenuBar.IMAGES_MENU=Imatges
+TEditorMenuBar.HELP_MENU=Ajuda
+TEditorMenuBar.INTERPRET=Interpretar
+TEditorMenuBar.BOARD=Tauler
+TEditorMenuBar.TO_PNG=A PNG
+TEditorMenuBar.TO_JPG=A JPG
+TEditorMenuBar.VALIDATION_MENU=Validació
+TEditorMenuBar.VALIDATE_MENU=Validar
+TEditorMenuBar.ADMIN_MENU=Administrar
+TEditorMenuBar.DYNAMIC_MENU=Utilitats
+TEditorMenuBar.IMAGES_NEW=Insertar imatge
+TEditorMenuBar.IMAGES_MODIFY=Modificar imatge
+TEditorMenuBar.IMAGES_DELETE=Eliminar imatges
+TEditorMenuBar.LOAD_DB=Importar Base de Dades
+TEditorMenuBar.EXPORT_DB=Exportar Base de Dades
+TEditorExitAction.NAME=Sortir
+
+# tico.editor.actions
+TAddGridCellAction.NAME=Afegir cel·la
+TAddGridCellAction.CHOOSE_POSITION=Escollir la posició de la nova  cel•la:
+TAddGridCellAction.POSITION=Posició
+
+TBoardDeleteAction.NAME=Esborrar tauler
+TBoardDeleteAction.NO_BOARD_ERROR=Has de  seleccionar un tauler  per a esborrar
+TBoardDeleteAction.INITIAL_BOARD=El tauler inicial no es pot eliminar
+TBoardDeleteAction.CONFIRM_DELETE_BEGIN=Estàs a punt d’esborrar el tauler
+TBoardDeleteAction.CONFIRM_DELETE_END=aquesta operació no es pot desfer
+TBoardDeleteAction.CONFIRM_DELETE_QUESTION=N’està segur?
+TBoardDeleteAction.CONFIRM_DELETE_DELETE=Esborrat
+
+TBoardExportAction.NAME=Exportar tauler
+TBoardExportAction.NO_BOARD_ERROR=Per a exportar un tauler n’hi ha d’haver algun seleccionat. 
+TBoardExportAction.CHOOSE_EXPORT_BOARD=Exportar tauler
+TBoardExportAction.CHOOSE_FILE_EXISTS=El fitxer seleccionat ja existeix.
+TBoardExportAction.CHOOSE_FILE_EXISTS_QUESTION=Desitja sobreescriure’l?
+TBoardExportAction.CHOOSE_FILE_OVERWRITE=Sobreescriure
+TBoardExportAction.EXPORT_ERROR=Errada al exportar el tauler.
+
+TBoardExportImageAction.NAME=Exportar a
+TBoardExportImageAction.NO_BOARD_ERROR=Per a exportar la imatge hi ha d’haver un tauler seleccionat. 
+TBoardExportImageAction.CHOOSE_FILE_EXISTS=El fitxer seleccionat ja existeix.
+TBoardExportImageAction.CHOOSE_FILE_EXISTS_QUESTION=Desitja sobreescriure'l?
+TBoardExportImageAction.CHOOSE_FILE_OVERWRITE=Sobreescriure
+TBoardExportImageAction.EXPORT_ERROR=Errada al exportar la imatge.
+
+TBoardInterpretAction.NAME=Interpretar tauler
+TBoardInterpretAction.NO_BOARD_ERROR=Has de seleccionar un tauler per a interpretar-lo.
+TBoardInterpretAction.ASK_SAVE=El projecte actual ha estat modificat.
+TBoardInterpretAction.ASK_SAVE_QUESTION=Desitja guardar-lo abans d'interpretar el tauler?
+TBoardInterpretAction.MODIFIED_BOARD=Projecte modificat
+
+TBoardNewAction.NAME=Nou tauler
+TBoardNewAction.NO_PROJECT_ERROR=No pots crear un tauler sense haver creat abans un projecte.
+
+TBoardValidationAction.NAME=Tauler
+TBoardValidationAction.NO_BOARD_ERROR=Ha de seleccionar un tauler per a interpretar-lo.
+TBoardValidationAction.ASK_SAVE=El tauler actual ha estat modificat.
+TBoardValidationAction.ASK_SAVE_QUESTION=Desitja guardar-lo abans de validar-lo?
+TBoardValidationAction.MODIFIED_BOARD=Tauler modificat.
+
+TChangeGridOrderAction.NAME=Canviar a
+TChangeGridOrderAction.COLUMNS=columnes
+TChangeGridOrderAction.ROWS=files
+
+TDeleteAction.NAME=Esborrar
+TDeleteAction.DELETION=Esborrat
+TDeleteAction.ASK_DELETE_GRIDS_BEGIN=Les quadricules amb alguna cel·la seleccionada
+TDeleteAction.ASK_DELETE_GRIDS_END=també seran esborrades. N'està segur?
+
+TInsertGridCellAction.CHOOSE_POSITION=Escull la posició de la nova cel·la:
+TInsertGridCellAction.POSITION=Posició
+
+TProjectExitAction.NAME=Sortir
+TProjectExitAction.ASK_SAVE=El projecte actual ha estat modificat.
+TProjectExitAction.ASK_SAVE_QUESTION=Desitja guardar-lo abans de sortir?
+TProjectExitAction.MODIFIED_PROJECT=Projecte modificat
+
+TProjectImportAction.NAME=Importar
+TProjectImportAction.IMPORT=Importar
+TProjectImportAction.IMPORT_ERROR=Errada al importar.
+
+TProjectInterpretAction.NAME=Interpretar projecte
+TProjectInterpretAction.ASK_SAVE=El projecte actual ha estat modificat.
+TProjectInterpretAction.ASK_SAVE_QUESTION=Desitja guardar-lo abans d'interpretar-lo?
+TProjectInterpretAction.MODIFIED_PROJECT=Projecte modificat.
+
+TProjectNewAction.NAME=Nou
+TProjectNewAction.ASK_SAVE=El projecte actual ha estat modificat.
+TProjectNewAction.ASK_SAVE_QUESTION=Desitja guardar-lo abans de crear-ne un de nou?
+TProjectNewAction.MODIFIED_PROJECT=Projecte modificat.
+
+TProjectOpenAction.NAME=Obrir
+TProjectOpenAction.ASK_SAVE=El projecte actual ha estat modificat.
+TProjectOpenAction.ASK_SAVE_QUESTION=Desitja guardar-lo abans de crear-ne un de nou?
+TProjectOpenAction.MODIFIED_PROJECT=Projecte modificat
+TProjectOpenAction.OPEN_PROJECT=Obrir projecte
+TProjectOpenAction.OPEN_ERROR=Errada al llegir el projecte.
+
+TProjectPrintAction.NAME=Imprimir
+TProjectPrintAction.PRINT_ERROR=Errada al llegir el projecte.
+
+TProjectSaveAction.NAME=Guardar
+TProjectSaveAction.SAVE_PROJECT=Guardar projecte
+TProjectSaveAction.CHOOSE_FILE_EXISTS=El fitxer seleccionat ja existeix.
+TProjectSaveAction.CHOOSE_FILE_EXISTS_QUESTION=Desitja sobreescriure'l?
+TProjectSaveAction.CHOOSE_FILE_OVERWRITE=Sobrescriure
+TProjectSaveAction.SAVE_ERROR=Errada al guardar el projecte.
+
+TProjectSaveAsAction.NAME=Guardar com
+TProjectSaveAsAction.SAVE_PROJECT=Guardar projecte
+TProjectSaveAsAction.CHOOSE_FILE_EXISTS=El fitxer seleccionat ja existeix.
+TProjectSaveAsAction.CHOOSE_FILE_EXISTS_QUESTION=Desitja sobreescriure'l?
+TProjectSaveAsAction.CHOOSE_FILE_OVERWRITE=Sobrescriure
+TProjectSaveAsAction.SAVE_ERROR=Errada al guardar el projecte.
+
+TProjectValidationAction.NAME=Projecte
+TProjectValidationAction.ASK_SAVE=El projecte actual ha estat modificat.
+TProjectValidationAction.ASK_SAVE_QUESTION=Desitja guardar-lo abans de validar-lo?
+TProjectValidationAction.MODIFIED_PROJECT=Projecte modificat.
+
+TUsersAdminAction.NAME=Usuaris
+TLimitationsAdminAction.NAME=Limitacions
+TRulesAdminAction.NAME=Regles
+TAddGridColumnAction.NAME=Afegir columna
+TAddGridRowAction.NAME=Afegir fila
+TAdjustHorizontalGapAction.NAME=Ajustar distància horitzontal
+TAdjustVerticalGapAction.NAME=Ajustar distància vertical
+TAlignBottomAction.NAME=Alinear a baix
+TAlignCenterHorizontalAction.NAME=Alinear centre horitzontal
+TAlignCenterVerticalAction.NAME=Alinear centre vertical
+TAlignLeftAction.NAME=Alinear esquerra
+TAlignRightAction.NAME=Alinear dreta
+TAlignTopAction.NAME=Alinear amunt
+TBackAction.NAME=Enviar darrere
+TBoardPropertiesAction.NAME=Propietats
+TComponentDialogAction.NAME=Propietats
+TCopyAction.NAME=Copiar
+TCutAction.NAME=Retallar
+TDeleteGridCellAction.NAME=Esborrar cel·la
+TEditorPreferencesAction.NAME=Preferències
+TEditorAboutAction.NAME=Sobre...
+TExtractGridCellAction.NAME=Extreure cel·la
+TFitHeightAction.NAME=Ajustar altura
+TFitWidthAction.NAME=Ajustar amplada
+TFrontAction.NAME=Enviar davant
+THandlerCellAction.NAME=Cel·la
+THandlerControllerCellAction.NAME=Cel·la de control
+THandlerGridAction.NAME=Quadricula
+THandlerLabelAction.NAME=Etiqueta
+THandlerLineAction.NAME=Línia
+THandlerOvalAction.NAME=Cercle
+THandlerRectangleAction.NAME=Rectangle
+THandlerRoundRectAction.NAME=Rectangle Arrodonit
+THandlerSelectionAction.NAME=Seleccionar
+THandlerTextAreaAction.NAME=Àrea de text
+TPasteAction.NAME=Enganxar
+TProjectPropertiesAction.NAME=Propietats
+TRedoAction.NAME=Tornar a fer
+TReorderGridAction.NAME=Reordenar quadricula
+TSelectAllAction.NAME=Seleccionar tot
+TUndoAction.NAME=Desfer
+
+# tico.editor.dialogs
+TAboutDialog.TITLE=Sobre...
+TAboutDialog.EDITOR_VERSION=Editor Tico e1.5 r2
+TAboutDialog.INTERPRETER_VERSION=Intèrpret Tico e1.5 r2
+TAboutDialog.DEVELOPERS=Programadors
+TAboutDialog.OTHER_DEVELOPERS=Altres...
+TAboutDialog.DIRECTOR=Director.
+TAboutDialog.COLLABORATORS=Col·laboradors
+TAboutDialog.ORGANIZATIONS=Entitats
+TAboutDialog.YEAR=Any
+TAboutDialog.LICENSE=Llicència
+TAboutDialog.BUTTON_ACCEPT=Acceptar
+
+TBoardDialog.TITLE=Tauler
+TBoardDialog.TAB_PROPERTIES=Propietats
+TBoardDialog.TAB_BROWSE_ORDER=Ordre d'escombrada
+TBoardDialog.BOARD_NAME=Nom
+TBoardDialog.ERROR_EMPTY_NAME=No pots asignar-li un nom buit.
+TBoardDialog.ERROR_REPEATED_NAME=No pots asignar-li un nom repetit.
+
+TCellDialog.TITLE=Cel·la
+TCellDialog.ID=Identificador
+TCellDialog.TAB_TEXT=Text
+TCellDialog.TAB_PROPERTIES=Propietats
+TCellDialog.TAB_ACTIONS=Accions
+TCellDialog.TEXT_FILED=Text
+TCellDialog.ALTERNATIVE_IMAGE=Imatge alternativa
+TCellDialog.ENVIRONMENT=Entorn
+TCellDialog.TAB_MULTIMEDIA=Multimèdia
+
+TControllerCellDialog.TITLE=Cel·la de control
+TControllerCellDialog.ID=Identificador
+TControllerCellDialog.TAB_TEXT=Text
+TControllerCellDialog.TAB_ACTIONS=Accions
+TControllerCellDialog.TEXT_FILED=Text
+TControllerCellDialog.TEXT_DEFAULT=Sortir
+
+TComponentDialog.ERROR_EMPTY_ID=No pots asignar-li un identificador buit.
+TComponentDialog.ERROR_REPEATED_ID=No pots asignar-li un identificador repetit.
+
+TEditorDialog.TITLE=Preferències
+TEditorDialog.TAB_PREFERENCES=Preferències
+TEditorDialog.LANGUAGE=Idioma
+TEditorDialog.LANGUAGE_CHANGE_ADVICE=Perquè el canvi d'idioma es realitzi has de reiniciar l'aplicació.
+TEditorDialog.LANGUAGE_CHANGE=Canvi d'idioma
+
+TGridCellDialog.TITLE=Cel·la de quadricula
+TGridCellDialog.TAB_GRID=Quadricula
+
+TGridSizeOptionPane.TITLE=Escollir un tamany
+TGridSizeOptionPane.ROWS=Files
+TGridSizeOptionPane.COLUMNS=Columnes
+TGridSizeOptionPane.BUTTON_ACCEPT=Acceptar
+
+#Galeria d'imatges
+TImageGalleryDialog.TITLE=Recerca d'imatges
+TImageGalleryDialog.ERROR=Errada
+TImageGalleryDialog.MESSAGE=Ha de seleccionar una imatge
+TImageGalleryDialog.INSERT=Insertar
+TImageGalleryDialog.CANCEL=Cancel·lar
+TImageGalleryDialog.GALLERY_MANAGER=Gestor de recursos
+
+TIGManageGallery.NAME=Imatges
+TIGManageGallery.INSERT=Insertar nova imatge
+TIGManageGallery.MODIFY=Modificar imatge
+
+TIGManageGalleryDialog.NAME=Insertar Nova Imatge
+TIGManageGalleryDialog.IMAGE=Imatge
+TIGManageGalleryDialog.END=Acceptar
+TIGManageGalleryDialog.CANCEL=Cancel·lar
+TIGManageGalleryDialog.REPEATED_IMAGES_TITLE=Si la imatge existeix
+TIGManageGalleryDialog.REPLACE_IMAGE=Reemplaçar imatge
+TIGManageGalleryDialog.ADD_IMAGE=Afegir imatge
+
+TIGKeyWordManageGalleryDialog.NAME=Termes clau
+
+TIGKeyWordInsertDialog.NAME=Termes clau
+TIGKeyWordInsertDialog.LABEL=Afegir nous termes clau:
+TIGKeyWordInsertDialog.ADD=Afegir
+
+TIGTableModel.FIRST_COLUMN=Termes clau
+TIGTableModel.SECOND_COLUMN=Associar
+
+TIGSearchImageDialog.NAME=Modificar imatge
+TIGSearchImageDialog.MESSAGE=Ha de seleccionar una imatge
+TIGSearchImageDialog.ERROR=Imatge no seleccionada
+TIGSearchImageDialog.MODIFY=Modificar imatge
+TIGSearchImageDialog.DELETE=Eliminar imatge
+TIGSearchImageDialog.DELETE_ALL=Eliminar imatges
+TIGSearchImageDialog.END=Cancel·lar
+TIGSearchImageDialog.ASK=Desitja eliminar la imatge seleccionada?
+TIGSearchImageDialog.DELETE_MESSAGE=Atenció! Està a punt d'esborrar
+TIGSearchImageDialog.ENSURE_DELETE=imatge/s. Està segur de que desitja eliminar-les?
+TIGSearchImageDialog.CANCEL=Cancel·lar
+TIGSearchImageDialog.MESSAGE_NO_SEARCH=Ha de realitzar una recerca
+TIGSearchImageDialog.MESSAGE_NO_IMAGES_FOUND=No s'han trobat imatges per a esborrar
+
+TIGKeyWordGalleryDialog.NAME=Gestionar termes clau
+TIGKeyWordGalleryDialog.END=Acceptar
+TIGKeyWordGalleryDialog.ADD=Afegir
+TIGKeyWordGalleryDialog.MODIFY=Modificar
+TIGKeyWordGalleryDialog.DELETE=Eliminar
+
+TIGImageDataDialog.NAME=Modificar imatge
+TIGImageDataDialog.DATANAME=Nom
+TIGImageDataDialog.END=Acceptar
+TIGImageDataDialog.CANCEL=Cancel·lar
+
+TIGImageDialog.TEXT=Imatge no disponible
+
+TIGInsertImageAction.NAME=Errada
+TIGInsertImageAction.MESSAGE=Errada al carregar la imatge.
+
+TIGKeyWordSearchDialog.NO_RESULTS=No s'ha trobat cap imatge associada
+TIGKeyWordSearchDialog.NO_CATEGORIES=No s'han inserit categories per a la recerca
+TIGKeyWordSearchDialog.NAME=Resultats de la recerca
+TIGKeyWordSearchDialog.CATEGORY_SEARCH=Per termes clau
+TIGKeyWordSearchDialog.SEARCH=Buscar
+TIGKeyWordSearchDialog.AND=i
+TIGKeyWordSearchDialog.OR=o
+
+TIGSearchNameDialog.NAME_SEARCH=Per nom d'imatge
+TIGSearchNameDialog.SEARCH=Buscar:
+TIGSearchNameDialog.SEARCH_BUTTON=Buscar
+TIGSearchNameDialog.NO_RESULTS=No s'ha trobat cap imatge amb aquest nom
+TIGSearchNameDialog.NAME_RESULT=Resultats de la recerca
+
+TIGManageImageAction.EMPTY=No hi ha imatges en la base de dades
+TIGManageImageAction.ERROR=Base de dades buida
+
+TIGDeleteKeyWordAction.ASK=Desitja eliminar el terme clau seleccionat?
+TIGDeleteKeyWordAction.NAME=Eliminar terme clau
+
+TIGModifyImageAction.ERROR=Errada al modificar la imatge
+TIGModifyImageAction.NAME=Modificar Imatge
+
+TIGOperationDB.CANCELED=Operació cancel
+
+TIGImportDBDialog.NAME=Importar Base de Dades
+TIGImportDBDialog.IMAGES=Seleccionar
+TIGImportDBDialog.EXIT=Cancel·lar
+TIGImportDBDialog.IMAGES_SEL=Seleccioni el directori que conté la Base de Dades
+TIGImportDBDialog.TEXT=Seleccionar
+TIGImportDBDialog.TEXT_FILE=Seleccioni el fitxer que conté les categories (opcional)
+TIGImportDBDialog.IMPORT_BUTTON=Importar
+TIGImportDBDialog.DB=Importar
+TIGImportDBDialog.IMAGES_DIRECTORY=Directori de Base de Dades
+TIGImportDBDialog.ASSOCIATION_FILE=Fitxer amb les Associacions
+TIGImportDBDialog.ERROR=Errada al carregar la Base de Dades
+TIGImportDBDialog.ERROR_EMPTY_DIRECTORY=Ha de seleccionar un directori
+TIGImportDBDialog.ERROR_FILE=Ha de seleccionar un fitxer
+TIGImportDBDialog.PROGRESS=Progrés
+TIGImportDBDialog.PROGRESS_TASK=Progrés de la tasca
+TIGImportDBDialog.ERROR_FORMAT_DATABASE=Format erroni de Base de Dades
+TIGImportDBDialog.REPEATED_IMAGES_TITLE=Si hi ha imatges repetides...
+TIGImportDBDialog.REPLACE_IMAGES=Reemplaçar imatges
+TIGImportDBDialog.ADD_IMAGES=Afegir imatges
+TIGImportDBDialog.IMPORT_COMPLETED=La Base de Dades s'ha importat correctament
+TIGImportDBDialog.IMPORT_WITH_ERRORS=La Base de Dades s'ha importat amb errors
+TIGImportDBDialog.IMPORT_INFO=Per a més informació consulti el fitxer
+TIGImportDBDialog.IMPORT_WITH_ERRORS_MESSAGE=Les següents imatges no s'han importat:
+
+TIGExportDBDialog.NAME=Exportar Base de Dades
+TIGExportDBDialog.IMAGES=Seleccionar
+TIGExportDBDialog.EXIT=Cancel·lar
+TIGExportDBDialog.IMAGES_SEL=Seleccioni el directori on exportar les imatges
+TIGExportDBDialog.TEXT=Seleccionar
+TIGExportDBDialog.DB=Exportar
+TIGExportDBDialog.IMAGES_DIRECTORY=Directori d'Imatges
+TIGExportDBDialog.ERROR=Errada al exportar la Base de Dades
+TIGExportDBDialog.ERROR_IM=Ha de seleccionar un directori
+TIGExportDBDialog.PROGRESS=Progrés
+TIGExportDBDialog.MESSAGE_NO_IMAGES_FOUND=No s'han trobat imatges per a exportar
+TIGExportDBDialog.EXPORT_COMPLETED=La Base de Dades s'ha exportat correctament
+
+TIGDeleteImagesDialog.DELETE_COMPLETED=Imatges esborrades correctament
+
+TIGModifyImageNameDialog.PREVIEW_EMPTY=Sense imatge
+
+TIGThumbImageDialog.TEXT=Imatge no disponible
+
+TIGLoadingDialog.NAME=Carregant Base de Dades.
+TIGLoadingDialog.TEXT=Aquesta operació pot tardar varis minuts.
+
+TIGThumbnailsDialog.PREVIOUS=Anterior
+TIGThumbnailsDialog.NEXT=Següent
+TIGThumbnailsDialog.ONE_IMAGE_FOUND=1 imatge trobada
+TIGThumbnailsDialog.IMAGES_FOUND=imatges trobades
+TIGThumbnailsDialog.NO_RESULTS=No s'ha trobat cap resultat
+TIGThumbnailsDialog.NAME_RESULT=Resultats
+
+TLabelDialog.TITLE=Etiqueta
+TLabelDialog.TAB_TEXT=Text
+TLabelDialog.TAB_PROPERTIES=Propietats
+TLabelDialog.TEXT=Text
+
+TLineDialog.TITLE=Línia
+TLineDialog.TAB_PROPERTIES=Propietats
+
+TPolygonDialog.TITLE=Polígon
+TPolygonDialog.TAB_PROPERTIES=Propietats
+
+TProjectDialog.TITLE=Propietats
+TProjectDialog.TAB_PROPERTIES=Propietats
+
+
+TPropertiesDialog.BUTTON_ACCEPT=Acceptar
+TPropertiesDialog.BUTTON_APPLY=Aplicar
+TPropertiesDialog.BUTTON_CANCEL=Cancel·lar
+
+TTextAreaDialog.TITLE=Àrea de text
+TTextAreaDialog.ID=Identificador
+TTextAreaDialog.TAB_TEXT=Text
+TTextAreaDialog.TAB_PROPERTIES=Propietats
+TTextAreaDialog.TEXT=Text
+
+# tico.editor.handlers
+TBasicMarqueeHandler.ALIGNMENT=Alineació
+
+# tico.editor.toolbars
+TAlignToolBar.NAME=Alinear
+TEditionToolBar.NAME=Accions
+TFileToolBar.NAME=Arxiu
+TFormatToolBar.NAME=Format
+TFormatToolBar.APPLY_BACKGROUND_TOOLTIP=Aplicar fons
+TFormatToolBar.APPLY_BORDER_TOOLTIP=Aplicar vora
+THandlersToolBar.NAME=Eines
+TTextToolBar.NAME=Text
+TTextToolBar.APPLY_TEXT_TOOLTIP=Aplicar text
+TTextToolBar.BOLD=Negreta
+TTextToolBar.ITALIC=Cursiva
+
+#tico.interpreter
+TInterpreter.INTERPRETER_WINDOW_TITLE=Intèrpret Tico
+TInterpreter.FILE_MENU=Arxiu
+TInterpreterMenuBar.ACTION_MENU=Accions
+TInterpreterProjectOpenAction.NAME=Obrir
+TInterpreterExitAction.NAME=Sortir
+TInterpreterRunAction.NAME=Començar
+TInterpreterReturnAction.NAME=Tornar
+TInterpreterStopAction.NAME=Aturar
+TInterpreterCopyAction.NAME=Copiar
+TInterpreterMenuBar.VIEW_MENU=Veure
+TInterpreterLanguaje.NAME=Idioma
+TInterpreterMenuBar.MODE=Mode de ratolí
+TInterpreter.VALIDATION_MENU=Validació
+TEditorMenuBar.VALIDATE=Validar opcions de l'intèrpret
+TInterpreterFullscreenAction.NAME=Pantalla Completa
+
+TInterpreterMouseMode.AUTOMATIC_SCANNING=Escaneig automàtic
+TInterpreterMouseMode.DIRECT_SELECTION=Selecció directa
+TInterpreterMouseMode.MANUAL_SCANNING=Escaneig manual
+TInterpreterOptions.NAME=Opcions de l'Intèrpret
+TInterpreterRead.NAME=Llegir
+TInterpreterReadAction.NAME=Llegir
+TInterpreterControllerAction.NAME=Controlador
+TInterpreterUndoAction.NAME=Esborrar cel·la
+TInterpreterUndoAllAction.NAME=Esborrar cel·les
+TInterpreterHomeAction.NAME=Inici
+TInterpreterValidationAction.NAME=Intèrpret
+
+TInterpreterOptionDialog.NAME=Opcions de l'intèrpret
+TInterpreterOptionDialog.CURSOR_IMAGE=Imatge del cursor
+TInterpreterOptionDialog.MAX_ACCUMULATED_CELLS=Número màxim de cel·les acumulades
+TInterpreterOptionDialog.MOUSE_MODE=Mode de Ratolí
+TInterpreterOptionDialog.WAIT_CURSOR=Espera del cursor en segons
+TInterpreterOptionDialog.BUTTON_ACCEPT=Acceptar
+TInterpreterOptionDialog.BUTTON_CANCEL=Cancel·lar
+
+#tico.rules
+TValidationDialog.BOARD_TITLE=Validar tauler
+TValidationDialog.PROJECT_TITLE=Validar projecte
+TValidationDialog.INTERPRETER_TITLE=Validar intèrpret
+TValidationDialog.TEXT_TITLE=Limitacions
+TValidationDialog.TAB=Validar
+TValidationDialog.BUTTONDESIGN=Suggerències de disseny
+TValidationDialog.BUTTONVALIDATE=Validar
+TValidationDialog.CLOSE_BUTTON=Tancar
+TValidationDialog.MOTOR=Grau de limitació motriu:
+TValidationDialog.PSYCHIC=Grau de limitació cognitiva:
+TValidationDialog.SENSORY=Grau de limitació sensorial:
+TValidationDialog.LOAD_USER_BUTTON=Carregar usuari
+
+TGenerateRules.ERROR_MESSAGE=Errada en la regla
+
+Rules.MOTOR=motriu
+Rules.PSYCHIC=cognitiva
+Rules.SENSORY=sensorial
+Rules.PROJECTNUMBOARDS=número taulers P
+Rules.BOARDHEIGHT=altura T
+Rules.BOARDWIDTH=amplada T
+Rules.BOARDLIGHTNESS=lluminosidad fons T
+Rules.BOARDNOIMAGE=sense imatge T
+Rules.BOARDSOUND=so T
+Rules.CELLHEIGHT=altura C
+Rules.CELLWIDTH=amplada C
+Rules.CELLLIGHTNESS=lluminosidad fons C
+Rules.CELLBORDERLIGHTNESS=lluminosidad vora C
+Rules.CELLBORDERWIDTH=amplada vora C
+Rules.CELLTEXT=text C
+Rules.CELLTEXTSIZE=tamany text C
+Rules.CELLTEXTTYPE=text majúscula C
+Rules.CELLTEXTFONT=font Arial/Verdana C
+Rules.CELLTEXTSTYLE=text sense format C
+Rules.CELLTEXTLIGHTNESS=lluminositat text C
+Rules.CELLSOUND=so C
+Rules.CELLROW=fila C
+Rules.CELLCOLUMN=columna C
+Rules.CELLNOIMAGE=sense imatge C
+Rules.CELLIMAGEHEIGHT=altura imatge C
+Rules.CELLIMAGEWIDTH=amplada imatge C
+Rules.CELLNOALTERNATIVEICON=sense icona alternativa C
+Rules.CELLICONHEIGHT=altura icona alternativa C
+Rules.CELLICONWIDTH=amplada icona alternativa C
+Rules.INTMOUSEBAR=escombrada I
+Rules.INTDELAY=velocitat I
+Rules.INTACCUMULATED=paraules acumulades I
+Rules.M_CELL_WIDTH=amplada C
+Rules.M_CELL_HEIGHT=altura C
+Rules.S_CELL_WIDTH=amplada C
+Rules.S_CELL_HEIGHT=altura C
+Rules.P_NUM_BOARDS=número taulers P
+Rules.P_BOARD_NOIMAGE=sense imatge T
+Rules.P_CELL_NOIMAGE=sense imatge C
+Rules.P_CELL_TEXT=text C
+Rules.P_CELL_TEXTTYPE=majúscula C
+Rules.S_CELL_BORDERWIDTH=amplada vora C
+Rules.S_CELL_SOUND=so C
+Rules.S_CELL_NOIMAGE=sense imatge C
+Rules.S_CELL_TEXTSIZE=tamany text C
+Rules.S_CELL_TEXTFONT=Arial/Verdana C
+Rules.S_CELL_TEXTSTYLE=sense format C
+Rules.S_BOARD_WIDTH=amplada T
+Rules.S_BOARD_HEIGHT=altura T
+Rules.S_BOARD_NOIMAGE=sense imatge T
+Rules.S_BOARD_SOUND=so T
+Rules.S_LIGHTNESS_RANGE=contrast
+Rules.M_INT_MOUSEBAR=escombrada I
+Rules.M_INT_DELAY=velocitat I (ms)
+Rules.P_INT_ACCUMULATED=paraules acumulades I
+
+TUsersAdminDialog.TITLE=Administració d'usuaris
+TUsersAdminDialog.TAB=Usuaris
+TUsersAdminDialog.TEXT_TITLE=Limitacions
+TUsersAdminDialog.CLOSE_BUTTON=Tancar
+TUsersAdminDialog.LOAD_USER_BUTTON=Carregar usuari
+TUsersAdminDialog.SAVE_USER_BUTTON=Guardar usuari
+TUsersAdminDialog.DELETE_USER_BUTTON=Esborrar usuari
+TUsersAdminDialog.DELETE_MESAGE=Està segur de que desitja esborrar aquest usuari?
+TUsersAdminDialog.ACCEPT_OPTION=Acceptar
+TUsersAdminDialog.CANCEL_OPTION=Cancel·lar
+TUsersAdminDialog.MESSAGE=L'usuari s'ha guardat correctament.
+TUsersAdminDialog.ERROR_MESSAGE=L'usuari no ha pogut guardar-se correctament.
+TUsersAdminDialog.DELETE_OK_MESSAGE=L'usuari s'ha esborrat correctament.
+TUsersAdminDialog.DELETE_ERROR_MESSAGE=L'usuari no ha pogut esborrar-se correctament.
+
+TLimitationsAdminDialog.TITLE=Administració de limitacions
+TLimitationsAdminDialog.TAB=Limitacions
+TLimitationsAdminDialog.TEXT_LIMIT=Limitacions
+TLimitationsAdminDialog.TEXT_PARAM=Paràmetres
+TLimitationsAdminDialog.TEXT_TABLE=Requisits a complir
+TLimitationsAdminDialog.LABEL_LIMT=Limitació:
+TLimitationsAdminDialog.LABEL_PARAM=Paràmetre:
+TLimitationsAdminDialog.INFOLABEL=C = Cel·la / T = Tauler / P = Projecte
+TLimitationsAdminDialog.SAVE_BUTTON=Guardar modificacions
+TLimitationsAdminDialog.CLOSE_BUTTON=Tancar
+TLimitationsAdminDialog.LOAD_BUTTON=Carregar valors predeterminats
+TLimitationsAdminDialog.MOTOR=motriu
+TLimitationsAdminDialog.PSYCHIC=cognitiva
+TLimitationsAdminDialog.SENSORY=sensorial
+TLimitationsAdminDialog.RANGE=rang
+TLimitationsAdminDialog.ACCEPT_OPTION=Acceptar
+TLimitationsAdminDialog.CANCEL_OPTION=Cancel·lar
+TLimitationsAdminDialog.DELETE_MESSAGE=Les cel·les no poden estar buides. Modifiqui el valor o esborri una fila completa.
+TLimitationsAdminDialog.DELETE_ROW=Esborrar fila completa
+TLimitationsAdminDialog.ADD_ROW=Afegir fila
+TLimitationsAdminDialog.DELETE_LIMIT=Esborrar limitació
+TLimitationsAdminDialog.ADD_LIMIT=Afegir limitació
+TLimitationsAdminDialog.DELETE_PARAM=Esborrar paràmetre
+TLimitationsAdminDialog.ADD_PARAM=Afegir paràmetre
+TLimitationsAdminDialog.MAX_LIMIT=S'ha sobrepassat el número màxim de limitacions.
+TLimitationsAdminDialog.MESSAGE=Les dades s'han guardat correctament.
+TLimitationsAdminDialog.ERROR_MESSAGE=Les dades no s'han pogut guardar correctament.
+TLimitationsAdminDialog.DELETE_OK_MESSAGE=Les dades s'han esborrat correctament.
+TLimitationsAdminDialog.DELETE_ERROR_MESSAGE=Les dades no s'han pogut esborrar correctament.
+TLimitationsAdminDialog.INFO_BLANKCELLS=Totes les files han d'estar completes.
+TLimitationsAdminDialog.INT=Tipus numèric
+TLimitationsAdminDialog.BOOL=Tipus verdader/fals
+TLimitationsAdminDialog.ACCEPT_OPTION=Acceptar
+TLimitationsAdminDialog.CANCEL_OPTION=Cancel·lar
+TLimitationsAdminDialog.DELETE_LIM_MESAGE=Està segur de que desitja esborrar aquesta limitació?
+TLimitationsAdminDialog.DELETE_PARAM_MESAGE=Està segur de que desitja esborrar aquest paràmetre?
+
+TRulesAdminDialog.TITLE=Administració de regles
+TRulesAdminDialog.TEXT_TITLE=Regles
+TRulesAdminDialog.TAB=Regles
+TRulesAdminDialog.PROJECT=Projecte
+TRulesAdminDialog.BOARD=Tauler
+TRulesAdminDialog.CELL=Cel·la
+TRulesAdminDialog.ALL=Totes
+TRulesAdminDialog.INTERPRETER=intèrpret
+TRulesAdminDialog.CLOSE_BUTTON=Tancar
+TRulesAdminDialog.SELECT=Seleccionar regla:
+TRulesAdminDialog.RULE=Regla
+TRulesAdminDialog.FUNCTION=Tipus de funció:
+TRulesAdminDialog.ATTRIBUTE=Atributs o característiques d'elements:
+TRulesAdminDialog.PARAMETER=Paràmetres de limitacions:
+TRulesAdminDialog.EXIST=L'atribut 'existeix'
+TRulesAdminDialog.TYPE=L'atribut 'és de tipus' paràmetre
+TRulesAdminDialog.COMPARATIONMIN=Atribut 'és menor que' paràmetre
+TRulesAdminDialog.COMPARATIONMAX=Atribut 'és major que' paràmetre
+TRulesAdminDialog.LIGHTNESS=contrast entre atributs 'és major que' paràmetre
+TRulesAdminDialog.INFOLABEL=C = Cel·la / T = Tauler / P = Projecte / I = Intèrpret
+TRulesAdminDialog.LANGUAGE=Missatge a
+TRulesAdminDialog.TOOLTIP_ATR=Característiques dels elements d'un projecte
+TRulesAdminDialog.TOOLTIP_FUN=Funció per a validar els atributs d'acord als paràmetres
+TRulesAdminDialog.TOOLTIP_PAR=Requisits a complir per als atributs
+TRulesAdminDialog.REMOVE_BUTTON=Esborrar regla
+TRulesAdminDialog.EDIT_BUTTON=Modificar regla
+TRulesAdminDialog.ADD_BUTTON=Afegir nova regla
+TRulesAdminDialog.LOAD_BUTTON=Carregar regles predeterminades
+TRulesAdminDialog.LOAD_RULES_MESSAGE=Està segur de que desitja carregar les regles inicials? Les regles actuals s'esborraran
+TRulesAdminDialog.LOAD_ERROR_MESSAGE=Les regles no s'han carregat correctament.
+TRulesAdminDialog.LOAD_OK_MESSAGE=Les regles s'han carregat correctament.
+TRulesAdminDialog.DELETE_MESAGE=Està segur de que desitja esborrar aquesta regla?
+TRulesAdminDialog.DELETE_OK_MESSAGE=La regla s'ha esborrat correctament.
+TRulesAdminDialog.DELETE_ERROR_MESSAGE=La regla no ha pogut esborrar-se correctament.
+TRulesAdminDialog.EDIT_OK_MESSAGE=La regla s'ha modificat correctament. Si ha modificat el missatje ha de reiniciar l'aplicació perquè es realitzin els canvis.
+TRulesAdminDialog.EDIT_ERROR_MESSAGE=La regla no ha pogut modificar-se correctament.
+TRulesAdminDialog.ACCEPT_OPTION=Acceptar
+TRulesAdminDialog.CANCEL_OPTION=Cancel·lar
+
+TAddRule.TITLE=Afegir regla
+TAddRule.TAB=Afegir
+TAddRule.FUNCTION=Tipus de funció:
+TAddRule.ATTRIBUTE=Atributs o característiques d'elements:
+TAddRule.PARAMETER=Paràmetres de limitacions:
+TAddRule.EXIST=L'atribut 'existeix?'
+TAddRule.TYPE=L'atribut 'és de tipus' paràmetre?
+TAddRule.COMPARATIONMIN=Atribut 'és menor que' paràmetre
+TAddRule.COMPARATIONMAX=Atribut'és major que' paràmetre
+TAddRule.LIGHTNESS=Atributs, 'el seu contrast és major que' paràmetre
+TAddRule.INFOLABEL=C = Cel·la / T = Tauler / P = Projecte / I = Intèrpret
+TAddRule.LANGUAGE=Missatje a
+TAddRule.TOOLTIP_ATR=Característiques dels elements d'un projecte
+TAddRule.TOOLTIP_FUN=Funció per a validar els atributs d'acord als paràmetres
+TAddRule.TOOLTIP_PAR=Requisits a complir pels atributs
+TAddRule.SAVE_BUTTON=Guardar regla
+TAddRule.CLOSE_BUTTON=Tancar
+TAddRule.INFO_BLANK_FUN=Ha d'elegir una funció
+TAddRule.INFO_BLANK_ATR=Ha d'elegir un atribut
+TAddRule.INFO_BLANK_PAR=Ha d'elegir un paràmetre
+TAddRule.INFO_BLANK_ES=Ha d'escriure un missatge
+TAddRule.SAVE_OK_MESSAGE = La regla s'ha guardat correctament. Perquè es realitzin els canvis en el missatge ha de reiniciar l'aplicació.
+TAddRule.SAVE_ERROR_MESSAGE = La regla no ha pogut guardar-se correctament.
+TAddRule.TEXT_TITLE=Afegir regla
+
+TBoardRules.ANALYZE=ANÀLISI DE TAULER
+TShowResults.TEXTAREA_VALIDATION_NAME=Resultats de la vali.dació
+TShowResults.TEXTAREA_DESIGNRULES_NAME=Regles de disseny
+TShowResults.PROPERTY=Propietat:
+TShowResults.VALUE=Valor:
+TShowResults.ADVICE=Suggerència:
+TShowResults.NO_ADVICES=No hi ha suggerències
+TShowResults.MESSAGE_1=Número de taulers (Lim. cognitiva)
+TShowResults.MESSAGE_2=Amplada del tauler (Lim. sensorial)
+TShowResults.MESSAGE_3=Altura del tauler (Lim. sensorial)
+TShowResults.MESSAGE_4=El tauler no ha de tenir imatge (Lim. sensorial)
+TShowResults.MESSAGE_5=El tauler no ha de tenir imatge (Lim. cognitiva)
+TShowResults.MESSAGE_6=El tauler no té so (Lim. sensorial)
+TShowResults.MESSAGE_7=Amplada de la cel·la (Lim. motriu)
+TShowResults.MESSAGE_8=Altura de la cel·la (Lim. motriu)
+TShowResults.MESSAGE_9=Amplada de la cel·la (Lim. sensorial)
+TShowResults.MESSAGE_10=Altura de la cel·la (Lim. sensorial)
+TShowResults.MESSAGE_11=La cel·la no ha de tenir imatge (Lim. cognitiva)
+TShowResults.MESSAGE_12=La cel·la no ha de tenir imatge (Lim. sensorial)
+TShowResults.MESSAGE_13=La cel·la no té so (Lim. sensorial)
+TShowResults.MESSAGE_14=Tamany de vora de la cel·la (Lim. sensorial)
+TShowResults.MESSAGE_15=Es necessita text (Lim. cognitiva)
+TShowResults.MESSAGE_16=Tipus de text incorrecte (Lim. cognitiva)
+TShowResults.MESSAGE_17=Tamany de text (Lim. sensorial)
+TShowResults.MESSAGE_18=Font de text incorrecta (Lim. sensorial)
+TShowResults.MESSAGE_19=Format de text incorrecte (Lim. sensorial)
+TShowResults.MESSAGE_20=Diferència de contrast entre tauler i fons de cel·la (Lim. sensorial)
+TShowResults.MESSAGE_21=Diferència de contrast entre vora i fons de cel·la (Lim. sensorial)
+TShowResults.MESSAGE_22=Diferència de contrast entre text i fons de cel·la(Lim. sensorial)
+TShowResults.MESSAGE_23=Mode de selecció incorrecte (Lim. motriu)
+TShowResults.MESSAGE_24=Velocitat d'escombrada en ms (Lim. motriu)
+TShowResults.MESSAGE_25=Número de paraules acumulades (Lim. cognitiva)
+TShowResults.UPPERCASE=majúscula
+TShowResults.LOWERCASE=minúscula
+TShowResults.NO=No
+TShowResults.YES=Sí
+TShowResults.FONT=Arial o Verdana
+TShowResults.STYLE=sense format
+TShowResults.MOUSEBAR=Escombrada
+
+TShowResults.ATTRIB_CELL=REGLES PER A CEL·LA:
+TShowResults.ATTRIB_BOARD=REGLES PER A TAULER:
+TShowResults.ATTRIB_PROJECT=REGLES PER A PROJECTE:
+TShowResults.ATTRIB_INTERPRETER=REGLES PER A INTÈRPRET:
+TShowResults.PSYCHIC_NUMBOARDS=(Lim. cognitiva) Número de taulers:
+TShowResults.SENSORY_DIMENSION=(Lim. sensorial) Dimensions:
+TShowResults.SENSORY_COLOR=(Lim. sensorial) Color de fons:
+TShowResults.SENSORY_BORDERCOLOR=(Lim. sensorial) Color de vora:
+TShowResults.SENSORY_BORDERSIZE=(Lim. sensorial) Tamany de vora:
+TShowResults.SENSORY_IMAGE=(Lim. sensorial) Necessitat d'imatge:
+TShowResults.PSYCHIC_IMAGE=(Lim. cognitiva) Necessitat d'imatge:
+TShowResults.PSYCHIC_TEXT=(Lim. sensorial) Necessitat de text:
+TShowResults.SENSORY_TEXTSIZE=(Lim. sensorial) Tamany de text:
+TShowResults.PSYCHIC_TEXTTYPE=(Lim. sensorial) Tipus de text:
+TShowResults.SENSORY_SOUND=(Lim. sensorial) Necessitat de so:
+TShowResults.MOTOR_DIMENSION=(Lim. motriz) Dimensions:
+TShowResults.SENSORY_LIGHTNESS=(Lim. sensorial) Diferència de contrast
+TShowResults.TEXTBACKGROUND=text/fons:
+TShowResults.BORDERBACKGROUND=vora/fons:
+TShowResults.BOARDCELL=tauler/cel·les:
+TShowResults.COLORTABLE=Combinacions de color adequades:
+
+
+
+TProjectDialog.ORIENTATION=Orientació
+TProjectDialog.FREE=Lliure
+TProjectDialog.LANDSCAPE=Horitzontal
+TProjectDialog.PORTRAIT=Vertical
+
+TSynthesizerConfig.TITLE=Sintetitzat
+TSynthesizerConfig.CONFIGURE_VOICE=Configura Veu
+TSynthesizerConfig.COPY_TEXT=Copiar Text
+TSynthesizerConfig.GOOGLE_VOICE=Veu de Google
+TSynthesizerConfig.SYSTEM_VOICE=Veu del Sistema
+TProjectDialog.TAB_VOICE=Veu Defecte
+
+TProjectNewAndroidAction.NAME=Nou Android
+
+newAndroidOptions.SIZE_INSTRUCTIONS=<html>Consulteu la mida adequada de pantalla en <br />Menú->Accions->Veure resolucions <br />que trobarà en la versió de TICO <br />instal·lada al dispositiu Android</html>
+newAndroidOptions.TITLE=Opcions Android

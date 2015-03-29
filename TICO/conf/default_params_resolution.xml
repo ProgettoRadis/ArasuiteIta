@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Type of resolution and minimum size of parameters -->
+<params>
+	<res type="800"> <!--800x600-->
+		<motor value="0">
+			<m_cell_width>0</m_cell_width>
+			<m_cell_height>0</m_cell_height>
+			<m_int_mouseBar>false</m_int_mouseBar>
+			<m_int_delay>20000</m_int_delay>
+		</motor>
+		<motor value="1">
+			<m_cell_width>95</m_cell_width>
+			<m_cell_height>95</m_cell_height>
+			<m_int_mouseBar>false</m_int_mouseBar>
+			<m_int_delay>15000</m_int_delay>
+		</motor>
+		<motor value="2">
+			<m_cell_width>145</m_cell_width>
+			<m_cell_height>145</m_cell_height>
+			<m_int_mouseBar>true</m_int_mouseBar>
+			<m_int_delay>10000</m_int_delay>
+		</motor>
+		<motor value="3">
+			<m_cell_width>200</m_cell_width>
+			<m_cell_height>200</m_cell_height>
+			<m_int_mouseBar>true</m_int_mouseBar>
+			<m_int_delay>5000</m_int_delay>
+		</motor>
+		<motor value="4">
+			<m_cell_width>225</m_cell_width>
+			<m_cell_height>225</m_cell_height>
+			<m_int_mouseBar>true</m_int_mouseBar>
+			<m_int_delay>3000</m_int_delay>
+		</motor>
+		<motor value="5">
+			<m_cell_width>310</m_cell_width>
+			<m_cell_height>310</m_cell_height>
+			<m_int_mouseBar>true</m_int_mouseBar>
+			<m_int_delay>1000</m_int_delay>
+		</motor>
+		
+		<psychic value="0">
+			<p_cell_noImage>false</p_cell_noImage> 		<!-- needn't image -->
+			<p_cell_text>true</p_cell_text>				<!-- need text -->
+			<p_cell_textType>false</p_cell_textType> 	<!-- needn't upper case -->
+			<p_num_boards>100</p_num_boards>			<!-- max. num. boards -->
+			<p_board_noImage>false</p_board_noImage>	<!-- needn't image -->
+			<p_int_accumulated>10</p_int_accumulated>
+		</psychic>
+		<psychic value="1">
+			<p_cell_noImage>false</p_cell_noImage> 		<!-- needn't image -->
+			<p_cell_text>true</p_cell_text>				<!-- need text -->
+			<p_cell_textType>true</p_cell_textType> 	<!-- need upper case -->
+			<p_num_boards>15</p_num_boards>				<!-- max. num. boards -->
+			<p_board_noImage>true</p_board_noImage>		<!-- need NO image -->
+			<p_int_accumulated>9</p_int_accumulated>
+		</psychic>
+		<psychic value="2">
+			<p_cell_noImage>false</p_cell_noImage> 		<!-- needn't image -->
+			<p_cell_text>true</p_cell_text>				<!-- need text -->
+			<p_cell_textType>true</p_cell_textType> 	<!-- need upper case -->
+			<p_num_boards>10</p_num_boards>				<!-- max. num. boards -->
+			<p_board_noImage>true</p_board_noImage>		<!-- need NO image -->
+			<p_int_accumulated>8</p_int_accumulated>
+		</psychic>
+		<psychic value="3">
+			<p_cell_noImage>false</p_cell_noImage>		<!-- needn't image -->
+			<p_cell_text>true</p_cell_text>				<!-- need text -->
+			<p_cell_textType>true</p_cell_textType> 	<!-- need upper case -->
+			<p_num_boards>5</p_num_boards>				<!-- max. num. boards -->
+			<p_board_noImage>true</p_board_noImage>		<!-- need NO image -->
+			<p_int_accumulated>7</p_int_accumulated>
+		</psychic>
+		<psychic value="4">
+			<p_cell_noImage>false</p_cell_noImage> 		<!-- needn't image -->
+			<p_cell_text>true</p_cell_text>				<!-- need text -->
+			<p_cell_textType>true</p_cell_textType> 	<!-- need upper case -->
+			<p_num_boards>3</p_num_boards>				<!-- max. num. boards -->
+			<p_board_noImage>true</p_board_noImage>		<!-- need NO image -->
+			<p_int_accumulated>6</p_int_accumulated>
+		</psychic>
+		<psychic value="5">
+			<p_cell_noImage>true</p_cell_noImage> 		<!-- need NO image -->
+			<p_cell_text>true</p_cell_text>				<!-- need text -->
+			<p_cell_textType>true</p_cell_textType> 	<!-- need upper case -->
+			<p_num_boards>1</p_num_boards>				<!-- max. num. boards -->
+			<p_board_noImage>true</p_board_noImage>		<!-- need NO image -->
+			<p_int_accumulated>5</p_int_accumulated>
+		</psychic>
+		
+		<sensory value="0">
+			<s_cell_width>0</s_cell_width>
+			<s_cell_height>0</s_cell_height>
+			<s_cell_borderWidth>0</s_cell_borderWidth>
+			<s_cell_sound>true</s_cell_sound> 				<!-- need sound -->
+			<s_cell_noImage>false</s_cell_noImage> 			<!-- needn't image -->
+			<s_cell_textSize>0</s_cell_textSize>
+			<s_cell_textFont>false</s_cell_textFont>		<!-- needn't be Arial or Verdana -->
+			<s_cell_textStyle>false</s_cell_textStyle>		<!-- needn't be PLAIN -->
+			<s_board_width>800</s_board_width>
+			<s_board_height>600</s_board_height>
+			<s_board_noImage>false</s_board_noImage>		<!-- needn't image -->
+			<s_board_sound>true</s_board_sound>				<!-- need sound -->
+			<s_lightness_range>30</s_lightness_range>		<!-- min. lightness percentage -->
+		</sensory>
+		<sensory value="1">
+			<s_cell_width>95</s_cell_width>
+			<s_cell_height>95</s_cell_height>
+			<s_cell_borderWidth>1</s_cell_borderWidth>
+			<s_cell_sound>true</s_cell_sound> 				<!-- need sound -->
+			<s_cell_noImage>false</s_cell_noImage> 			<!-- needn't image -->
+			<s_cell_textSize>15</s_cell_textSize>
+			<s_cell_textFont>true</s_cell_textFont>			<!-- need to be Arial or Verdana -->
+			<s_cell_textStyle>true</s_cell_textStyle>		<!-- need to be PLAIN -->
+			<s_board_width>640</s_board_width>
+			<s_board_height>480</s_board_height>
+			<s_board_noImage>true</s_board_noImage>			<!-- need NO image -->
+			<s_board_sound>true</s_board_sound>				<!-- need sound -->
+			<s_lightness_range>40</s_lightness_range>		<!-- min. lightness percentage -->
+		</sensory>
+		<sensory value="2">
+			<s_cell_width>145</s_cell_width>
+			<s_cell_height>145</s_cell_height>
+			<s_cell_borderWidth>3</s_cell_borderWidth>
+			<s_cell_sound>true</s_cell_sound> 				<!-- need sound -->
+			<s_cell_noImage>false</s_cell_noImage> 			<!-- needn't image -->
+			<s_cell_textSize>20</s_cell_textSize>
+			<s_cell_textFont>true</s_cell_textFont>			<!-- need to be Arial or Verdana -->
+			<s_cell_textStyle>true</s_cell_textStyle>		<!-- need to be PLAIN -->
+			<s_board_width>640</s_board_width>
+			<s_board_height>480</s_board_height>
+			<s_board_noImage>true</s_board_noImage>			<!-- need NO image -->
+			<s_board_sound>true</s_board_sound>				<!-- need sound -->
+			<s_lightness_range>50</s_lightness_range>		<!-- min. lightness percentage -->
+		</sensory>
+		<sensory value="3">
+			<s_cell_width>200</s_cell_width>
+			<s_cell_height>200</s_cell_height>
+			<s_cell_borderWidth>5</s_cell_borderWidth>
+			<s_cell_sound>true</s_cell_sound> 				<!-- need sound -->
+			<s_cell_noImage>false</s_cell_noImage> 			<!-- needn't image -->
+			<s_cell_textSize>30</s_cell_textSize>
+			<s_cell_textFont>true</s_cell_textFont>			<!-- need to be Arial or Verdana -->
+			<s_cell_textStyle>true</s_cell_textStyle>		<!-- need to be PLAIN -->
+			<s_board_width>640</s_board_width>
+			<s_board_height>480</s_board_height>
+			<s_board_noImage>true</s_board_noImage>			<!-- need NO image -->
+			<s_board_sound>true</s_board_sound>				<!-- need sound -->
+			<s_lightness_range>60</s_lightness_range>		<!-- min. lightness percentage -->
+		</sensory>
+		<sensory value="4">
+			<s_cell_width>225</s_cell_width>
+			<s_cell_height>225</s_cell_height>
+			<s_cell_borderWidth>7</s_cell_borderWidth>
+			<s_cell_sound>true</s_cell_sound> 				<!-- need sound -->
+			<s_cell_noImage>false</s_cell_noImage> 			<!-- needn't image -->
+			<s_cell_textSize>35</s_cell_textSize>
+			<s_cell_textFont>true</s_cell_textFont>			<!-- need to be Arial or Verdana -->
+			<s_cell_textStyle>true</s_cell_textStyle>		<!-- need to be PLAIN -->
+			<s_board_width>640</s_board_width>
+			<s_board_height>480</s_board_height>
+			<s_board_noImage>true</s_board_noImage>			<!-- need NO image -->
+			<s_board_sound>true</s_board_sound>				<!-- need sound -->
+			<s_lightness_range>70</s_lightness_range>		<!-- min. lightness percentage -->
+		</sensory>
+		<sensory value="5">
+			<s_cell_width>310</s_cell_width>
+			<s_cell_height>310</s_cell_height>
+			<s_cell_borderWidth>8</s_cell_borderWidth>
+			<s_cell_sound>true</s_cell_sound> 				<!-- need sound -->
+			<s_cell_noImage>true</s_cell_noImage> 			<!-- need NO image -->
+			<s_cell_textSize>40</s_cell_textSize>
+			<s_cell_textFont>true</s_cell_textFont>			<!-- need to be Arial or Verdana -->
+			<s_cell_textStyle>true</s_cell_textStyle>		<!-- need to be PLAIN -->
+			<s_board_width>640</s_board_width>
+			<s_board_height>480</s_board_height>		
+			<s_board_noImage>true</s_board_noImage> 		<!-- need NO image -->
+			<s_board_sound>true</s_board_sound>				<!-- need sound -->
+			<s_lightness_range>80</s_lightness_range>		<!-- min. lightness percentage -->
+		</sensory>	
+	</res>
+	<res type="1024"> <!--1024x768-->
+		<motor value="0">
+			<m_cell_width>0</m_cell_width>
+			<m_cell_height>0</m_cell_height>
+			<m_int_mouseBar>false</m_int_mouseBar>
+			<m_int_delay>20000</m_int_delay>
+		</motor>
+		<motor value="1">
+			<m_cell_width>115</m_cell_width>
+			<m_cell_height>115</m_cell_height>
+			<m_int_mouseBar>false</m_int_mouseBar>
+			<m_int_delay>15000</m_int_delay>
+		</motor>
+		<motor value="2">
+			<m_cell_width>185</m_cell_width>
+			<m_cell_height>185</m_cell_height>
+			<m_int_mouseBar>true</m_int_mouseBar>
+			<m_int_delay>10000</m_int_delay>
+		</motor>
+		<motor value="3">
+			<m_cell_width>250</m_cell_width>
+			<m_cell_height>250</m_cell_height>
+			<m_int_mouseBar>true</m_int_mouseBar>
+			<m_int_delay>5000</m_int_delay>
+		</motor>
+		<motor value="4">
+			<m_cell_width>280</m_cell_width>
+			<m_cell_height>280</m_cell_height>
+			<m_int_mouseBar>true</m_int_mouseBar>
+			<m_int_delay>3000</m_int_delay>
+		</motor>
+		<motor value="5">
+			<m_cell_width>380</m_cell_width>
+			<m_cell_height>380</m_cell_height>
+			<m_int_mouseBar>true</m_int_mouseBar>
+			<m_int_delay>1000</m_int_delay>
+		</motor>
+		
+		<psychic value="0">
+			<p_cell_noImage>false</p_cell_noImage> 		<!-- needn't image -->
+			<p_cell_text>true</p_cell_text>				<!-- need text -->
+			<p_cell_textType>false</p_cell_textType> 	<!-- needn't upper case -->
+			<p_num_boards>100</p_num_boards>			<!-- max. num. boards -->
+			<p_board_noImage>false</p_board_noImage>	<!-- needn't image -->
+			<p_int_accumulated>10</p_int_accumulated>
+		</psychic>
+		<psychic value="1">
+			<p_cell_noImage>false</p_cell_noImage> 		<!-- needn't image -->
+			<p_cell_text>true</p_cell_text>				<!-- need text -->
+			<p_cell_textType>true</p_cell_textType> 	<!-- need upper case -->
+			<p_num_boards>15</p_num_boards>				<!-- max. num. boards -->
+			<p_board_noImage>true</p_board_noImage>		<!-- need NO image -->
+			<p_int_accumulated>9</p_int_accumulated>
+		</psychic>
+		<psychic value="2">
+			<p_cell_noImage>false</p_cell_noImage> 		<!-- needn't image -->
+			<p_cell_text>true</p_cell_text>				<!-- need text -->
+			<p_cell_textType>true</p_cell_textType> 	<!-- need upper case -->
+			<p_num_boards>10</p_num_boards>				<!-- max. num. boards -->
+			<p_board_noImage>true</p_board_noImage>		<!-- need NO image -->
+			<p_int_accumulated>8</p_int_accumulated>
+		</psychic>
+		<psychic value="3">
+			<p_cell_noImage>false</p_cell_noImage>		<!-- needn't image -->
+			<p_cell_text>true</p_cell_text>				<!-- need text -->
+			<p_cell_textType>true</p_cell_textType> 	<!-- need upper case -->
+			<p_num_boards>5</p_num_boards>				<!-- max. num. boards -->
+			<p_board_noImage>true</p_board_noImage>		<!-- need NO image -->
+			<p_int_accumulated>7</p_int_accumulated>
+		</psychic>
+		<psychic value="4">
+			<p_cell_noImage>false</p_cell_noImage> 		<!-- needn't image -->
+			<p_cell_text>true</p_cell_text>				<!-- need text -->
+			<p_cell_textType>true</p_cell_textType> 	<!-- need upper case -->
+			<p_num_boards>3</p_num_boards>				<!-- max. num. boards -->
+			<p_board_noImage>true</p_board_noImage>		<!-- need NO image -->
+			<p_int_accumulated>6</p_int_accumulated>
+		</psychic>
+		<psychic value="5">
+			<p_cell_noImage>true</p_cell_noImage> 		<!-- need NO image -->
+			<p_cell_text>true</p_cell_text>				<!-- need text -->
+			<p_cell_textType>true</p_cell_textType> 	<!-- need upper case -->
+			<p_num_boards>1</p_num_boards>				<!-- max. num. boards -->
+			<p_board_noImage>true</p_board_noImage>		<!-- need NO image -->
+			<p_int_accumulated>5</p_int_accumulated>
+		</psychic>
+		
+		<sensory value="0">
+			<s_cell_width>0</s_cell_width>
+			<s_cell_height>0</s_cell_height>
+			<s_cell_borderWidth>0</s_cell_borderWidth>
+			<s_cell_sound>true</s_cell_sound> 				<!-- need sound -->
+			<s_cell_noImage>false</s_cell_noImage> 			<!-- needn't image -->
+			<s_cell_textSize>0</s_cell_textSize>
+			<s_cell_textFont>false</s_cell_textFont>		<!-- needn't be Arial or Verdana -->
+			<s_cell_textStyle>false</s_cell_textStyle>		<!-- needn't be PLAIN -->
+			<s_board_width>1024</s_board_width>
+			<s_board_height>768</s_board_height>
+			<s_board_noImage>false</s_board_noImage>		<!-- needn't image -->
+			<s_board_sound>true</s_board_sound>				<!-- need sound -->
+			<s_lightness_range>30</s_lightness_range>		<!-- min. lightness percentage -->
+		</sensory>
+		<sensory value="1">
+			<s_cell_width>115</s_cell_width>
+			<s_cell_height>115</s_cell_height>
+			<s_cell_borderWidth>1</s_cell_borderWidth>
+			<s_cell_sound>true</s_cell_sound> 				<!-- need sound -->
+			<s_cell_noImage>false</s_cell_noImage> 			<!-- needn't image -->
+			<s_cell_textSize>15</s_cell_textSize>
+			<s_cell_textFont>true</s_cell_textFont>			<!-- need to be Arial or Verdana -->
+			<s_cell_textStyle>true</s_cell_textStyle>		<!-- need to be PLAIN -->
+			<s_board_width>800</s_board_width>
+			<s_board_height>600</s_board_height>
+			<s_board_noImage>true</s_board_noImage>			<!-- need NO image -->
+			<s_board_sound>true</s_board_sound>				<!-- need sound -->
+			<s_lightness_range>40</s_lightness_range>		<!-- min. lightness percentage -->
+		</sensory>
+		<sensory value="2">
+			<s_cell_width>185</s_cell_width>
+			<s_cell_height>185</s_cell_height>
+			<s_cell_borderWidth>3</s_cell_borderWidth>
+			<s_cell_sound>true</s_cell_sound> 				<!-- need sound -->
+			<s_cell_noImage>false</s_cell_noImage> 			<!-- needn't image -->
+			<s_cell_textSize>20</s_cell_textSize>
+			<s_cell_textFont>true</s_cell_textFont>			<!-- need to be Arial or Verdana -->
+			<s_cell_textStyle>true</s_cell_textStyle>		<!-- need to be PLAIN -->
+			<s_board_width>800</s_board_width>
+			<s_board_height>600</s_board_height>
+			<s_board_noImage>true</s_board_noImage>			<!-- need NO image -->
+			<s_board_sound>true</s_board_sound>				<!-- need sound -->
+			<s_lightness_range>50</s_lightness_range>		<!-- min. lightness percentage -->
+		</sensory>
+		<sensory value="3">
+			<s_cell_width>250</s_cell_width>
+			<s_cell_height>250</s_cell_height>
+			<s_cell_borderWidth>5</s_cell_borderWidth>
+			<s_cell_sound>true</s_cell_sound> 				<!-- need sound -->
+			<s_cell_noImage>false</s_cell_noImage> 			<!-- needn't image -->
+			<s_cell_textSize>30</s_cell_textSize>
+			<s_cell_textFont>true</s_cell_textFont>			<!-- need to be Arial or Verdana -->
+			<s_cell_textStyle>true</s_cell_textStyle>		<!-- need to be PLAIN -->
+			<s_board_width>800</s_board_width>
+			<s_board_height>600</s_board_height>
+			<s_board_noImage>true</s_board_noImage>			<!-- need NO image -->
+			<s_board_sound>true</s_board_sound>				<!-- need sound -->
+			<s_lightness_range>60</s_lightness_range>		<!-- min. lightness percentage -->
+		</sensory>
+		<sensory value="4">
+			<s_cell_width>280</s_cell_width>
+			<s_cell_height>280</s_cell_height>
+			<s_cell_borderWidth>7</s_cell_borderWidth>
+			<s_cell_sound>true</s_cell_sound> 				<!-- need sound -->
+			<s_cell_noImage>false</s_cell_noImage> 			<!-- needn't image -->
+			<s_cell_textSize>35</s_cell_textSize>
+			<s_cell_textFont>true</s_cell_textFont>			<!-- need to be Arial or Verdana -->
+			<s_cell_textStyle>true</s_cell_textStyle>		<!-- need to be PLAIN -->
+			<s_board_width>800</s_board_width>
+			<s_board_height>600</s_board_height>
+			<s_board_noImage>true</s_board_noImage>			<!-- need NO image -->
+			<s_board_sound>true</s_board_sound>				<!-- need sound -->
+			<s_lightness_range>70</s_lightness_range>		<!-- min. lightness percentage -->
+		</sensory>
+		<sensory value="5">
+			<s_cell_width>380</s_cell_width>
+			<s_cell_height>380</s_cell_height>
+			<s_cell_borderWidth>8</s_cell_borderWidth>
+			<s_cell_sound>true</s_cell_sound> 				<!-- need sound -->
+			<s_cell_noImage>true</s_cell_noImage> 			<!-- need NO image -->
+			<s_cell_textSize>40</s_cell_textSize>
+			<s_cell_textFont>true</s_cell_textFont>			<!-- need to be Arial or Verdana -->
+			<s_cell_textStyle>true</s_cell_textStyle>		<!-- need to be PLAIN -->
+			<s_board_width>800</s_board_width>
+			<s_board_height>600</s_board_height>		
+			<s_board_noImage>true</s_board_noImage> 		<!-- need NO image -->
+			<s_board_sound>true</s_board_sound>				<!-- need sound -->
+			<s_lightness_range>80</s_lightness_range>		<!-- min. lightness percentage -->
+		</sensory>	
+	</res>
+</params>

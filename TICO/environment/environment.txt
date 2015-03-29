@@ -1,0 +1,8 @@
+entorno=Environment
+#Comentarios
+arrancar_firefox=C:\\Archivos de programa\\Mozilla Firefox\\firefox.exe
+arrancar_chrome=C:\\Archivos de programa\\Google\\Chrome\\Application\\chrome.exe
+arrancar_chrome_fb=C:\\Archivos de programa\\Google\\Chrome\\Application\\chrome.exe www.facebook.com
+arrancar_chrome_google=C:\\Archivos de programa\\Google\\Chrome\\Application\\chrome.exe www.google.com
+arrancar_chrome_gmail=C:\\Archivos de programa\\Google\\Chrome\\Application\\chrome.exe www.gmail.com
+arrancar_chrome_youtube=C:\\Archivos de programa\\Google\\Chrome\\Application\\chrome.exe www.youtube.com

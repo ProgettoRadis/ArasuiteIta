@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="libs/sound/jl1.0.jar"/>
+	<classpathentry kind="lib" path="libs/sound/jogg-0.0.7.jar"/>
+	<classpathentry kind="lib" path="libs/sound/jorbis-0.0.15.jar"/>
+	<classpathentry kind="lib" path="libs/sound/tritonus_jorbis.jar"/>
+	<classpathentry kind="lib" path="libs/sound/tritonus_share.jar"/>
+	<classpathentry kind="lib" path="libs/jgraph.jar"/>
+	<classpathentry kind="lib" path="libs/cgjsapi.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="libs/jdom.jar"/>
+	<classpathentry kind="lib" path="libs/dsj.jar"/>
+	<classpathentry kind="lib" path="libs/sqlite/sqlitejdbc-v054.jar"/>
+	<classpathentry kind="lib" path="libs/images/jess.jar"/>
+	<classpathentry kind="lib" path="libs/sound/javalayer.jar"/>
+	<classpathentry kind="lib" path="libs/images/jsr94.jar"/>
+	<classpathentry kind="lib" path="libs/sound/tritonus_mp3.jar"/>
+	<classpathentry kind="lib" path="libs/images/javazoom.jar"/>
+	<classpathentry kind="lib" path="libs/images/jai_core.jar"/>
+	<classpathentry kind="lib" path="libs/images/jai_codec.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/galleryManager"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

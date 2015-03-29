@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Rules Data Base -->
+<rules>
+  <rule type="project">
+    <name>RULE_1</name>
+    <atr>projectNumBoards</atr>
+    <function>comparationMax</function>
+    <param>p_num_boards</param>
+    <text>MESSAGE_1</text>
+  </rule>
+  <rule type="board">
+    <name>RULE_2</name>
+    <atr>boardWidth</atr>
+    <function>comparationMin</function>
+    <param>s_board_width</param>
+    <text>MESSAGE_2</text>
+  </rule>
+  <rule type="board">
+    <name>RULE_3</name>
+    <atr>boardHeight</atr>
+    <function>comparationMin</function>
+    <param>s_board_height</param>
+    <text>MESSAGE_3</text>
+  </rule>
+  <rule type="board">
+    <name>RULE_4</name>
+    <atr>boardNoImage</atr>
+    <function>exist</function>
+    <param>s_board_noImage</param>
+    <text>MESSAGE_4</text>
+  </rule>
+  <rule type="board">
+    <name>RULE_5</name>
+    <atr>boardNoImage</atr>
+    <function>exist</function>
+    <param>p_board_noImage</param>
+    <text>MESSAGE_5</text>
+  </rule>
+  <rule type="board">
+    <name>RULE_6</name>
+    <atr>boardSound</atr>
+    <function>exist</function>
+    <param>s_board_sound</param>
+    <text>MESSAGE_6</text>
+  </rule>
+  <rule type="cell">
+    <name>RULE_7</name>
+    <atr>cellWidth</atr>
+    <function>comparationMin</function>
+    <param>m_cell_width</param>
+    <text>MESSAGE_7</text>
+  </rule>
+  <rule type="cell">
+    <name>RULE_8</name>
+    <atr>cellHeight</atr>
+    <function>comparationMin</function>
+    <param>m_cell_height</param>
+    <text>MESSAGE_8</text>
+  </rule>
+  <rule type="cell">
+    <name>RULE_9</name>
+    <atr>cellWidth</atr>
+    <function>comparationMin</function>
+    <param>s_cell_width</param>
+    <text>MESSAGE_9</text>
+  </rule>
+  <rule type="cell">
+    <name>RULE_10</name>
+    <atr>cellHeight</atr>
+    <function>comparationMin</function>
+    <param>s_cell_height</param>
+    <text>MESSAGE_10</text>
+  </rule>
+  <rule type="cell">
+    <name>RULE_11</name>
+    <atr>cellNoImage</atr>
+    <function>exist</function>
+    <param>p_cell_noImage</param>
+    <text>MESSAGE_11</text>
+  </rule>
+  <rule type="cell">
+    <name>RULE_12</name>
+    <atr>cellNoImage</atr>
+    <function>exist</function>
+    <param>s_cell_noImage</param>
+    <text>MESSAGE_12</text>
+  </rule>
+  <rule type="cell">
+    <name>RULE_13</name>
+    <atr>cellSound</atr>
+    <function>exist</function>
+    <param>s_cell_sound</param>
+    <text>MESSAGE_13</text>
+  </rule>
+  <rule type="cell">
+    <name>RULE_14</name>
+    <atr>cellBorderWidth</atr>
+    <function>comparationMin</function>
+    <param>s_cell_borderWidth</param>
+    <text>MESSAGE_14</text>
+  </rule>
+  <rule type="cell">
+    <name>RULE_15</name>
+    <atr>cellText</atr>
+    <function>exist</function>
+    <param>p_cell_text</param>
+    <text>MESSAGE_15</text>
+  </rule>
+  <rule type="cell">
+    <name>RULE_16</name>
+    <atr>cellTextType</atr>
+    <function>type</function>
+    <param>p_cell_textType</param>
+    <text>MESSAGE_16</text>
+  </rule>
+  <rule type="cell">
+    <name>RULE_17</name>
+    <atr>cellTextSize</atr>
+    <function>comparationMin</function>
+    <param>s_cell_textSize</param>
+    <text>MESSAGE_17</text>
+  </rule>
+  <rule type="cell">
+    <name>RULE_18</name>
+    <atr>cellTextFont</atr>
+    <function>type</function>
+    <param>s_cell_textFont</param>
+    <text>MESSAGE_18</text>
+  </rule>
+  <rule type="cell">
+    <name>RULE_19</name>
+    <atr>cellTextStyle</atr>
+    <function>type</function>
+    <param>s_cell_textStyle</param>
+    <text>MESSAGE_19</text>
+  </rule>
+  <rule type="cell">
+    <name>RULE_20</name>
+    <atr>cellLightness</atr>
+    <atr2>boardLightness</atr2>
+    <function>lightness</function>
+    <param>s_lightness_range</param>
+    <text>MESSAGE_20</text>
+  </rule>
+  <rule type="cell">
+    <name>RULE_21</name>
+    <atr>cellLightness</atr>
+    <atr2>cellBorderLightness</atr2>
+    <function>lightness</function>
+    <param>s_lightness_range</param>
+    <text>MESSAGE_21</text>
+  </rule>
+  <rule type="cell">
+    <name>RULE_22</name>
+    <atr>cellLightness</atr>
+    <atr2>cellTextLightness</atr2>
+    <function>lightness</function>
+    <param>s_lightness_range</param>
+    <text>MESSAGE_22</text>
+  </rule>
+  <rule type="interpreter">
+    <name>RULE_23</name>
+    <atr>intMouseBar</atr>
+    <function>type</function>
+    <param>m_int_mouseBar</param>
+    <text>MESSAGE_23</text>
+  </rule>
+  <rule type="interpreter">
+    <name>RULE_24</name>
+    <atr>intDelay</atr>
+    <function>comparationMax</function>
+    <param>m_int_delay</param>
+    <text>MESSAGE_24</text>
+  </rule>
+  <rule type="interpreter">
+    <name>RULE_25</name>
+    <atr>intAccumulated</atr>
+    <function>comparationMax</function>
+    <param>p_int_accumulated</param>
+    <text>MESSAGE_25</text>
+  </rule>
+</rules>

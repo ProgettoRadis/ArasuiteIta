@@ -1,0 +1,1221 @@
+% Introducción
+\section{Introducción}\label{sec:manual.introduccion}
+
+\par Este es el manual de usuario de \textbf{TICO}, para su \textbf{versión 1.5}.
+En él se explica el funcionamiento de la aplicación, su aspecto y las formas
+de realizar cada una de las posibles acciones.
+
+% Instalación de la aplicación
+\section{Instalación y ejecución de la aplicación}\label{sec:manual.instalacion}
+
+\par La aplicación se distribuye en dos ficheros diferentes, que corresponden con su instalación
+en diferentes sistemas operativos, y otro que corresponde con el código fuente de la aplicación.
+
+\subsection{En Windows}\label{sec:manual.instalacion.windows}
+
+\par Para instalar \texttt{TICO} en \textsl{Windows} hay que ejecutar el instalador que se distribuye con la aplicación (\texttt{tico-bin-w32-e1.5.exe}) y seguir las instrucciones que ahí se indican.
+
+\par El instalador crea automáticamente dos ejecutables, uno para el Editor y otro para el Intérprete dentro de la carpeta de instalación seleccionada. También crea los accesos directos correspondientes en el \textsl{Escritorio} y el \textsl{Menú de inicio}. Como argumento de cualquiera de los dos ejecutables, se le puede pasar la dirección de un fichero de proyecto de \textbf{TICO} para que sea abierto nada más ejecutar la aplicación.
+
+\subsection{En otros sistemas operativos}\label{sec:manual.instalacion.otros}
+
+\par Para instalar \textbf{TICO} en cualquier otro sistema operativo hay que
+descomprimir el archivo comprimido \texttt{tico-bin-other-e1.5.zip} en la carpeta
+elegida para ello.
+
+\par Para ejecutar la aplicación en otros sistemas operativos se proveen
+dos ejecutables diferentes. Uno para sistemas operativos \textsl{Windows}
+(\texttt{tico.bat}), por si alguien no quiere utilizar el instalador, y otro para sistemas operativos tipo \textsl{Unix} (\texttt{tico.sh}). Ambos ejecutables sirven tanto para el Intérprete como para el Editor según los argumentos con los que se invoquen. Para ejecutar el Intérprete o el Editor hay que utilizar, como primer parámetro, la opciones \texttt{-i} y \texttt{-e} respectivamente, ejecutándose el Editor en caso de que no se utilice ninguna. Como segundo argumento se puede utilizar la dirección de un fichero de proyecto de \textbf{TICO}, que será abierto de inicio de la ejecución de la aplicación correspondiente.
+
+\subsection{Aplicaciones requeridas}\label{sec:manual.instalacion.aplicaciones}
+
+\par Para que la aplicación se pueda ejecutar es necesario tener instalada, en el ordenador en el que se va a utilizar, una versión de la \textsl{Máquina Virtual de Java} igual o superior a la 1.6. Su descarga es gratuita y se puede realizar desde la
+dirección web de \textsl{Sun Microsystems} o desde \url{http://www.java.com/es/download/}.
+
+\par La reproducción de archivos de vídeo únicamente está disponible para sistemas operativos tipo \textsl{Microsoft Windows} y es necesario tener instalado el Reproductor de Windows Media 9 o superior, de tal manera que los vídeos que se reproduzcan correctamente con este programa se reproducirán correctamente en el Intérprete \textbf{TICO}.
+% \par Adicionalmente, para que funcione la reproducción de ficheros de sonido en formato \textsl{mp3} en la versión 1.4.2 de la \textsl{Máquina Virtual Java}, habrá que instalar \textsl{Tritonus}. Una serie de librerías libres y gratuitas que pueden ser descargadas desde \url{http://tritonus.org}.
+
+%formatos soportados
+\section{Formatos soportados}\label{sec:manual.formatos}
+
+\par A continuación se detallan los distintos formatos de proyecto, imagen, sonido y vídeo que son reconocidos por la aplicación.
+
+\subsection{Formatos de proyecto}\label{sec:manual.formatos.proyecto}
+\par Los formatos de proyecto que puede abrir el Editor son: TCO y TCOA (editados para el Intérprete TICO4Android).
+\par El Intérprete de ordenadores personales puede abrir sólo proyectos en formato TCO y el Intérprete TICO4Android puede abrir sólo proyectos en formato TCOA.
+
+\subsection{Formatos de imagen}\label{sec:manual.formatos.imagen}
+
+\par Los formatos de imagen reconocidos por la aplicación son: GIF, JPEG, JPG y PNG.
+
+\subsection{Formatos de audio}\label{sec:manual.formatos.audio}
+
+\par Los formatos de audio reconocidos por la aplicación son: MP3, WAV, MID y MIDI.
+
+\subsection{Formatos de vídeo}\label{sec:manual.formatos.video}
+
+\par Los formatos de vídeo reconocidos por la aplicación son: AVI, MPG, MPEG, WMV y 3GP.
+
+% Manual del editor
+\section{Manual del Editor}\label{sec:manual.editor}
+
+\subsection{Elementos del Editor}\label{sec:manual.editor.elementos}
+
+\par En esta sección se muestra la aplicación del Editor junto con su aspecto, elementos y funcionalidades. También se explica como se pueden realizar y qué opciones ofrece para editar proyectos y tableros.
+
+\subsubsection{Ventana del Editor}
+\label{sec:manual.editor.elementos.ventana}
+
+\begin{figure}[h!tb]\begin{center}
+\includegraphics[width=\textwidth]{figures/editor-example}
+\caption{Ventana del editor}\label{gra:editor-example}
+\end{center}\end{figure}
+
+\par La figura~\ref{gra:editor-example} muestra el aspecto de la ventana principal del
+Editor. En ella se pueden distinguir los siguientes elementos:
+\begin{enumerate}
+	\item \textbf{Barra de menú:} Permite realizar la mayoría de las acciones aplicables a un tablero.
+	\item \textbf{Barras de herramientas:} Conjunto de barras de herramientas móviles dirigidas a la edición de tableros y las propiedades de sus componentes.
+	\item \textbf{Lista de tableros del proyecto:} Lista con los tableros pertenecientes al proyecto actual. Permite seleccionar cuál es el tablero que se quiere editar en cada momento.
+	\item \textbf{Orden de barrido del proyecto seleccionado:} Muestra y permite editar el orden de barrido de las celdas mostradas en un determinado momento.
+	\item \textbf{Área de edición:} Elemento del Editor a través del cual se pueden editar los tableros y sus componentes.
+\end{enumerate}
+
+\subsubsection{Barra de menú}
+\label{sec:manual.Editor.elementos.menu}
+
+\par La barra de menú de la aplicación contiene los siguientes submenús
+que permiten realizar todo tipo de acciones sobre el Editor. Las acciones
+concretas se mostrarán en los lugares correspondientes según la función que
+realicen. Los submenús son los siguientes:
+\begin{itemize}
+	\item \textbf{Archivo}: Acciones a realizar sobre un proyecto. Permite crear
+	un proyecto nuevo tanto normal como para Android, cargarlo, guardarlo, exportarlo a diferentes formatos, importarlo, imprimirlo y salir de la aplicación.
+	\item \textbf{Edición}: Acciones básicas de edición. Permite deshacer y rehacer, cortar copiar y pegar componentes,	borrar los componentes seleccionados, seleccionar todo y editar las preferencias de la aplicación.
+	\item \textbf{Ver}: Permite mostrar y ocultar las barras de herramientas de la aplicación.
+	\item \textbf{Herramientas}: Especifica la herramienta de edición actual, una por cada
+	componente que se puede insertar en un tablero y otra para seleccionar componentes, moverlos y redimensionarlos.
+	\item \textbf{Tablero}: Contiene las acciones a realizar sobre un tablero.
+	\item \textbf{Proyecto}: Contiene las acciones a realizar sobre un proyecto.
+	\item \textbf{Ayuda}: Contiene el indispensable ''Acerca de...'' que muestra información sobre
+	la aplicación.
+\end{itemize}
+
+\subsubsection{Barras de herramientas}
+\label{sec:manual.Editor.elementos.herramientas}
+
+\begin{figure}[h!tb]\begin{center}
+\includegraphics[width=\textwidth]{figures/toolbars}
+\caption{Barras de herramientas}\label{gra:toolbars}
+\end{center}\end{figure}
+
+\par La ventana del Editor contiene una serie de barras de herramientas independientes
+para realizar diferentes tipos de acciones sobre el proyecto que se está editando.
+Estas barras se muestran en la figura~\ref{gra:toolbars} y su función es:
+\begin{enumerate}
+	\item \textbf{Archivo}: Acciones que se pueden realizar sobre un proyecto.
+	\begin{trivlist}
+		\item \includegraphics[height=14pt]{figures/toolbar-file-new}
+		\textbf{Nuevo proyecto}: Crea un nuevo proyecto.
+		\item \includegraphics[height=14pt]{figures/archive-new-android-22}
+		\textbf{Nuevo proyecto Android}: Crea un nuevo proyecto para Android.		
+		\item \includegraphics[height=14pt]{figures/toolbar-file-open}
+		\textbf{Abrir proyecto}: Carga un proyecto desde un fichero de proyecto. Se puede cambiar el filtro de archivos entre proyectos normales y proyectos para Android.
+		\item \includegraphics[height=14pt]{figures/toolbar-file-save}
+		\textbf{Guardar proyecto}: Graba el proyecto en un fichero con el nombre
+		actual o pregunta el nombre y el tipo si aún no ha sido especificado.
+		\item \includegraphics[height=14pt]{figures/toolbar-file-save-as}
+		\textbf{Guardar proyecto como}: Graba el proyecto en un fichero preguntando
+		el nombre del mismo. Se puede cambiar también el tipo de proyecto, si es un proyecto para su interpetación en el Intérprete normal o para el Intérprete Android.
+		\item \includegraphics[height=14pt]{figures/toolbar-file-print}
+		\textbf{Imprimir proyecto}: Imprime el proyecto de forma que cada tablero
+		queda en una página diferente.
+	\end{trivlist}
+	\item \textbf{Acciones}: Acciones que se pueden realizar sobre el tablero en edición.
+	\begin{trivlist}
+		\item \includegraphics[height=14pt]{figures/toolbar-edit-cut}
+		\textbf{Cortar}: Corta los elementos del área de edición que estén seleccionados
+		en el portapapeles.
+		\item \includegraphics[height=14pt]{figures/toolbar-edit-copy}
+		\textbf{Copiar}: Copia los elementos del área de edición que estén seleccionados
+		en el portapapeles.
+		\item \includegraphics[height=14pt]{figures/toolbar-edit-paste}
+		\textbf{Pegar}: Pega en el tablero que se está editando el contenido del portapapeles.
+		\item \includegraphics[height=14pt]{figures/toolbar-edit-undo}
+		\textbf{Deshacer}: Deshace la última modificación realizada en tablero en edición.
+		\item \includegraphics[height=14pt]{figures/toolbar-edit-redo}
+		\textbf{Rehacer}: Rehace la última modificación deshecha en tablero en edición.
+		\item \includegraphics[height=14pt]{figures/toolbar-edit-delete}
+		\textbf{Borrar}: Borra los elementos seleccionados en el área de edición.
+	\end{trivlist}
+	\item \textbf{Herramientas}: Selecciona la herramienta que se va a utilizar para interaccionar con el área de edición. Las herramientas se utilizan pulsando con el ratón sobre el área de edición	y arrastrando hasta conseguir el tamaño deseado. Cuando se haya insertado un componente la herramienta	activada cambiará automáticamente a la de selección. El botón que corresponde con la herramienta	seleccionada en el momento actual está siempre resaltado.
+	\begin{trivlist}
+		\item \includegraphics[height=14pt]{figures/toolbar-actions-select}
+		\textbf{Selección}: Permite seleccionar, redimensionar y mover componentes o conjuntos
+		de ellos. Realizando \textit{doble-clic} sobre cualquier componente se muestran
+		sus propiedades y pulsando con el botón derecho ofrece una serie de acciones a realizar
+		relacionadas con el componente.
+		\item \includegraphics[height=14pt]{figures/toolbar-actions-cell}
+		\textbf{Celda}: Herramienta para crear celdas.
+		\item \includegraphics[height=14pt]{figures/handler-cell-controller-22}
+		\textbf{Celda de control}: Herramienta para celdas de control.
+		\item \includegraphics[height=14pt]{figures/toolbar-actions-grid}
+		\textbf{Cuadrícula}: Herramienta para crear cuadrículas. Al seleccionarla te abre un diálogo que te pregunta la dimensión de la cuadrícula que quieres crear.
+		\item \includegraphics[height=14pt]{figures/toolbar-actions-text-area}
+		\textbf{Área de texto}: Herramienta para crear áreas de texto.
+		\item \includegraphics[height=14pt]{figures/toolbar-actions-label}
+		\textbf{Etiqueta}: Herramienta para crear etiquetas.
+		\item \includegraphics[height=14pt]{figures/toolbar-actions-line}
+		\textbf{Línea}: Herramienta para crear líneas.
+		\item \includegraphics[height=14pt]{figures/toolbar-actions-oval}
+		\textbf{Óvalo}: Herramienta para crear óvalos.
+		\item \includegraphics[height=14pt]{figures/toolbar-actions-rectangle}
+		\textbf{Rectángulo}: Herramienta para crear rectángulos.
+		\item \includegraphics[height=14pt]{figures/toolbar-actions-round-rect}
+		\textbf{Rectángulo redondeado}: Herramienta para crear rectángulos redondeados.
+	\end{trivlist}
+	\item \textbf{Formato}: Determina las propiedades del fondo y borde que tendrán los nuevos componentes. Cuando se selecciona algún componente en el área de edición, esta barra de herramientas se actualiza automáticamente para reflejar las propiedades de fondo y borde de ese componente. Si se quieren	cambiar las propiedades del fondo y borde de todos los componentes seleccionados en el área de edición	hay que modificar los parámetros correspondientes y pulsar sobre el botón que corresponda a las	propiedades que se quieren modificar.
+	\begin{trivlist}
+		\item \includegraphics[height=14pt]{figures/toolbar-format-apply-background}
+		\textbf{Aplicar fondo}: Modifica las propiedades del fondo de los componentes seleccionados
+		a los elegidos en el resto de elementos de la barra de herramientas a la que pertenece.
+		\item \includegraphics[height=14pt]{figures/toolbar-format-apply-border}
+		\textbf{Aplicar borde}: Modifica las propiedades del borde de los componentes seleccionados
+		a los elegidos en el resto de elementos de la barra de herramientas a la que pertenece.
+	\end{trivlist}
+	\item \textbf{Texto}: Determina la fuente de texto que tendrán todos los nuevos componentes. Cuando se selecciona algún componente en el área de edición, esta barra de herramientas se actualiza automáticamente para reflejar la fuente de ese componente. Si se quiere cambiar la fuente de todos los componentes seleccionados en el área de edición, hay que modificar los parámetros correspondientes y pulsar sobre el botón \textit{Aplicar fuente}.
+	\begin{trivlist}
+		\item \includegraphics[height=14pt]{figures/toolbar-text-apply-font}
+		\textbf{Aplicar fuente}: Modifica las fuente de los componentes seleccionados a los elegidos en el resto de elementos de la barra de herramientas a la que pertenece.
+	\end{trivlist}
+	
+	\item \textbf{Alineación}: Opciones de alineación entre grupos de componentes seleccionados
+de un tablero.
+
+	\begin{trivlist}
+		\item \includegraphics[height=14pt]{figures/toolbar-align-horizontal-gap}
+		\textbf{Separación horizontal}: Distribuye los componentes seleccionados horizontalmente de forma que los de los extremos se queden en su sitio y el resto se distribuyan para que el espacio que los separe sea idéntico para todos ellos.
+		\item \includegraphics[height=14pt]{figures/toolbar-align-vertical-gap}
+		\textbf{Separación vertical}: Distribuye los componentes seleccionados verticalmente de forma que los de los extremos se queden en su sitio y el resto se distribuyan para que el espacio que los separe sea idéntico para todos ellos.
+		\item \includegraphics[height=14pt]{figures/toolbar-align-adjust-width}
+		\textbf{Ajustar anchura}: Asigna a todos los elementos seleccionados la anchura del primero que	se seleccionó.
+		\item \includegraphics[height=14pt]{figures/toolbar-align-adjust-height}
+		\textbf{Ajustar altura}: Asigna a todo los elementos seleccionados la altura del primero que se seleccionó.
+		\item \includegraphics[height=14pt]{figures/toolbar-align-top}
+		\textbf{Alinear arriba}: Alinea todos los elementos seleccionados de forma que sus lados superiores queden en línea con el del primero que se seleccionó.
+		\item \includegraphics[height=14pt]{figures/toolbar-align-left}
+		\textbf{Alinear izquierda} Alinea todos los elementos seleccionados de forma que sus lados izquierdos queden en línea con el del primero que se seleccionó.
+		\item \includegraphics[height=14pt]{figures/toolbar-align-bottom}
+		\textbf{Alinear abajo}: Alinea todos los elementos seleccionados de forma que sus lados inferiores queden en línea con el del primero que se seleccionó.
+		\item \includegraphics[height=14pt]{figures/toolbar-align-right}
+		\textbf{Alinear derecha}: Alinea todos los elementos seleccionados de forma que sus lados derechos queden en línea con el del  primero que se seleccionó.
+		\item \includegraphics[height=14pt]{figures/toolbar-align-horizontal-center}
+		\textbf{Alinear centro horizontal}: Alinea todos los elementos seleccionados de forma que sus ejes horizontales queden en lí­nea con el del primero que se seleccionó.
+		\item \includegraphics[height=14pt]{figures/toolbar-align-vertical-center}
+		\textbf{Alinear centro vertical}: Alinea todos los elementos seleccionados de forma que sus ejes verticales queden en lí­nea con el del primero que se seleccionó.
+		\item \includegraphics[height=14pt]{figures/toolbar-align-front}
+		\textbf{Enviar al frente}: Envía al frente todos los objetos seleccionados de forma que se muestran por encima de los demás.
+		\item \includegraphics[height=14pt]{figures/toolbar-align-back}
+		\textbf{Enviar al fondo}: Envía al fondo todos los objetos seleccionados de forma que se muestran debajo de los demás.
+	\end{trivlist}
+\end{enumerate}
+\par Todas ellas pueden ser mostradas u ocultadas a través del menú \textit{Ver}
+de la aplicación. Por defecto se sitúan en la parte superior de la ventana del Editor,
+pero pueden ser desplazadas a cualquier punto de la pantalla pulsando y arrastrando en
+la parte punteada situada a la izquierda de cada una de ellas.
+
+\par Si las acciones que corresponden a cada uno de los elementos de una barra de herramientas
+no se pueden realizar, serán deshabilitadas y los botones que las invocan se mostrarán en blanco y negro.
+
+\subsubsection{Preferencias del Editor}
+\label{sec:manual.Editor.elementos.preferencias}
+
+\par Las preferencias del Editor se pueden modificar pulsando \textit{Editar - Preferencias}.
+Las preferencias son:
+\begin{itemize}
+	\item \textbf{Idioma:} Especifica el idioma de ejecución de la aplicación. Para cambiarlo
+	hay que reiniciar la aplicación.
+\end{itemize}
+
+% EdiciÃ³n de proyectos
+\subsection{Edición de proyectos}\label{sec:manual.Editor.proyectos}
+
+\par La aplicación del Editor está diseñada para editar proyectos, tanto para su interpretación en un ordenador personal como en un dispositivo Android, y los tableros que la componen. Para añadir y borrar tableros a un proyecto se utiliza la \textit{lista de tableros}, la cual también permite seleccionar qué tablero se va a mostrar en el área de edición.
+
+\subsubsection{Acciones sobre un proyecto}
+\label{sec:manual.Editor.proyecto.acciones}
+
+\par A través de la barra de menú y en algunos casos de su correspondiente botón en la barra de herramientas, se pueden realizar las siguientes acciones sobre el proyecto actual:
+\begin{itemize}
+	\item \textbf{Guardar:} Guarda el proyecto en un fichero para que pueda ser abierto, ya sea para ser interpretado o seguir siendo editado posteriormente. Se puede seleccionar el tipo de proyecto que es, entre \textit{proyectos de Tico} para su interpretación en un ordenador personal y \textit{proyectos de Tico Android} para su interpretación en un dispositivo Android.
+	\item \textbf{Imprimir:} Imprime el proyecto entero de forma que cada tablero se imprima	en una hoja diferente.
+	\item \textbf{Importar un proyecto:} Importa un proyecto guardado previamente y añade todos sus tableros a la lista de tableros del proyecto manteniendo las relaciones de navegación entre ellos.
+	\item \textbf{Importar un tablero:} Importa un tablero exportado previamente y lo añade a la lista de tableros del proyecto.
+	\item \textbf{Exportar el tablero seleccionado:} Exporta el tablero seleccionado a un fichero \textit{.brd} para que pueda ser importado y reutilizado posteriormente en otro proyecto.
+	\item \textbf{Exportar el tablero seleccionado a una imagen:} Exporta el tablero seleccionado a un fichero de imagen en formato \textsl{JPG} o \textsl{PNG}.
+	\item \textbf{Modificar sus propiedades:} Las propiedades de un proyecto se pueden modificar a través de una ventana que se abre ejecutando \textit{Proyecto - Propiedades}.
+\end{itemize}
+
+\subsubsection{Lista de tableros}
+\label{sec:manual.Editor.proyectos.tableros}
+
+\begin{figure}[h!tb]\begin{center}
+\includegraphics[width=0.4\textwidth]{figures/board-list}
+\caption{Lista de tableros}\label{gra:board-list}
+\end{center}\end{figure}
+
+\par La lista de tableros se muestra en la figura~\ref{gra:board-list}. Tiene dos botones que permiten añadir y borrar tableros del proyecto y una lista en la cual se seleccionar el tablero que se quiere editar en cada momento. El botón \includegraphics[height=11pt]{figures/board-list-new} añade un nuevo tablero vacío al proyecto y el botón \includegraphics[height=11pt]{figures/board-list-delete} borra el tablero seleccionado. La acción de borrar un tablero no se puede deshacer, así que antes de realizarla habrá que cerciorarse de que el tablero seleccionado no se necesita.
+
+\subsubsection{Propiedades de un proyecto}
+\label{sec:manual.Editor.proyectos.propiedades}
+
+\par Las propiedades del proyecto actual se pueden modificar pulsando \textit{Proyecto - Propiedades}. La ventana de propiedades se puede reescalar y si se reduce se podrá tener acceso a todos sus componentes mediante scroll vertical y horizontal. 
+\par Estas propiedades son:
+\begin{itemize}
+	\item \textbf{Tablero inicial:} Determina el primer tablero que se abrirá cuando se inicie la
+	interpretación el proyecto.
+	\item \textbf{Orientación (sólo en edición para Android):} Determina la orientación de pantalla que se forzará en el Intérprete TICO4Android para la visualización del proyecto. Las opciones son:
+	\begin{itemize}
+		\item \textbf{Vertical:} El proyecto en el Intérprete TICO4Android se visualizará de forma vertical, en la posición en que la pantalla es más alta que ancha. El proyecto no se reorientará al cambiar la posición del dispositivo Android.
+		\item \textbf{Horizontal:} El proyecto en el Intérprete TICO4Android se visualizará de forma horizontal, en la posición en que la pantalla es más ancha que alta. El proyecto no se reorientará al cambiar la posición del dispositivo Android.
+		\item \textbf{Libre:} El proyecto en el Intérprete TICO4Android se visualizará de la forma en la que está orientado el dispositivo Android. Durante la ejecución si se reorienta el dispositivo automáticamente también se reorientará el proyecto.
+	\end{itemize}
+\end{itemize}
+
+% Área de edición de tableros
+\subsection{Edición de tableros} \label{sec:manual.Editor.tablero}
+
+\par Para editar un tablero se proveen una serie de herramientas que permiten al usuario interaccionar con el \textit{área de edición}. Su funcionamiento se explica en los siguientes apartados.
+
+\subsubsection{Área de edición}
+\label{sec:manual.Editor.tablero.area}
+
+\par El Área de edición muestra el tablero seleccionado en la \textit{lista de tableros} del proyecto actual. Para interaccionar con ella hay que elegir la herramienta que se quiere utilizar, ya sea a través del submenú \textit{Herramientas} de la aplicación o de la barra de herramientas del mismo nombre.
+
+\par Las herramientas se pueden dividir en dos grupos:
+\begin{itemize}
+	\item \textbf{Herramientas que sirven para insertar nuevos componentes en el tablero.} Dentro de este grupo existe una herramienta diferente para cada tipo de componente, pero todas ellas funcionan de manera similar. Una vez seleccionada, se pulsa con el ratón en un punto del tablero y se arrastra hasta haber obtenido el tamaño deseado.
+	\item \textbf{Herramientas para interaccionar con el tablero.} Dentro de este grupo únicamente está la herramienta de selección. Las utilidades de esta herramienta son muchas:
+	\begin{itemize}
+		\item \textbf{Seleccionar componentes:} Permite seleccionar componentes y grupos de ellos. Esto se puede realizar de varias formas. Pulsando con el botón izquierdo del ratón sobre un componente, lo seleccionas y deseleccionas todos los demás. Si además estás pulsando la tecla \textit{control}, añades el nuevo componente a la selección actual. Lo mismo se puede realizar pulsando y arrastrando, en este caso se seleccionarán todos los componentes que se encuentren dentro del cuadrado de selección.
+		\item \textbf{Redimensionar componentes:} Los componentes individuales seleccionados
+se pueden redimensionar pulsando y arrastrando en cualquiera de las pequeñas marcas que aparecen en las esquinas del rectángulo de selección y en el centro de cualquiera de sus lados. El icono que aparece al poner el ratón sobre ellas muestra las direcciones en las que permiten redimensionar.
+		\item \textbf{Mover componentes:} Un componente o conjunto de componentes seleccionados se puede desplazar en el tablero pulsando sobre cualquiera de ellos y arrastrándolo hasta situarlo en el lugar deseado.
+		\item \textbf{Mostrar ventana de propiedades de componentes:} Haciendo \textit{doble-clic} con el ratón sobre cualquier componente del tablero se abre la ventana que permite editar las propiedades de ese componente.
+		\item \textbf{Mostrar menús desplegables:} Pulsando el botón derecho del ratón sobre cualquier punto del tablero o cualquiera de sus componentes se muestra un menú desplegable que permite realizar diferentes acciones relacionadas con el tablero o con el componente pulsado.
+	\end{itemize}
+\end{itemize}
+
+\subsubsection{Orden de barrido}
+\label{sec:manual.Editor.tablero.barrido}
+
+\par Determina el orden de barrido de las celdas del tablero actual. Cuando una de ellas se añade a un tablero también se añade automáticamente al final del orden de barrido del mismo. Se puede modificar el orden seleccionando el componente que se quiere mover y pulsando sobre los botones \includegraphics[height=11pt]{figures/cell-order-up} o \includegraphics[height=11pt]{figures/cell-order-down} para adelantarlo o retrasarlo en el orden respectivamente.
+
+\subsubsection{Propiedades de un tablero}
+\label{sec:manual.Editor.tablero.propiedades}
+
+\par Para mostrar la ventana de propiedades del tablero se puede pulsar \textit{Tablero - Propiedades} o, con la herramienta de selección activada, pulsar el botón derecho sobre el fondo del tablero en el área de edición y seleccionar \textit{Propiedades}. La ventana de propiedades se puede reescalar y si se reduce se podrá tener acceso a todos sus componentes mediante scroll vertical y horizontal.
+
+\par Las propiedades de un tablero son:
+\begin{itemize}
+	\item \textbf{Nombre:} Nombre del tablero que se mostrará en la lista de tableros.
+	\item \textbf{Tamaño:} Tamaño del tablero en \textsl{píxeles}.
+	\item \textbf{Color de fondo:} Color de fondo del tablero. También se puede seleccionar un color de gradiente para hacer un degradado en el tablero.
+	\item \textbf{Sonido de fondo:} Sonido que se reproducirá al cargar el tablero en el Intérprete durante la interpretación del mismo.
+	\item \textbf{Imagen de fondo:} Imagen de fondo del tablero. Para seleccionar como se ajusta la imagen al tamaño del tablero se ofrecen tres opciones:
+	\begin{itemize}
+		\item \textbf{Centrada:} La imagen se centra dentro del tablero. Si la imagen es mayor que el tablero se reduce, pero sin perder sus proporciones.
+		\item \textbf{Redimensionada:} La imagen se redimensiona para que se ajuste al ancho o al alto del tablero de forma que no pierda sus proporciones.
+		\item \textbf{Ajustada:} La imagen se redimensiona de forma que cubra todo el fondo del tablero.
+	\end{itemize}
+	\item \textbf{Orden de barrido:} Determina el orden de barrido de las celdas del tablero. Esta lista es la misma que se permite editar a través de la ventana principal del Editor. El interfaz que permite modificarlo se muestra en la figura~\ref{gra:board-properties-order-component}. La lista inferior es idéntica a la mostrada en la ventana principal del Editor. La superior contiene las celdas que no se quiere que sean barridas. Para moverlas de una lista a otra se utilizan los botones \includegraphics[height=11pt]{figures/board-properties-order-add} y \includegraphics[height=11pt]{figures/board-properties-order-remove} que permiten añadir a la lista inferior el elemento seleccionado de la superior y viceversa.
+\end{itemize}
+
+\begin{figure}[htb]\begin{center}
+\includegraphics[width=0.4\textwidth]{figures/board-properties-order-component}
+\caption{Interfaz de edición de orden de barrido}\label{gra:board-properties-order-component}
+\end{center}\end{figure}
+
+% Componentes de un tablero
+\subsection{Componentes de un tablero}\label{sec:manual.Editor.componentes}
+
+\par En esta sección se definen todos los posibles componentes de un tablero y sus propiedades. Como ya se ha explicado en la sección~\ref{sec:manual.Editor.tablero}, para insertar un nuevo componente hay que utilizar la herramienta correspondiente al tipo de componente que se quiere insertar. En la figura~\ref{gra:component-examples} se puede ver un ejemplo de cada tipo de componente.
+
+\begin{figure}
+\begin{tabular}{ccc}
+	\includegraphics[width=0.3\textwidth]{figures/component-examples-cell} &
+	\includegraphics[width=0.3\textwidth]{figures/component-examples-control-cell} &	
+	\includegraphics[width=0.3\textwidth]{figures/component-examples-grid} \\
+	
+	Celda & Celda de control & Cuadrícula \\ \\
+	\includegraphics[width=0.3\textwidth]{figures/component-examples-text-area}	&
+	\includegraphics[width=0.3\textwidth]{figures/component-examples-label} &
+	\includegraphics[width=0.3\textwidth]{figures/component-examples-line} \\
+	Área de texto & Etiqueta & Línea \\ \\
+	\includegraphics[width=0.3\textwidth]{figures/component-examples-rectangle} &
+	\includegraphics[width=0.3\textwidth]{figures/component-examples-round-rect} &
+	\includegraphics[width=0.3\textwidth]{figures/component-examples-oval} \\
+	Rectángulo & Rectángulo redondeado & Óvalo \\ \\
+\end{tabular}
+\caption{Ejemplos de componentes}\label{gra:component-examples}
+\end{figure}
+
+\par Para mostrar la ventana de propiedades de un componente, con la herramienta de selección activada, hay que hacer \textit{doble-clic} o pulsar el botón derecho y seleccionar \textit{Propiedades} sobre el componente que se quiere modificar. Las ventanas de propiedades de los distintos elementos son muy similares. Todas ellas están formadas por un componente en el que las propiedades están agrupadas por solapas, tres botones que permiten aceptar, aplicar o cancelar respectivamente las propiedades elegidas y, en algunos casos, un campo de texto que permite especificar el identificador del componente. La ventana de propiedades se puede reescalar y si se reduce se podrá tener acceso a todos sus componentes mediante scroll vertical y horizontal. La figura~\ref{gra:cell-dialog-examples} muestra un ejemplo de la ventana de propiedades de una celda.
+
+\begin{figure}
+\begin{minipage}{0.45\textwidth}\begin{center}
+\includegraphics[width=\textwidth]{figures/cell-dialog-examples-1}
+\end{center}\end{minipage}
+\hfill
+\begin{minipage}{0.45\textwidth}\begin{center}
+\includegraphics[width=\textwidth]{figures/cell-dialog-examples-2}
+\end{center}\end{minipage}
+\hfill
+\begin{minipage}{0.45\textwidth}\begin{center}
+\includegraphics[width=\textwidth]{figures/cell-dialog-examples-3}
+\end{center}\end{minipage}
+\hfill
+\begin{minipage}{0.45\textwidth}\begin{center}
+\includegraphics[width=\textwidth]{figures/cell-dialog-examples-4}
+\end{center}\end{minipage}
+\caption{Ventanas de propiedades de una celda}\label{gra:cell-dialog-examples}
+\end{figure}
+	
+\subsubsection{Celdas}
+\label{sec:manual.Editor.componentes.celdas}
+
+\par Las celdas son los componentes principales de un tablero. Junto con las celdas de control son los elementos con los que el usuario puede interaccionar directamente durante la interpretación.
+
+\par Las propiedades de una celda son:
+\begin{itemize}
+	\item \textbf{Identificador:} Identificador único dentro de su tablero que determina la celda y que se muestra en todos los interfaces donde ésta puede ser seleccionada.
+	\item \textbf{Texto:} Texto que se muestra centrado verticalmente.
+	\item \textbf{Fuente:} Fuente que se le aplica al texto de la celda. En la edición Android no se puede seleccionar ya que se usa la fuente de Android.
+	\item \textbf{Borde:} Anchura y color del borde rectangular que rodea la celda.
+	\item \textbf{Efectos de barrido:} Anchura y color del borde rectangular que rodea la celda en el momento del barrido en el Intérprete.
+	\item \textbf{Fondo:} Color del fondo de la celda. También se puede seleccionar un color de gradiente para hacer un degradado en el fondo de la celda.
+	\item \textbf{Imagen:} Imagen que se mostrará dentro de la celda. Puede seleccionarse una
+imagen existente en el ordenador o bien desde la Galería de pictogramas (ver sección~\ref{sec:manual.Editor.galeria}). Si la celda también tiene texto se ofrecen tres opciones de posicionamiento de ambos:
+	\begin{itemize}
+		\item \textbf{Imagen arriba:} La imagen se sitúa encima del texto dejando un margen entre ambos.
+		\item \textbf{Imagen abajo:} La imagen se sitúa debajo del texto dejando un margen entre ambos.
+		\item \textbf{Texto centrado:} Ambos elementos se centran en la celda superponiéndose el texto encima de la imagen.
+	\end{itemize}
+	\par Aunque en la edición Android podemos seleccionar la posición del texto, el Intérprete TICO4Android la ignorará, ya que la posición del texto en este Intérprete depende de su propia configuración (arriba, abajo o sin texto)
+	\item \textbf{Acciones de interpretación:} Estas propiedades determinan las acciones dinámicas que realiza la celda durante la interpretación:
+	\begin{itemize}
+		\item \textbf{Acumular:} Cuando la celda es pulsada se añade a una lista que se muestra en la ventana del Intérprete (ver sección~\ref{sec:manual.interprete}). Esta opción permite la construcción de frases.
+		\item \textbf{Ir a otro tablero:} Cuando la celda es pulsada se termina la interpretación del tablero actual y se comienza la del tablero seleccionado. Ambos tableros deberán pertenecer al mismo proyecto.
+		\item \textbf{Imagen alternativa:} Imagen que se muestra cuando el barrido está sobre la celda o pasamos el ratón sobre ella.
+		\item \textbf{Sonido:} Sonido que se reproduce cuando se pulsa la celda.
+		\item \textbf{Texto a enviar:} Cuando la celda es pulsada el texto que contiene se envía al área de texto seleccionada durante el tiempo especificado. Este texto se mostrará en el área en vez del suyo propio original. 
+		\item \textbf{Vídeo:} Vídeo que se reproduce cuando se pulsa la celda.
+		\item \textbf{Sonido de barrido:} Sonido que se reproduce cuando el barrido está sobre la celda. Sólo se reproduce en los modos de barrido y no sonará si estamos en selección directa. En el Intérprete Android además tendrá que estar activado en sus opciones el sonido alternativo.
+	\end{itemize}
+	\item \textbf{Entorno:} Esta propiedad determina la acción de control de entorno que debe realizarse al pulsar la celda durante la interpretación.
+\end{itemize}
+
+
+\subsubsection{Celdas de control}
+\label{sec:manual.Editor.componentes.celdasDeControl}
+
+\begin{figure}[htb]
+\begin{minipage}{0.45\textwidth}\begin{center}
+\includegraphics[width=\textwidth]{figures/propiedades-celda-control-1}
+\end{center}\end{minipage}
+\hfill
+\begin{minipage}{0.45\textwidth}\begin{center}
+\includegraphics[width=\textwidth]{figures/propiedades-celda-control-2}
+\end{center}\end{minipage}
+
+\caption{Ventanas de propiedades de una celda de control}\label{gra:control-cell-dialog-examples}
+\end{figure}
+
+\par Las celdas de control son un tipo específico de celdas. Junto con las celdas son los elementos con los que el usuario puede interaccionar directamente durante la interpretación
+y permiten controlar las acciones a realizar en el Intérprete. La figura~\ref{gra:control-cell-dialog-examples} muestra la ventana a través de la que se configura una celda de control.
+Las propiedades de una celda de control son:
+\begin{itemize}
+
+\item \textbf{Identificador:} Identificador único que determina la celda de control y que se
+muestra en todos los interfaces donde ésta puede ser seleccionada.
+\item \textbf{Texto:} Texto que se muestra en la parte inferior de la celda de control. Este texto no se puede modificar y se corresponde con la acción de la celda de control.
+\item \textbf{Fuente:} Fuente que se aplica al texto de la celda de control. En la edición Android no se puede seleccionar ya que se usa la fuente de Android.
+\item \textbf{Acción:} Acción que realiza la celda de control cuando es pulsada durante la interpretación de un proyecto. Las acciones que se pueden realizar son:
+\begin{itemize}
+\item \textbf{Leer:} Realiza una lectura de las celdas acumuladas en el área de acumulación
+del Intérprete TICO (ver sección~\ref{sec:manual.interprete}). La lectura consiste en reproducir por orden el sonido de las celdas acumuladas si lo tienen.
+\item \textbf{Volver:} Vuelve al tablero que se interpretó de forma inmediatamente anterior
+al tablero actual.
+\item \textbf{Inicio:} Vuelve al tablero inicial del proyecto que se está interpretando.
+\item \textbf{Borrar celda:} Borra la última celda acumulada en el área de acumulación.
+\item \textbf{Borrar celdas:} Borra todas las celdas acumuladas en el área de acumulación.
+\item \textbf{Parar:} Termina la interpretación del proyecto actual.
+\item \textbf {Salir:} Cierra el Intérprete TICO.
+\end{itemize}
+\item \textbf{Sonido de barrido:} Sonido que se reproduce cuando el barrido está sobre la celda. Sólo se reproduce en los modos de barrido y no sonará si estamos en selección directa. En el Intérprete TICO4Android además tendrá que estar activado en sus opciones el sonido alternativo.
+\end{itemize}
+
+\subsubsection{Cuadrículas}
+\label{sec:manual.Editor.componentes.cuadriculas}
+
+\par Las cuadrículas son herramientas para crear tablas de celdas de forma rápida. Pueden ser editadas en conjunto como cuadrícula después de insertarla mientras estemos editando, pero al ser cargado un proyecto no se recuperará esa información y aparecerán como celdas independientes, sin las opciones de agrupación. Las cuadrículas no tienen propiedades.
+
+
+\subsubsection{Áreas de texto}
+\label{sec:manual.Editor.componentes.areas}
+
+\par Las áreas de texto son componentes rectangulares que pueden contener varias líneas de texto con diferentes alineaciones. Durante la interpretación de un tablero pueden recibir un texto temporal que se mostrará durante un tiempo determinado.
+
+\par Las propiedades de una área de texto son:
+\begin{itemize}
+	\item \textbf{Identificador:} Identificador único dentro de su tablero que determina el área de texto y que se muestra en todos los interfaces donde ésta puede ser seleccionada.
+	\item \textbf{Texto:} Texto que se muestra en el área de texto.
+	\item \textbf{Alineación:} Determina la alineación vertical y horizontal del texto.
+	\item \textbf{Fuente:} Fuente que se le aplica al texto. En la edición para Android está deshabilitada ya que se usa la fuente Android.
+	\item \textbf{Borde:} Anchura y color del borde rectangular que rodea el área de texto.
+	\item \textbf{Fondo:} Color del fondo del área de texto. También se puede seleccionar un color de gradiente para hacer un degradado en el fondo del área de texto.
+\end{itemize}
+
+\subsubsection{Etiquetas}
+\label{sec:manual.Editor.componentes.etiquetas}
+
+\par Las etiquetas son componentes de texto cuyo tamaño se ajusta automáticamente.
+
+\par Las propiedades de una etiqueta son:
+\begin{itemize}
+	\item \textbf{Texto:} Texto que se muestra en la etiqueta.
+	\item \textbf{Fuente:} Fuente que se le aplica al texto de la etiqueta. En la edición para Android está deshabilitada ya que se usa la fuente Android.
+	\item \textbf{Borde:} Anchura y color del borde rectangular que rodea la etiqueta.
+	\item \textbf{Fondo:} Color del fondo de la etiqueta. También se puede seleccionar un color de gradiente para hacer un degradado en el fondo de la etiqueta.
+\end{itemize}
+
+\subsubsection{Líneas}
+\label{sec:manual.Editor.componentes.lineas}
+
+\par Las líneas son componentes visuales cuya representación es una línea que une
+dos de las esquinas del componente.
+
+\par Las propiedades de una línea son:
+\begin{itemize}
+	\item \textbf{Color:} Color de dibujo de la línea.
+	\item \textbf{Anchura:} Anchura de la línea.
+\end{itemize}
+
+\subsubsection{Polígonos}
+\label{sec:manual.Editor.componentes.poligonos}
+
+\par Dentro de este grupo se incluyen todos los componentes visuales que tienen idénticas
+propiedades y que únicamente varía su forma de representación. Los posibles polígonos son:
+rectángulo, rectángulo redondeado y óvalo, teniendo cada uno la forma que su nombre indica.
+
+\par Las propiedades de un polígono son:
+\begin{itemize}
+	\item \textbf{Borde:} Anchura y color del borde que rodea el polígono.
+	\item \textbf{Fondo:} Color del fondo del polígono. También se puede seleccionar un color de gradiente para hacer un degradado en el fondo del polígono.
+\end{itemize}
+
+%validacion
+\subsection{Utilidad de Validación}\label{sec:manual.Editor.validacion}
+
+\begin{figure}[h!tb]\begin{center}
+\includegraphics[width=\textwidth]{figures/utilidades}
+\caption{Menú Validación en el Editor}\label{gra:utilidades}
+\end{center}\end{figure}
+
+\par Esta opción del menú valida tableros y proyectos y administra los elementos relacionados con la validación. La figura~\ref{gra:utilidades} muestra la integración de la herramienta en el Editor.
+\par Dentro de esta opción se encuentran las distintas alternativas a las que se puede
+acceder para manejar la información que proporciona esta herramienta:
+
+\begin{figure}[h!tb]\begin{center}
+\includegraphics[width=\textwidth]{figures/administrar}
+\caption{Menú de administración}\label{gra:administrar}
+\end{center}\end{figure}
+
+\begin{itemize}
+\item \textbf{Administrar:} Facilita el acceso al módulo de administración para la edición de
+los distintos elementos de que está compuesto (figura~\ref{gra:administrar}).
+
+
+
+\begin{itemize}
+\item \textbf{Usuarios:} Añade, modifica o borra usuarios.
+\item \textbf{Limitaciones:} Crea o borra limitaciones y permite editar los atributos propios
+dentro de cada una de ellas.
+\item \textbf{Reglas:} Crea, modifica y borra reglas de validación para posteriores validaciones.
+\end{itemize}
+
+\begin{figure}[h!tb]\begin{center}
+\includegraphics[width=\textwidth]{figures/validar}
+\caption{Menú de validación}\label{gra:validar}
+\end{center}\end{figure}
+
+\item \textbf{Validar:} Esta opción da paso a la validación completa de tableros y proyectos
+(figura~\ref{gra:validar}).
+\begin{itemize}
+\item \textbf{Tablero:} Hace una validación de los elementos que componen el tablero.
+\item \textbf{Proyecto:} Valida el conjunto de tableros de los que está formado el proyecto y cada tablero por separado.
+\end{itemize}
+
+
+\end{itemize}
+
+
+\subsubsection{Administración de usuarios}
+\label{sec:manual.Editor.validacion.usuarios}
+
+\par La opción de administrar usuarios permite al usuario intermedio introducir, modificar o borrar alumnos junto con sus características. Accediendo a través del menú \textit{Utilidades - Validación - Administrar - Usuarios} se alcanzan las opciones de la ventana de la figura~\ref{gra:administracion-usuarios}:
+
+\begin{figure}[h!tb]\begin{center}
+\includegraphics[scale=0.75]{figures/administracion-usuarios}
+\caption{Ventana para la administración de usuarios}\label{gra:administracion-usuarios}
+\end{center}\end{figure}
+
+\begin{itemize}
+\item \textbf{Guardar usuario:} Esta opción permite:
+\begin{itemize}
+\item \textbf{Añadir:} Se añade un nuevo alumno dando valores a las distintas limitaciones que se muestran en pantalla dentro del rango permitido, escribiendo su nombre en el cuadro editable de la derecha y pulsando el botón Guardar usuario.
+\item \textbf{Modificar:} Se modifica un alumno que ya se encuentra en la base de datos. Para esto hay que dar valores a las distintas limitaciones dentro del rango permitido, eligiendo en la lista desplegable de la derecha un nombre de entre los que se muestran y pulsando el botón Guardar usuario. Como resultado se mostrará un mensaje informativo si se ha guardado correctamente (figura~\ref{gra:usuario-guardado}) o un mensaje de error en caso contrario.
+
+\begin{figure}[h!tb]\begin{center}
+\includegraphics[scale=0.75]{figures/usuario-guardado}
+\caption{Usuario guardado}\label{gra:usuario-guardado}
+\end{center}\end{figure}
+
+\end{itemize}
+
+\item \textbf{Cargar usuario:} En este caso se cargan los datos de un alumno. Los valores de las limitaciones que aparecen en pantalla se actualizarán con los que posee el alumno elegido de la lista desplegable de la parte izquierda al pulsar este botón (figura~\ref{gra:cargar-usuario}). Esto permite ver las características de un usuario concreto y, si lo creemos conveniente, modificarlo en base a los valores que ya poseía tal y como se ha explicado anteriormente.
+\begin{figure}[h!tb]\begin{center}
+\includegraphics[scale=0.75]{figures/cargar-usuario}
+\caption{Cargar un usuario}\label{gra:cargar-usuario}
+\end{center}\end{figure}
+
+
+\item \textbf{Borrar usuario:} Eligiendo un alumno de la lista desplegable izquierda y pulsando
+el botón se le puede eliminar definitivamente. Antes de eliminarlo el sistema muestra un mensaje de confirmación como el de la figura~\ref{gra:borrar-usuario}.
+\begin{figure}[h!tb]\begin{center}
+\includegraphics[scale=0.75]{figures/borrar-usuario}
+\caption{Mensaje de confirmación al borrar un usuario}\label{gra:borrar-usuario}
+\end{center}\end{figure}
+
+
+\end{itemize}
+
+\subsubsection{Administración de limitaciones}
+\label{sec:manual.Editor.validacion.administracion-limitaciones}
+
+\par Esta ventana, mostrada en la figura~\ref{gra:administracion-limitaciones}, permite al usuario visualizar y modificar las limitaciones y sus propiedades. Está compuesta de distintas listas con los nombres de cada limitación y una tabla con los valores dentro de éstas.
+
+\begin{figure}[h!tb]\begin{center}
+\includegraphics[width=\textwidth]{figures/administracion-limitaciones}
+\caption{Ventana de administración de limitaciones}\label{gra:administracion-limitaciones}
+\end{center}\end{figure}
+
+\par Esta ventana permite:
+
+\par En la sección \textit{Limitaciones}.
+\begin{itemize}
+\item \textbf{Añadir limitación:} La nueva limitación queda almacenada escribiendo su nombre en el cuadro editable y pulsando el botón.
+\item \textbf{Borrar limitación:} Permite borrar una limitación seleccionada de entre las que se encuentran en la lista desplegable al pulsar el botón. Inmediatamente aparece un mensaje de confirmación como el de la figura~\ref{gra:borrar-limitacion}.
+
+\begin{figure}[h!tb]\begin{center}
+\includegraphics[scale=0.75]{figures/borrar-limitacion}
+\caption{Mensaje de confirmación al borrar una limitación}\label{gra:borrar-limitacion}
+\end{center}\end{figure}
+
+
+\end{itemize}
+
+\par En la sección \textit{Parámetros}.
+\begin{itemize}
+\item \textbf{Añadir parámetro:} Se ha de elegir a través de la lista desplegable situada a la izquierda, la limitación en la que se quiere añadir un parámetro (figura~\ref{gra:cargar-limitacion}); después se escribe en el cuadro editable el nombre del nuevo parámetro y se elige el tipo de dato que va a guardar (numérico o verdadero/falso); finalmente se pulsa el botón.
+\begin{figure}%[htb]
+\begin{center}
+\includegraphics[width=\textwidth]{figures/cargar-limitacion}
+\caption{Cargar una limitación}\label{gra:cargar-limitacion}
+\end{center}\end{figure}
+\item \textbf{Borrar parámetro:} De la misma forma que para añadir, se elige la limitación, se busca el parámetro de la lista desplegable contigua que se desea borrar y se pulsa el botón.
+
+\end{itemize}
+
+
+
+\par La sección \textit{Requisitos a cumplir} muestra en una tabla los parámetros que contiene cada limitación, cuando en la sección \textit{Parámetros} se selecciona alguna de ellas. También refleja los cambios que se producen al añadir o borrar parámetros. La tabla permite modificar el valor de los parámetros y aumentar o disminuir el rango de la limitación.
+
+\begin{itemize}
+\item \textbf{Añadir una fila:} En el caso de querer añadir un nuevo grado al rango de la limitación se ha de pulsar el botón \textit{Añadir fila} con lo que, automáticamente, aparecerá una nueva fila en la tabla, la cual habrá que rellenar completamente con nuevos datos.
+
+\item \textbf{Borrar una fila completa:} A la hora de disminuir el número de grados de la limitación puede seleccionarse una fila completa, pinchando sobre ella y pulsando el botón \textit{Borrar fila completa}.
+
+\item \textbf{Guardar modificaciones:} Una vez modificados los valores de la tabla se pueden guardar pulsando el botón. Si se ha añadido una nueva fila y no se ha completado aparece el mensaje de aviso de la figura~\ref{gra:aviso-fila-incompleta} y el mensaje de error de la figura~\ref{gra:error-guardar-requisitos}.
+\begin{figure}%[htb]
+\begin{center}
+\includegraphics[scale=0.75]{figures/aviso-fila-incompleta}
+\caption{Mensaje de aviso para completar todas las filas}\label{gra:aviso-fila-incompleta}
+\end{center}\end{figure}
+
+\begin{figure}%[htb]
+\begin{center}
+\includegraphics[scale=0.75]{figures/error-guardar-requisitos}
+\caption{Error al guardar requisitos}\label{gra:error-guardar-requisitos}
+\end{center}\end{figure}
+
+\item \textbf{Cargar valores predeterminados:} Los parámetros y los valores que poseía cada una de las limitaciones que existían al inicio de la instalación y que todavía se encuentran disponibles, son cargados mediante el botón Cargar valores predeterminados en la tabla para su visualización o para ser guardados.
+
+\end{itemize}
+
+
+\subsubsection{Administración de reglas}
+\label{sec:manual.Editor.validacion.administracion-reglas}
+
+\begin{figure}%[htb]
+\begin{center}
+\includegraphics[width=\textwidth]{figures/administracion-reglas}
+\caption{Ventana para la administración de reglas}\label{gra:administracion-reglas}
+\end{center}\end{figure}
+
+\par La figura~\ref{gra:administracion-reglas} muestra la ventana que da acceso a la opción encargada de administrar las reglas que servirán para la validación de proyectos. Permite al usuario lo siguiente:
+
+
+\begin{itemize}
+\item \textbf{Modificar regla:} Se puede editar la regla seleccionada mediante la lista desplegable, que puede mostrar todas o sólo las clasificadas por: reglas para celdas, para tableros o para proyectos mediante los botones de selección. Se muestran sus atributos, parámetros, función utilizada y mensaje a mostrar en sus correspondientes posiciones. Además, para cada una de estas propiedades de la regla se da la opción de cambiar cada una de ellas y guardar la regla modificada pulsando el botón.
+
+\item \textbf{Borrar regla:} Permite borrar una regla, seleccionando la regla a eliminar de la lista desplegable y pulsando el botón.
+
+\item \textbf{Añadir nueva regla:} Se puede insertar una nueva regla pulsando esta opción, la cual da paso a una nueva ventana para crear reglas. Como se muestra en la figura~\ref{gra:anyadir-regla} existen listas desplegables para elegir el tipo de función, el/los atributo/s relacionado/s con las características de los componentes del tablero o proyecto que se quieren comprobar, el parámetro con el que se va a hacer la comparación y el mensaje que se quiere mostrar por pantalla. La nueva regla quedará guardada pulsando el botón \textit{Guardar regla} de esta última ventana.
+
+\begin{figure}%[htb]
+\begin{center}
+\includegraphics[width=\textwidth]{figures/anyadir-regla}
+\caption{Ventana para añadir nuevas reglas}\label{gra:anyadir-regla}
+\end{center}\end{figure}
+
+\item \textbf{Cargar reglas predeterminadas:} Se cargarán automáticamente las reglas iniciales (y se borrarán las añadidas posteriormente a la instalación de la aplicación) con sólo pulsar el botón, avisando al usuario mediante el mensaje de la figura~\ref{gra:reglas-predeterminadas} si desea continuar con la operación.
+
+\begin{figure}%[htb]
+\begin{center}
+\includegraphics[width=\textwidth]{figures/reglas-predeterminadas}
+\caption{Mensaje de confirmación al cargar las reglas predeterminadas}\label{gra:reglas-predeterminadas}
+\end{center}\end{figure}
+
+\end{itemize}
+
+\subsubsection{Validación de tableros}
+\label{sec:manual.Editor.validacion.validacion-tableros}
+
+\par La opción de validación de tableros, analiza el tablero en sí y todos los componentes dentro de él. Mediante la figura~\ref{gra:validar-tablero} se muestra el aspecto de la ventana.
+
+\begin{figure}[htb]\begin{center}
+\includegraphics[scale=0.75]{figures/validar-tableero}
+\caption{Ventana de validación de tableros}\label{gra:validar-tablero}
+\end{center}\end{figure}
+
+\par Para comenzar a validar es necesario dar valor a cada limitación o cargar estos valores de alguno de los usuarios que se encuentran en la base de datos, seleccionándolos desde la lista desplegable y cargándolos mediante el botón \textit{Cargar usuario}. Seguidamente se puede validar el tablero mediante el botón \textit{Validar}. Se mostrará una nueva ventana con los resultados del análisis, como en la figura~\ref{gra:validacion-tablero}. También se puede pedir al sistema un conjunto de sugerencias de diseño de tableros para poder adaptar nuestro diseño a los requisitos mostrados. La figura~\ref{gra:sugerencias-tablero} muestra esta última opción.
+
+\begin{figure}[h!tb]\begin{center}
+\includegraphics[width=\textwidth]{figures/validacion-tablero}
+\caption{Ventana de resultados para tableros}\label{gra:validacion-tablero}
+\end{center}\end{figure}
+
+\begin{figure}[h!tb]\begin{center}
+\includegraphics[width=\textwidth]{figures/sugerencias-tablero}
+\caption{Ventana de sugerencias de diseño para tableros}\label{gra:sugerencias-tablero}
+\end{center}\end{figure}
+
+\subsubsection{Validación de proyectos}
+\label{sec:manual.Editor.validacion.validacion-proyectos}
+
+\par La validación de proyectos se realiza de la misma manera que la validación de tableros, sólo que en esta ocasión se analiza el proyecto en general y cada uno de los distintos tableros que lo componen en particular. La ventana de validación, que puede verse en la figura~\ref{gra:validar-proyecto}, es muy similar a la de validación de tableros, con las mismas opciones disponibles. Las figuras~\ref{gra:validacion-proyecto} y~\ref{gra:sugerencias-proyecto} muestran los resultados de validar un proyecto y mostrar sugerencias de diseño respectivamente.
+
+\begin{figure}%[htb]
+\begin{center}
+\includegraphics[scale=0.75]{figures/validar-proyecto}
+\caption{Ventana de validación de proyecto}\label{gra:validar-proyecto}
+\end{center}\end{figure}
+
+\begin{figure}%[htb]
+\begin{center}
+\includegraphics[width=\textwidth]{figures/validacion-proyecto}
+\caption{Ventana de resultados para proyectos}\label{gra:validacion-proyecto}
+\end{center}\end{figure}
+
+\begin{figure}%[htb]
+\begin{center}
+\includegraphics[width=\textwidth]{figures/sugerencias-proyecto}
+\caption{Ventana de sugerencias de diseño para proyectos}\label{gra:sugerencias-proyecto}
+\end{center}\end{figure}
+
+
+%galeria de imagenes
+\subsection{Utilidad Galería de pictogramas}\label{sec:manual.Editor.galeria}
+\par Este menú permite la gestión de la Galería de pictogramas a través de diferentes opciones. La figura~\ref{gra:menu-pictogramas} muestra la integración de esta opción en el Editor. \textbf{La Galería no va incluida en la instalación de TICO, sino que debe descargarse desde la página web del Proyecto TICO\footnote{\url{http://www.proyectotico.es}} e incorporarse una vez instalado el programa}.
+La incorporación de la Galería de pictogramas a la aplicación TICO se explica en la sección~\ref{sec:manual.Editor.galeria.como-importar} de este manual.
+
+\begin{figure}[h!tb]\begin{center}
+\includegraphics[width=\textwidth]{figures/menu-pictogramas}
+\caption{Menú Galería de pictogramas en el Editor}\label{gra:menu-pictogramas}
+\end{center}\end{figure}
+
+\par Los pictogramas incluidos en la Galería son elaborados por ARASAAC\footnote{\url{http://www.catedu.es/arasaac}}- CATEDU\footnote{\url{http://www.catedu.es}} con la colaboración de los profesionales del Colegio Público de Educación Especial Alborada de Zaragoza y la financiación del Departamento de Ciencia, Tecnología y Universidad del Gobierno de Aragón y el programa Teruel Digital. Estos pictogramas se distribuyen bajo licencia de Creative Commons (BY-NC-SA).
+
+\par También pueden añadirse imágenes propias a la Galería. De esta forma se pueden encontrar rápidamente para usarlas en los tableros de comunicación generados con TICO.
+
+
+\subsubsection{Cómo importar la Galería de pictogramas en el Editor}
+\label{sec:manual.Editor.galeria.como-importar}
+
+\par A continuación se explican los pasos a realizar para importar la Galería de pictogramas en el Editor TICO.
+
+\begin{enumerate}
+\item Descargar la Galería desde la página web de TICO (\url{http://www.proyectotico.es}), que se puede encontrar en la sección Galería de pictogramas. Guardar el archivo en una ubicación conocida de su equipo, por ejemplo, en el Escritorio.
+
+\item Descomprimir el archivo \textit{Pictogramas.zip} que se habrá descargado. Se generará la carpeta Pictogramas que debe contener las imágenes.
+
+\item Abrir el Editor TICO. Acceder al menú \textit{Utilidades - Galería de pictogramas - Importar Base de Datos}.
+
+\item Pulsar el botón \textit{Seleccionar} que abrirá una ventana desde la que podremos seleccionar la carpeta que contiene las imágenes. Deberemos navegar hasta seleccionar la carpeta \textit{Pictogramas}.
+
+\item Si nuestra Galería de pictogramas no contiene imágenes antes de importar, pulsamos el botón \textit{Importar} y esperamos a que finalice de importar las imágenes.
+
+\item Si ya teníamos imágenes en la Galería y vamos a importarla de nuevo puede ser que haya imágenes que se repitan o tengan el mismo nombre. En este caso podemos elegir entre reemplazar las imágenes que teníamos por las nuevas, o añadir las nuevas imágenes a la Galería. Una vez seleccionada la opción que queremos pulsamos el botón \textit{Importar} y esperamos a que finalice de importar las imágenes.
+
+\end{enumerate}
+
+\par Una vez importada la Galería se podrán realizar búsquedas para incorporar imágenes
+a los tableros de comunicación.
+
+\subsubsection{Búsqueda de imágenes en la Galería}
+\label{sec:manual.Editor.galeria.busqueda}
+
+\par Dado que el número de pictogramas es muy elevado y sigue en crecimiento, la Galería permite la búsqueda de imágenes, tanto por términos clave asociados a las mismas, como por nombre de la imagen. Estos términos clave, que caracterizan una imagen, pueden ser definidos y modificados desde el Editor y son, en principio, los conceptos representados por las imágenes: sinónimos, traducciones a otros idiomas, etc.
+
+\begin{figure}[h!tb]\begin{center}
+\includegraphics[width=\textwidth]{figures/busqueda-imagenes}
+\caption{Ventana de búsqueda de imágenes}\label{gra:busqueda-imagenes}
+\end{center}\end{figure}
+
+\par La figura~\ref{gra:busqueda-imagenes} muestra la ventana de búsqueda de imágenes. En ella se pueden distinguir los siguientes elementos:
+
+\begin{enumerate}
+\item \textbf{Panel de búsqueda por términos clave:} Permite introducir la combinación de términos clave que se quiere buscar y pulsando el botón se realiza la búsqueda.
+
+\item \textbf{Panel de búsqueda por nombre:} Permite introducir el nombre de la imagen que se quiere buscar y pulsando el botón se realiza la búsqueda.
+
+\item \textbf{Panel de imágenes:} Muestra el resultado de las diferentes búsquedas en grupos de cuatro. Para ver el resto de las imágenes se pueden usar las flechas situadas en la parte inferior o las flechas izquierda y derecha del teclado.
+\end{enumerate}
+
+\fbox{ \parbox{0.94 \linewidth}{
+\color{red}
+	\par Antes de realizar búsquedas es importante saber que:
+	
+	\begin{itemize}
+		\item Cuando se quieren realizar búsquedas de los pictogramas de la Galería, éstas deben hacerse por términos clave, no por nombre de la imagen. Esto se debe a que el nombre de la imagen es un código numérico que la identifica en la Galería de pictogramas. De esta forma pueden hacerse búsquedas en los diferentes idiomas disponibles.
+
+		\item La búsqueda por nombre de imagen es útil cuando se han incorporado imágenes externas a la Galería.
+	
+		\item Se puede utilizar el carácter '*' como comodín introduciendo tantos asteriscos como se quiera, y en todas las posiciones. La búsqueda por '*' mostrará como resultado todas las imágenes de la Galería.
+	\end{itemize}
+}}
+
+\begin{itemize}
+
+\item \textbf{Búsqueda por términos clave}
+\par Permite buscar hasta por tres términos clave.
+
+\par Cuenta con tres cuadros de texto donde se pueden introducir los términos a buscar y dos menús desplegables donde se puede elegir entre las opciones 'y' y 'o'. Si se elige 'y' se mostrarán como resultado las imágenes que pertenezcan a todos los términos clave introducidos. Si se elige 'o', se mostrarán como resultado las imágenes que pertenezcan a alguno de los términos clave introducidos. Estas opciones se pueden combinar para realizar búsquedas más complejas.
+
+\par Se puede utilizar el símbolo '*' para seleccionar los términos clave que empiezan, acaban o contienen la letra o conjunto de letras introducido. La figura~\ref{gra:ejemplo-busqueda} muestra dos ejemplos de búsquedas en la Galería por término clave.
+
+\begin{figure}
+\begin{minipage}{0.95 \textwidth}\begin{center}
+\includegraphics[width=\textwidth]{figures/ejemplo-busqueda1}
+\end{center}\end{minipage}
+
+\begin{minipage}{0.95 \textwidth}\begin{center}
+\includegraphics[width=\textwidth]{figures/ejemplo-busqueda2}
+\end{center}\end{minipage}
+\caption{Ejemplos de búsquedas de imágenes por término clave}\label{gra:ejemplo-busqueda}
+\end{figure}
+
+
+\item \textbf{Búsqueda por nombre de imagen}
+
+\par Permite buscar imágenes distintas a los pictogramas de ARASAAC que hayan sido insertadas en la Galería de la siguiente manera:
+\begin{itemize}
+\item \textbf{Por nombre exacto de la imagen:} basta con poner el nombre de la imagen que queremos buscar y pulsar en \textit{Buscar}.
+
+\item \textbf{Por nombres que empiecen por una letra o conjunto de letras:} si queremos todos los instrumentos musicales buscaremos por instrumento* y si queremos todas las imágenes que empiecen por la letra 'a' buscaremos a*.
+
+\item \textbf{Por nombres que finalicen por una letra o conjunto de letras:} si queremos todas las palabras que finalicen en 'tor' buscaremos *tor y si queremos todas las palabras que acaban en la letra 'e' buscaremos *e.
+
+\item \textbf{Por nombres que contengan una letra o conjunto de letras:} si queremos todas las palabras que contengan la sílaba 'de' buscaremos *de* y si queremos todas las palabras que contengan una letra 'y' buscaremos por *y*.
+\end{itemize}
+
+\par Las figuras~\ref{gra:busqueda-nombre} y~\ref{gra:busqueda-nombre2} muestran dos ejemplos de búsquedas en la Galería por nombre de imagen.
+
+\begin{figure}%[htb]
+\begin{center}
+\includegraphics[width=\textwidth]{figures/busqueda-nombre}
+\caption{Ejemplo de búsqueda de imagen por nombre}\label{gra:busqueda-nombre}
+\end{center}\end{figure}
+
+\begin{figure}%[htb]
+\begin{center}
+\includegraphics[width=\textwidth]{figures/busqueda-nombre2}
+\caption{Ejemplo de búsqueda de imagen por nombre}\label{gra:busqueda-nombre2}
+\end{center}\end{figure}
+
+\end{itemize}
+
+\subsubsection{Términos clave}
+\label{sec:manual.Editor.galeria.terminos-clave}
+
+\begin{figure}\begin{center}
+\includegraphics[scale=0.75]{figures/terminos-clave}
+\caption{Ventana para la gestión de términos clave}\label{gra:terminos-clave}
+\end{center}\end{figure}
+
+\par Esta ventana, mostrada en la figura~\ref{gra:terminos-clave} permite gestionar los términos clave existentes en la Galería de pictogramas. Las acciones que se pueden realizar son:
+
+\begin{itemize}
+\item \textbf{Añadir:} Se pueden introducir nuevos términos clave escribiéndolos en el cuadro de texto separados por comas y pulsando después el botón \textit{Añadir}.
+
+\item \textbf{Modificar:} Permite modificar un término clave. Para esto hay que seleccionarlo previamente en la lista lo que provocará que aparezca escrito en el cuadro de texto. Después de modificarlo en el cuadro de texto pulsamos el botón \textit{Modificar}.
+
+\item \textbf{Eliminar:} Permite eliminar el término clave que se seleccione en la lista. El programa pedirá confirmación de que se desea eliminar el término.
+\end{itemize}
+
+\subsubsection{Insertar imagen}
+\label{sec:manual.Editor.galeria.insertar-imagen}
+
+\begin{figure}\begin{center}
+\includegraphics[scale=0.75]{figures/insertar-imagen}
+\caption{Ventana para insertar una imagen en la Galería}\label{gra:insertar-imagen}
+\end{center}\end{figure}
+
+\par Esta opción permite añadir una imagen en la Galería de pictogramas. La figura~\ref{gra:insertar-imagen} muestra la ventana que permite realizarlo. En ella se pueden distinguir los siguientes elementos:
+
+\begin{enumerate}
+\item \textbf{Panel de selección de imagen:} Permite seleccionar la imagen que se desea añadir a la Galería.
+
+\item \textbf{Opciones de inserción:} Al añadir una imagen a la Galería puede ser que ya exista otra con el mismo nombre. Este panel permite seleccionar qué hacer en este caso. Las opciones disponibles son:
+\begin{itemize}
+\item \textbf{Reemplazar imagen:} Elimina la imagen que había en la Galería con sus términos clave y añade la nueva imagen con sus términos clave.
+\item \textbf{Añadir imagen:} Añade a la Galería la nueva imagen con sus términos clave renombrándola. El renombrado de la imagen consiste en añadir un número al final del nombre de la imagen.
+\end{itemize}
+
+\item \textbf{Panel de términos clave:} Permite seleccionar los términos clave que queremos que se asocien con la imagen que vamos a insertar. Además permite añadir nuevos términos escribiéndolos en el cuadro de texto separados por comas y pulsando en el botón \textit{Añadir}.
+
+\end{enumerate}
+
+
+\subsubsection{Modificar imagen}
+\label{sec:manual.Editor.galeria.modificar}
+
+\par Esta opción permite modificar una imagen de la Galería de pictogramas. La figura~\ref{gra:modificar-imagen} muestra la ventana que permite realizarlo. A través de ella se pueden realizar búsquedas de imágenes tal y como se explica en la sección~\ref{sec:manual.Editor.galeria.busqueda}. Los resultados de las búsquedas se muestran en el panel de imágenes y pinchando sobre ellas se pueden seleccionar para su modificación.
+
+\begin{figure}[h!tb]\begin{center}
+\includegraphics[width=\textwidth]{figures/modificar-imagen}
+\caption{Ventana para modificar imágenes de la Galería}\label{gra:modificar-imagen}
+\end{center}\end{figure}
+
+\par Las opciones existentes son:
+
+\begin{enumerate}
+\item \textbf{Modificar imagen:} La figura~\ref{gra:modificar} muestra la ventana que se abre al pulsar sobre esta opción. A través de ella se pueden modificar los términos clave que están asociados a la imagen seleccionando o deseleccionando de la lista de términos. Además se pueden introducir nuevos términos a través del cuadro de texto escribiéndolos separados por comas y pulsando el botón \textit{Añadir}.
+
+\begin{figure}\begin{center}
+\includegraphics[scale=0.75]{figures/modificar}
+\caption{Ventana para modificar una imagen de la Galería}\label{gra:modificar}
+\end{center}\end{figure}
+
+\item \textbf{Eliminar imagen:} Pulsando sobre este botón se puede eliminar una imagen de la Galería. El programa pide confirmación al usuario.
+\end{enumerate}
+
+\subsubsection{Eliminar imágenes}
+\label{sec:manual.Editor.galeria.eliminar}
+
+\par Esta opción permite eliminar varias imágenes de la Galería de pictogramas habiendo realizado previamente una búsqueda. La figura~\ref{gra:eliminar-imagen} muestra la ventana que permite realizarlo. A través de ella se pueden realizar búsquedas de imágenes tal y como se explica en la sección~\ref{sec:manual.Editor.galeria.busqueda} para ser eliminadas.
+
+\begin{figure}[h!tb]\begin{center}
+\includegraphics[width=\textwidth]{figures/eliminar-imagen}
+\caption{Ventana para eliminar imágenes de la Galería}\label{gra:eliminar-imagen}
+\end{center}\end{figure}
+
+\par En esta ventana se distinguen los siguientes elementos:
+\begin{enumerate}
+\item \textbf{Panel de búsqueda de imágenes:} Este panel permite la búsqueda de imágenes por término clave o por nombre de imagen para eliminarlas.
+
+\item \textbf{Panel de imágenes:} Este panel permite la visualización de los resultados de las búsquedas.
+
+\item \textbf{Barra de progreso:} La ventana incorpora una barra de progreso para saber en cada momento la evolución del borrado de imágenes.
+\end{enumerate}
+
+\par Las imágenes se eliminan pulsando sobre el botón \textit{Eliminar imágenes}.
+
+\subsubsection{Importar Base de Datos}
+\label{sec:manual.Editor.galeria.importar}
+
+\par Esta opción permite importar una base de datos con el formato adecuado para TICO. Esta base de datos se puede obtener o bien de la página web de TICO (ver sección~\ref{sec:manual.Editor.galeria.como-importar}) o exportando la Galería de pictogramas del Editor (ver sección~\ref{sec:manual.Editor.galeria.exportar}). La figura~\ref{gra:importar} muestra la ventana que permite realizarlo.
+
+\begin{figure}[h!tb]\begin{center}
+\includegraphics[width=\textwidth]{figures/importar}
+\caption{Ventana para importar la Galería de pictogramas}\label{gra:importar}
+\end{center}\end{figure}
+
+\par En esta ventana se distinguen los siguientes elementos:
+\begin{enumerate}
+\item \textbf{Panel de selección de directorio:} Este panel permite la selección del directorio donde se encuentra la base de datos a importar.
+
+\item \textbf{Opciones de importación:} Al importar la base de datos de imágenes en la Galería puede ser que ya existan imágenes con el mismo nombre. Este panel permite seleccionar qué hacer en este caso. Las opciones disponibles son:
+\begin{itemize}
+\item \textbf{Reemplazar imagen:} Elimina la imagen que había en la Galería con sus términos clave y añade la nueva imagen con sus términos clave.
+\item \textbf{Añadir imagen:} Añade a la Galería la nueva imagen con sus términos clave renombrándola. El renombrado de la imagen consiste en añadir un número al final del nombre de la imagen.
+\end{itemize}
+
+\item \textbf{Barra de progreso:} La ventana lleva incorporada una barra de progreso para que el usuario conozca en cada momento el estado de la importación.
+
+\end{enumerate}
+
+\par Pulsando el botón \textit{Importar} comienza la importación de la base de datos.
+
+\subsubsection{Exportar Base de Datos}
+\label{sec:manual.Editor.galeria.exportar}
+
+\par Esta opción permite realizar búsquedas de imágenes tal y como se explica en la sección~\ref{sec:manual.Editor.galeria.busqueda}. para exportarlas a una base de datos que podrá ser importada posteriormente. La figura 40 muestra la ventana que permite realizarlo.
+
+\begin{figure}[h!tb]\begin{center}
+\includegraphics[width=\textwidth]{figures/exportar}
+\caption{Ventana para exportar la Galería de pictogramas}\label{gra:exportar}
+\end{center}\end{figure}
+
+\par En esta ventana se distinguen los siguientes elementos:
+\begin{enumerate}
+\item \textbf{Panel de búsqueda de imágenes:} Este panel permite la búsqueda de imágenes por término clave o por nombre de imagen. Es necesario realizar una búsqueda que indique las imágenes a exportar. En el panel de imágenes se muestran los resultados de las búsquedas.
+\item \textbf{Panel de selección de directorio:} Este panel permite la selección del directorio donde se guardará la Galería de pictogramas exportada.
+\item \textbf{Barra de progreso:} La ventana lleva incorporada una barra de progreso para
+que el usuario conozca en cada momento el estado de la exportación.
+
+\end{enumerate}
+\par Pulsando el botón \textit{Exportar} comienza la exportación de la base de datos.
+
+
+\subsection{Modos de edición: Normal y Android}
+\label{sec:manual.Editor.modos}
+\par El Editor TICO puede ser usado para crear proyectos TICO tanto para el Intérprete normal de ordenador personal, como para el Intérprete TICO4Android. Los archivos resultantes para proyectos normales y Android tienen las extensiones \textit{.tco} y \textit{.tcoa} respectivamente.
+
+\par El funcionamiento, aspecto y opciones de ambos modos de edición son muy similares aunque con algunas diferencias. Durante la edición, en todo momento podemos saber en qué modo estamos editando mirando la barra superior de la aplicación. Si estamos en modo Normal en la barra superior aparecerá escrito \textit{Editor Tico -} y el nombre del proyecto que está siendo editado (ver figura~\ref{gra:modo-normal}). Si estamos en modo Android aparecerá escrito \textit{Editor Tico ANDROID -} y el nombre del proyecto que está siendo editado (ver figura~\ref{gra:modo-android}).
+
+\begin{figure}[h!tb]\begin{center}
+\includegraphics[width=\textwidth]{figures/modo-normal}
+\caption{Barra de la aplicación Editor en modo Normal}\label{gra:modo-normal}
+\end{center}\end{figure}
+
+\begin{figure}[h!tb]\begin{center}
+\includegraphics[width=\textwidth]{figures/modo-android}
+\caption{Barra de la aplicación Editor en modo Android}\label{gra:modo-android}
+\end{center}\end{figure}
+
+\par El cambio de un modo a otro es automático y depende de nuestras decisiones al crear un nuevo proyecto, abrir o guardar. El modo de edición puede cambiar entre Normal y Android en los siguientes casos:
+\begin{itemize}
+	\item \textbf{Al crear un nuevo proyecto.} Para crear un nuevo proyecto tenemos dos opciones, tanto en la barra de herramientas como en los iconos, \textit{Nuevo} y \textit{Nuevo android} que crearán un proyecto nuevo en modo Normal o modo Android respectivamente.
+	
+	\item \textbf{Al abrir un proyecto existente.} En el diálogo de selección de archivo (ver figura~\ref{gra:abrir-proyecto}) podemos cambiar el filtro en \textit{Archivos de Tipo} entre \textit{Proyectos de Tico} y \textit{Proyectos de Tico Android}. Si terminamos correctamente de abrir un proyecto el Editor estará en el modo del tipo aquí seleccionado.
+
+
+\begin{figure}[htb]\begin{center}
+\includegraphics[width=\textwidth]{figures/abrir-proyecto}
+\caption{Ventana para la selección de proyecto a abrir}\label{gra:abrir-proyecto}
+\end{center}\end{figure}
+
+\item \textbf{Al guardar un proyecto.} De la misma forma que al abrir, en el diálogo de selección de archivo para guardar (el cual aparece al seleccionar \textit{Guardar como} o al seleccionar \textit{Guardar} sin que se haya especificado previamente su nombre) podemos cambiar el tipo de proyecto entre \textit{Proyectos de Tico} y \textit{Proyectos de Tico Android}. Si terminamos correctamente de guardar un proyecto el Editor pasará al modo del tipo aquí seleccionado. Podemos ver una imagen de la ventana de guardado en la figura~\ref{gra:guardar-proyecto}
+
+\begin{figure}[htb]\begin{center}
+\includegraphics[width=\textwidth]{figures/guardar-proyecto}
+\caption{Ventana para la selección de proyecto a guardar}\label{gra:guardar-proyecto}
+\end{center}\end{figure}
+
+\end{itemize}
+
+\subsubsection{Diferencias entre modo Normal y Android}
+\label{sec:manual.Editor.modos.diferencias}
+
+Las principales diferencias tanto de opciones como de visualización entre el modo Normal y el modo Android son:
+
+\begin{itemize}
+\item En modo Android está deshabilitada la lista de fuentes de texto. El Intérprete Android usa su fuente propia, la \textit{Droid Sans}, y por tanto durante la edición para Android todos los textos se mostrarán con dicha fuente.
+
+\item Las celdas y las celdas de control se visualizan de distinta manera. En el modo Android la imagen se hace del máximo tamaño posible dentro de su celda guardando su proporción de altura y anchura para su mejor visualización en pantallas pequeñas de dispositivos Android. El texto se superpone alineado arriba o abajo (dependiendo de la opción escogida en las propiedades de la celda). Se pueden ver ejemplos de cómo se visualiza un proyecto en modo Normal (ver figura~\ref{gra:proyecto-normal}) y en modo Android(ver figura~\ref{gra:proyecto-android}).
+
+\begin{figure}\begin{center}
+\includegraphics[scale=0.5]{figures/proyecto-normal}
+\caption{Ventana del Editor en modo Normal}\label{gra:proyecto-normal}
+\end{center}\end{figure}
+
+\begin{figure}\begin{center}
+\includegraphics[scale=0.5]{figures/proyecto-android}
+\caption{Ventana del Editor en modo Android}\label{gra:proyecto-android}
+\end{center}\end{figure}
+
+%\item En las propiedades de las celdas en modo Android no aparece la opción \textit{Enviar texto}. El Intérprete Android no acepta textos a enviar para agilizar la aplicación evitando la detención de la interpretación durante la muestra del texto enviado. 
+
+\item En las propiedades del proyecto en modo Android se añade la opción \textit{orientación}. Esta opción determina la orientación de pantalla que se forzará en el Intérprete TICO4Android para la visualización del proyecto (ver sección~\ref{sec:manual.Editor.proyectos.propiedades}).
+
+\item Al crear un nuevo proyecto Android se muestra un nuevo diálogo (ver figura~\ref{gra:dialogo-nuevo-android}) en el que se pide el tamaño de tablero recomendado por la aplicación TICO4Android para el dispositivo y la orientación deseada. Esta información se guarda para que en futuros proyectos salgan por defecto.
+
+\begin{figure}\begin{center}
+\includegraphics[scale=0.75]{figures/dialogo-nuevo-android}
+\caption{Ventana de propiedades iniciales del proyecto Android}\label{gra:dialogo-nuevo-android}
+\end{center}\end{figure}
+
+\end{itemize}
+\clearpage
+
+\subsection{Plantillas}
+\label{sec:manual.Editor.plantillas}
+
+\par Al instalar la aplicación también se crean unas plantillas que se pueden utilizar para crear tableros ya inicializados con el tamaño de fondo, textos y las celdas ya distribuidas. Estas plantillas están pensadas para proyectos Android (por los tamaños escogidos) aunque pueden utilizarse también para proyectos normales.
+
+\par Para usar estas plantillas hay que usar la opción \textit{Archivo - Importar}. Las plantillas se encuentran en la carpeta \textit{templates} dentro del directorio en el que instalamos la aplicación TICO. En esta carpeta tenemos otras carpetas con la resolución absoluta de pantalla de los dispositivos Android para los que están pensados y a su vez dentro de ellas tenemos un par de carpetas \textit{landscape} y \textit{portrait} pensadas para la orientación del dispositivo horizontal y vertical respectivamente. Ya dentro de estas carpetas tenemos las plantillas con un nombre que nos indica las celdas que contiene en proporción filas por columnas y la resolución del tablero entre paréntesis. 
+
+\par Por ejemplo, la plantilla \textit{3x4(480x608).brd} contiene 12 celdas distribuidas en tres filas de cuatro celdas y con un tamaño de tablero de 480 píxeles de ancho por 608 de alto. Esta plantilla es idónea para los dispositivos Android en los que al usar la opción \textit{Ver resoluciones} del Intérprete Android (ver Manual del Intérprete Android) nos de una resolución portrait de 480 de ancho y 608 de alto.
+\clearpage
+% Manual del interprete
+\section{Manual del Intérprete}\label{sec:manual.interprete}
+
+\subsection{Elementos del Intérprete}
+\label{sec:manual.interprete.elementos}
+\par En esta sección se muestra la aplicación del Intérprete junto con su aspecto y funcionalidades. También se explican las opciones de configuración para su uso.
+
+\subsubsection{Ventana del Intérprete}
+\label{sec:manual.interprete.elementos.ventana}
+La figura~\ref{gra:interprete} muestra el aspecto de la ventana principal del Intérprete. En ella se pueden distinguir los siguientes elementos:
+\begin{figure}[h!tb]\begin{center}
+\includegraphics[width=\textwidth]{figures/interprete}
+\caption{Ventana del Intérprete}\label{gra:interprete}
+\end{center}\end{figure}
+
+\begin{enumerate}
+\item \textbf{Barra de menú:} Permite configurar las opciones del Intérprete para la interpretación de los proyectos y acceder a la mayoría de sus funcionalidades.
+
+\item \textbf{Área de interpretación:} Lugar donde se colocan los distintos tableros de un proyecto TICO cuando es cargado para la interpretación.
+
+\item \textbf{Área de acumulación:} Lugar donde se colocan las celdas acumulables que han sido seleccionadas por el usuario.
+\end{enumerate}
+
+\subsubsection{Barra de menú}
+\label{sec:manual.interprete.elementos.menu}
+
+\par La barra de menú de la aplicación contiene los siguientes submenús que permiten realizar todo tipo de acciones sobre el Intérprete:
+
+\begin{enumerate}
+\item \textbf{Archivo:} Acciones a realizar sobre un proyecto. Permite la carga de un proyecto ya creado en el Editor, así como salir de la aplicación.
+
+\item \textbf{Configuración:} Permite configurar las opciones de la aplicación: imagen del cursor durante el barrido, número máximo de celdas a acumular, espera del cursor durante el barrido automático y el tipo de barrido. Además se pueden configurar las preferencias de la aplicación.
+
+\item \textbf{Acciones:} Acciones de interpretación sobre un proyecto. Entre estas acciones se encuentran el comienzo de la interpretación, el fin de la interpretación, la lectura de la zona acumulada, el borrado de la última celda acumulada y el borrado de todas las celdas acumuladas (ver figura~\ref{gra:menu-acciones}).
+
+\begin{figure}[h!tb]\begin{center}
+\includegraphics[scale=0.75]{figures/menu-acciones}
+\caption{Detalle del Intérprete donde se muestra el menú Acciones}\label{gra:menu-acciones}
+\end{center}\end{figure}
+
+\item \textbf{Validación:} Permite realizar la validación de la configuración del Intérprete de acuerdo con las limitaciones específicas de los usuarios.
+\item \textbf{Ayuda:} Contiene el indispensable ``Acerca de...'' que muestra información sobre la aplicación.
+
+\end{enumerate}
+
+\subsubsection{Preferencias del Intérprete}
+\label{sec:manual.interprete.elementos.preferencias}
+\par Las preferencias del Intérprete se pueden modificar pulsando \textit{Configuración - Preferencias}.
+\par Las preferencias son:
+
+\begin{itemize}
+\item \textbf{Idioma:} Especifica el idioma de ejecución de la aplicación. Para que el cambio surta efecto hay que reiniciar la aplicación.
+\end{itemize}
+
+\subsection{Configuración del Intérprete}
+\label{sec:manual.interprete.configuracion}
+
+\par La figura~\ref{gra:opciones-interprete} muestra las opciones que se pueden configurar en el Intérprete a través del menú \textit{Configuración - Opciones del intérprete} que son:
+
+\begin{figure}[h!tb]\begin{center}
+\includegraphics[scale=0.75]{figures/opciones-interprete}
+\caption{Ventana de configuración de las opciones del Intérprete}\label{gra:opciones-interprete}
+\end{center}\end{figure}
+
+\begin{enumerate}
+\item \textbf{Imagen del cursor:} Permite seleccionar la imagen para el cursor del ratón durante la interpretación del proyecto. Si no se configura se utilizará una imagen por defecto.
+
+\item \textbf{Número máximo de celdas acumuladas:} Indica el número máximo de celdas que pueden acumularse en el área de acumulación hasta un máximo de 30. El valor que viene por defecto es 5.
+
+\item \textbf{Espera del cursor en segundos:} Si se selecciona como modo de ratón el barrido automático, indica el número de segundos que debe esperar el cursor antes de saltar al siguiente elemento del tablero. El valor por defecto es 1.
+\item \textbf{Modo de ratón:} Permite seleccionar entre tres modos diferentes de realizar la interpretación del proyecto que son:
+\begin{itemize}
+\item \textbf{Selección directa:} La interpretación del tablero se realiza utilizando el ratón convencional.
+\item \textbf{Barrido automático:} El programa realiza un barrido secuencial de las celdas del tablero. Las celdas se seleccionan con el clic izquierdo del ratón. Para esta opción se puede configurar el tiempo que el ratón debe permanecer sobre una celda antes de saltar a la siguiente.
+\item \textbf{Barrido manual:} Permite realizar un barrido controlado de las celdas del tablero. El clic derecho del ratón cambia de celda y con el clic izquierdo se selecciona una celda.
+\end{itemize}
+\end{enumerate}
+
+\subsection{Validación del Intérprete}
+\label{sec:manual.interprete.validacion}
+
+\par Esta opción permite la validación de las propiedades del Intérprete para ver si se adaptan a las características del alumno. La figura~\ref{gra:validacion-interprete} muestra el menú en la ventana del Intérprete a través del que se accede a esta funcionalidad.
+
+\begin{figure}[h!tb]\begin{center}
+\includegraphics[scale=0.75]{figures/validacion-interprete}
+\caption{Opción de validación del Intérprete}\label{gra:validacion-interprete}
+\end{center}\end{figure}
+
+
+\begin{figure}[h!tb]\begin{center}
+\includegraphics[scale=0.75]{figures/ventana-validacion-interprete}
+\caption{Ventana de validación del Intérprete}\label{gra:ventana-validacion-interprete}
+\end{center}\end{figure}
+
+
+\par Este menú da paso a la validación de la configuración del Intérprete mediante la ventana que aparece en la figura~\ref{gra:ventana-validacion-interprete}. Se deben introducir a mano los valores de las limitaciones del usuario o cargar un usuario de la base de datos, seleccionándolo desde la lista desplegable y pulsando el botón \textit{Cargar usuario}.
+
+
+
+\par A continuación se puede optar por realizar la validación mediante el botón \textit{Validar} o mostrar las sugerencias de diseño para el Intérprete mediante el botón \textit{Sugerencias de diseño}, mostrando la información en ambos casos de la misma manera que se muestra en el caso del Editor (figuras~\ref{gra:validado-interprete} y~\ref{gra:sugerencias-interprete}).
+
+\begin{figure}[h!tb]%[htb]
+\begin{center}
+\includegraphics[width=\textwidth]{figures/validado-interprete}
+\caption{Ventana de resultados para el Intérprete}\label{gra:validado-interprete}
+\end{center}\end{figure}
+
+\begin{figure}[h!tb]\begin{center}
+\includegraphics[width=\textwidth]{figures/sugerencias-interprete}
+\caption{Ventana de sugerencias para el Intérprete}\label{gra:sugerencias-interprete}
+\end{center}\end{figure}
+
+
+\clearpage
+
+\section{Créditos}
+\label{sec:manual.creditos}
+\par TICO es fruto de una serie de Proyectos Fin de Carrera de Ingeniería Informática de la Universidad de Zaragoza. Todos se han desarrollado bajo la dirección del Dr. Joaquín Ezpeleta Mateo, profesor de esta Universidad, junto con la colaboración de César Canalís Casasús y José Manuel Marcos Rodrigo, profesores del Colegio Público de Educación Especial Alborada de Zaragoza.
+
+\begin{itemize}
+\item \textbf{Desarrollo de herramientas para la creación y utilización de tableros de comunicación en el ámbito de la educación especial}, desarrollado por Fernando Negré Ramos y David Ramos Siguín. Noviembre de 2005.
+
+\item \textbf{Tico 2.0: Modificación y extensión de una herramienta para la edición y ejecución de tableros interactivos de comunicación}, por Pablo Muñoz Orbañanos. Noviembre 2006.
+
+\item \textbf{Intérprete Tico 2.0: Herramienta para la ejecución de tableros interactivos
+de comunicación y control del entorno}, por Antonio Rodríguez Villanueva. Agosto 2007.
+
+\item \textbf{Validación automática, basada en reglas, de la accesibilidad de los proyectos Tico}, por Beatriz Mateo Mendaza. Junio 2008.
+
+\item \textbf{Integración de plugins en la aplicación Tico. Desarrollo e integración de
+un plugin para la gestión de una galería de imágenes}, por Patricia Martínez Jaray. Septiembre 2008.
+
+\item \textbf{TICO e1.0: mejora y extensión de la aplicación TICO para su primera
+distribución estable}, por Carolina Palacio Julián. Junio 2010.
+
+\item \textbf{TICO4Android: Implementación de TICO para dispositivos móviles basados en Android\textsuperscript{\textregistered}}, por Eduardo Ferrer Domingo. Diciembre 2012.
+\end{itemize}
+
+\par Para cualquier sugerencia o duda puede consultar la página web o enviar un correo
+electrónico a la dirección \texttt{ticoproyecto@gmail.com}.

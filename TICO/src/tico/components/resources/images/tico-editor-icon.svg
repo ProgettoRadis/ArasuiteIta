@@ -1,0 +1,380 @@
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- ViewVC :: http://www.viewvc.org/ -->
+<head>
+<title>SourceForge.net Repository - [tico] View of /trunk/src/tico/components/resources/images/tico-editor-icon.svg</title>
+<meta name="generator" content="ViewVC 1.0.5" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="description" content="The world's largest development and download repository of Open Source code and applications" />
+<meta name="keywords" content="Open Source, Development, Developers, Projects, Downloads, OSTG, VA Software, SF.net, SourceForge" />
+<title>SourceForge.net Repository - tico Index of /</title>
+<link rel="shortcut icon" href="http://a.fsdn.com/con/img/favicon.ico" />
+<link rel="stylesheet" href="http://a.fsdn.com/con/css/sf.min.css?1256826599" type="text/css" />
+<link rel="stylesheet" href="/viewvc-static/styles.css" type="text/css" />
+<style type="text/css"> .short-head #hd { background-position:0 -247px; } #hd .yui-b { height:47px; margin:0 auto; position:relative; text-align:left; width:74.923em; } pre.vc_log { margin:1em; }</style>
+
+<!-- BEGIN: AdSolution-Tag 4.2: Global-Code [PLACE IN HTML-HEAD-AREA!] -->
+<!-- DoubleClick Random Number -->
+<script language="JavaScript" type="text/javascript">
+dfp_ord=Math.random()*10000000000000000;
+dfp_tile = 1;
+</script>
+<!-- End DoubleClick Random Number -->
+<script type="text/javascript">
+var google_page_url = 'http://sourceforge.net/projects/tico/';
+var sourceforge_project_name = 'tico';
+var sourceforge_project_description = '';
+</script>
+<!-- END: AdSolution-Tag 4.2: Global-Code -->
+<!-- after META tags -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</head>
+<body class="short-head">
+<!--[if IE 7]><div id="ie7only"><![endif]-->
+<!--[if IE 6]><div id="ie6only"><![endif]-->
+<!--[if IE]><div id="ieonly"><![endif]-->
+<div id="doc3">
+<div id="hd">
+<div class="yui-b">
+<div class="yui-gc">
+<div class="yui-u first">
+<a href="http://sourceforge.net/" class="logo">Find and develop open source software</a>
+</div>
+<div class="yui-u">
+<div class="search">
+<form action="http://sourceforge.net/search/" method="get" name="searchform" id="searchform">
+<input type="hidden" name="type_of_search" value="soft" />
+<input type="text" class="text clear hint" name="words" id="words" value="enter keyword" />
+<span class="yui-button yui-push-button default"><span class="first-child"><button type="submit" value="Search">Search</button></span></span>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="bd" class="inner-bd">
+<div id="doc4" class="yui-t6">
+<div id="breadcrumbs">
+
+<a href="http://sourceforge.net/">SourceForge.net</a>
+&gt; <a href="http://sourceforge.net/softwaremap/">Find Software</a>
+&gt; <a href="http://sourceforge.net/projects/tico/">tico</a>
+&gt; SCM Repositories
+
+
+<a href="/viewvc/tico/?pathrev=11">
+
+
+&gt; tico
+
+
+</a>
+
+
+
+<a href="/viewvc/tico/trunk/?pathrev=11">
+
+
+&gt; trunk
+
+
+</a>
+
+
+
+<a href="/viewvc/tico/trunk/src/?pathrev=11">
+
+
+&gt; src
+
+
+</a>
+
+
+
+<a href="/viewvc/tico/trunk/src/tico/?pathrev=11">
+
+
+&gt; tico
+
+
+</a>
+
+
+
+<a href="/viewvc/tico/trunk/src/tico/components/?pathrev=11">
+
+
+&gt; components
+
+
+</a>
+
+
+
+<a href="/viewvc/tico/trunk/src/tico/components/resources/?pathrev=11">
+
+
+&gt; resources
+
+
+</a>
+
+
+
+<a href="/viewvc/tico/trunk/src/tico/components/resources/images/?pathrev=11">
+
+
+&gt; images
+
+
+</a>
+
+
+
+<a href="/viewvc/tico/trunk/src/tico/components/resources/images/tico-editor-icon.svg?view=log&amp;pathrev=11">
+
+
+&gt; tico-editor-icon.svg
+
+
+</a>
+
+
+
+</div>
+
+
+
+
+
+ <div id="project_nav_container">
+<small><div>
+
+<a href="/viewvc/tico/trunk/src/tico/components/resources/images/?pathrev=11"><img src="/viewvc-static/images/back_small.png" width="16" height="16" alt="Parent Directory" /> Parent Directory</a>
+
+| <a href="/viewvc/tico/trunk/src/tico/components/resources/images/tico-editor-icon.svg?view=log&amp;pathrev=11"><img src="/viewvc-static/images/log.png" width="16" height="16" alt="Revision Log" /> Revision Log</a>
+
+
+
+
+</div>
+</small>
+<h1>SCM Repositories - <a href="http://sourceforge.net/projects/tico">tico</a></h1>
+</div>
+<hr class="clear">
+<div class="yui-b">
+<div id="fad83">
+<!-- DoubleClick Ad Tag -->
+<script type="text/javascript">
+//<![CDATA[
+document.write('<script src="http://ad.doubleclick.net/adj/ostg.sourceforge/pg_viewvc_p88_shortrec;pg=viewvc;tile='+dfp_tile+';tpc=tico;ord='+dfp_ord+'?" type="text/javascript"><\/script>');
+dfp_tile++;
+//]]>
+</script>
+<!-- End DoubleClick Ad Tag -->
+</div>
+</div>
+<div id="yui-main">
+<div class="yui-b sfBox">
+There are no available options for this view.
+ 
+
+
+</div>
+</div>
+<hr class="clear">
+<div>
+ 
+
+
+
+
+<div>
+
+<a href="/viewvc/tico/trunk/src/tico/components/resources/images/?pathrev=11"><img src="/viewvc-static/images/back_small.png" width="16" height="16" alt="Parent Directory" /> Parent Directory</a>
+
+| <a href="/viewvc/tico/trunk/src/tico/components/resources/images/tico-editor-icon.svg?view=log&amp;pathrev=11"><img src="/viewvc-static/images/log.png" width="16" height="16" alt="Revision Log" /> Revision Log</a>
+
+
+
+
+</div>
+
+<hr />
+<div class="vc_summary">
+Revision <a href="/viewvc/tico?view=rev&amp;revision=11"><strong>11</strong></a> -
+(<a href="/viewvc/tico/trunk/src/tico/components/resources/images/tico-editor-icon.svg?revision=11&amp;pathrev=11"><strong>download</strong></a>)
+
+(<a href="/viewvc/tico/trunk/src/tico/components/resources/images/tico-editor-icon.svg?annotate=11&amp;pathrev=11"><strong>annotate</strong></a>)
+
+<br /><em>Fri Jan 29 20:43:33 2010 UTC</em>
+(4 days, 12 hours ago)
+by <em>bleras</em>
+
+
+
+
+
+
+<br />File size: 12161 byte(s)
+
+
+
+<pre class="vc_log">Icons redesign.</pre>
+
+</div>
+<div id="vc_markup"><pre><a id="l_1"></a><span class="hl line">    1 </span>&lt;?xml <span class="hl kwb">version</span>=<span class="hl str">&quot;1.0&quot;</span> <span class="hl kwb">encoding</span>=<span class="hl str">&quot;UTF-8&quot;</span> <span class="hl kwb">standalone</span>=<span class="hl str">&quot;no&quot;</span>?<span class="hl kwa">&gt;</span>
+<a id="l_2"></a><span class="hl line">    2 </span><span class="hl com">&lt;!-- Created with Inkscape (http://www.inkscape.org/) --&gt;</span>
+<a id="l_3"></a><span class="hl line">    3 </span>
+<a id="l_4"></a><span class="hl line">    4 </span><span class="hl kwa">&lt;svg</span>
+<a id="l_5"></a><span class="hl line">    5 </span>   xmlns:<span class="hl kwb">dc</span>=<span class="hl str">&quot;http://purl.org/dc/elements/1.1/&quot;</span>
+<a id="l_6"></a><span class="hl line">    6 </span>   xmlns:<span class="hl kwb">cc</span>=<span class="hl str">&quot;http://creativecommons.org/ns#&quot;</span>
+<a id="l_7"></a><span class="hl line">    7 </span>   xmlns:<span class="hl kwb">rdf</span>=<span class="hl str">&quot;http://www.w3.org/1999/02/22-rdf-syntax-ns#&quot;</span>
+<a id="l_8"></a><span class="hl line">    8 </span>   xmlns:<span class="hl kwb">svg</span>=<span class="hl str">&quot;http://www.w3.org/2000/svg&quot;</span>
+<a id="l_9"></a><span class="hl line">    9 </span>   <span class="hl kwb">xmlns</span>=<span class="hl str">&quot;http://www.w3.org/2000/svg&quot;</span>
+<a id="l_10"></a><span class="hl line">   10 </span>   xmlns:<span class="hl kwb">sodipodi</span>=<span class="hl str">&quot;http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd&quot;</span>
+<a id="l_11"></a><span class="hl line">   11 </span>   xmlns:<span class="hl kwb">inkscape</span>=<span class="hl str">&quot;http://www.inkscape.org/namespaces/inkscape&quot;</span>
+<a id="l_12"></a><span class="hl line">   12 </span>   <span class="hl kwb">width</span>=<span class="hl str">&quot;256&quot;</span>
+<a id="l_13"></a><span class="hl line">   13 </span>   <span class="hl kwb">height</span>=<span class="hl str">&quot;256&quot;</span>
+<a id="l_14"></a><span class="hl line">   14 </span>   <span class="hl kwb">id</span>=<span class="hl str">&quot;svg2&quot;</span>
+<a id="l_15"></a><span class="hl line">   15 </span>   <span class="hl kwb">version</span>=<span class="hl str">&quot;1.1&quot;</span>
+<a id="l_16"></a><span class="hl line">   16 </span>   inkscape:<span class="hl kwb">version</span>=<span class="hl str">&quot;0.47pre4 r22446&quot;</span>
+<a id="l_17"></a><span class="hl line">   17 </span>   sodipodi:<span class="hl kwb">docname</span>=<span class="hl str">&quot;New document 1&quot;</span><span class="hl kwa">&gt;</span>
+<a id="l_18"></a><span class="hl line">   18 </span>  <span class="hl kwa">&lt;defs</span>
+<a id="l_19"></a><span class="hl line">   19 </span>     <span class="hl kwb">id</span>=<span class="hl str">&quot;defs4&quot;</span><span class="hl kwa">&gt;</span>
+<a id="l_20"></a><span class="hl line">   20 </span>    <span class="hl kwa">&lt;inkscape</span>:perspective
+<a id="l_21"></a><span class="hl line">   21 </span>       sodipodi:<span class="hl kwb">type</span>=<span class="hl str">&quot;inkscape:persp3d&quot;</span>
+<a id="l_22"></a><span class="hl line">   22 </span>       inkscape:<span class="hl kwb">vp_x</span>=<span class="hl str">&quot;0 : 526.18109 : 1&quot;</span>
+<a id="l_23"></a><span class="hl line">   23 </span>       inkscape:<span class="hl kwb">vp_y</span>=<span class="hl str">&quot;0 : 1000 : 0&quot;</span>
+<a id="l_24"></a><span class="hl line">   24 </span>       inkscape:<span class="hl kwb">vp_z</span>=<span class="hl str">&quot;744.09448 : 526.18109 : 1&quot;</span>
+<a id="l_25"></a><span class="hl line">   25 </span>       inkscape:<span class="hl kwb">persp3d-origin</span>=<span class="hl str">&quot;372.04724 : 350.78739 : 1&quot;</span>
+<a id="l_26"></a><span class="hl line">   26 </span>       <span class="hl kwb">id</span>=<span class="hl str">&quot;perspective10&quot;</span> <span class="hl kwa">/&gt;</span>
+<a id="l_27"></a><span class="hl line">   27 </span>    <span class="hl kwa">&lt;inkscape</span>:perspective
+<a id="l_28"></a><span class="hl line">   28 </span>       <span class="hl kwb">id</span>=<span class="hl str">&quot;perspective2849&quot;</span>
+<a id="l_29"></a><span class="hl line">   29 </span>       inkscape:<span class="hl kwb">persp3d-origin</span>=<span class="hl str">&quot;0.5 : 0.33333333 : 1&quot;</span>
+<a id="l_30"></a><span class="hl line">   30 </span>       inkscape:<span class="hl kwb">vp_z</span>=<span class="hl str">&quot;1 : 0.5 : 1&quot;</span>
+<a id="l_31"></a><span class="hl line">   31 </span>       inkscape:<span class="hl kwb">vp_y</span>=<span class="hl str">&quot;0 : 1000 : 0&quot;</span>
+<a id="l_32"></a><span class="hl line">   32 </span>       inkscape:<span class="hl kwb">vp_x</span>=<span class="hl str">&quot;0 : 0.5 : 1&quot;</span>
+<a id="l_33"></a><span class="hl line">   33 </span>       sodipodi:<span class="hl kwb">type</span>=<span class="hl str">&quot;inkscape:persp3d&quot;</span> <span class="hl kwa">/&gt;</span>
+<a id="l_34"></a><span class="hl line">   34 </span>  <span class="hl kwa">&lt;/defs&gt;</span>
+<a id="l_35"></a><span class="hl line">   35 </span>  <span class="hl kwa">&lt;sodipodi</span>:namedview
+<a id="l_36"></a><span class="hl line">   36 </span>     <span class="hl kwb">id</span>=<span class="hl str">&quot;base&quot;</span>
+<a id="l_37"></a><span class="hl line">   37 </span>     <span class="hl kwb">pagecolor</span>=<span class="hl str">&quot;#ffffff&quot;</span>
+<a id="l_38"></a><span class="hl line">   38 </span>     <span class="hl kwb">bordercolor</span>=<span class="hl str">&quot;#666666&quot;</span>
+<a id="l_39"></a><span class="hl line">   39 </span>     <span class="hl kwb">borderopacity</span>=<span class="hl str">&quot;1.0&quot;</span>
+<a id="l_40"></a><span class="hl line">   40 </span>     inkscape:<span class="hl kwb">pageopacity</span>=<span class="hl str">&quot;0.0&quot;</span>
+<a id="l_41"></a><span class="hl line">   41 </span>     inkscape:<span class="hl kwb">pageshadow</span>=<span class="hl str">&quot;2&quot;</span>
+<a id="l_42"></a><span class="hl line">   42 </span>     inkscape:<span class="hl kwb">zoom</span>=<span class="hl str">&quot;1.979899&quot;</span>
+<a id="l_43"></a><span class="hl line">   43 </span>     inkscape:<span class="hl kwb">cx</span>=<span class="hl str">&quot;180.14286&quot;</span>
+<a id="l_44"></a><span class="hl line">   44 </span>     inkscape:<span class="hl kwb">cy</span>=<span class="hl str">&quot;147.99998&quot;</span>
+<a id="l_45"></a><span class="hl line">   45 </span>     inkscape:<span class="hl kwb">document-units</span>=<span class="hl str">&quot;px&quot;</span>
+<a id="l_46"></a><span class="hl line">   46 </span>     inkscape:<span class="hl kwb">current-layer</span>=<span class="hl str">&quot;layer1&quot;</span>
+<a id="l_47"></a><span class="hl line">   47 </span>     <span class="hl kwb">showgrid</span>=<span class="hl str">&quot;false&quot;</span>
+<a id="l_48"></a><span class="hl line">   48 </span>     inkscape:<span class="hl kwb">window-width</span>=<span class="hl str">&quot;1280&quot;</span>
+<a id="l_49"></a><span class="hl line">   49 </span>     inkscape:<span class="hl kwb">window-height</span>=<span class="hl str">&quot;950&quot;</span>
+<a id="l_50"></a><span class="hl line">   50 </span>     inkscape:<span class="hl kwb">window-x</span>=<span class="hl str">&quot;0&quot;</span>
+<a id="l_51"></a><span class="hl line">   51 </span>     inkscape:<span class="hl kwb">window-y</span>=<span class="hl str">&quot;25&quot;</span>
+<a id="l_52"></a><span class="hl line">   52 </span>     inkscape:<span class="hl kwb">window-maximized</span>=<span class="hl str">&quot;1&quot;</span> <span class="hl kwa">/&gt;</span>
+<a id="l_53"></a><span class="hl line">   53 </span>  <span class="hl kwa">&lt;metadata</span>
+<a id="l_54"></a><span class="hl line">   54 </span>     <span class="hl kwb">id</span>=<span class="hl str">&quot;metadata7&quot;</span><span class="hl kwa">&gt;</span>
+<a id="l_55"></a><span class="hl line">   55 </span>    <span class="hl kwa">&lt;rdf</span>:RDF<span class="hl kwa">&gt;</span>
+<a id="l_56"></a><span class="hl line">   56 </span>      <span class="hl kwa">&lt;cc</span>:Work
+<a id="l_57"></a><span class="hl line">   57 </span>         rdf:<span class="hl kwb">about</span>=<span class="hl str">&quot;&quot;</span><span class="hl kwa">&gt;</span>
+<a id="l_58"></a><span class="hl line">   58 </span>        <span class="hl kwa">&lt;dc</span>:format<span class="hl kwa">&gt;</span>image/svg+xml<span class="hl kwa">&lt;/dc</span>:format<span class="hl kwa">&gt;</span>
+<a id="l_59"></a><span class="hl line">   59 </span>        <span class="hl kwa">&lt;dc</span>:type
+<a id="l_60"></a><span class="hl line">   60 </span>           rdf:<span class="hl kwb">resource</span>=<span class="hl str">&quot;http://purl.org/dc/dcmitype/StillImage&quot;</span> <span class="hl kwa">/&gt;</span>
+<a id="l_61"></a><span class="hl line">   61 </span>        <span class="hl kwa">&lt;dc</span>:title<span class="hl kwa">&gt;&lt;/dc</span>:title<span class="hl kwa">&gt;</span>
+<a id="l_62"></a><span class="hl line">   62 </span>      <span class="hl kwa">&lt;/cc</span>:Work<span class="hl kwa">&gt;</span>
+<a id="l_63"></a><span class="hl line">   63 </span>    <span class="hl kwa">&lt;/rdf</span>:RDF<span class="hl kwa">&gt;</span>
+<a id="l_64"></a><span class="hl line">   64 </span>  <span class="hl kwa">&lt;/metadata&gt;</span>
+<a id="l_65"></a><span class="hl line">   65 </span>  <span class="hl kwa">&lt;g</span>
+<a id="l_66"></a><span class="hl line">   66 </span>     inkscape:<span class="hl kwb">label</span>=<span class="hl str">&quot;Layer 1&quot;</span>
+<a id="l_67"></a><span class="hl line">   67 </span>     inkscape:<span class="hl kwb">groupmode</span>=<span class="hl str">&quot;layer&quot;</span>
+<a id="l_68"></a><span class="hl line">   68 </span>     <span class="hl kwb">id</span>=<span class="hl str">&quot;layer1&quot;</span>
+<a id="l_69"></a><span class="hl line">   69 </span>     <span class="hl kwb">transform</span>=<span class="hl str">&quot;translate(-194.85714,-81.505039)&quot;</span><span class="hl kwa">&gt;</span>
+<a id="l_70"></a><span class="hl line">   70 </span>    <span class="hl kwa">&lt;g</span>
+<a id="l_71"></a><span class="hl line">   71 </span>       <span class="hl kwb">id</span>=<span class="hl str">&quot;g3624&quot;</span><span class="hl kwa">&gt;</span>
+<a id="l_72"></a><span class="hl line">   72 </span>      <span class="hl kwa">&lt;rect</span>
+<a id="l_73"></a><span class="hl line">   73 </span>         <span class="hl kwb">ry</span>=<span class="hl str">&quot;30.684849&quot;</span>
+<a id="l_74"></a><span class="hl line">   74 </span>         <span class="hl kwb">y</span>=<span class="hl str">&quot;81.505035&quot;</span>
+<a id="l_75"></a><span class="hl line">   75 </span>         <span class="hl kwb">x</span>=<span class="hl str">&quot;194.85715&quot;</span>
+<a id="l_76"></a><span class="hl line">   76 </span>         <span class="hl kwb">height</span>=<span class="hl str">&quot;256&quot;</span>
+<a id="l_77"></a><span class="hl line">   77 </span>         <span class="hl kwb">width</span>=<span class="hl str">&quot;256&quot;</span>
+<a id="l_78"></a><span class="hl line">   78 </span>         <span class="hl kwb">id</span>=<span class="hl str">&quot;rect2891&quot;</span>
+<a id="l_79"></a><span class="hl line">   79 </span>         <span class="hl kwb">style</span>=<span class="hl str">&quot;fill:#ffffff;fill-opacity:1;stroke:none&quot;</span> <span class="hl kwa">/&gt;</span>
+<a id="l_80"></a><span class="hl line">   80 </span>      <span class="hl kwa">&lt;g</span>
+<a id="l_81"></a><span class="hl line">   81 </span>         <span class="hl kwb">transform</span>=<span class="hl str">&quot;translate(150.48562,82.89593)&quot;</span>
+<a id="l_82"></a><span class="hl line">   82 </span>         <span class="hl kwb">id</span>=<span class="hl str">&quot;g2882&quot;</span><span class="hl kwa">&gt;</span>
+<a id="l_83"></a><span class="hl line">   83 </span>        <span class="hl kwa">&lt;path</span>
+<a id="l_84"></a><span class="hl line">   84 </span>           sodipodi:<span class="hl kwb">type</span>=<span class="hl str">&quot;arc&quot;</span>
+<a id="l_85"></a><span class="hl line">   85 </span>           <span class="hl kwb">style</span>=<span class="hl str">&quot;fill:#ffffff;fill-opacity:1;stroke:none&quot;</span>
+<a id="l_86"></a><span class="hl line">   86 </span>           <span class="hl kwb">id</span>=<span class="hl str">&quot;path4157&quot;</span>
+<a id="l_87"></a><span class="hl line">   87 </span>           sodipodi:<span class="hl kwb">cx</span>=<span class="hl str">&quot;508.39285&quot;</span>
+<a id="l_88"></a><span class="hl line">   88 </span>           sodipodi:<span class="hl kwb">cy</span>=<span class="hl str">&quot;328.61218&quot;</span>
+<a id="l_89"></a><span class="hl line">   89 </span>           sodipodi:<span class="hl kwb">rx</span>=<span class="hl str">&quot;10.535714&quot;</span>
+<a id="l_90"></a><span class="hl line">   90 </span>           sodipodi:<span class="hl kwb">ry</span>=<span class="hl str">&quot;19.107143&quot;</span>
+<a id="l_91"></a><span class="hl line">   91 </span>           <span class="hl kwb">d</span>=<span class="hl str">&quot;m 518.92857,328.61218 c 0,10.55259 -4.717,19.10715 -10.53572,19.10715 -5.81871,0 -10.53571,-8.55456 -10.53571,-19.10715 0,-10.55258 4.717,-19.10714 10.53571,-19.10714 5.81872,0 10.53572,8.55456 10.53572,19.10714 z&quot;</span>
+<a id="l_92"></a><span class="hl line">   92 </span>           <span class="hl kwb">transform</span>=<span class="hl str">&quot;matrix(1.8644067,0,0,1.0560747,-826.77966,-253.06971)&quot;</span> <span class="hl kwa">/&gt;</span>
+<a id="l_93"></a><span class="hl line">   93 </span>        <span class="hl kwa">&lt;g</span>
+<a id="l_94"></a><span class="hl line">   94 </span>           <span class="hl kwb">id</span>=<span class="hl str">&quot;g3856&quot;</span>
+<a id="l_95"></a><span class="hl line">   95 </span>           <span class="hl kwb">transform</span>=<span class="hl str">&quot;translate(-39.285714,-5)&quot;</span><span class="hl kwa">&gt;</span>
+<a id="l_96"></a><span class="hl line">   96 </span>          <span class="hl kwa">&lt;path</span>
+<a id="l_97"></a><span class="hl line">   97 </span>             <span class="hl kwb">id</span>=<span class="hl str">&quot;path2979&quot;</span>
+<a id="l_98"></a><span class="hl line">   98 </span>             <span class="hl kwb">d</span>=<span class="hl str">&quot;m 214.42549,56.660706 c -17.19552,0.0258 -36.72906,2.10435 -36.72906,4.6281 0,0.50588 2.29292,2.40582 5.09537,4.204614 14.38019,9.23015 22.29846,25.07755 20.68473,41.41088 -0.37435,3.78903 -0.26146,6.74885 0.27297,7.07827 0.5045,0.31097 2.65002,-0.063 4.79206,-0.81673 14.89927,-5.2428 43.93519,-5.7619 61.84191,-1.11921 18.94967,4.9131 34.34562,14.63173 41.97607,26.52837 3.11026,4.8492 3.45858,5.11109 4.94371,3.62988 1.29501,-1.29157 1.60747,-3.64166 1.60747,-12.43234 0,-13.91025 -2.241,-20.92851 -10.09973,-31.4892 -16.83711,-22.62598 -44.36226,-36.891544 -78.79612,-40.896654 -4.39995,-0.51177 -9.85753,-0.73457 -15.58938,-0.72598 z&quot;</span>
+<a id="l_99"></a><span class="hl line">   99 </span>             <span class="hl kwb">style</span>=<span class="hl str">&quot;fill:#f9a95f&quot;</span> <span class="hl kwa">/&gt;</span>
+<a id="l_100"></a><span class="hl line">  100 </span>          <span class="hl kwa">&lt;path</span>
+<a id="l_101"></a><span class="hl line">  101 </span>             <span class="hl kwb">id</span>=<span class="hl str">&quot;path2975&quot;</span>
+<a id="l_102"></a><span class="hl line">  102 </span>             <span class="hl kwb">d</span>=<span class="hl str">&quot;m 213.85268,59.620536 c -13.79863,-0.0208 -28.70803,1.45973 -31.78125,3.15625 -0.99015,0.5466 -0.17385,1.52848 2.96875,3.687504 5.60811,3.85287 12.92442,11.72916 15.375,16.53125 3.637,7.12696 5.17016,14.20739 5,22.90625 -0.12859,6.5733 0.12054,8.30115 1.1875,8.15625 0.74331,-0.10095 5.79001,-1.15511 11.1875,-2.34375 11.75549,-2.58883 33.9737,-3.0788 45.625,-1 10.17619,1.81563 23.87301,6.38842 30.90625,10.34375 5.00376,2.814 13.7556,10.84723 18.875,17.0625 0.19523,0.0542 0.35163,0.19974 0.375,0.40625 0.70162,0.86858 1.31689,1.69921 1.84375,2.46875 3.10522,4.53557 4.35312,2.81613 4.78125,-6.59375 0.62736,-13.78929 -2.7158,-23.58092 -11.96875,-35.15625 -9.48033,-11.85977 -18.59127,-19.1089 -32.875,-26.15625 -18.51307,-9.134044 -38.15671,-13.433554 -61.5,-13.468754 z m 43.34375,83.687504 c -1.84334,0.0145 -3.1978,0.81664 -5.5,3.1875 -2.74119,2.82293 -5.30662,4.00582 -8.03125,3.53125 l -63.03125,0 c -1.61883,3.56747 -2.6421,7.28414 -2.875,10.90625 l 14.125,0 0,-0.1875 27.9375,0 27.9375,0 4.34375,4 c 2.99069,2.75159 5.03516,3.90803 6.59375,3.6875 2.22395,-0.31469 2.28125,-0.52397 2.28125,-12.5625 l 0,-12.25 -2.96875,-0.28125 c -0.28806,-0.0282 -0.54917,-0.0334 -0.8125,-0.0312 z&quot;</span>
+<a id="l_103"></a><span class="hl line">  103 </span>             <span class="hl kwb">style</span>=<span class="hl str">&quot;fill:#fc8a20&quot;</span> <span class="hl kwa">/&gt;</span>
+<a id="l_104"></a><span class="hl line">  104 </span>          <span class="hl kwa">&lt;path</span>
+<a id="l_105"></a><span class="hl line">  105 </span>             <span class="hl kwb">style</span>=<span class="hl str">&quot;fill:#686790&quot;</span>
+<a id="l_106"></a><span class="hl line">  106 </span>             <span class="hl kwb">d</span>=<span class="hl str">&quot;m 194.24913,206.03806 c -30.21619,-3.8434 -55.87902,-15.52634 -72.63885,-33.06865 -13.35019,-13.9735 -18.41519,-26.33623 -17.63959,-43.05507 0.72776,-15.68792 5.89603,-27.00722 17.95521,-39.32466 6.35694,-6.49308 18.42245,-15.14561 27.53339,-19.745 10.82384,-5.46409 28.16099,0.11978 36.7653,11.84121 4.9747,6.77689 6.75349,12.27529 6.80453,21.03342 0.0645,11.06976 -2.58122,16.47583 -11.6707,23.84697 -12.84458,10.41636 -18.02979,19.72253 -17.84871,32.03404 0.26776,18.20478 20.03608,36.24342 47.49886,43.34283 4.80731,1.24274 8.74056,2.60076 8.74056,3.01784 0,0.75146 -19.72928,0.81108 -25.5,0.0771 z m -25.8151,-88.38237 c 6.81945,-2.57656 11.60081,-9.77357 11.60081,-17.46179 0,-5.57633 -1.18572,-8.52204 -5.1579,-12.81387 -3.85554,-4.1658 -7.37674,-5.66091 -13.32815,-5.65917 -6.51395,0.002 -11.14869,2.23619 -15.22856,7.34127 -2.79797,3.50105 -3.0711,4.49334 -3.0711,11.15718 0,6.65017 0.27469,7.65375 3.02505,11.05191 1.66378,2.05566 4.58176,4.57243 6.4844,5.59282 3.84917,2.06434 11.30978,2.44112 15.67545,0.79165 z m 1.35497,-10.38834 c -2.65646,-3.20083 1.24523,-8.11777 4.71013,-5.93574 3.46233,2.18041 2.22883,7.3877 -1.75,7.3877 -0.96531,0 -2.29737,-0.65338 -2.96013,-1.45196 z m 9.96013,61.61795 c -4.43821,-1.74521 -4.49788,-1.83059 -4.34544,-6.21775 0.35062,-10.09089 6.73401,-21.2174 15.72539,-27.41 l 5.3923,-3.71382 9.86388,2.67975 c 13.94502,3.78848 24.25183,7.9478 28.61387,11.54713 9.63211,7.94793 -0.77033,12.51349 -19.25,8.4487 -9.11456,-2.00484 -9.49734,-1.94772 -7.12846,1.06382 3.88598,4.94022 0.70975,6.80261 -9.16539,5.37414 -10.62171,-1.53647 -10.29752,-1.67287 -10.24885,4.31204 0.0398,4.88815 -0.12961,5.26501 -2.4573,5.46775 -1.375,0.11976 -4.525,-0.57853 -7,-1.55176 z m 84.21884,0.99042 c -0.95836,-0.60813 -1.21032,-4.06867 -1,-13.73468 l 0.28116,-12.92173 15.5,0 15.49999,0 0.28166,12.35939 c 0.18819,8.25828 -0.1013,12.82083 -0.87245,13.75 -0.88343,1.06448 -4.35012,1.38702 -14.78164,1.3753 -7.49516,-0.008 -14.20408,-0.38115 -14.90872,-0.82828 z m 50.97902,-29.31639 c -1.66215,-2.38701 -5.24749,-6.50992 -7.96743,-9.16202 -4.82449,-4.70416 -4.92587,-4.92408 -4.14895,-9 1.66081,-8.713 6.47796,-18.678 9.02907,-18.678 1.47498,0 6.67437,11.64702 7.95656,17.82329 1.3467,6.48703 0.89367,20.61592 -0.71253,22.22212 -0.84618,0.84618 -1.90293,0.0313 -4.15672,-3.20539 z&quot;</span>
+<a id="l_107"></a><span class="hl line">  107 </span>             <span class="hl kwb">id</span>=<span class="hl str">&quot;path2971&quot;</span> <span class="hl kwa">/&gt;</span>
+<a id="l_108"></a><span class="hl line">  108 </span>          <span class="hl kwa">&lt;path</span>
+<a id="l_109"></a><span class="hl line">  109 </span>             <span class="hl kwb">style</span>=<span class="hl str">&quot;fill:#04044a&quot;</span>
+<a id="l_110"></a><span class="hl line">  110 </span>             <span class="hl kwb">d</span>=<span class="hl str">&quot;m 193.22881,203.51516 c -16.15764,-2.09653 -34.92478,-7.47877 -46.67149,-13.38495 -34.21866,-17.20496 -50.464114,-46.91422 -41.35256,-75.6245 5.29482,-16.68387 19.56633,-31.944 40.02405,-42.79661 6.47355,-3.43415 7.49006,-3.67929 13.51611,-3.25948 15.71993,1.09516 28.46395,12.77134 31.00937,28.41105 1.78153,10.94609 -2.05811,22.20203 -9.26903,27.17231 -5.7169,3.9405 -14.07651,12.91415 -16.53028,17.74448 -8.24422,16.22907 -2.34621,34.39048 15.24507,46.94336 7.19614,5.13506 18.28681,10.50293 26.77876,12.96088 3.1625,0.91537 5.75,1.85738 5.75,2.09335 0,0.50418 -14.1426,0.3055 -18.5,-0.25989 z M 169.98637,115.2557 c 7.11341,-4.51119 10.83027,-13.298 8.80564,-20.81689 -2.56651,-9.5313 -10.16389,-15.52043 -19.68807,-15.52043 -10.66533,0 -19.37512,8.71104 -19.37512,19.37789 0,6.11259 1.33552,9.57643 5.31132,13.77569 4.23525,4.47326 8.04013,6.04575 14.74289,6.09299 4.47329,0.0315 6.459,-0.53466 10.20334,-2.90925 z m -1.86902,-10.48147 c -0.99567,-2.59467 0.39988,-4.73919 2.85699,-4.39028 1.65273,0.23469 2.25447,0.98741 2.25447,2.82014 0,1.83273 -0.60174,2.58545 -2.25447,2.82014 -1.35228,0.19202 -2.49559,-0.3082 -2.85699,-1.25 z m 9.86146,61.45679 c -4.71344,-2.13951 -4.79656,-2.41482 -2.8762,-9.52693 3.01831,-11.17845 7.98355,-18.28096 16.10866,-23.04259 l 4.14975,-2.43191 6.93389,1.92424 c 11.25814,3.12428 24.44641,8.03307 28.56158,10.63086 4.60334,2.90596 6.11798,7.03538 3.32865,9.07499 -2.53774,1.85564 -10.31915,1.65446 -20.73185,-0.53598 -4.82653,-1.01533 -8.97842,-1.51774 -9.22642,-1.11648 -0.24799,0.40127 0.43849,1.53446 1.52552,2.51821 5.71982,5.17637 -0.56177,6.60141 -16.79589,3.81031 l -3.27231,-0.5626 0.65999,5.61547 c 0.63948,5.44093 0.58578,5.6148 -1.72769,5.59352 -1.31322,-0.0121 -4.30018,-0.89008 -6.63768,-1.95111 z m 84.19468,0.68951 c -0.28254,-0.7363 -0.38568,-6.48621 -0.2292,-12.77758 l 0.28452,-11.43886 14.78008,-0.27691 14.78008,-0.2769 -0.28008,12.7769 -0.28008,12.77691 -14.2708,0.27758 c -11.19528,0.21776 -14.38151,-0.0109 -14.78452,-1.06114 z m 52.05235,-27.72579 c -0.35076,-1.10515 -3.53108,-4.87436 -7.06739,-8.37604 -4.39524,-4.3522 -6.42964,-7.13549 -6.42964,-8.79647 0,-3.7559 3.75979,-13.99306 6.31389,-17.19145 l 2.29449,-2.87332 1.54136,2.37332 c 4.87363,7.50423 8.43886,26.4077 6.4643,34.27494 -0.77808,3.10014 -2.23276,3.37503 -3.11701,0.58902 z&quot;</span>
+<a id="l_111"></a><span class="hl line">  111 </span>             <span class="hl kwb">id</span>=<span class="hl str">&quot;path2969&quot;</span> <span class="hl kwa">/&gt;</span>
+<a id="l_112"></a><span class="hl line">  112 </span>          <span class="hl kwa">&lt;path</span>
+<a id="l_113"></a><span class="hl line">  113 </span>             <span class="hl kwb">style</span>=<span class="hl str">&quot;fill:#0d0a0d&quot;</span>
+<a id="l_114"></a><span class="hl line">  114 </span>             <span class="hl kwb">d</span>=<span class="hl str">&quot;m 184.98556,157.69901 c 0.22494,-0.825 1.2717,-1.60456 2.32613,-1.73237 1.34704,-0.16326 1.47108,-0.0443 0.41713,0.39995 -0.825,0.34777 -1.87176,1.12733 -2.32613,1.73236 -0.53136,0.70754 -0.6802,0.56484 -0.41713,-0.39994 z m 14.49326,0.29427 c 1.2375,-0.23836 3.2625,-0.23836 4.5,0 1.2375,0.23835 0.225,0.43337 -2.25,0.43337 -2.475,0 -3.4875,-0.19502 -2.25,-0.43337 z m -8.48097,-0.98726 c 0.97297,-0.25354 2.32297,-0.23687 3,0.0371 0.67703,0.27393 -0.11903,0.48137 -1.76903,0.46099 -1.65,-0.0204 -2.20394,-0.2445 -1.23097,-0.49804 z m 15.80992,-0.3827 c -0.0434,-0.86662 -1.20395,-2.63256 -2.57895,-3.92431 -2.87841,-2.70412 -3.17538,-4 -0.91667,-4 0.87084,0 1.37811,0.5625 1.12728,1.25 -0.25082,0.6875 0.4349,2.23033 1.52383,3.42852 1.08894,1.19818 1.74219,2.77318 1.45167,3.5 -0.38044,0.95178 -0.5503,0.88066 -0.60716,-0.25421 z m 19.92105,-3.83165 c 3.575,-0.32596 7.175,-0.96353 8,-1.41682 0.825,-0.45328 0.62649,-0.11578 -0.44113,0.75 -1.35012,1.09488 -3.78585,1.52625 -8,1.41682 l -6.05887,-0.15734 6.5,-0.59266 z m -10.73097,-0.78565 c 0.97297,-0.25354 2.32297,-0.23687 3,0.0371 0.67703,0.27393 -0.11903,0.48137 -1.76903,0.46099 -1.65,-0.0204 -2.20394,-0.2445 -1.23097,-0.49804 z m -4.45653,-0.99012 c 0.72187,-0.28887 1.58437,-0.25335 1.91667,0.0789 0.33229,0.33229 -0.25834,0.56864 -1.3125,0.52522 -1.16495,-0.048 -1.4019,-0.28494 -0.60417,-0.60416 z m -5.0625,-0.97917 c 0.6875,-0.27741 1.8125,-0.27741 2.5,0 0.6875,0.27741 0.125,0.50439 -1.25,0.50439 -1.375,0 -1.9375,-0.22698 -1.25,-0.50439 z m 106.024,-14.08922 c -1.98326,-2.76055 -5.44375,-6.4961 -7.68997,-8.30121 -2.91751,-2.34458 -4.08403,-4.03564 -4.08403,-5.92048 0,-4.0253 3.72461,-14.16153 6.44032,-17.52681 l 2.42093,-3 2.94826,6.5 c 1.62155,3.575 3.45277,8.88465 4.06938,11.79922 1.24767,5.89746 1.38028,16.68281 0.24079,19.58463 -0.63516,1.6175 -1.24957,1.17421 -4.34568,-3.13535 z M 168.11736,104.26915 c -0.99567,-2.59467 0.39988,-4.73919 2.85699,-4.39028 1.65273,0.23469 2.25447,0.98741 2.25447,2.82014 0,1.83273 -0.60174,2.58545 -2.25447,2.82014 -1.35228,0.19202 -2.49559,-0.3082 -2.85699,-1.25 z&quot;</span>
+<a id="l_115"></a><span class="hl line">  115 </span>             <span class="hl kwb">id</span>=<span class="hl str">&quot;path2967&quot;</span> <span class="hl kwa">/&gt;</span>
+<a id="l_116"></a><span class="hl line">  116 </span>        <span class="hl kwa">&lt;/g&gt;</span>
+<a id="l_117"></a><span class="hl line">  117 </span>      <span class="hl kwa">&lt;/g&gt;</span>
+<a id="l_118"></a><span class="hl line">  118 </span>    <span class="hl kwa">&lt;/g&gt;</span>
+<a id="l_119"></a><span class="hl line">  119 </span>  <span class="hl kwa">&lt;/g&gt;</span>
+<a id="l_120"></a><span class="hl line">  120 </span><span class="hl kwa">&lt;/svg&gt;</span>
+</pre></div>
+
+<br />
+</div>
+</div>
+</div>
+<div id="ft">
+<div class="yui-b">
+<div class="yui-gb">
+<div class="yui-u first" style="text-align: center;"> <a href="http://p.sf.net/sourceforge/support">SourceForge Help<a/> </div>
+<div class="yui-u" style="text-align: center;"> <strong><a href="/viewvc-static/help_rootview.html">ViewVC Help</a></strong> </div>
+<div class="yui-u" style="text-align: center;"> <a href="http://viewvc.tigris.org/">Powered by ViewVC 1.0.5</a> </div>
+</div>
+<p class="copyright">Copyright &copy; 2010 <a title="Network which provides and promotes Open Source software downloads, development, discussion and news." href="http://geek.net">Geeknet, Inc.</a> All rights reserved. <a href="http://p.sf.net/sourceforge/terms">Terms of Use</a></p>
+</div>
+</div>
+</div>
+<!--[if IE]></div><![endif]-->
+<!--[if IE 6]></div><![endif]-->
+<!--[if IE 7]></div><![endif]-->
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-32013-37");
+pageTracker._setDomainName(".sourceforge.net");
+pageTracker._trackPageview();
+</script>
+</body>
+</html>
+
