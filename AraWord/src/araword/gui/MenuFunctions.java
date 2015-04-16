@@ -47,6 +47,7 @@ import org.jdom.output.Format;
 import org.jdom.output.XMLOutputter;
 import org.xml.sax.InputSource;
 
+import araword.tts.strategy.GoogleTTSStrategy;
 import araword.utils.TFileHandler;
 import araword.G;
 import araword.classes.AWElement;
@@ -1603,10 +1604,10 @@ public class MenuFunctions {
     }
     
     public static void VoiceSintesys() {
-    	    	
-    	araword.utils.TInterpreterGoogleTTS ttsg = new araword.utils.TInterpreterGoogleTTS();
+    	G.ttsStrategy.play(araword.utils.TextUtils.getText());
+    	/*araword.utils.TInterpreterGoogleTTS ttsg = new araword.utils.TInterpreterGoogleTTS();
         ttsg.setCurrentVoiceAndText(araword.utils.TextUtils.getText());          
-        ttsg.run();
+        ttsg.run();*/
     }
     
     

@@ -25,6 +25,7 @@ import araword.listeners.FocusListenerImpl;
 import araword.listeners.KeyListenerImpl;
 import araword.listeners.MouseListenerImpl;
 import araword.listeners.MouseMotionListenerImpl;
+import araword.tts.strategy.TtsStrategy;
 
 public abstract class G { // Can't be instantiated
 
@@ -112,6 +113,8 @@ public abstract class G { // Can't be instantiated
     // GUI object variables needed here for easy modularization of source code.
     public static JTextPane textZone;
     public static araword.gui.GUI appWindow;
+    
+    public static TtsStrategy ttsStrategy;
     
     public static void giveMePrivateVariables(JTextPane one) {
        // A trick to avoid problems with easy GUI editing.

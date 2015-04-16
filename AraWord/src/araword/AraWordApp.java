@@ -8,6 +8,7 @@ import org.jdesktop.application.Application;
 import org.jdesktop.application.SingleFrameApplication;
 
 import araword.gui.GUI;
+import araword.tts.strategy.GoogleTTSStrategy;
 
 
 /**
@@ -20,6 +21,11 @@ public class AraWordApp extends SingleFrameApplication {
      */
     @Override protected void startup() {
         show(new GUI(this));
+        
+        //Maurizio: remove after create new option menu TTS
+        GoogleTTSStrategy tts =  new GoogleTTSStrategy();
+    	tts.setCurrentVoice();
+    	G.ttsStrategy = tts;
         
      // Create the ExitListener
         ExitListener exitListener = new ExitListener() {    
