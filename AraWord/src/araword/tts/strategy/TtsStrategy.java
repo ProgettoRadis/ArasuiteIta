@@ -1,7 +1,9 @@
 package araword.tts.strategy;
 
-public interface TtsStrategy{
+public interface TtsStrategy {
 
-	public void play(String text);
-	
+	void play(String text);
+
+	void setCurrentVoice(String voiceName);
+
 }

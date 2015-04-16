@@ -4,6 +4,8 @@ package araword;
 
 import java.util.EventObject;
 
+import araword.tts.strategy.AppleTtsStrategy;
+import araword.tts.strategy.TtsStrategy;
 import org.jdesktop.application.Application;
 import org.jdesktop.application.SingleFrameApplication;
 
@@ -19,19 +21,20 @@ public class AraWordApp extends SingleFrameApplication {
     /**
      * At startup create and show the main frame of the application.
      */
-    @Override protected void startup() {
+    @Override
+    protected void startup() {
         show(new GUI(this));
-        
+
         //Maurizio: remove after create new option menu TTS
-        GoogleTTSStrategy tts =  new GoogleTTSStrategy();
-    	tts.setCurrentVoice();
-    	G.ttsStrategy = tts;
-        
-     // Create the ExitListener
-        ExitListener exitListener = new ExitListener() {    
-            public boolean canExit(EventObject arg0) { 
+        TtsStrategy tts =  new AppleTtsStrategy();
+        tts.setCurrentVoice("Test");
+        G.ttsStrategy = tts;
+
+        // Create the ExitListener
+        ExitListener exitListener = new ExitListener() {
+            public boolean canExit(EventObject arg0) {
                 // return statement
-                return false; 
+                return false;
             }
 
             public void willExit(EventObject arg0) {}
@@ -45,8 +48,8 @@ public class AraWordApp extends SingleFrameApplication {
      * Windows shown in our application come fully initialized from the GUI
      * builder, so this additional configuration is not needed.
      */
-    @Override protected void configureWindow(java.awt.Window root) {
-    }
+    @Override
+    protected void configureWindow(java.awt.Window root) {}
 
     /**
      * A convenient static getter for the application instance.
@@ -62,5 +65,5 @@ public class AraWordApp extends SingleFrameApplication {
     public static void main(String[] args) {
         launch(AraWordApp.class, args);
     }
-    
+
 }
