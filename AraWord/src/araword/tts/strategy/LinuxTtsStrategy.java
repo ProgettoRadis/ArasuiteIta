@@ -4,7 +4,7 @@ import java.io.IOException;
 
 import araword.G;
 
-public class LinuxTtsStrtegy implements TtsStrategy {
+public class LinuxTtsStrategy implements TtsStrategy {
 
 	private String voiceName;
 	//private String text;
