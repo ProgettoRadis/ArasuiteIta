@@ -1,5 +1,7 @@
 package araword.tts.strategy;
 
+import java.io.IOException;
+
 /**
  * Created by Davide Monfrecola on 17/04/15.
  */
@@ -10,11 +12,21 @@ public class AppleTtsStrategy implements TtsStrategy {
 
     @Override
     public void play(String text) {
-        System.out.println("Apple TTS called");
+        try {
+            System.out.println("Apple TTS called");
+            Runtime.getRuntime().exec("say " + text);
+        } catch (IOException e) {
+            // TODO log error message
+            System.out.println(e.getMessage());
+        }
     }
 
     @Override
     public void setCurrentVoice(String voiceName) {
         this.voiceName = voiceName;
+    }
+
+    private void executeScript() {
+
     }
 }
