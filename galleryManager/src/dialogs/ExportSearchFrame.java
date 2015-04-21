@@ -117,7 +117,8 @@ public class ExportSearchFrame extends JDialog {
         term1TextField.setColumns(10);
 
         AndOr1ComboBox = new JComboBox();
-        AndOr1ComboBox.setModel(new DefaultComboBoxModel(new String[] { TLanguage.getString("EXPORT_SEARCH_FRAME.AND"),
+		AndOr1ComboBox.setModel(new DefaultComboBoxModel(new String[] {
+				TLanguage.getString("EXPORT_SEARCH_FRAME.AND"),
                 TLanguage.getString("EXPORT_SEARCH_FRAME.OR") }));
         panel.add(AndOr1ComboBox);
 
@@ -223,8 +224,9 @@ public class ExportSearchFrame extends JDialog {
                 if (imageNameTextField.getText().length() >= 3) {
                     try {
                         DB db = DB.getInstance();
-                        String query = "SELECT COUNT(*) AS row_count, GROUP_CONCAT(main.word) AS terms, main.nameNN AS name FROM main WHERE main.name LIKE '%"
-                                + imageNameTextField.getText() + "%' GROUP BY nameNN";
+						String query = "SELECT COUNT(*) AS row_count, GROUP_CONCAT(main.word) AS terms, main.nameNN AS name FROM main WHERE main.name LIKE '"
+								+ imageNameTextField.getText()
+								+ "' GROUP BY nameNN";
 
                         queryLoaded = query;
 
