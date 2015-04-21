@@ -51,99 +51,99 @@ import araword.utils.TextUtils;
 import dialogs.mainFrame;
 
 public class GUI extends FrameView
-    {
+{
 
     public GUI(SingleFrameApplication app) {
         super(app);
-        initComponents();     
-               
+        initComponents();
+
         try {
-			TSetup.load();
-			TLanguage.initLanguage(G.applicationLanguage);
-			// Menu bar and toolbar.
-			setMenuBar(menuBar);
-			String iconsPath = "classicIcons";
-			if (G.classicIcons) iconsPath = "classicIcons";
-			else iconsPath = "ARASAACIcons";			
-			
-			// Ugly, but only quick way found to resize PNGs without losing transparency.
-	        toolBarButtonFileNew.setIcon(new ImageIcon(new ImageIcon(
-	        		"resources" + File.separator + "imgToolbar" + File.separator + iconsPath + File.separator + "file-new.png").getImage().getScaledInstance(G.iconsSize,G.iconsSize,java.awt.Image.SCALE_SMOOTH)));
-	        toolBarButtonFileOpen.setIcon(new ImageIcon(new ImageIcon(
-	        		"resources" + File.separator + "imgToolbar" + File.separator + iconsPath + File.separator + "file-open.png").getImage().getScaledInstance(G.iconsSize,G.iconsSize,java.awt.Image.SCALE_SMOOTH)));
-	        toolBarButtonFileSave.setIcon(new ImageIcon(new ImageIcon(
-	        		"resources" + File.separator + "imgToolbar" + File.separator + iconsPath + File.separator + "file-save-as.png").getImage().getScaledInstance(G.iconsSize,G.iconsSize,java.awt.Image.SCALE_SMOOTH)));
-	        toolBarButtonEditUndo.setIcon(new ImageIcon(new ImageIcon(
-	        		"resources" + File.separator + "imgToolbar" + File.separator + iconsPath + File.separator + "edit-undo.png").getImage().getScaledInstance(G.iconsSize,G.iconsSize,java.awt.Image.SCALE_SMOOTH)));
-	        toolBarButtonEditRedo.setIcon(new ImageIcon(new ImageIcon(
-	        		"resources" + File.separator + "imgToolbar" + File.separator + iconsPath + File.separator + "edit-redo.png").getImage().getScaledInstance(G.iconsSize,G.iconsSize,java.awt.Image.SCALE_SMOOTH)));
-	        toolBarButtonEditCut.setIcon(new ImageIcon(new ImageIcon(
-	        		"resources" + File.separator + "imgToolbar" + File.separator + iconsPath + File.separator + "edit-cut.png").getImage().getScaledInstance(G.iconsSize,G.iconsSize,java.awt.Image.SCALE_SMOOTH)));
-	        toolBarButtonEditCopy.setIcon(new ImageIcon(new ImageIcon(
-	        		"resources" + File.separator + "imgToolbar" + File.separator + iconsPath + File.separator + "edit-copy.png").getImage().getScaledInstance(G.iconsSize,G.iconsSize,java.awt.Image.SCALE_SMOOTH)));
-	        toolBarButtonEditPaste.setIcon(new ImageIcon(new ImageIcon(
-	        		"resources" + File.separator + "imgToolbar" + File.separator + iconsPath + File.separator + "edit-paste.png").getImage().getScaledInstance(G.iconsSize,G.iconsSize,java.awt.Image.SCALE_SMOOTH)));
-	        toolBarButtonPictogramsNextImage.setIcon(new ImageIcon(new ImageIcon(
-	        		"resources" + File.separator + "imgToolbar" + File.separator + iconsPath + File.separator + "pictograms-next-image.png").getImage().getScaledInstance(G.iconsSize,G.iconsSize,java.awt.Image.SCALE_SMOOTH)));
-	        toolBarButtonPictogramsCompoundSplitWord.setIcon(new ImageIcon(new ImageIcon(
-	        		"resources" + File.separator + "imgToolbar" + File.separator + iconsPath + File.separator + "pictograms-compound-split-word.png").getImage().getScaledInstance(G.iconsSize,G.iconsSize,java.awt.Image.SCALE_SMOOTH)));
-	        toolBarButtonPictogramsChangeName.setIcon(new ImageIcon(new ImageIcon(
-	        		"resources" + File.separator + "imgToolbar" + File.separator + iconsPath + File.separator + "pictograms-change-name.png").getImage().getScaledInstance(G.iconsSize,G.iconsSize,java.awt.Image.SCALE_SMOOTH)));
-	        toolBarButtonPictogramsInsertImage.setIcon(new ImageIcon(new ImageIcon(
-	        		"resources" + File.separator + "imgToolbar" + File.separator + iconsPath + File.separator + "pictograms-insert-image.png").getImage().getScaledInstance(G.iconsSize,G.iconsSize,java.awt.Image.SCALE_SMOOTH)));
-	        toolBarButtonVoiceSintesys.setIcon(new ImageIcon(new ImageIcon(
-	        		"resources" + File.separator + "imgToolbar" + File.separator + iconsPath + File.separator + "voice-sintesys.png").getImage().getScaledInstance(G.iconsSize,G.iconsSize,java.awt.Image.SCALE_SMOOTH)));
-	        setToolBar(toolBar);
+            TSetup.load();
+            TLanguage.initLanguage(G.applicationLanguage);
+            // Menu bar and toolbar.
+            setMenuBar(menuBar);
+            String iconsPath = "classicIcons";
+            if (G.classicIcons) iconsPath = "classicIcons";
+            else iconsPath = "ARASAACIcons";
+
+            // Ugly, but only quick way found to resize PNGs without losing transparency.
+            toolBarButtonFileNew.setIcon(new ImageIcon(new ImageIcon(
+                    "resources" + File.separator + "imgToolbar" + File.separator + iconsPath + File.separator + "file-new.png").getImage().getScaledInstance(G.iconsSize,G.iconsSize,java.awt.Image.SCALE_SMOOTH)));
+            toolBarButtonFileOpen.setIcon(new ImageIcon(new ImageIcon(
+                    "resources" + File.separator + "imgToolbar" + File.separator + iconsPath + File.separator + "file-open.png").getImage().getScaledInstance(G.iconsSize,G.iconsSize,java.awt.Image.SCALE_SMOOTH)));
+            toolBarButtonFileSave.setIcon(new ImageIcon(new ImageIcon(
+                    "resources" + File.separator + "imgToolbar" + File.separator + iconsPath + File.separator + "file-save-as.png").getImage().getScaledInstance(G.iconsSize,G.iconsSize,java.awt.Image.SCALE_SMOOTH)));
+            toolBarButtonEditUndo.setIcon(new ImageIcon(new ImageIcon(
+                    "resources" + File.separator + "imgToolbar" + File.separator + iconsPath + File.separator + "edit-undo.png").getImage().getScaledInstance(G.iconsSize,G.iconsSize,java.awt.Image.SCALE_SMOOTH)));
+            toolBarButtonEditRedo.setIcon(new ImageIcon(new ImageIcon(
+                    "resources" + File.separator + "imgToolbar" + File.separator + iconsPath + File.separator + "edit-redo.png").getImage().getScaledInstance(G.iconsSize,G.iconsSize,java.awt.Image.SCALE_SMOOTH)));
+            toolBarButtonEditCut.setIcon(new ImageIcon(new ImageIcon(
+                    "resources" + File.separator + "imgToolbar" + File.separator + iconsPath + File.separator + "edit-cut.png").getImage().getScaledInstance(G.iconsSize,G.iconsSize,java.awt.Image.SCALE_SMOOTH)));
+            toolBarButtonEditCopy.setIcon(new ImageIcon(new ImageIcon(
+                    "resources" + File.separator + "imgToolbar" + File.separator + iconsPath + File.separator + "edit-copy.png").getImage().getScaledInstance(G.iconsSize,G.iconsSize,java.awt.Image.SCALE_SMOOTH)));
+            toolBarButtonEditPaste.setIcon(new ImageIcon(new ImageIcon(
+                    "resources" + File.separator + "imgToolbar" + File.separator + iconsPath + File.separator + "edit-paste.png").getImage().getScaledInstance(G.iconsSize,G.iconsSize,java.awt.Image.SCALE_SMOOTH)));
+            toolBarButtonPictogramsNextImage.setIcon(new ImageIcon(new ImageIcon(
+                    "resources" + File.separator + "imgToolbar" + File.separator + iconsPath + File.separator + "pictograms-next-image.png").getImage().getScaledInstance(G.iconsSize,G.iconsSize,java.awt.Image.SCALE_SMOOTH)));
+            toolBarButtonPictogramsCompoundSplitWord.setIcon(new ImageIcon(new ImageIcon(
+                    "resources" + File.separator + "imgToolbar" + File.separator + iconsPath + File.separator + "pictograms-compound-split-word.png").getImage().getScaledInstance(G.iconsSize,G.iconsSize,java.awt.Image.SCALE_SMOOTH)));
+            toolBarButtonPictogramsChangeName.setIcon(new ImageIcon(new ImageIcon(
+                    "resources" + File.separator + "imgToolbar" + File.separator + iconsPath + File.separator + "pictograms-change-name.png").getImage().getScaledInstance(G.iconsSize,G.iconsSize,java.awt.Image.SCALE_SMOOTH)));
+            toolBarButtonPictogramsInsertImage.setIcon(new ImageIcon(new ImageIcon(
+                    "resources" + File.separator + "imgToolbar" + File.separator + iconsPath + File.separator + "pictograms-insert-image.png").getImage().getScaledInstance(G.iconsSize,G.iconsSize,java.awt.Image.SCALE_SMOOTH)));
+            toolBarButtonVoiceSintesys.setIcon(new ImageIcon(new ImageIcon(
+                    "resources" + File.separator + "imgToolbar" + File.separator + iconsPath + File.separator + "voice-sintesys.png").getImage().getScaledInstance(G.iconsSize,G.iconsSize,java.awt.Image.SCALE_SMOOTH)));
+            setToolBar(toolBar);
         }
         catch (Exception e) { System.out.println(e); }
-        
+
         textZone.setBackground(Color.WHITE); // Needed for Unix...
-        aboutDialogImage.setIcon(new ImageIcon("resources/logo.png"));	
-		G.documentLanguage = G.defaultDocumentLanguage;
-		G.imagesSize = G.defaultImagesSize;
-		G.font = new Font(G.defaultFont.getName(),G.defaultFont.getStyle(),G.defaultFont.getSize());
-		G.color = new Color(G.defaultColor.getRed(),G.defaultColor.getBlue(),G.defaultColor.getGreen());
-		G.textBelowPictogram = G.defaultTextBelowPictogram;
-    	G.notFound = new ImageIcon(new ImageIcon("resources/404.jpg").getImage().getScaledInstance(-1,G.imagesSize,0));
-    	
-    	setApplicationLanguage();
-		
-		// Keyboard shortcuts for menu actions.
-		menuFileNew.setAccelerator(KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_N,java.awt.Event.CTRL_MASK));
-		menuFileOpen.setAccelerator(KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_O,java.awt.Event.CTRL_MASK));
-		menuFileSave.setAccelerator(KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S,java.awt.Event.CTRL_MASK));
-		menuFileExit.setAccelerator(KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_Q,java.awt.Event.CTRL_MASK));
-		
-		menuEditCut.setAccelerator(KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_X,java.awt.Event.CTRL_MASK));
-		menuEditCopy.setAccelerator(KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C,java.awt.Event.CTRL_MASK));
-		menuEditPaste.setAccelerator(KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_V,java.awt.Event.CTRL_MASK));
-		menuEditUndo.setAccelerator(KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_Z,java.awt.Event.CTRL_MASK));
-		menuEditRedo.setAccelerator(KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_Y,java.awt.Event.CTRL_MASK));
-		menuEditFind.setAccelerator(KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F,java.awt.Event.CTRL_MASK));
-		menuEditSelectAll.setAccelerator(KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_E,java.awt.Event.CTRL_MASK));
-		
-		menuPictogramsNextImage.setAccelerator(KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F3,0));
-		menuPictogramsCompoundSplitWord.setAccelerator(KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F4,0));
-		menuPictogramsChangeName.setAccelerator(KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F5,0));
-		menuPictogramsInsertImage.setAccelerator(KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F6,0));
-		menuVoiceSintesys.setAccelerator(KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F7,0));
-		
-		menuHelpShowHelp.setAccelerator(KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F1,0));
-	
-		this.getFrame().setTitle("AraWord");
+        aboutDialogImage.setIcon(new ImageIcon("resources/logo.png"));
+        G.documentLanguage = G.defaultDocumentLanguage;
+        G.imagesSize = G.defaultImagesSize;
+        G.font = new Font(G.defaultFont.getName(),G.defaultFont.getStyle(),G.defaultFont.getSize());
+        G.color = new Color(G.defaultColor.getRed(),G.defaultColor.getBlue(),G.defaultColor.getGreen());
+        G.textBelowPictogram = G.defaultTextBelowPictogram;
+        G.notFound = new ImageIcon(new ImageIcon("resources/404.jpg").getImage().getScaledInstance(-1,G.imagesSize,0));
+
+        setApplicationLanguage();
+
+        // Keyboard shortcuts for menu actions.
+        menuFileNew.setAccelerator(KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_N,java.awt.Event.CTRL_MASK));
+        menuFileOpen.setAccelerator(KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_O,java.awt.Event.CTRL_MASK));
+        menuFileSave.setAccelerator(KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S,java.awt.Event.CTRL_MASK));
+        menuFileExit.setAccelerator(KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_Q,java.awt.Event.CTRL_MASK));
+
+        menuEditCut.setAccelerator(KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_X,java.awt.Event.CTRL_MASK));
+        menuEditCopy.setAccelerator(KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C,java.awt.Event.CTRL_MASK));
+        menuEditPaste.setAccelerator(KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_V,java.awt.Event.CTRL_MASK));
+        menuEditUndo.setAccelerator(KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_Z,java.awt.Event.CTRL_MASK));
+        menuEditRedo.setAccelerator(KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_Y,java.awt.Event.CTRL_MASK));
+        menuEditFind.setAccelerator(KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F,java.awt.Event.CTRL_MASK));
+        menuEditSelectAll.setAccelerator(KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_E,java.awt.Event.CTRL_MASK));
+
+        menuPictogramsNextImage.setAccelerator(KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F3,0));
+        menuPictogramsCompoundSplitWord.setAccelerator(KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F4,0));
+        menuPictogramsChangeName.setAccelerator(KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F5,0));
+        menuPictogramsInsertImage.setAccelerator(KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F6,0));
+        menuVoiceSintesys.setAccelerator(KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F7,0));
+
+        menuHelpShowHelp.setAccelerator(KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F1,0));
+
+        this.getFrame().setTitle("AraWord");
         this.getFrame().pack();
         this.getFrame().setIconImage(Toolkit.getDefaultToolkit().getImage("resources/logo.png")); // Application logo
         // Little trick to allow modulation without breaking possibility of easy
         // GUI development and change.
         G.giveMePrivateVariables(textZone);
         try {
-        	DBManagement.connectDB();
-        	DBManagement.connectVerbsDB();
-        	DBManagement.createAraWordView(G.documentLanguage);
+            DBManagement.connectDB();
+            DBManagement.connectVerbsDB();
+            DBManagement.createAraWordView(G.documentLanguage);
             TextUtils.newDocument();
         }
         catch (Exception exc) {System.out.println(exc);}
-        
+
         // Catch event "window closing" from big red X on Windows XP.
         // This way, users don't lose their document accidentally.
         this.getFrame().setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
@@ -151,120 +151,120 @@ public class GUI extends FrameView
         this.getFrame().addWindowListener( new WindowAdapter()
         {
             @Override
-			public void windowClosing(WindowEvent e)
+            public void windowClosing(WindowEvent e)
             {
                 //############### hacer que permitar guardar al salir ##################
-            	if (JOptionPane.showConfirmDialog(getFrame(),TLanguage.getString("FILE_MENU_EXIT_WARNING"),
-                		TLanguage.getString("WARNING"),JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
-                	getFrame().setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                	System.exit(0);
+                if (JOptionPane.showConfirmDialog(getFrame(),TLanguage.getString("FILE_MENU_EXIT_WARNING"),
+                        TLanguage.getString("WARNING"),JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
+                    getFrame().setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                    System.exit(0);
                 }
             }
         });
     }
-    
-    private void setApplicationLanguage() {
-    	menuFile.setText(TLanguage.getString("FILE_MENU"));
-    	menuFileNew.setText(TLanguage.getString("FILE_MENU_NEW"));
-    	menuFileOpen.setText(TLanguage.getString("FILE_MENU_LOAD"));
-    	menuFileSave.setText(TLanguage.getString("FILE_MENU_SAVE"));
-    	menuFileSaveAs.setText(TLanguage.getString("FILE_MENU_SAVE_AS"));
-    	menuFileExport.setText(TLanguage.getString("FILE_MENU_EXPORT"));
-    	menuFileExportImage.setText(TLanguage.getString("FILE_MENU_EXPORT_IMAGE"));
-    	menuFileExportPDF.setText(TLanguage.getString("FILE_MENU_EXPORT_PDF"));
-    	menuFileExit.setText(TLanguage.getString("FILE_MENU_EXIT"));
-    	
-    	menuEdit.setText(TLanguage.getString("EDIT_MENU"));
-    	menuEditCut.setText(TLanguage.getString("EDIT_MENU_CUT"));
-    	menuEditCopy.setText(TLanguage.getString("EDIT_MENU_COPY"));
-    	menuEditPaste.setText(TLanguage.getString("EDIT_MENU_PASTE"));
-    	menuEditUndo.setText(TLanguage.getString("EDIT_MENU_UNDO"));
-    	menuEditRedo.setText(TLanguage.getString("EDIT_MENU_REDO"));
-    	menuEditFind.setText(TLanguage.getString("EDIT_MENU_FIND"));
-    	menuEditSelectAll.setText(TLanguage.getString("EDIT_MENU_SELECT_ALL"));
 
-    	menuText.setText(TLanguage.getString("TEXT_MENU"));
-    	menuTextFont.setText(TLanguage.getString("TEXT_MENU_FONT"));
-	 	menuTextColor.setText(TLanguage.getString("TEXT_MENU_COLOR"));
-	 	menuTextPlacement.setText(TLanguage.getString("TEXT_MENU_PLACEMENT"));
-	 	menuTextPlacementAbovePictogram.setText(TLanguage.getString("TEXT_MENU_PLACEMENT_ABOVE_PICTOGRAM"));
-	 	menuTextPlacementBelowPictogram.setText(TLanguage.getString("TEXT_MENU_PLACEMENT_BELOW_PICTOGRAM"));
-	 	menuTextToUpperCase.setText(TLanguage.getString("TEXT_MENU_TO_UPPER_CASE"));
-    	menuTextToUpperCaseActiveElement.setText(TLanguage.getString("TEXT_MENU_TO_UPPER_CASE_ACTIVE_ELEMENT"));
-    	menuTextToUpperCaseAllElements.setText(TLanguage.getString("TEXT_MENU_TO_UPPER_CASE_ALL_ELEMENTS"));
-    	menuTextToLowerCase.setText(TLanguage.getString("TEXT_MENU_TO_LOWER_CASE"));
-    	menuTextToLowerCaseActiveElement.setText(TLanguage.getString("TEXT_MENU_TO_LOWER_CASE_ACTIVE_ELEMENT"));
-    	menuTextToLowerCaseAllElements.setText(TLanguage.getString("TEXT_MENU_TO_LOWER_CASE_ALL_ELEMENTS"));
-    	menuTextDocumentLanguage.setText(TLanguage.getString("TEXT_MENU_DOCUMENT_LANGUAGE"));
-    
-    	menuPictograms.setText(TLanguage.getString("PICTOGRAMS_MENU"));
-    	menuPictogramsSize.setText(TLanguage.getString("PICTOGRAMS_MENU_SIZE"));
-    	menuPictogramsNextImage.setText(TLanguage.getString("PICTOGRAMS_MENU_NEXT_IMAGE"));
-    	menuPictogramsCompoundSplitWord.setText(TLanguage.getString("PICTOGRAMS_MENU_COMPOUND_SPLIT_WORD"));
-    	menuPictogramsChangeName.setText(TLanguage.getString("PICTOGRAMS_MENU_CHANGE_NAME"));
-    	menuPictogramsInsertImage.setText(TLanguage.getString("TOOLS_MENU_RESOURCE_MANAGER"));
-    	menuVoiceSintesys.setText(TLanguage.getString("TOOLS_MENU_VOICE_SINTESYS"));
-    	menuPictogramsHide.setText(TLanguage.getString("PICTOGRAMS_MENU_HIDE"));
-    	menuPictogramsHideBorder.setText(TLanguage.getString("PICTOGRAMS_MENU_HIDE_BORDER"));
-    	menuPictogramsHideBorderActiveElement.setText(TLanguage.getString("PICTOGRAMS_MENU_HIDE_BORDER_ACTIVE_ELEMENT"));
-    	menuPictogramsHideBorderAllElements.setText(TLanguage.getString("PICTOGRAMS_MENU_HIDE_BORDER_ALL_ELEMENTS"));
-    	menuPictogramsHideImage.setText(TLanguage.getString("PICTOGRAMS_MENU_HIDE_IMAGE"));
-    	menuPictogramsHideImageActiveElement.setText(TLanguage.getString("PICTOGRAMS_MENU_HIDE_IMAGE_ACTIVE_ELEMENT"));
-    	menuPictogramsHideImageAllElements.setText(TLanguage.getString("PICTOGRAMS_MENU_HIDE_IMAGE_ALL_ELEMENTS"));
-    	menuPictogramsShow.setText(TLanguage.getString("PICTOGRAMS_MENU_SHOW"));
-    	menuPictogramsShowBorder.setText(TLanguage.getString("PICTOGRAMS_MENU_SHOW_BORDER"));
-    	menuPictogramsShowBorderActiveElement.setText(TLanguage.getString("PICTOGRAMS_MENU_SHOW_BORDER_ACTIVE_ELEMENT"));
-    	menuPictogramsShowBorderAllElements.setText(TLanguage.getString("PICTOGRAMS_MENU_SHOW_BORDER_ALL_ELEMENTS"));
-    	menuPictogramsShowImage.setText(TLanguage.getString("PICTOGRAMS_MENU_SHOW_IMAGE"));
-    	menuPictogramsShowImageActiveElement.setText(TLanguage.getString("PICTOGRAMS_MENU_SHOW_IMAGE_ACTIVE_ELEMENT"));
-    	menuPictogramsShowImageAllElements.setText(TLanguage.getString("PICTOGRAMS_MENU_SHOW_IMAGE_ALL_ELEMENTS"));
-    	
-    	menuTools.setText(TLanguage.getString("TOOLS_MENU"));
-    	menuToolsResourceManager.setText(TLanguage.getString("TOOLS_MENU_RESOURCE_MANAGER"));
-    	
-    	menuToolsGeneralPreferences.setText(TLanguage.getString("TOOLS_MENU_GENERAL_PREFERENCES"));
-    	
-    	menuHelp.setText(TLanguage.getString("HELP_MENU"));
-    	menuHelpShowHelp.setText(TLanguage.getString("HELP_MENU_SHOW_HELP"));
-    	menuHelpAbout.setText(TLanguage.getString("HELP_MENU_ABOUT"));
-    	
-    	generalPreferencesDialog.setTitle(TLanguage.getString("GENERAL_PREFERENCES_DIALOG_TITLE"));
-    	generalPreferencesDialogApplicationLanguageLabel.setText(TLanguage.getString("GENERAL_PREFERENCES_DIALOG_APPLICATION_LANGUAGE_LABEL"));
-    	generalPreferencesDialogDocumentLanguageLabel.setText(TLanguage.getString("GENERAL_PREFERENCES_DIALOG_DOCUMENT_LANGUAGE_LABEL"));
-    	generalPreferencesDialogImagesSizeLabel.setText(TLanguage.getString("GENERAL_PREFERENCES_DIALOG_IMAGES_SIZE_LABEL"));
+    private void setApplicationLanguage() {
+        menuFile.setText(TLanguage.getString("FILE_MENU"));
+        menuFileNew.setText(TLanguage.getString("FILE_MENU_NEW"));
+        menuFileOpen.setText(TLanguage.getString("FILE_MENU_LOAD"));
+        menuFileSave.setText(TLanguage.getString("FILE_MENU_SAVE"));
+        menuFileSaveAs.setText(TLanguage.getString("FILE_MENU_SAVE_AS"));
+        menuFileExport.setText(TLanguage.getString("FILE_MENU_EXPORT"));
+        menuFileExportImage.setText(TLanguage.getString("FILE_MENU_EXPORT_IMAGE"));
+        menuFileExportPDF.setText(TLanguage.getString("FILE_MENU_EXPORT_PDF"));
+        menuFileExit.setText(TLanguage.getString("FILE_MENU_EXIT"));
+
+        menuEdit.setText(TLanguage.getString("EDIT_MENU"));
+        menuEditCut.setText(TLanguage.getString("EDIT_MENU_CUT"));
+        menuEditCopy.setText(TLanguage.getString("EDIT_MENU_COPY"));
+        menuEditPaste.setText(TLanguage.getString("EDIT_MENU_PASTE"));
+        menuEditUndo.setText(TLanguage.getString("EDIT_MENU_UNDO"));
+        menuEditRedo.setText(TLanguage.getString("EDIT_MENU_REDO"));
+        menuEditFind.setText(TLanguage.getString("EDIT_MENU_FIND"));
+        menuEditSelectAll.setText(TLanguage.getString("EDIT_MENU_SELECT_ALL"));
+
+        menuText.setText(TLanguage.getString("TEXT_MENU"));
+        menuTextFont.setText(TLanguage.getString("TEXT_MENU_FONT"));
+        menuTextColor.setText(TLanguage.getString("TEXT_MENU_COLOR"));
+        menuTextPlacement.setText(TLanguage.getString("TEXT_MENU_PLACEMENT"));
+        menuTextPlacementAbovePictogram.setText(TLanguage.getString("TEXT_MENU_PLACEMENT_ABOVE_PICTOGRAM"));
+        menuTextPlacementBelowPictogram.setText(TLanguage.getString("TEXT_MENU_PLACEMENT_BELOW_PICTOGRAM"));
+        menuTextToUpperCase.setText(TLanguage.getString("TEXT_MENU_TO_UPPER_CASE"));
+        menuTextToUpperCaseActiveElement.setText(TLanguage.getString("TEXT_MENU_TO_UPPER_CASE_ACTIVE_ELEMENT"));
+        menuTextToUpperCaseAllElements.setText(TLanguage.getString("TEXT_MENU_TO_UPPER_CASE_ALL_ELEMENTS"));
+        menuTextToLowerCase.setText(TLanguage.getString("TEXT_MENU_TO_LOWER_CASE"));
+        menuTextToLowerCaseActiveElement.setText(TLanguage.getString("TEXT_MENU_TO_LOWER_CASE_ACTIVE_ELEMENT"));
+        menuTextToLowerCaseAllElements.setText(TLanguage.getString("TEXT_MENU_TO_LOWER_CASE_ALL_ELEMENTS"));
+        menuTextDocumentLanguage.setText(TLanguage.getString("TEXT_MENU_DOCUMENT_LANGUAGE"));
+
+        menuPictograms.setText(TLanguage.getString("PICTOGRAMS_MENU"));
+        menuPictogramsSize.setText(TLanguage.getString("PICTOGRAMS_MENU_SIZE"));
+        menuPictogramsNextImage.setText(TLanguage.getString("PICTOGRAMS_MENU_NEXT_IMAGE"));
+        menuPictogramsCompoundSplitWord.setText(TLanguage.getString("PICTOGRAMS_MENU_COMPOUND_SPLIT_WORD"));
+        menuPictogramsChangeName.setText(TLanguage.getString("PICTOGRAMS_MENU_CHANGE_NAME"));
+        menuPictogramsInsertImage.setText(TLanguage.getString("TOOLS_MENU_RESOURCE_MANAGER"));
+        menuVoiceSintesys.setText(TLanguage.getString("TOOLS_MENU_VOICE_SINTESYS"));
+        menuPictogramsHide.setText(TLanguage.getString("PICTOGRAMS_MENU_HIDE"));
+        menuPictogramsHideBorder.setText(TLanguage.getString("PICTOGRAMS_MENU_HIDE_BORDER"));
+        menuPictogramsHideBorderActiveElement.setText(TLanguage.getString("PICTOGRAMS_MENU_HIDE_BORDER_ACTIVE_ELEMENT"));
+        menuPictogramsHideBorderAllElements.setText(TLanguage.getString("PICTOGRAMS_MENU_HIDE_BORDER_ALL_ELEMENTS"));
+        menuPictogramsHideImage.setText(TLanguage.getString("PICTOGRAMS_MENU_HIDE_IMAGE"));
+        menuPictogramsHideImageActiveElement.setText(TLanguage.getString("PICTOGRAMS_MENU_HIDE_IMAGE_ACTIVE_ELEMENT"));
+        menuPictogramsHideImageAllElements.setText(TLanguage.getString("PICTOGRAMS_MENU_HIDE_IMAGE_ALL_ELEMENTS"));
+        menuPictogramsShow.setText(TLanguage.getString("PICTOGRAMS_MENU_SHOW"));
+        menuPictogramsShowBorder.setText(TLanguage.getString("PICTOGRAMS_MENU_SHOW_BORDER"));
+        menuPictogramsShowBorderActiveElement.setText(TLanguage.getString("PICTOGRAMS_MENU_SHOW_BORDER_ACTIVE_ELEMENT"));
+        menuPictogramsShowBorderAllElements.setText(TLanguage.getString("PICTOGRAMS_MENU_SHOW_BORDER_ALL_ELEMENTS"));
+        menuPictogramsShowImage.setText(TLanguage.getString("PICTOGRAMS_MENU_SHOW_IMAGE"));
+        menuPictogramsShowImageActiveElement.setText(TLanguage.getString("PICTOGRAMS_MENU_SHOW_IMAGE_ACTIVE_ELEMENT"));
+        menuPictogramsShowImageAllElements.setText(TLanguage.getString("PICTOGRAMS_MENU_SHOW_IMAGE_ALL_ELEMENTS"));
+
+        menuTools.setText(TLanguage.getString("TOOLS_MENU"));
+        menuToolsResourceManager.setText(TLanguage.getString("TOOLS_MENU_RESOURCE_MANAGER"));
+
+        menuToolsGeneralPreferences.setText(TLanguage.getString("TOOLS_MENU_GENERAL_PREFERENCES"));
+
+        menuHelp.setText(TLanguage.getString("HELP_MENU"));
+        menuHelpShowHelp.setText(TLanguage.getString("HELP_MENU_SHOW_HELP"));
+        menuHelpAbout.setText(TLanguage.getString("HELP_MENU_ABOUT"));
+
+        generalPreferencesDialog.setTitle(TLanguage.getString("GENERAL_PREFERENCES_DIALOG_TITLE"));
+        generalPreferencesDialogApplicationLanguageLabel.setText(TLanguage.getString("GENERAL_PREFERENCES_DIALOG_APPLICATION_LANGUAGE_LABEL"));
+        generalPreferencesDialogDocumentLanguageLabel.setText(TLanguage.getString("GENERAL_PREFERENCES_DIALOG_DOCUMENT_LANGUAGE_LABEL"));
+        generalPreferencesDialogImagesSizeLabel.setText(TLanguage.getString("GENERAL_PREFERENCES_DIALOG_IMAGES_SIZE_LABEL"));
 //    	generalPreferencesDialogMaxLengthCompoundWordsLabel.setText(TLanguage.getString("GENERAL_PREFERENCES_DIALOG_MAX_LENGTH_COMPOUND_WORDS_LABEL"));
 //    	generalPreferencesDialogMaxUndoLevelLabel.setText(TLanguage.getString("GENERAL_PREFERENCES_DIALOG_MAX_UNDO_LEVEL_LABEL"));
 //    	generalPreferencesDialogPictogramsPathLabel.setText(TLanguage.getString("GENERAL_PREFERENCES_DIALOG_PICTOGRAMS_PATH_LABEL"));
 //    	generalPreferencesDialogChoosePictogramsPathButton.setText(TLanguage.getString("GENERAL_PREFERENCES_DIALOG_PICTOGRAMS_PATH_CHOOSE_BUTTON"));
-    	generalPreferencesDialogTextFontLabel.setText(TLanguage.getString("GENERAL_PREFERENCES_DIALOG_TEXT_FONT_LABEL"));
-    	generalPreferencesDialogChooseTextFontButton.setText(TLanguage.getString("GENERAL_PREFERENCES_DIALOG_TEXT_FONT_CHOOSE_BUTTON"));
-    	generalPreferencesDialogTextColorLabel.setText(TLanguage.getString("GENERAL_PREFERENCES_DIALOG_TEXT_COLOR_LABEL"));
-    	generalPreferencesDialogChooseTextColorButton.setText(TLanguage.getString("GENERAL_PREFERENCES_DIALOG_TEXT_COLOR_CHOOSE_BUTTON"));
-    	generalPreferencesDialogTextPlacementLabel.setText(TLanguage.getString("GENERAL_PREFERENCES_DIALOG_TEXT_PLACEMENT_LABEL"));   	
-    	generalPreferencesDialogOKButton.setText(TLanguage.getString("OK"));
-    	generalPreferencesDialogCancelButton.setText(TLanguage.getString("CANCEL"));
-    	
-    	documentLanguageDialog.setTitle(TLanguage.getString("DOCUMENT_LANGUAGE_DIALOG_TITLE"));
-    	documentLanguageDialogDocumentLanguageLabel.setText(TLanguage.getString("DOCUMENT_LANGUAGE_DIALOG_DOCUMENT_LANGUAGE_LABEL"));
-    	documentLanguageDialogOKButton.setText(TLanguage.getString("OK"));
-    	documentLanguageDialogCancelButton.setText(TLanguage.getString("CANCEL"));
+        generalPreferencesDialogTextFontLabel.setText(TLanguage.getString("GENERAL_PREFERENCES_DIALOG_TEXT_FONT_LABEL"));
+        generalPreferencesDialogChooseTextFontButton.setText(TLanguage.getString("GENERAL_PREFERENCES_DIALOG_TEXT_FONT_CHOOSE_BUTTON"));
+        generalPreferencesDialogTextColorLabel.setText(TLanguage.getString("GENERAL_PREFERENCES_DIALOG_TEXT_COLOR_LABEL"));
+        generalPreferencesDialogChooseTextColorButton.setText(TLanguage.getString("GENERAL_PREFERENCES_DIALOG_TEXT_COLOR_CHOOSE_BUTTON"));
+        generalPreferencesDialogTextPlacementLabel.setText(TLanguage.getString("GENERAL_PREFERENCES_DIALOG_TEXT_PLACEMENT_LABEL"));
+        generalPreferencesDialogOKButton.setText(TLanguage.getString("OK"));
+        generalPreferencesDialogCancelButton.setText(TLanguage.getString("CANCEL"));
 
-    	imagesSizeDialog.setTitle(TLanguage.getString("IMAGES_SIZE_DIALOG_TITLE"));
-    	imagesSizeDialogImagesSizeLabel.setText(TLanguage.getString("IMAGES_SIZE_DIALOG_IMAGES_SIZE_LABEL"));
-    	imagesSizeDialogOKButton.setText(TLanguage.getString("OK"));
-    	imagesSizeDialogCancelButton.setText(TLanguage.getString("CANCEL"));
-    	
-    	exportPDFDialog.setTitle(TLanguage.getString("EXPORT_PDF_DIALOG_TITLE"));
-    	exportPDFDialogExportButton.setText(TLanguage.getString("EXPORT_PDF_BUTTON"));
-    	exportPDFDialogCancelButton.setText(TLanguage.getString("CANCEL"));
-    	exportPDFDialogPictosLineLabel.setText(TLanguage.getString("EXPORT_PDF_PICTOS_LINE"));    	
-    	exportPDFDialogArasaacLicenseCB.setText(TLanguage.getString("EXPORT_PDF_ARASAAC_LICENSE"));
-    	exportPDFDialogPagLabel.setText(TLanguage.getString("EXPORT_PDF_PAGE"));
-    	exportPDFDialogPrevLabel.setText(TLanguage.getString("EXPORT_PDF_PREVISUALIZATION"));
-    	//exportPDFDialogPrevArea.setText("AREA");
-    	
-    	aboutDialog.setTitle(TLanguage.getString("ABOUT_DIALOG_TITLE"));
-    	aboutDialogCloseButton.setText(TLanguage.getString("CLOSE"));
+        documentLanguageDialog.setTitle(TLanguage.getString("DOCUMENT_LANGUAGE_DIALOG_TITLE"));
+        documentLanguageDialogDocumentLanguageLabel.setText(TLanguage.getString("DOCUMENT_LANGUAGE_DIALOG_DOCUMENT_LANGUAGE_LABEL"));
+        documentLanguageDialogOKButton.setText(TLanguage.getString("OK"));
+        documentLanguageDialogCancelButton.setText(TLanguage.getString("CANCEL"));
+
+        imagesSizeDialog.setTitle(TLanguage.getString("IMAGES_SIZE_DIALOG_TITLE"));
+        imagesSizeDialogImagesSizeLabel.setText(TLanguage.getString("IMAGES_SIZE_DIALOG_IMAGES_SIZE_LABEL"));
+        imagesSizeDialogOKButton.setText(TLanguage.getString("OK"));
+        imagesSizeDialogCancelButton.setText(TLanguage.getString("CANCEL"));
+
+        exportPDFDialog.setTitle(TLanguage.getString("EXPORT_PDF_DIALOG_TITLE"));
+        exportPDFDialogExportButton.setText(TLanguage.getString("EXPORT_PDF_BUTTON"));
+        exportPDFDialogCancelButton.setText(TLanguage.getString("CANCEL"));
+        exportPDFDialogPictosLineLabel.setText(TLanguage.getString("EXPORT_PDF_PICTOS_LINE"));
+        exportPDFDialogArasaacLicenseCB.setText(TLanguage.getString("EXPORT_PDF_ARASAAC_LICENSE"));
+        exportPDFDialogPagLabel.setText(TLanguage.getString("EXPORT_PDF_PAGE"));
+        exportPDFDialogPrevLabel.setText(TLanguage.getString("EXPORT_PDF_PREVISUALIZATION"));
+        //exportPDFDialogPrevArea.setText("AREA");
+
+        aboutDialog.setTitle(TLanguage.getString("ABOUT_DIALOG_TITLE"));
+        aboutDialogCloseButton.setText(TLanguage.getString("CLOSE"));
         String str = "";
         str = "******* AraWord 1.0.5 *******\n\n";
         str = str + "--- " + TLanguage.getString("TAboutDialog.DEVELOPERS") + " ---\n";
@@ -285,9 +285,9 @@ public class GUI extends FrameView
         str = str + "******* Pictogramas ARASAAC (http://arasaac.org) *******\n\n";
         str = str + "# Autor: Sergio Palao\n";
         str = str + "# Licencia: Creative Commons (BY-NC-SA)";
-        
+
         aboutDialogTextArea.setText(str);
-        
+
         toolBarButtonFileNew.setToolTipText(menuFileNew.getText());
         toolBarButtonFileOpen.setToolTipText(menuFileOpen.getText());
         toolBarButtonFileSave.setToolTipText(menuFileSave.getText());
@@ -301,46 +301,46 @@ public class GUI extends FrameView
         toolBarButtonPictogramsChangeName.setToolTipText(menuPictogramsChangeName.getText());
         toolBarButtonPictogramsInsertImage.setToolTipText(menuPictogramsInsertImage.getText());
         toolBarButtonVoiceSintesys.setToolTipText(menuVoiceSintesys.getText());
-        
+
         // Forgot that!!
-        
+
         // In future, it could not be "fixed" but instead depend of language chosen:
         // Castellano --> Castellano, Inglés, Francés...
         // English --> Spanish, English, French...
         SpinnerModel model = new SpinnerListModel(G.applicationLanguages);
         ((DefaultComboBoxModel)generalPreferencesDialogSpinnerApplicationLanguage.getModel()).removeAllElements();
         for (int i = 0; i < G.applicationLanguages.length; i++) {
-        	generalPreferencesDialogSpinnerApplicationLanguage.addItem(G.applicationLanguages[i]);
-		}
-		
+            generalPreferencesDialogSpinnerApplicationLanguage.addItem(G.applicationLanguages[i]);
+        }
+
         ((DefaultComboBoxModel)generalPreferencesDialogSpinnerDocumentLanguage.getModel()).removeAllElements();
-		for (int i = 0; i < G.documentLanguages.length; i++) {			
-			generalPreferencesDialogSpinnerDocumentLanguage.addItem(G.documentLanguages[i]);
-		}
+        for (int i = 0; i < G.documentLanguages.length; i++) {
+            generalPreferencesDialogSpinnerDocumentLanguage.addItem(G.documentLanguages[i]);
+        }
 
 //		SpinnerModel model3 = new SpinnerListModel(G.documentLanguages);
 //		documentLanguageDialogSpinnerDocumentLanguage.setModel(model3);
-		for (int i = 0; i < G.documentLanguages.length; i++) {
-			documentLanguageDialogComboBoxDocumentLanguage.addItem(G.documentLanguages[i]);
-		}
-		
-		String textPlacement[] = new String[]{TLanguage.getString("SPINNER_TEXT_BELOW_PICTOGRAM"),TLanguage.getString("SPINNER_TEXT_ABOVE_PICTOGRAM")};
-		for (int i = 0; i < textPlacement.length; i++) {			
-			generalPreferencesDialogSpinnerTextPlacement.addItem(textPlacement[i]);
-		}
-		
-		generalPreferencesDialogSpinnerImagesSize.setValue(G.defaultImagesSize);
+        for (int i = 0; i < G.documentLanguages.length; i++) {
+            documentLanguageDialogComboBoxDocumentLanguage.addItem(G.documentLanguages[i]);
+        }
+
+        String textPlacement[] = new String[]{TLanguage.getString("SPINNER_TEXT_BELOW_PICTOGRAM"),TLanguage.getString("SPINNER_TEXT_ABOVE_PICTOGRAM")};
+        for (int i = 0; i < textPlacement.length; i++) {
+            generalPreferencesDialogSpinnerTextPlacement.addItem(textPlacement[i]);
+        }
+
+        generalPreferencesDialogSpinnerImagesSize.setValue(G.defaultImagesSize);
 //    	generalPreferencesDialogSpinnerMaxLengthCompoundWords.setValue(G.maxLengthCompoundWords);
 //    	generalPreferencesDialogSpinnerMaxUndoLevel.setValue(G.maxUndoLevel);
-    	generalPreferencesDialogSpinnerDocumentLanguage.setSelectedItem(G.defaultDocumentLanguage);
-    	generalPreferencesDialogSpinnerApplicationLanguage.setSelectedItem(G.applicationLanguage);
-    	if (G.textBelowPictogram) {
-    		generalPreferencesDialogSpinnerTextPlacement.setSelectedItem(TLanguage.getString("SPINNER_TEXT_BELOW_PICTOGRAM"));
-    	} else {
-    		generalPreferencesDialogSpinnerTextPlacement.setSelectedItem(TLanguage.getString("SPINNER_TEXT_ABOVE_PICTOGRAM"));
-    	}
-    	
-    	documentLanguageDialogComboBoxDocumentLanguage.setSelectedItem(G.documentLanguage);
+        generalPreferencesDialogSpinnerDocumentLanguage.setSelectedItem(G.defaultDocumentLanguage);
+        generalPreferencesDialogSpinnerApplicationLanguage.setSelectedItem(G.applicationLanguage);
+        if (G.textBelowPictogram) {
+            generalPreferencesDialogSpinnerTextPlacement.setSelectedItem(TLanguage.getString("SPINNER_TEXT_BELOW_PICTOGRAM"));
+        } else {
+            generalPreferencesDialogSpinnerTextPlacement.setSelectedItem(TLanguage.getString("SPINNER_TEXT_ABOVE_PICTOGRAM"));
+        }
+
+        documentLanguageDialogComboBoxDocumentLanguage.setSelectedItem(G.documentLanguage);
     }
 
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -405,7 +405,7 @@ public class GUI extends FrameView
         menuPictogramsHideBorderAllElements = new javax.swing.JMenuItem();
         menuTools = new javax.swing.JMenu();
         menuToolsResourceManager = new javax.swing.JMenuItem();
-        
+
         menuToolsGeneralPreferences = new javax.swing.JMenuItem();
         menuHelp = new javax.swing.JMenu();
         menuHelpShowHelp = new javax.swing.JMenuItem();
@@ -468,13 +468,13 @@ public class GUI extends FrameView
         imagesSizeDialogSpinnerImagesSize = new javax.swing.JSpinner();
         imagesSizeDialogCancelButton = new javax.swing.JButton();
         imagesSizeDialogOKButton = new javax.swing.JButton();
-        
+
         //export PDF dialog window
         exportPDFDialog = new javax.swing.JDialog();
         exportPDFDialog.addWindowListener(new WindowAdapter()
         {
             @Override
-			public void windowClosing(WindowEvent e)
+            public void windowClosing(WindowEvent e)
             {
                 G.imagesSize=G.imagesSizePDF;
             }
@@ -506,18 +506,18 @@ public class GUI extends FrameView
         org.jdesktop.layout.GroupLayout mainPanelLayout = new org.jdesktop.layout.GroupLayout(mainPanel);
         mainPanel.setLayout(mainPanelLayout);
         mainPanelLayout.setHorizontalGroup(
-            mainPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(mainPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .add(scrollTextZone, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 859, Short.MAX_VALUE)
-                .addContainerGap())
+                mainPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                        .add(mainPanelLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .add(scrollTextZone, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 859, Short.MAX_VALUE)
+                                .addContainerGap())
         );
         mainPanelLayout.setVerticalGroup(
-            mainPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(mainPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .add(scrollTextZone, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 524, Short.MAX_VALUE)
-                .addContainerGap())
+                mainPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                        .add(mainPanelLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .add(scrollTextZone, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 524, Short.MAX_VALUE)
+                                .addContainerGap())
         );
 
         menuBar.setName("menuBar"); // NOI18N
@@ -567,28 +567,28 @@ public class GUI extends FrameView
         menuFileExportImage.setName("menuFileExportImage"); // NOI18N
         menuFileExportImage.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-            	menuFileExportActionPerformed(evt);
+                menuFileExportActionPerformed(evt);
             }
         });
         menuFileExport.add(menuFileExportImage);
-        
+
         menuFileExportPDF.setText(resourceMap.getString("menuFileExportPDF.text")); // NOI18N
         menuFileExportPDF.setName("menuFileExportPDF"); // NOI18N
         menuFileExportPDF.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-            	menuFileExportPDFActionPerformed(evt);
+                menuFileExportPDFActionPerformed(evt);
             }
         });
-        menuFileExport.add(menuFileExportPDF);        
-        
+        menuFileExport.add(menuFileExportPDF);
+
         menuFile.add(menuFileExport);
 
         menuFileExit.setText(resourceMap.getString("menuFileExit.text")); // NOI18N
         menuFileExit.setName("menuFileExit"); // NOI18N
-        
-        
-        
-        
+
+
+
+
         menuFileExit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 menuFileExitActionPerformed(evt);
@@ -913,8 +913,8 @@ public class GUI extends FrameView
         menuPictogramsHide.add(menuPictogramsHideBorder);
 
         menuPictograms.add(menuPictogramsHide);
-        
-        
+
+
 
         menuBar.add(menuPictograms);
 
@@ -924,12 +924,12 @@ public class GUI extends FrameView
         menuToolsResourceManager.setName("menuToolsResourceManager"); // NOI18N
         menuToolsResourceManager.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-            	mainFrame f = new mainFrame(G.applicationLanguage);
+                mainFrame f = new mainFrame(G.applicationLanguage);
                 f.setVisible(true);
                 f.pack();
             }
         });
-        
+
         //change: 02/02/12: just disable the option in order the data base be handled
         //                    from the ResourceMananger application. There are some
         //                    path problems when launching it from the menu
@@ -943,12 +943,12 @@ public class GUI extends FrameView
             }
         });
         menuTools.add(menuToolsGeneralPreferences);
-        
+
         menuVoiceSintesys.setText(resourceMap.getString("menuPictogramsNextImage.text")); // NOI18N
         menuVoiceSintesys.setName("menuVoiceSintesys"); // NOI18N
         menuVoiceSintesys.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-            	toolBarButtonVoiceSintesysActionPerformed(evt);
+                toolBarButtonVoiceSintesysActionPerformed(evt);
             }
         });
         menuTools.add(menuVoiceSintesys);
@@ -1010,40 +1010,40 @@ public class GUI extends FrameView
         org.jdesktop.layout.GroupLayout jPanel1Layout = new org.jdesktop.layout.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(aboutDialogImage, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 702, Short.MAX_VALUE)
+                jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                        .add(aboutDialogImage, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 702, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(org.jdesktop.layout.GroupLayout.TRAILING, aboutDialogImage, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 234, Short.MAX_VALUE)
+                jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                        .add(org.jdesktop.layout.GroupLayout.TRAILING, aboutDialogImage, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 234, Short.MAX_VALUE)
         );
 
         org.jdesktop.layout.GroupLayout aboutDialogLayout = new org.jdesktop.layout.GroupLayout(aboutDialog.getContentPane());
         aboutDialog.getContentPane().setLayout(aboutDialogLayout);
         aboutDialogLayout.setHorizontalGroup(
-            aboutDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(aboutDialogLayout.createSequentialGroup()
-                .addContainerGap()
-                .add(aboutDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(org.jdesktop.layout.GroupLayout.TRAILING, aboutDialogLayout.createSequentialGroup()
-                        .add(aboutDialogCloseButton)
-                        .addContainerGap())
-                    .add(org.jdesktop.layout.GroupLayout.TRAILING, aboutDialogLayout.createSequentialGroup()
-                        .add(aboutDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
-                            .add(org.jdesktop.layout.GroupLayout.LEADING, jPanel1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .add(jScrollPane1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 702, Short.MAX_VALUE))
-                        .addContainerGap())))
+                aboutDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                        .add(aboutDialogLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .add(aboutDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                                        .add(org.jdesktop.layout.GroupLayout.TRAILING, aboutDialogLayout.createSequentialGroup()
+                                                .add(aboutDialogCloseButton)
+                                                .addContainerGap())
+                                        .add(org.jdesktop.layout.GroupLayout.TRAILING, aboutDialogLayout.createSequentialGroup()
+                                                .add(aboutDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
+                                                        .add(org.jdesktop.layout.GroupLayout.LEADING, jPanel1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                        .add(jScrollPane1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 702, Short.MAX_VALUE))
+                                                .addContainerGap())))
         );
         aboutDialogLayout.setVerticalGroup(
-            aboutDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(aboutDialogLayout.createSequentialGroup()
-                .addContainerGap()
-                .add(jPanel1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .add(12, 12, 12)
-                .add(jScrollPane1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 480, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(aboutDialogCloseButton)
-                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                aboutDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                        .add(aboutDialogLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .add(jPanel1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                .add(12, 12, 12)
+                                .add(jScrollPane1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 480, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                                .add(aboutDialogCloseButton)
+                                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         findDialog.setTitle(resourceMap.getString("findDialog.title")); // NOI18N
@@ -1075,30 +1075,30 @@ public class GUI extends FrameView
         org.jdesktop.layout.GroupLayout findDialogLayout = new org.jdesktop.layout.GroupLayout(findDialog.getContentPane());
         findDialog.getContentPane().setLayout(findDialogLayout);
         findDialogLayout.setHorizontalGroup(
-            findDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(findDialogLayout.createSequentialGroup()
-                .addContainerGap()
-                .add(findDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
-                    .add(findDialogFindTextLabel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 73, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(findDialogLayout.createSequentialGroup()
-                        .add(findDialogFindButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 65, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(findDialogExitButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 62, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                    .add(findDialogTextField))
-                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                findDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                        .add(findDialogLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .add(findDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
+                                        .add(findDialogFindTextLabel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 73, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                        .add(findDialogLayout.createSequentialGroup()
+                                                .add(findDialogFindButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 65, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                                                .add(findDialogExitButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 62, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                                        .add(findDialogTextField))
+                                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         findDialogLayout.setVerticalGroup(
-            findDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(findDialogLayout.createSequentialGroup()
-                .addContainerGap()
-                .add(findDialogFindTextLabel)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(findDialogTextField, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(findDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(findDialogFindButton)
-                    .add(findDialogExitButton))
-                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                findDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                        .add(findDialogLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .add(findDialogFindTextLabel)
+                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                                .add(findDialogTextField, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                                .add(findDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                                        .add(findDialogFindButton)
+                                        .add(findDialogExitButton))
+                                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         generalPreferencesDialog.setModal(true);
@@ -1202,89 +1202,89 @@ public class GUI extends FrameView
         org.jdesktop.layout.GroupLayout generalPreferencesDialogLayout = new org.jdesktop.layout.GroupLayout(generalPreferencesDialog.getContentPane());
         generalPreferencesDialog.getContentPane().setLayout(generalPreferencesDialogLayout);
         generalPreferencesDialogLayout.setHorizontalGroup(
-            generalPreferencesDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(generalPreferencesDialogLayout.createSequentialGroup()
-                .addContainerGap()
-                .add(generalPreferencesDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(generalPreferencesDialogLayout.createSequentialGroup()
-                        .add(generalPreferencesDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                            .add(generalPreferencesDialogImagesSizeLabel)
+                generalPreferencesDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                        .add(generalPreferencesDialogLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .add(generalPreferencesDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                                        .add(generalPreferencesDialogLayout.createSequentialGroup()
+                                                .add(generalPreferencesDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                                                                .add(generalPreferencesDialogImagesSizeLabel)
 //                            .add(generalPreferencesDialogMaxUndoLevelLabel)
-                            .add(generalPreferencesDialogApplicationLanguageLabel)
+                                                                .add(generalPreferencesDialogApplicationLanguageLabel)
 //                            .add(generalPreferencesDialogPictogramsPathLabel)
-                            .add(generalPreferencesDialogDocumentLanguageLabel)
+                                                                .add(generalPreferencesDialogDocumentLanguageLabel)
 //                            .add(generalPreferencesDialogMaxLengthCompoundWordsLabel)
-                        )
-                        .add(18, 18, 18)
-                        .add(generalPreferencesDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                            .add(generalPreferencesDialogSpinnerImagesSize, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 151, Short.MAX_VALUE)
+                                                )
+                                                .add(18, 18, 18)
+                                                .add(generalPreferencesDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                                                                .add(generalPreferencesDialogSpinnerImagesSize, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 151, Short.MAX_VALUE)
 //                            .add(generalPreferencesDialogChoosePictogramsPathButton, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 151, Short.MAX_VALUE)
-                            .add(generalPreferencesDialogSpinnerDocumentLanguage, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 151, Short.MAX_VALUE)
-                            .add(generalPreferencesDialogSpinnerApplicationLanguage, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 151, Short.MAX_VALUE)
+                                                                .add(generalPreferencesDialogSpinnerDocumentLanguage, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 151, Short.MAX_VALUE)
+                                                                .add(generalPreferencesDialogSpinnerApplicationLanguage, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 151, Short.MAX_VALUE)
 //                            .add(generalPreferencesDialogSpinnerMaxLengthCompoundWords, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 151, Short.MAX_VALUE)
 //                            .add(generalPreferencesDialogSpinnerMaxUndoLevel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 151, Short.MAX_VALUE)
-                        ))
-                    .add(generalPreferencesDialogTextFontLabel)
-                    .add(generalPreferencesDialogTextColorLabel)
-                    .add(generalPreferencesDialogLayout.createSequentialGroup()
-                        .add(generalPreferencesDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                            .add(generalPreferencesDialogOKButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 131, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                            .add(generalPreferencesDialogTextPlacementLabel))
-                        .add(18, 18, 18)
-                        .add(generalPreferencesDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                            .add(org.jdesktop.layout.GroupLayout.TRAILING, generalPreferencesDialogChooseTextColorButton, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 153, Short.MAX_VALUE)
-                            .add(org.jdesktop.layout.GroupLayout.TRAILING, generalPreferencesDialogChooseTextFontButton, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 153, Short.MAX_VALUE)
-                            .add(org.jdesktop.layout.GroupLayout.TRAILING, generalPreferencesDialogSpinnerTextPlacement, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 153, Short.MAX_VALUE)
-                            .add(generalPreferencesDialogCancelButton, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 153, Short.MAX_VALUE))))
-                .addContainerGap())
+                                                ))
+                                        .add(generalPreferencesDialogTextFontLabel)
+                                        .add(generalPreferencesDialogTextColorLabel)
+                                        .add(generalPreferencesDialogLayout.createSequentialGroup()
+                                                .add(generalPreferencesDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                                                        .add(generalPreferencesDialogOKButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 131, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                                        .add(generalPreferencesDialogTextPlacementLabel))
+                                                .add(18, 18, 18)
+                                                .add(generalPreferencesDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                                                        .add(org.jdesktop.layout.GroupLayout.TRAILING, generalPreferencesDialogChooseTextColorButton, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 153, Short.MAX_VALUE)
+                                                        .add(org.jdesktop.layout.GroupLayout.TRAILING, generalPreferencesDialogChooseTextFontButton, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 153, Short.MAX_VALUE)
+                                                        .add(org.jdesktop.layout.GroupLayout.TRAILING, generalPreferencesDialogSpinnerTextPlacement, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 153, Short.MAX_VALUE)
+                                                        .add(generalPreferencesDialogCancelButton, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 153, Short.MAX_VALUE))))
+                                .addContainerGap())
         );
         generalPreferencesDialogLayout.setVerticalGroup(
-            generalPreferencesDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(generalPreferencesDialogLayout.createSequentialGroup()
-                .addContainerGap()
-                .add(generalPreferencesDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(generalPreferencesDialogImagesSizeLabel)
-                    .add(generalPreferencesDialogSpinnerImagesSize, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                .add(5, 5, 5)
-                .add(generalPreferencesDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                generalPreferencesDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                        .add(generalPreferencesDialogLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .add(generalPreferencesDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                                        .add(generalPreferencesDialogImagesSizeLabel)
+                                        .add(generalPreferencesDialogSpinnerImagesSize, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                                .add(5, 5, 5)
+                                .add(generalPreferencesDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
 //                    .add(generalPreferencesDialogMaxUndoLevelLabel)
 //                    .add(generalPreferencesDialogSpinnerMaxUndoLevel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-            	)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(generalPreferencesDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                                )
+                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                                .add(generalPreferencesDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
 //                    .add(generalPreferencesDialogMaxLengthCompoundWordsLabel)
 //                    .add(generalPreferencesDialogSpinnerMaxLengthCompoundWords, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    )
-                .add(9, 9, 9)
-                .add(generalPreferencesDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(generalPreferencesDialogApplicationLanguageLabel)
-                    .add(generalPreferencesDialogSpinnerApplicationLanguage, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(generalPreferencesDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(generalPreferencesDialogDocumentLanguageLabel)
-                    .add(generalPreferencesDialogSpinnerDocumentLanguage, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                .add(generalPreferencesDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                                )
+                                .add(9, 9, 9)
+                                .add(generalPreferencesDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                                        .add(generalPreferencesDialogApplicationLanguageLabel)
+                                        .add(generalPreferencesDialogSpinnerApplicationLanguage, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                                .add(generalPreferencesDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                                        .add(generalPreferencesDialogDocumentLanguageLabel)
+                                        .add(generalPreferencesDialogSpinnerDocumentLanguage, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
+                                .add(generalPreferencesDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
 //                    .add(generalPreferencesDialogPictogramsPathLabel)
 //                    .add(generalPreferencesDialogChoosePictogramsPathButton, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                )
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(generalPreferencesDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(generalPreferencesDialogTextFontLabel)
-                    .add(generalPreferencesDialogChooseTextFontButton))
-                .add(7, 7, 7)
-                .add(generalPreferencesDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(generalPreferencesDialogTextColorLabel)
-                    .add(generalPreferencesDialogChooseTextColorButton))
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                .add(generalPreferencesDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(generalPreferencesDialogTextPlacementLabel)
-                    .add(generalPreferencesDialogSpinnerTextPlacement, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                .add(34, 34, 34)
-                .add(generalPreferencesDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(generalPreferencesDialogOKButton)
-                    .add(generalPreferencesDialogCancelButton))
-                .addContainerGap())
+                                )
+                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                                .add(generalPreferencesDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                                        .add(generalPreferencesDialogTextFontLabel)
+                                        .add(generalPreferencesDialogChooseTextFontButton))
+                                .add(7, 7, 7)
+                                .add(generalPreferencesDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                                        .add(generalPreferencesDialogTextColorLabel)
+                                        .add(generalPreferencesDialogChooseTextColorButton))
+                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
+                                .add(generalPreferencesDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                                        .add(generalPreferencesDialogTextPlacementLabel)
+                                        .add(generalPreferencesDialogSpinnerTextPlacement, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                                .add(34, 34, 34)
+                                .add(generalPreferencesDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                                        .add(generalPreferencesDialogOKButton)
+                                        .add(generalPreferencesDialogCancelButton))
+                                .addContainerGap())
         );
 
         toolBar.setFloatable(false);
@@ -1421,7 +1421,7 @@ public class GUI extends FrameView
             }
         });
         toolBar.add(toolBarButtonPictogramsChangeName);
-        
+
         toolBarButtonPictogramsInsertImage.setText(resourceMap.getString("toolBarButtonPictogramsChangeName.text")); // NOI18N
         toolBarButtonPictogramsInsertImage.setFocusable(false);
         toolBarButtonPictogramsInsertImage.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -1433,7 +1433,7 @@ public class GUI extends FrameView
             }
         });
         toolBar.add(toolBarButtonPictogramsInsertImage);
-        
+
         toolBarButtonVoiceSintesys.setText(resourceMap.getString("toolBarButtonVoiceSintesys.text")); // NOI18N
         toolBarButtonVoiceSintesys.setFocusable(false);
         toolBarButtonVoiceSintesys.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -1445,11 +1445,11 @@ public class GUI extends FrameView
             }
         });
         toolBar.add(toolBarButtonVoiceSintesys);
-        
-        
-        
-        
-        
+
+
+
+
+
 
         documentLanguageDialog.setModal(true);
         documentLanguageDialog.setName("documentLanguageDialog"); // NOI18N
@@ -1460,7 +1460,7 @@ public class GUI extends FrameView
 
 //        documentLanguageDialogSpinnerDocumentLanguage.setModel(new javax.swing.SpinnerListModel(new String[] {"(todos)", "Español", "English", "Français", "Deutsch", "Català"}));
 //        documentLanguageDialogSpinnerDocumentLanguage.setName("documentLanguageDialogSpinnerDocumentLanguage"); // NOI18N
-        
+
 //        String[] languages = new String[] {"(todos)", "Español", "English", "Français", "Deutsch", "Català"};
 //        for (int i = 0; i < languages.length; i++) {
 //			documentLanguageDialogComboBoxDocumentLanguage.addItem(languages[i]);
@@ -1485,32 +1485,32 @@ public class GUI extends FrameView
         org.jdesktop.layout.GroupLayout documentLanguageDialogLayout = new org.jdesktop.layout.GroupLayout(documentLanguageDialog.getContentPane());
         documentLanguageDialog.getContentPane().setLayout(documentLanguageDialogLayout);
         documentLanguageDialogLayout.setHorizontalGroup(
-            documentLanguageDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(documentLanguageDialogLayout.createSequentialGroup()
-                .addContainerGap()
-                .add(documentLanguageDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(documentLanguageDialogLayout.createSequentialGroup()
-                        .add(documentLanguageDialogDocumentLanguageLabel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .add(35, 35, 35)
-                        .add(documentLanguageDialogComboBoxDocumentLanguage, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 154, Short.MAX_VALUE))
-                    .add(org.jdesktop.layout.GroupLayout.TRAILING, documentLanguageDialogLayout.createSequentialGroup()
-                        .add(documentLanguageDialogOKButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 138, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(documentLanguageDialogCancelButton, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 154, Short.MAX_VALUE)))
-                .addContainerGap())
+                documentLanguageDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                        .add(documentLanguageDialogLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .add(documentLanguageDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                                        .add(documentLanguageDialogLayout.createSequentialGroup()
+                                                .add(documentLanguageDialogDocumentLanguageLabel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .add(35, 35, 35)
+                                                .add(documentLanguageDialogComboBoxDocumentLanguage, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 154, Short.MAX_VALUE))
+                                        .add(org.jdesktop.layout.GroupLayout.TRAILING, documentLanguageDialogLayout.createSequentialGroup()
+                                                .add(documentLanguageDialogOKButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 138, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                                                .add(documentLanguageDialogCancelButton, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 154, Short.MAX_VALUE)))
+                                .addContainerGap())
         );
         documentLanguageDialogLayout.setVerticalGroup(
-            documentLanguageDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(documentLanguageDialogLayout.createSequentialGroup()
-                .addContainerGap()
-                .add(documentLanguageDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(documentLanguageDialogComboBoxDocumentLanguage, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(documentLanguageDialogDocumentLanguageLabel))
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .add(documentLanguageDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(documentLanguageDialogCancelButton)
-                    .add(documentLanguageDialogOKButton))
-                .addContainerGap())
+                documentLanguageDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                        .add(documentLanguageDialogLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .add(documentLanguageDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                                        .add(documentLanguageDialogComboBoxDocumentLanguage, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                        .add(documentLanguageDialogDocumentLanguageLabel))
+                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .add(documentLanguageDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                                        .add(documentLanguageDialogCancelButton)
+                                        .add(documentLanguageDialogOKButton))
+                                .addContainerGap())
         );
 
         imagesSizeDialog.setModal(true);
@@ -1542,143 +1542,143 @@ public class GUI extends FrameView
         org.jdesktop.layout.GroupLayout imagesSizeDialogLayout = new org.jdesktop.layout.GroupLayout(imagesSizeDialog.getContentPane());
         imagesSizeDialog.getContentPane().setLayout(imagesSizeDialogLayout);
         imagesSizeDialogLayout.setHorizontalGroup(
-            imagesSizeDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(imagesSizeDialogLayout.createSequentialGroup()
-                .addContainerGap()
-                .add(imagesSizeDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
-                    .add(imagesSizeDialogOKButton, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .add(imagesSizeDialogImagesSizeLabel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                .add(imagesSizeDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(imagesSizeDialogSpinnerImagesSize, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 93, Short.MAX_VALUE)
-                    .add(imagesSizeDialogCancelButton, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 93, Short.MAX_VALUE))
-                .addContainerGap())
+                imagesSizeDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                        .add(imagesSizeDialogLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .add(imagesSizeDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
+                                        .add(imagesSizeDialogOKButton, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .add(imagesSizeDialogImagesSizeLabel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
+                                .add(imagesSizeDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                                        .add(imagesSizeDialogSpinnerImagesSize, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 93, Short.MAX_VALUE)
+                                        .add(imagesSizeDialogCancelButton, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 93, Short.MAX_VALUE))
+                                .addContainerGap())
         );
         imagesSizeDialogLayout.setVerticalGroup(
-            imagesSizeDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(imagesSizeDialogLayout.createSequentialGroup()
-                .addContainerGap()
-                .add(imagesSizeDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(imagesSizeDialogImagesSizeLabel)
-                    .add(imagesSizeDialogSpinnerImagesSize, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(imagesSizeDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(imagesSizeDialogOKButton)
-                    .add(imagesSizeDialogCancelButton))
-                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                imagesSizeDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                        .add(imagesSizeDialogLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .add(imagesSizeDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                                        .add(imagesSizeDialogImagesSizeLabel)
+                                        .add(imagesSizeDialogSpinnerImagesSize, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                                .add(imagesSizeDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                                        .add(imagesSizeDialogOKButton)
+                                        .add(imagesSizeDialogCancelButton))
+                                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        
-        
+
+
         // ################################# INIT COMPONENTS EXPORT PDF DIALOG
         exportPDFDialog.setModal(true);
         exportPDFDialog.setName("exportPDFDialog"); // NOI18N
         exportPDFDialog.setResizable(false);
 
-        
+
         exportPDFDialogPictosLineLabel.setName("exportPDFDialogPictosLineLabel"); // NOI18N
 
         exportPDFDialogSpinnerPictosLine.setModel(new javax.swing.SpinnerNumberModel(5, 1, 10, 1));
         exportPDFDialogSpinnerPictosLine.setName("exportPDFDialogSpinnerPictosLine"); // NOI18N
         exportPDFDialogSpinnerPictosLine.addChangeListener(new javax.swing.event.ChangeListener() {
-            
+
             public void stateChanged(javax.swing.event.ChangeEvent arg0) {
-            	G.numPictosLinePDF=((Integer) exportPDFDialogSpinnerPictosLine.getValue()).intValue();
-            	G.imagesSize=200/G.numPictosLinePDF;
-            	
-            	araword.utils.TextUtils.regeneratePDFPrevZone(exportPDFDialogPrevArea,((Integer) exportPDFDialogPagSpinner.getValue()).intValue());
-            	//System.out.println("Picto linea: " + ((Integer) exportPDFDialogSpinnerPictosLine.getValue()).intValue());
+                G.numPictosLinePDF=((Integer) exportPDFDialogSpinnerPictosLine.getValue()).intValue();
+                G.imagesSize=200/G.numPictosLinePDF;
+
+                araword.utils.TextUtils.regeneratePDFPrevZone(exportPDFDialogPrevArea,((Integer) exportPDFDialogPagSpinner.getValue()).intValue());
+                //System.out.println("Picto linea: " + ((Integer) exportPDFDialogSpinnerPictosLine.getValue()).intValue());
             }
-        });        
-        
+        });
+
         exportPDFDialogPagSpinner.setModel(new javax.swing.SpinnerNumberModel(1, 1, 50, 1));
         exportPDFDialogPagSpinner.setName("exportPDFDialogPagSpinner"); // NOI18N
         exportPDFDialogPagSpinner.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent arg0) {
-            	int page= ((Integer) exportPDFDialogPagSpinner.getValue()).intValue();
-            	araword.utils.TextUtils.regeneratePDFPrevZone(exportPDFDialogPrevArea,page);
-            	
-            }
-        });
-        
-        exportPDFDialogArasaacLicenseCB.setSelected(G.licensePDF);
-        exportPDFDialogArasaacLicenseCB.addActionListener(new java.awt.event.ActionListener() {
-        	 public void actionPerformed(java.awt.event.ActionEvent evt) {
-             	G.licensePDF=exportPDFDialogArasaacLicenseCB.isSelected();
-             }
-        });
-        
-        exportPDFDialogCancelButton.setName("exportPDFDialogCancelButton"); // NOI18N
-        exportPDFDialogCancelButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-            	exportPDFDialogCancelButtonActionPerformed(evt);
+                int page= ((Integer) exportPDFDialogPagSpinner.getValue()).intValue();
+                araword.utils.TextUtils.regeneratePDFPrevZone(exportPDFDialogPrevArea,page);
+
             }
         });
 
-       
+        exportPDFDialogArasaacLicenseCB.setSelected(G.licensePDF);
+        exportPDFDialogArasaacLicenseCB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                G.licensePDF=exportPDFDialogArasaacLicenseCB.isSelected();
+            }
+        });
+
+        exportPDFDialogCancelButton.setName("exportPDFDialogCancelButton"); // NOI18N
+        exportPDFDialogCancelButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                exportPDFDialogCancelButtonActionPerformed(evt);
+            }
+        });
+
+
         exportPDFDialogExportButton.setName("exportPDFDialogExportButton"); // NOI18N
         exportPDFDialogExportButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-            	exportPDFDialogExportButtonActionPerformed(evt);
-            	System.out.println("##### pulsado export");
-            	
-            	
+                exportPDFDialogExportButtonActionPerformed(evt);
+                System.out.println("##### pulsado export");
+
+
             }
         });
 
         org.jdesktop.layout.GroupLayout exportPDFDialogLayout = new org.jdesktop.layout.GroupLayout(exportPDFDialog.getContentPane());
         exportPDFDialog.getContentPane().setLayout(exportPDFDialogLayout);
-        
+
         //pruebas de añadir componentes
         exportPDFDialogLayout.setHorizontalGroup(
-        		exportPDFDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                .add(org.jdesktop.layout.GroupLayout.TRAILING, exportPDFDialogLayout.createSequentialGroup()
-                    .addContainerGap()
-                    .add(exportPDFDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                        .add(exportPDFDialogLayout.createSequentialGroup()
-                            .add(exportPDFDialogPictosLineLabel)
-                            .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                            .add(exportPDFDialogSpinnerPictosLine, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .add(exportPDFDialogArasaacLicenseCB)
-                        .add(exportPDFDialogLayout.createSequentialGroup()
-                            .add(exportPDFDialogCancelButton)
-                            .add(76, 76, 76)
-                            .add(exportPDFDialogExportButton)))
-                    .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 57, Short.MAX_VALUE)
-                    .add(exportPDFDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                        .add(exportPDFDialogPrevArea, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 275, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .add(exportPDFDialogLayout.createSequentialGroup()
-                            .add(exportPDFDialogPrevLabel)
-                            .add(67, 67, 67)
-                            .add(exportPDFDialogPagLabel)
-                            .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                            .add(exportPDFDialogPagSpinner, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
-                    .addContainerGap())
-            );
+                exportPDFDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                        .add(org.jdesktop.layout.GroupLayout.TRAILING, exportPDFDialogLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .add(exportPDFDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                                        .add(exportPDFDialogLayout.createSequentialGroup()
+                                                .add(exportPDFDialogPictosLineLabel)
+                                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
+                                                .add(exportPDFDialogSpinnerPictosLine, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .add(exportPDFDialogArasaacLicenseCB)
+                                        .add(exportPDFDialogLayout.createSequentialGroup()
+                                                .add(exportPDFDialogCancelButton)
+                                                .add(76, 76, 76)
+                                                .add(exportPDFDialogExportButton)))
+                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 57, Short.MAX_VALUE)
+                                .add(exportPDFDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                                        .add(exportPDFDialogPrevArea, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 275, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                        .add(exportPDFDialogLayout.createSequentialGroup()
+                                                .add(exportPDFDialogPrevLabel)
+                                                .add(67, 67, 67)
+                                                .add(exportPDFDialogPagLabel)
+                                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                                                .add(exportPDFDialogPagSpinner, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
+                                .addContainerGap())
+        );
         exportPDFDialogLayout.setVerticalGroup(
-        		exportPDFDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                .add(exportPDFDialogLayout.createSequentialGroup()
-                    .addContainerGap()
-                    .add(exportPDFDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                        .add(exportPDFDialogPrevLabel)
-                        .add(exportPDFDialogPagLabel)
-                        .add(exportPDFDialogPagSpinner, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                    .add(exportPDFDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                exportPDFDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                         .add(exportPDFDialogLayout.createSequentialGroup()
-                            .add(21, 21, 21)
-                            .add(exportPDFDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                                .add(exportPDFDialogPictosLineLabel)
-                                .add(exportPDFDialogSpinnerPictosLine, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                            .add(18, 18, 18)
-                            .add(exportPDFDialogArasaacLicenseCB)
-                            .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 236, Short.MAX_VALUE)
-                            .add(exportPDFDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                                .add(exportPDFDialogCancelButton)
-                                .add(exportPDFDialogExportButton)))
-                        .add(exportPDFDialogLayout.createSequentialGroup()
-                            .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                            .add(exportPDFDialogPrevArea, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 389, Short.MAX_VALUE)))
-                    .add(28, 28, 28))
-            );
+                                .addContainerGap()
+                                .add(exportPDFDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                                        .add(exportPDFDialogPrevLabel)
+                                        .add(exportPDFDialogPagLabel)
+                                        .add(exportPDFDialogPagSpinner, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                                .add(exportPDFDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                                        .add(exportPDFDialogLayout.createSequentialGroup()
+                                                .add(21, 21, 21)
+                                                .add(exportPDFDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                                                        .add(exportPDFDialogPictosLineLabel)
+                                                        .add(exportPDFDialogSpinnerPictosLine, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                                                .add(18, 18, 18)
+                                                .add(exportPDFDialogArasaacLicenseCB)
+                                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 236, Short.MAX_VALUE)
+                                                .add(exportPDFDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                                                        .add(exportPDFDialogCancelButton)
+                                                        .add(exportPDFDialogExportButton)))
+                                        .add(exportPDFDialogLayout.createSequentialGroup()
+                                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                                                .add(exportPDFDialogPrevArea, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 389, Short.MAX_VALUE)))
+                                .add(28, 28, 28))
+        );
         
         
         
@@ -1736,224 +1736,222 @@ public class GUI extends FrameView
     }// </editor-fold>//GEN-END:initComponents
 
     private void menuFileNewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuFileNewActionPerformed
-    	if (JOptionPane.showConfirmDialog(getFrame(),TLanguage.getString("FILE_MENU_NEW_WARNING_DISCARD"),
-    			TLanguage.getString("WARNING"),JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
-			TextUtils.newDocument();
-		}
+        if (JOptionPane.showConfirmDialog(getFrame(),TLanguage.getString("FILE_MENU_NEW_WARNING_DISCARD"),
+                TLanguage.getString("WARNING"),JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
+            TextUtils.newDocument();
+        }
     }//GEN-LAST:event_menuFileNewActionPerformed
 
     private void menuFileOpenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuFileOpenActionPerformed
-    	MenuFunctions.fileOpen();
+        MenuFunctions.fileOpen();
     }//GEN-LAST:event_menuFileOpenActionPerformed
 
     private void menuFileSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuFileSaveActionPerformed
-    	MenuFunctions.fileSave();
+        MenuFunctions.fileSave();
     }//GEN-LAST:event_menuFileSaveActionPerformed
-    
+
     private void menuFileSaveAsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuFileSaveAsActionPerformed
-    	MenuFunctions.fileSaveAs();
+        MenuFunctions.fileSaveAs();
     }//GEN-LAST:event_menuFileSaveAsActionPerformed
-    
+
     private void menuFileExportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuFileExportActionPerformed
-    	MenuFunctions.fileExport();
-     }//GEN-LAST:event_menuFileExportActionPerformed
-    
-    
+        MenuFunctions.fileExport();
+    }//GEN-LAST:event_menuFileExportActionPerformed
+
+
     private void menuFileExportPDFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuFileExportActionPerformed
-    	//generate previsualization area
-    	System.out.println("######## export PDF ##########");
-    	
-    	    	
-    	//imagesSizeDialog
-    	exportPDFDialog.pack();
-    	G.imagesSizePDF=G.imagesSize;
-    	G.numPictosLinePDF=((Integer) exportPDFDialogSpinnerPictosLine.getValue()).intValue();
-    	G.imagesSize=200/G.numPictosLinePDF;
-    	
-    	exportPDFDialogPagSpinner.setValue(1);
-    	araword.utils.TextUtils.regeneratePDFPrevZone(exportPDFDialogPrevArea,1);
-    	exportPDFDialog.setModal(true);
-    	exportPDFDialog.setLocationRelativeTo(null); // Center window on the middle of the screen.
-    	exportPDFDialog.setVisible(true);
-    	
-    	
-     }//GEN-LAST:event_menuFileExportActionPerformed
-   
+        //generate previsualization area
+        System.out.println("######## export PDF ##########");
+
+        //imagesSizeDialog
+        exportPDFDialog.pack();
+        G.imagesSizePDF=G.imagesSize;
+        G.numPictosLinePDF=((Integer) exportPDFDialogSpinnerPictosLine.getValue()).intValue();
+        G.imagesSize=200/G.numPictosLinePDF;
+
+        exportPDFDialogPagSpinner.setValue(1);
+        araword.utils.TextUtils.regeneratePDFPrevZone(exportPDFDialogPrevArea,1);
+        exportPDFDialog.setModal(true);
+        exportPDFDialog.setLocationRelativeTo(null); // Center window on the middle of the screen.
+        exportPDFDialog.setVisible(true);
+
+    }//GEN-LAST:event_menuFileExportActionPerformed
+
     private void menuFileExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuFileExitActionPerformed
         if (JOptionPane.showConfirmDialog(getFrame(),TLanguage.getString("FILE_MENU_EXIT_WARNING"),
-        		TLanguage.getString("WARNING"),JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION)
+                TLanguage.getString("WARNING"),JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION)
             System.exit(0);
     }//GEN-LAST:event_menuFileExitActionPerformed
 
     private void menuEditCutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuEditCutActionPerformed
-    	MenuFunctions.editCut();
+        MenuFunctions.editCut();
     }//GEN-LAST:event_menuEditCutActionPerformed
 
     private void menuEditCopyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuEditCopyActionPerformed
-    	MenuFunctions.editCopy();
+        MenuFunctions.editCopy();
     }//GEN-LAST:event_menuEditCopyActionPerformed
 
     private void menuEditPasteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuEditPasteActionPerformed
-    	MenuFunctions.editPaste(G.activeElementPosition+1);
+        MenuFunctions.editPaste(G.activeElementPosition+1);
     }//GEN-LAST:event_menuEditPasteActionPerformed
 
     private void menuEditUndoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuEditUndoActionPerformed
-    	MenuFunctions.editUndo();
+        MenuFunctions.editUndo();
     }//GEN-LAST:event_menuEditUndoActionPerformed
 
     private void menuEditRedoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuEditRedoActionPerformed
-    	MenuFunctions.editRedo();
+        MenuFunctions.editRedo();
     }//GEN-LAST:event_menuEditRedoActionPerformed
 
     private void menuEditFindActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuEditFindActionPerformed
-    	findDialog.pack();
-    	G.lastPositionFound = -1;
-    	findDialog.setModal(true);
-    	findDialog.setLocationRelativeTo(null); // Center window on the middle of the screen.
-    	findDialog.setVisible(true);
+        findDialog.pack();
+        G.lastPositionFound = -1;
+        findDialog.setModal(true);
+        findDialog.setLocationRelativeTo(null); // Center window on the middle of the screen.
+        findDialog.setVisible(true);
     }//GEN-LAST:event_menuEditFindActionPerformed
 
     private void findDialogFindButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_findDialogFindButtonActionPerformed
-    	
-    	String strToFind = findDialogTextField.getText();
+
+        String strToFind = findDialogTextField.getText();
         boolean somethingFound = false;
-        
+
         if (strToFind.equals("")) {
-        	// Don't allow search of empty strings.
-        	JOptionPane.showMessageDialog(null,TLanguage.getString("EDIT_MENU_FIND_UNABLE_EMPTY_STRING_SEARCH"),
-        			TLanguage.getString("WARNING"),JOptionPane.INFORMATION_MESSAGE);
-        	return;
+            // Don't allow search of empty strings.
+            JOptionPane.showMessageDialog(null,TLanguage.getString("EDIT_MENU_FIND_UNABLE_EMPTY_STRING_SEARCH"),
+                    TLanguage.getString("WARNING"),JOptionPane.INFORMATION_MESSAGE);
+            return;
         }
         if (!strToFind.equals(G.lastStringAsked)) {
-        	G.lastPositionFound = -1; // New search.
-        	G.lastStringAsked = strToFind;
+            G.lastPositionFound = -1; // New search.
+            G.lastStringAsked = strToFind;
         }
         String wholeText = TextUtils.ElementList2String(G.elementList);
         if (wholeText.indexOf(strToFind)==-1) return; // String to find is not on text.
-        
+
         searchLoop: // Useful to break outer loop.
-    	for (int i=G.lastPositionFound+1; i<G.elementList.size(); i++) {
-        	AWElement elem = G.elementList.get(i);
-        	if (elem.getType()==0) {
-        		String wordText = elem.getTextField().getText();
-        		if (wordText.length()>=strToFind.length()) {
-        			// Search "abc" in a word like "ddabcddd"
-        			if (wordText.indexOf(strToFind)!=-1) { // Found word!!
-        				G.lastPositionFound = i;
-            			somethingFound = true;
-            			break searchLoop;
-        			}
-        		}
-        		else {
-        			// Search "abc ddddd" in a word like "abc".
-        			// If we use startWith instead of indexOf, we'll miss search hits like
-        			// search "abc ddddd" in a sequence of words: "fffabc dddddwer".
-        			// However, that's a lot easier.
-        			if (strToFind.startsWith(wordText)) {
-        				boolean stop = false;
-        				int tmpPos = i;
-        				String words = "";
-        				ArrayList<AWElement> eL = new ArrayList<AWElement>();
-        				eL.add(elem);
-        				while (!stop) {
-        					if (tmpPos<G.elementList.size()) {
-	        					eL.add(G.elementList.get(tmpPos));
-	        					tmpPos++;
-	        					words = TextUtils.ElementList2String(eL);
-	        					if (words.length()>=strToFind.length()) {
-	        	        			// Search "abc de f" in a sequence of words like "abc de f ghij"
-	        	        			if (words.indexOf(strToFind)!=-1) { // Found word!!
-	        	        				G.lastPositionFound = i;
-	        	            			somethingFound = true;
-	        	            			break searchLoop;
-	        	        			}
-	        	        			else stop = true;
-	        	        		}
-        					}
-        					else stop = true;
-        				}
-        			}
-        		}   		
-        	}
+        for (int i=G.lastPositionFound+1; i<G.elementList.size(); i++) {
+            AWElement elem = G.elementList.get(i);
+            if (elem.getType()==0) {
+                String wordText = elem.getTextField().getText();
+                if (wordText.length()>=strToFind.length()) {
+                    // Search "abc" in a word like "ddabcddd"
+                    if (wordText.indexOf(strToFind)!=-1) { // Found word!!
+                        G.lastPositionFound = i;
+                        somethingFound = true;
+                        break searchLoop;
+                    }
+                }
+                else {
+                    // Search "abc ddddd" in a word like "abc".
+                    // If we use startWith instead of indexOf, we'll miss search hits like
+                    // search "abc ddddd" in a sequence of words: "fffabc dddddwer".
+                    // However, that's a lot easier.
+                    if (strToFind.startsWith(wordText)) {
+                        boolean stop = false;
+                        int tmpPos = i;
+                        String words = "";
+                        ArrayList<AWElement> eL = new ArrayList<AWElement>();
+                        eL.add(elem);
+                        while (!stop) {
+                            if (tmpPos<G.elementList.size()) {
+                                eL.add(G.elementList.get(tmpPos));
+                                tmpPos++;
+                                words = TextUtils.ElementList2String(eL);
+                                if (words.length()>=strToFind.length()) {
+                                    // Search "abc de f" in a sequence of words like "abc de f ghij"
+                                    if (words.indexOf(strToFind)!=-1) { // Found word!!
+                                        G.lastPositionFound = i;
+                                        somethingFound = true;
+                                        break searchLoop;
+                                    }
+                                    else stop = true;
+                                }
+                            }
+                            else stop = true;
+                        }
+                    }
+                }
+            }
         }
-    	
-    	findDialog.setVisible(false);
-    	if (somethingFound) {
-	    	G.elementList.get(G.lastPositionFound).getTextField().requestFocusInWindow();
-    	}
-    	else {
-    		JOptionPane.showMessageDialog(null,TLanguage.getString("EDIT_MENU_FIND_NOT_FOUND_TEXT"),
-    				TLanguage.getString("WARNING"),JOptionPane.INFORMATION_MESSAGE);
-    		G.lastPositionFound = -1;
-    	}
-    	findDialog.setVisible(true);
-    	
+
+        findDialog.setVisible(false);
+        if (somethingFound) {
+            G.elementList.get(G.lastPositionFound).getTextField().requestFocusInWindow();
+        }
+        else {
+            JOptionPane.showMessageDialog(null,TLanguage.getString("EDIT_MENU_FIND_NOT_FOUND_TEXT"),
+                    TLanguage.getString("WARNING"),JOptionPane.INFORMATION_MESSAGE);
+            G.lastPositionFound = -1;
+        }
+        findDialog.setVisible(true);
+
     }//GEN-LAST:event_findDialogFindButtonActionPerformed
 
     private void findDialogExitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_findDialogExitButtonActionPerformed
-    	findDialog.setVisible(false);
+        findDialog.setVisible(false);
     }//GEN-LAST:event_findDialogExitButtonActionPerformed
 
     private void menuEditSelectAllActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuEditSelectAllActionPerformed
-    	G.indexSelectionFrom = 0;
-    	G.indexSelectionTo = G.elementList.size()-1;
-    	for (int i=G.indexSelectionFrom; i<=G.indexSelectionTo; i++) {
-			G.elementList.get(i).setBackground(Color.BLUE);
-		}
-		G.wereDrag = false;
-		G.selectionState = 2;
+        G.indexSelectionFrom = 0;
+        G.indexSelectionTo = G.elementList.size()-1;
+        for (int i=G.indexSelectionFrom; i<=G.indexSelectionTo; i++) {
+            G.elementList.get(i).setBackground(Color.BLUE);
+        }
+        G.wereDrag = false;
+        G.selectionState = 2;
     }//GEN-LAST:event_menuEditSelectAllActionPerformed
-    
+
     private void menuTextFontActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuTextFontActionPerformed
-    	JFontChooser fontChooser = new JFontChooser();
-		if (fontChooser.showDialog(null) == JFontChooser.OK_OPTION) {
-			Font font = fontChooser.getSelectedFont(); 
-			G.font = font;
-		}
-		TextUtils.regenerateDocument();
+        JFontChooser fontChooser = new JFontChooser();
+        if (fontChooser.showDialog(null) == JFontChooser.OK_OPTION) {
+            Font font = fontChooser.getSelectedFont();
+            G.font = font;
+        }
+        TextUtils.regenerateDocument();
     }//GEN-LAST:event_menuTextFontActionPerformed
 
     private void menuTextColorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuTextColorActionPerformed
-    	Color tmpColor = JColorChooser.showDialog(null,"",Color.BLACK);
-    	if (tmpColor!=null) G.color = tmpColor;
-    	TextUtils.regenerateDocument();
+        Color tmpColor = JColorChooser.showDialog(null,"",Color.BLACK);
+        if (tmpColor!=null) G.color = tmpColor;
+        TextUtils.regenerateDocument();
     }//GEN-LAST:event_menuTextColorActionPerformed
-    
-    private void menuTextPlacementAbovePictogramActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuTextPlacementAbovePictogramActionPerformed
-    	G.textBelowPictogram = false;
-    	TextUtils.regenerateDocument();
-	}//GEN-LAST:event_menuTextPlacementAbovePictogramActionPerformed
 
-	private void menuTextPlacementBelowPictogramActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuTextPlacementBelowPictogramActionPerformed
-		G.textBelowPictogram = true;
-		TextUtils.regenerateDocument();
-	}//GEN-LAST:event_menuTextPlacementBelowPictogramActionPerformed
-	
-	private void menuTextToUpperCaseActiveElementActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuTextToUpperCaseActiveElementActionPerformed
-    	MenuFunctions.pictogramToUpperCaseActiveElement();
+    private void menuTextPlacementAbovePictogramActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuTextPlacementAbovePictogramActionPerformed
+        G.textBelowPictogram = false;
+        TextUtils.regenerateDocument();
+    }//GEN-LAST:event_menuTextPlacementAbovePictogramActionPerformed
+
+    private void menuTextPlacementBelowPictogramActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuTextPlacementBelowPictogramActionPerformed
+        G.textBelowPictogram = true;
+        TextUtils.regenerateDocument();
+    }//GEN-LAST:event_menuTextPlacementBelowPictogramActionPerformed
+
+    private void menuTextToUpperCaseActiveElementActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuTextToUpperCaseActiveElementActionPerformed
+        MenuFunctions.pictogramToUpperCaseActiveElement();
     }//GEN-LAST:event_menuTextToUpperCaseActiveElementActionPerformed
 
     private void menuTextToUpperCaseAllElementsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuTextToUpperCaseAllElementsActionPerformed
-    	MenuFunctions.pictogramToUpperCaseAllElements();
+        MenuFunctions.pictogramToUpperCaseAllElements();
     }//GEN-LAST:event_menuTextToUpperCaseAllElementsActionPerformed
-    
+
     private void menuTextToLowerCaseActiveElementActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuTextToLowerCaseActiveElementActionPerformed
-    	MenuFunctions.pictogramToLowerCaseActiveElement();
+        MenuFunctions.pictogramToLowerCaseActiveElement();
     }//GEN-LAST:event_menuTextToLowerCaseActiveElementActionPerformed
 
     private void menuTextToLowerCaseAllElementsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuTextToLowerCaseAllElementsActionPerformed
-    	MenuFunctions.pictogramToLowerCaseAllElements();
+        MenuFunctions.pictogramToLowerCaseAllElements();
     }//GEN-LAST:event_menuTextToLowerCaseAllElementsActionPerformed
-    
+
     private void menuTextDocumentLanguageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuTextDocumentLanguageActionPerformed
-    	documentLanguageDialog.pack();
-    	documentLanguageDialog.setModal(true);
-    	documentLanguageDialog.setLocationRelativeTo(null); // Center window on the middle of the screen.
-    	documentLanguageDialog.setVisible(true);
+        documentLanguageDialog.pack();
+        documentLanguageDialog.setModal(true);
+        documentLanguageDialog.setLocationRelativeTo(null); // Center window on the middle of the screen.
+        documentLanguageDialog.setVisible(true);
     }//GEN-LAST:event_menuTextDocumentLanguageActionPerformed
-    
+
     private void documentLanguageDialogCancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_documentLanguageDialogCancelButtonActionPerformed
-    	documentLanguageDialog.setVisible(false);
+        documentLanguageDialog.setVisible(false);
     }//GEN-LAST:event_documentLanguageDialogCancelButtonActionPerformed
 
     private void documentLanguageDialogOKButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_documentLanguageDialogOKButtonActionPerformed
@@ -1961,142 +1959,142 @@ public class GUI extends FrameView
         DBManagement.connectVerbsDB();
         DBManagement.createAraWordView(G.documentLanguage);
         TextUtils.regenerateDocument();
-    	documentLanguageDialog.setVisible(false);
+        documentLanguageDialog.setVisible(false);
     }//GEN-LAST:event_documentLanguageDialogOKButtonActionPerformed
-     
+
     private void menuPictogramsSizeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuPictogramsSizeActionPerformed
-    	imagesSizeDialog.pack();
-    	imagesSizeDialog.setModal(true);
-    	imagesSizeDialog.setLocationRelativeTo(null); // Center window on the middle of the screen.
-    	imagesSizeDialog.setVisible(true);
+        imagesSizeDialog.pack();
+        imagesSizeDialog.setModal(true);
+        imagesSizeDialog.setLocationRelativeTo(null); // Center window on the middle of the screen.
+        imagesSizeDialog.setVisible(true);
     }//GEN-LAST:event_menuPictogramsSizeActionPerformed
-    
+
     private void imagesSizeDialogCancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_imagesSizeDialogCancelButtonActionPerformed
-    	imagesSizeDialog.setVisible(false);
+        imagesSizeDialog.setVisible(false);
     }//GEN-LAST:event_imagesSizeDialogCancelButtonActionPerformed
 
     private void imagesSizeDialogOKButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_imagesSizeDialogOKButtonActionPerformed
-    	System.out.println("##### CAMBIADO TAMAÑO #####");
-    	G.imagesSize = ((Integer)imagesSizeDialogSpinnerImagesSize.getValue()).intValue();
-    	ImageIcon image = new ImageIcon("resources/404.jpg");
-    	G.notFound = new ImageIcon(image.getImage().getScaledInstance(-1,G.imagesSize,0));
-    	TextUtils.regenerateDocument();
-    	imagesSizeDialog.setVisible(false);
+        System.out.println("##### CAMBIADO TAMAÑO #####");
+        G.imagesSize = ((Integer)imagesSizeDialogSpinnerImagesSize.getValue()).intValue();
+        ImageIcon image = new ImageIcon("resources/404.jpg");
+        G.notFound = new ImageIcon(image.getImage().getScaledInstance(-1,G.imagesSize,0));
+        TextUtils.regenerateDocument();
+        imagesSizeDialog.setVisible(false);
     }//GEN-LAST:event_imagesSizeDialogOKButtonActionPerformed
-    
+
     private void exportPDFDialogCancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_imagesSizeDialogCancelButtonActionPerformed
-    	G.imagesSize=G.imagesSizePDF;
-    	exportPDFDialog.setVisible(false);
+        G.imagesSize=G.imagesSizePDF;
+        exportPDFDialog.setVisible(false);
     }//GEN-LAST:event_imagesSizeDialogCancelButtonActionPerformed
-    
+
     private void exportPDFDialogExportButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_imagesSizeDialogCancelButtonActionPerformed
-    	//G.imagesSize=G.imagesSizePDF;
-    	MenuFunctions.filePDFExport();
-    	G.imagesSize=G.imagesSizePDF;
-    	exportPDFDialogPrevArea.setText("");
-    	exportPDFDialog.setVisible(false);
+        //G.imagesSize=G.imagesSizePDF;
+        MenuFunctions.filePDFExport();
+        G.imagesSize=G.imagesSizePDF;
+        exportPDFDialogPrevArea.setText("");
+        exportPDFDialog.setVisible(false);
     }//GEN-LAST:event_exportPDFDialogExportButtonActionPerformed    
-    
-    
+
+
     private void menuPictogramsNextImageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuPictogramsNextImageActionPerformed
         MenuFunctions.pictogramNextImage();
     }//GEN-LAST:event_menuPictogramsNextImageActionPerformed
 
     private void menuPictogramsCompoundSplitWordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuPictogramsCompoundSplitWordActionPerformed
-    	MenuFunctions.pictogramCompoundSplit();
+        MenuFunctions.pictogramCompoundSplit();
     }//GEN-LAST:event_menuPictogramsCompoundSplitWordActionPerformed
-    
+
     private void menuPictogramsChangeNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuPictogramsChangeNameActionPerformed
-    	MenuFunctions.pictogramChangeName();
+        MenuFunctions.pictogramChangeName();
     }//GEN-LAST:event_menuPictogramsChangeNameActionPerformed
-    
+
     private void menuPictogramsShowBorderAllElementsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuPictogramsShowBorderAllElementsActionPerformed
-    	MenuFunctions.pictogramShowBorderAllElements();
+        MenuFunctions.pictogramShowBorderAllElements();
     }//GEN-LAST:event_menuPictogramsShowBorderAllElementsActionPerformed
 
     private void menuPictogramsHideBorderAllElementsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuPictogramsHideBorderAllElementsActionPerformed
-    	MenuFunctions.pictogramHideBorderAllElements();
+        MenuFunctions.pictogramHideBorderAllElements();
     }//GEN-LAST:event_menuPictogramsHideBorderAllElementsActionPerformed
 
     private void menuPictogramsShowImageActiveElementActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuPictogramsShowImageActiveElementActionPerformed
-    	MenuFunctions.pictogramShowImageActiveElement();
+        MenuFunctions.pictogramShowImageActiveElement();
     }//GEN-LAST:event_menuPictogramsShowImageActiveElementActionPerformed
 
     private void menuPictogramsShowImageAllElementsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuPictogramsShowImageAllElementsActionPerformed
-    	MenuFunctions.pictogramShowImageAllElements();
+        MenuFunctions.pictogramShowImageAllElements();
     }//GEN-LAST:event_menuPictogramsShowImageAllElementsActionPerformed
 
     private void menuPictogramsShowBorderActiveElementActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuPictogramsShowBorderActiveElementActionPerformed
-    	MenuFunctions.pictogramShowBorderActiveElement();
+        MenuFunctions.pictogramShowBorderActiveElement();
     }//GEN-LAST:event_menuPictogramsShowBorderActiveElementActionPerformed
 
     private void menuPictogramsHideImageActiveElementActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuPictogramsHideImageActiveElementActionPerformed
-       MenuFunctions.pictogramHideImageActiveElement();
+        MenuFunctions.pictogramHideImageActiveElement();
     }//GEN-LAST:event_menuPictogramsHideImageActiveElementActionPerformed
 
     private void menuPictogramsHideImageAllElementsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuPictogramsHideImageAllElementsActionPerformed
-    	MenuFunctions.pictogramHideImageAllElements();
+        MenuFunctions.pictogramHideImageAllElements();
     }//GEN-LAST:event_menuPictogramsHideImageAllElementsActionPerformed
 
     private void menuPictogramsHideBorderActiveElementActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuPictogramsHideBorderActiveElementActionPerformed
-    	MenuFunctions.pictogramHideBorderActiveElement();
+        MenuFunctions.pictogramHideBorderActiveElement();
     }//GEN-LAST:event_menuPictogramsHideBorderActiveElementActionPerformed
 
     private void menuToolsResourceManagerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuToolsResourceManagerActionPerformed
-    	try {
-    		Runtime.getRuntime().exec("java -jar ."+File.separator+".."+
-    				   File.separator+"ResourceManager"+File.separator+"ResourceManager.jar");
-    	} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} 
+        try {
+            Runtime.getRuntime().exec("java -jar ."+File.separator+".."+
+                    File.separator+"ResourceManager"+File.separator+"ResourceManager.jar");
+        } catch (Exception e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
     }//GEN-LAST:event_menuToolsResourceManagerActionPerformed
-    
+
     private void menuToolsGeneralPreferencesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuToolsGeneralPreferencesActionPerformed
         generalPreferencesDialog.pack();
-    	generalPreferencesDialog.setLocationRelativeTo(null); // Center window on the middle of the screen.
-    	G.tempDefaultFont = G.defaultFont;
-    	G.tempDefaultColor = G.defaultColor;
-    	G.tempPictogramsPath = G.pictogramsPath;
-    	generalPreferencesDialog.setVisible(true);
+        generalPreferencesDialog.setLocationRelativeTo(null); // Center window on the middle of the screen.
+        G.tempDefaultFont = G.defaultFont;
+        G.tempDefaultColor = G.defaultColor;
+        G.tempPictogramsPath = G.pictogramsPath;
+        generalPreferencesDialog.setVisible(true);
     }//GEN-LAST:event_menuToolsGeneralPreferencesActionPerformed
 
     private void generalPreferencesDialogOKButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_generalPreferencesDialogOKButtonActionPerformed
-    	G.defaultTextBelowPictogram = ((String)generalPreferencesDialogSpinnerTextPlacement.getSelectedItem()).equals(TLanguage.getString("SPINNER_TEXT_BELOW_PICTOGRAM"));
-    	G.defaultImagesSize = ((Integer)generalPreferencesDialogSpinnerImagesSize.getValue()).intValue();
+        G.defaultTextBelowPictogram = ((String)generalPreferencesDialogSpinnerTextPlacement.getSelectedItem()).equals(TLanguage.getString("SPINNER_TEXT_BELOW_PICTOGRAM"));
+        G.defaultImagesSize = ((Integer)generalPreferencesDialogSpinnerImagesSize.getValue()).intValue();
 //    	G.maxLengthCompoundWords = ((Integer)generalPreferencesDialogSpinnerMaxLengthCompoundWords.getValue()).intValue();
 //    	G.maxUndoLevel = ((Integer)generalPreferencesDialogSpinnerMaxUndoLevel.getValue()).intValue();
-    	G.applicationLanguage = ((String)generalPreferencesDialogSpinnerApplicationLanguage.getSelectedItem());
-    	G.defaultDocumentLanguage = ((String)generalPreferencesDialogSpinnerDocumentLanguage.getSelectedItem());
-    	G.documentLanguage = ((String)generalPreferencesDialogSpinnerDocumentLanguage.getSelectedItem());
-    	G.defaultFont = G.tempDefaultFont;
-    	G.defaultColor = G.tempDefaultColor;
-    	G.pictogramsPath = G.tempPictogramsPath;
-    	try {
-			TSetup.save();
-			TLanguage.initLanguage(G.applicationLanguage);
-			setApplicationLanguage();
-			DBManagement.createAraWordView(G.documentLanguage);
-			TextUtils.regenerateDocument();
-		} 
-    	catch (Exception e) { System.out.println(e); }	
+        G.applicationLanguage = ((String)generalPreferencesDialogSpinnerApplicationLanguage.getSelectedItem());
+        G.defaultDocumentLanguage = ((String)generalPreferencesDialogSpinnerDocumentLanguage.getSelectedItem());
+        G.documentLanguage = ((String)generalPreferencesDialogSpinnerDocumentLanguage.getSelectedItem());
+        G.defaultFont = G.tempDefaultFont;
+        G.defaultColor = G.tempDefaultColor;
+        G.pictogramsPath = G.tempPictogramsPath;
+        try {
+            TSetup.save();
+            TLanguage.initLanguage(G.applicationLanguage);
+            setApplicationLanguage();
+            DBManagement.createAraWordView(G.documentLanguage);
+            TextUtils.regenerateDocument();
+        }
+        catch (Exception e) { System.out.println(e); }
 //    	ImageIcon image = new ImageIcon("resources/404.jpg");
 //    	G.notFound = new ImageIcon(image.getImage().getScaledInstance(-1,G.imagesSize,0));
 //    	TextUtils.regenerateDocument();
-    	generalPreferencesDialog.setVisible(false);
-    	
+        generalPreferencesDialog.setVisible(false);
+
     }//GEN-LAST:event_generalPreferencesDialogOKButtonActionPerformed
 
     private void generalPreferencesDialogCancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_generalPreferencesDialogCancelButtonActionPerformed
         generalPreferencesDialog.setVisible(false);
     }//GEN-LAST:event_generalPreferencesDialogCancelButtonActionPerformed
-    
+
     private void generalPreferencesDialogChooseTextFontButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_generalPreferencesDialogChooseTextFontButtonActionPerformed
-    	JFontChooser fontChooser = new JFontChooser();
-		if (fontChooser.showDialog(null) == JFontChooser.OK_OPTION) {
-			Font font = fontChooser.getSelectedFont(); 
-			G.tempDefaultFont = font;
-		}
+        JFontChooser fontChooser = new JFontChooser();
+        if (fontChooser.showDialog(null) == JFontChooser.OK_OPTION) {
+            Font font = fontChooser.getSelectedFont();
+            G.tempDefaultFont = font;
+        }
     }//GEN-LAST:event_generalPreferencesDialogChooseTextFontButtonActionPerformed
 
 //    private void generalPreferencesDialogChoosePictogramsPathButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_generalPreferencesDialogChoosePictogramsPathButtonActionPerformed
@@ -2116,10 +2114,10 @@ public class GUI extends FrameView
 
 
     private void toolBarButtonFileNewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toolBarButtonFileNewActionPerformed
-    	if (JOptionPane.showConfirmDialog(getFrame(),TLanguage.getString("FILE_MENU_NEW_WARNING_DISCARD"),
-        		TLanguage.getString("WARNING"),JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
-			TextUtils.newDocument();
-		}
+        if (JOptionPane.showConfirmDialog(getFrame(),TLanguage.getString("FILE_MENU_NEW_WARNING_DISCARD"),
+                TLanguage.getString("WARNING"),JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
+            TextUtils.newDocument();
+        }
     }//GEN-LAST:event_toolBarButtonFileNewActionPerformed
 
     private void toolBarButtonFileOpenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toolBarButtonFileOpenActionPerformed
@@ -2127,56 +2125,56 @@ public class GUI extends FrameView
     }//GEN-LAST:event_toolBarButtonFileOpenActionPerformed
 
     private void toolBarButtonFileSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toolBarButtonFileSaveActionPerformed
-    	MenuFunctions.fileSave();
+        MenuFunctions.fileSave();
     }//GEN-LAST:event_toolBarButtonFileSaveActionPerformed
 
     private void toolBarButtonEditUndoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toolBarButtonEditUndoActionPerformed
-    	MenuFunctions.editUndo();
+        MenuFunctions.editUndo();
     }//GEN-LAST:event_toolBarButtonEditUndoActionPerformed
 
     private void toolBarButtonEditRedoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toolBarButtonEditRedoActionPerformed
-    	MenuFunctions.editRedo();
+        MenuFunctions.editRedo();
     }//GEN-LAST:event_toolBarButtonEditRedoActionPerformed
 
     private void toolBarButtonEditCutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toolBarButtonEditCutActionPerformed
-    	MenuFunctions.editCut();
+        MenuFunctions.editCut();
     }//GEN-LAST:event_toolBarButtonEditCutActionPerformed
 
     private void toolBarButtonEditCopyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toolBarButtonEditCopyActionPerformed
-    	MenuFunctions.editCopy();
+        MenuFunctions.editCopy();
     }//GEN-LAST:event_toolBarButtonEditCopyActionPerformed
 
     private void toolBarButtonEditPasteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toolBarButtonEditPasteActionPerformed
-    	MenuFunctions.editPaste(G.activeElementPosition+1);
+        MenuFunctions.editPaste(G.activeElementPosition+1);
     }//GEN-LAST:event_toolBarButtonEditPasteActionPerformed
-    
+
     private void toolBarButtonPictogramsNextImageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toolBarButtonPictogramsNextImageActionPerformed
         MenuFunctions.pictogramNextImage();
-     }//GEN-LAST:event_toolBarButtonPictogramsNextImageActionPerformed
+    }//GEN-LAST:event_toolBarButtonPictogramsNextImageActionPerformed
 
-     private void toolBarButtonPictogramsCompoundSplitWordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toolBarButtonPictogramsCompoundSplitWordActionPerformed
+    private void toolBarButtonPictogramsCompoundSplitWordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toolBarButtonPictogramsCompoundSplitWordActionPerformed
         MenuFunctions.pictogramCompoundSplit();
-     }//GEN-LAST:event_toolBarButtonPictogramsCompoundSplitWordActionPerformed
+    }//GEN-LAST:event_toolBarButtonPictogramsCompoundSplitWordActionPerformed
 
-     private void toolBarButtonPictogramsChangeNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toolBarButtonPictogramsChangeNameActionPerformed
+    private void toolBarButtonPictogramsChangeNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toolBarButtonPictogramsChangeNameActionPerformed
         MenuFunctions.pictogramChangeName();
-     }//GEN-LAST:event_toolBarButtonPictogramsChangeNameActionPerformed
-     
-     private void toolBarButtonPictogramsInsertImageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toolBarButtonPictogramsInsertImageActionPerformed
-         MenuFunctions.pictogramInsertImage();
-      }//GEN-LAST:event_toolBarButtonPictogramsInsertImageActionPerformed
-     
-     private void toolBarButtonVoiceSintesysActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toolBarButtonPictogramsInsertImageActionPerformed
-         MenuFunctions.VoiceSintesys();
-      }//GEN-LAST:event_toolBarButtonPictogramsInsertImageActionPerformed
-     
-     
+    }//GEN-LAST:event_toolBarButtonPictogramsChangeNameActionPerformed
+
+    private void toolBarButtonPictogramsInsertImageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toolBarButtonPictogramsInsertImageActionPerformed
+        MenuFunctions.pictogramInsertImage();
+    }//GEN-LAST:event_toolBarButtonPictogramsInsertImageActionPerformed
+
+    private void toolBarButtonVoiceSintesysActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toolBarButtonPictogramsInsertImageActionPerformed
+        MenuFunctions.VoiceSintesys();
+    }//GEN-LAST:event_toolBarButtonPictogramsInsertImageActionPerformed
+
+
 
 
     private void generalPreferencesDialogChooseTextColorButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_generalPreferencesDialogChooseTextColorButtonActionPerformed
-    	G.tempDefaultColor = JColorChooser.showDialog(null,"",Color.BLACK);
+        G.tempDefaultColor = JColorChooser.showDialog(null,"",Color.BLACK);
     }//GEN-LAST:event_generalPreferencesDialogChooseTextColorButtonActionPerformed
-    
+
     private void menuHelpShowHelpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuHelpShowHelpActionPerformed
         // Opens help document
         if (Desktop.isDesktopSupported()) {
@@ -2189,50 +2187,50 @@ public class GUI extends FrameView
     }//GEN-LAST:event_menuHelpShowHelpActionPerformed
 
     private void menuHelpAboutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuHelpAboutActionPerformed
-       aboutDialog.pack();
-       aboutDialog.setVisible(true);
+        aboutDialog.pack();
+        aboutDialog.setVisible(true);
     }//GEN-LAST:event_menuHelpAboutActionPerformed
 
     private void aboutDialogCloseButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aboutDialogCloseButtonActionPerformed
-       aboutDialog.setVisible(false);
+        aboutDialog.setVisible(false);
     }//GEN-LAST:event_aboutDialogCloseButtonActionPerformed
-    
-    
+
+
     //cambiar teto de la barra del titulo
     public  void setBarTitle(String name) {
-    	
-    	this.getFrame().setTitle("kk");
-    	
+
+        this.getFrame().setTitle("kk");
+
     }
-    
-    
-    
+
+
+
     // **********************************
     // CREATE PROGRESS DIALOG
     // **********************************
-    
+
     private Timer timer;
     public static JProgressBar  progressBar;
     public JPanel createProgressDialog(){
-        
-		progressBar = new JProgressBar();
+
+        progressBar = new JProgressBar();
         progressBar.setValue(0);
         progressBar.setStringPainted(true);
         //progressBar.setIndeterminate(true);
 
         javax.swing.JLabel label = new javax.swing.JLabel("Progress: ");
-  	  javax.swing.JPanel center_panel = new javax.swing.JPanel();
-  	  center_panel.add(label);
-  	  center_panel.add(progressBar);
-  	   center_panel.setBorder(new TitledBorder(BorderFactory.createEtchedBorder(
-				Color.WHITE, new Color(165, 163, 151)), 
-				TLanguage.getString("TIGImportDBDialog.PROGRESS")));
+        javax.swing.JPanel center_panel = new javax.swing.JPanel();
+        center_panel.add(label);
+        center_panel.add(progressBar);
+        center_panel.setBorder(new TitledBorder(BorderFactory.createEtchedBorder(
+                Color.WHITE, new Color(165, 163, 151)),
+                TLanguage.getString("TIGImportDBDialog.PROGRESS")));
 
         //create a timer
         timer = new Timer(100, new TimerListener());
-        
+
         return center_panel;
-		
+
     }
 
     //the actionPerformed method in this class
@@ -2242,187 +2240,187 @@ public class GUI extends FrameView
             progressBar.setValue(25);
         }
     }
-    
-    
-    
+
+
+
     //*****************************
     // import images in awz file custom dialog
     //*****************************
-    
+
     private static boolean result = false;
-	private static javax.swing.JDialog customDialog;
+    private static javax.swing.JDialog customDialog;
 
 
-	public static boolean createCustomDialog(String imageName, List l) {
-		/*******************************
-		 * Dialog asking for permission to import a custom picto to the ddbb
-		 *******************************/
-		javax.swing.JLabel customWords;
-		javax.swing.JButton importButton;
-		javax.swing.JButton rejectButton;
-		javax.swing.JTextPane prevImage;
+    public static boolean createCustomDialog(String imageName, List l) {
+        /*******************************
+         * Dialog asking for permission to import a custom picto to the ddbb
+         *******************************/
+        javax.swing.JLabel customWords;
+        javax.swing.JButton importButton;
+        javax.swing.JButton rejectButton;
+        javax.swing.JTextPane prevImage;
 
-		// recover words
-		String wordResult = "";
-		Iterator k = l.iterator();
-		while (k.hasNext()) {
-			Element languageElement = (Element) k.next();
-			String language = languageElement.getAttributeValue("id");
-			wordResult = wordResult + language + ": ";
+        // recover words
+        String wordResult = "";
+        Iterator k = l.iterator();
+        while (k.hasNext()) {
+            Element languageElement = (Element) k.next();
+            String language = languageElement.getAttributeValue("id");
+            wordResult = wordResult + language + ": ";
 
-			List words = languageElement.getChildren("word");
-			Iterator w = words.iterator();
-			while (w.hasNext()) {
-				Element wordElement = (Element) w.next();
-				String word = wordElement.getText();
-				wordResult = wordResult + word + ", ";
+            List words = languageElement.getChildren("word");
+            Iterator w = words.iterator();
+            while (w.hasNext()) {
+                Element wordElement = (Element) w.next();
+                String word = wordElement.getText();
+                wordResult = wordResult + word + ", ";
 
-			}
-			wordResult = wordResult + "\n";
-		}
+            }
+            wordResult = wordResult + "\n";
+        }
 
-		// recover image
-		ImageIcon iconLoad = new ImageIcon(imageName);
-		Image imgIcon = iconLoad.getImage();
-		Image resizedImage = imgIcon.getScaledInstance(130, 130,
-				Image.SCALE_DEFAULT);
-		ImageIcon image = new ImageIcon(resizedImage);		
-			
-		
-		customDialog = new javax.swing.JDialog();
-		customDialog.setModal(true);
-		customDialog.setName("addCustomImageDialog"); // NOI18N
-		customDialog.setResizable(false);
-		customDialog.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
-
-		customDialog.setTitle(TLanguage.getString("CUSTOM.DESEA_ADD_PICTO"));
-
-		// interface netbeans
-		customWords = new javax.swing.JLabel();
-		importButton = new javax.swing.JButton();
-		rejectButton = new javax.swing.JButton();
-		prevImage = new javax.swing.JTextPane();
-
-		customWords.setText(wordResult);
+        // recover image
+        ImageIcon iconLoad = new ImageIcon(imageName);
+        Image imgIcon = iconLoad.getImage();
+        Image resizedImage = imgIcon.getScaledInstance(130, 130,
+                Image.SCALE_DEFAULT);
+        ImageIcon image = new ImageIcon(resizedImage);
 
 
-		importButton.setText(TLanguage.getString("CUSTOM.IMPORTAR"));
+        customDialog = new javax.swing.JDialog();
+        customDialog.setModal(true);
+        customDialog.setName("addCustomImageDialog"); // NOI18N
+        customDialog.setResizable(false);
+        customDialog.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
 
-		importButton.addActionListener(new java.awt.event.ActionListener() {
-			public void actionPerformed(java.awt.event.ActionEvent evt) {
-				result = true;
-				customDialog.dispose();
+        customDialog.setTitle(TLanguage.getString("CUSTOM.DESEA_ADD_PICTO"));
 
-			}
-		});
+        // interface netbeans
+        customWords = new javax.swing.JLabel();
+        importButton = new javax.swing.JButton();
+        rejectButton = new javax.swing.JButton();
+        prevImage = new javax.swing.JTextPane();
 
-		rejectButton.setText(TLanguage.getString("CUSTOM.RECHAZAR"));
+        customWords.setText(wordResult);
 
-		rejectButton.addActionListener(new java.awt.event.ActionListener() {
-			public void actionPerformed(java.awt.event.ActionEvent evt) {
-				result = false;
-				customDialog.dispose();
-			}
-		});
 
-		// prevImage.setText(imageName);
-		prevImage.insertIcon(image);
+        importButton.setText(TLanguage.getString("CUSTOM.IMPORTAR"));
 
-		javax.swing.GroupLayout layout = new javax.swing.GroupLayout(
-				customDialog.getContentPane());
-		customDialog.getContentPane().setLayout(layout);
-		layout.setHorizontalGroup(layout
-				.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-				.addGroup(
-						javax.swing.GroupLayout.Alignment.TRAILING,
-						layout.createSequentialGroup()
-								.addContainerGap()
-								.addGroup(
-										layout.createParallelGroup(
-												javax.swing.GroupLayout.Alignment.LEADING)
-												.addComponent(
-														customWords,
-														javax.swing.GroupLayout.PREFERRED_SIZE,
-														207,
-														javax.swing.GroupLayout.PREFERRED_SIZE)
-												.addGroup(
-														layout.createSequentialGroup()
-																.addComponent(
-																		importButton,
-																		javax.swing.GroupLayout.PREFERRED_SIZE,
-																		84,
-																		javax.swing.GroupLayout.PREFERRED_SIZE)
-																.addPreferredGap(
-																		javax.swing.LayoutStyle.ComponentPlacement.RELATED,
-																		36,
-																		Short.MAX_VALUE)
-																.addComponent(
-																		rejectButton,
-																		javax.swing.GroupLayout.PREFERRED_SIZE,
-																		89,
-																		javax.swing.GroupLayout.PREFERRED_SIZE)))
-								.addPreferredGap(
-										javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-								.addComponent(prevImage,
-										javax.swing.GroupLayout.PREFERRED_SIZE,
-										146,
-										javax.swing.GroupLayout.PREFERRED_SIZE)
-								.addContainerGap()));
-		layout.setVerticalGroup(layout
-				.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-				.addGroup(
-						layout.createSequentialGroup()
-								.addContainerGap()
-								.addGroup(
-										layout.createParallelGroup(
-												javax.swing.GroupLayout.Alignment.LEADING,
-												false)
-												.addGroup(
-														javax.swing.GroupLayout.Alignment.TRAILING,
-														layout.createSequentialGroup()
-																.addComponent(
-																		customWords,
-																		javax.swing.GroupLayout.PREFERRED_SIZE,
-																		88,
-																		javax.swing.GroupLayout.PREFERRED_SIZE)
-																.addPreferredGap(
-																		javax.swing.LayoutStyle.ComponentPlacement.RELATED,
-																		javax.swing.GroupLayout.DEFAULT_SIZE,
-																		Short.MAX_VALUE)
-																.addGroup(
-																		layout.createParallelGroup(
-																				javax.swing.GroupLayout.Alignment.BASELINE)
-																				.addComponent(
-																						importButton)
-																				.addComponent(
-																						rejectButton)))
-												.addComponent(
-														prevImage,
-														javax.swing.GroupLayout.PREFERRED_SIZE,
-														137,
-														javax.swing.GroupLayout.PREFERRED_SIZE))
-								.addContainerGap(
-										javax.swing.GroupLayout.DEFAULT_SIZE,
-										Short.MAX_VALUE)));
+        importButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                result = true;
+                customDialog.dispose();
 
-		customDialog.setLocation(100, 100);
-		customDialog.pack();
-		customDialog.setVisible(true);
+            }
+        });
 
-		return result;
-	}
+        rejectButton.setText(TLanguage.getString("CUSTOM.RECHAZAR"));
 
-    
-    
-    
-    
-    
+        rejectButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                result = false;
+                customDialog.dispose();
+            }
+        });
+
+        // prevImage.setText(imageName);
+        prevImage.insertIcon(image);
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(
+                customDialog.getContentPane());
+        customDialog.getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(layout
+                .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(
+                        javax.swing.GroupLayout.Alignment.TRAILING,
+                        layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(
+                                        layout.createParallelGroup(
+                                                javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(
+                                                        customWords,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                        207,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGroup(
+                                                        layout.createSequentialGroup()
+                                                                .addComponent(
+                                                                        importButton,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                        84,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addPreferredGap(
+                                                                        javax.swing.LayoutStyle.ComponentPlacement.RELATED,
+                                                                        36,
+                                                                        Short.MAX_VALUE)
+                                                                .addComponent(
+                                                                        rejectButton,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                        89,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addPreferredGap(
+                                        javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(prevImage,
+                                        javax.swing.GroupLayout.PREFERRED_SIZE,
+                                        146,
+                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap()));
+        layout.setVerticalGroup(layout
+                .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(
+                        layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(
+                                        layout.createParallelGroup(
+                                                javax.swing.GroupLayout.Alignment.LEADING,
+                                                false)
+                                                .addGroup(
+                                                        javax.swing.GroupLayout.Alignment.TRAILING,
+                                                        layout.createSequentialGroup()
+                                                                .addComponent(
+                                                                        customWords,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                        88,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addPreferredGap(
+                                                                        javax.swing.LayoutStyle.ComponentPlacement.RELATED,
+                                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                        Short.MAX_VALUE)
+                                                                .addGroup(
+                                                                        layout.createParallelGroup(
+                                                                                javax.swing.GroupLayout.Alignment.BASELINE)
+                                                                                .addComponent(
+                                                                                        importButton)
+                                                                                .addComponent(
+                                                                                        rejectButton)))
+                                                .addComponent(
+                                                        prevImage,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                        137,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addContainerGap(
+                                        javax.swing.GroupLayout.DEFAULT_SIZE,
+                                        Short.MAX_VALUE)));
+
+        customDialog.setLocation(100, 100);
+        customDialog.pack();
+        customDialog.setVisible(true);
+
+        return result;
+    }
+
+
+
+
+
+
     //*****************************
-    
-    
-    
 
-   
+
+
+
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JDialog aboutDialog;
     private javax.swing.JButton aboutDialogCloseButton;
@@ -2441,19 +2439,19 @@ public class GUI extends FrameView
     private javax.swing.JDialog generalPreferencesDialog;
     private javax.swing.JLabel generalPreferencesDialogApplicationLanguageLabel;
     private javax.swing.JButton generalPreferencesDialogCancelButton;
-//    private javax.swing.JButton generalPreferencesDialogChoosePictogramsPathButton;
+    //    private javax.swing.JButton generalPreferencesDialogChoosePictogramsPathButton;
     private javax.swing.JButton generalPreferencesDialogChooseTextColorButton;
     private javax.swing.JButton generalPreferencesDialogChooseTextFontButton;
     private javax.swing.JLabel generalPreferencesDialogDocumentLanguageLabel;
     private javax.swing.JLabel generalPreferencesDialogImagesSizeLabel;
-//    private javax.swing.JLabel generalPreferencesDialogMaxLengthCompoundWordsLabel;
+    //    private javax.swing.JLabel generalPreferencesDialogMaxLengthCompoundWordsLabel;
 //    private javax.swing.JLabel generalPreferencesDialogMaxUndoLevelLabel;
     private javax.swing.JButton generalPreferencesDialogOKButton;
-//    private javax.swing.JLabel generalPreferencesDialogPictogramsPathLabel;
+    //    private javax.swing.JLabel generalPreferencesDialogPictogramsPathLabel;
     private javax.swing.JComboBox generalPreferencesDialogSpinnerApplicationLanguage;
     private javax.swing.JComboBox generalPreferencesDialogSpinnerDocumentLanguage;
     private javax.swing.JSpinner generalPreferencesDialogSpinnerImagesSize;
-//    private javax.swing.JSpinner generalPreferencesDialogSpinnerMaxLengthCompoundWords;
+    //    private javax.swing.JSpinner generalPreferencesDialogSpinnerMaxLengthCompoundWords;
 //    private javax.swing.JSpinner generalPreferencesDialogSpinnerMaxUndoLevel;
     private javax.swing.JComboBox generalPreferencesDialogSpinnerTextPlacement;
     private javax.swing.JLabel generalPreferencesDialogTextColorLabel;
@@ -2464,7 +2462,7 @@ public class GUI extends FrameView
     private javax.swing.JLabel imagesSizeDialogImagesSizeLabel;
     private javax.swing.JButton imagesSizeDialogOKButton;
     private javax.swing.JSpinner imagesSizeDialogSpinnerImagesSize;
-    
+
     //export PDF dialog
     private javax.swing.JDialog exportPDFDialog;
     private javax.swing.JButton exportPDFDialogCancelButton;
@@ -2476,7 +2474,7 @@ public class GUI extends FrameView
     private javax.swing.JLabel exportPDFDialogPagLabel;
     private javax.swing.JLabel exportPDFDialogPrevLabel;
     private javax.swing.JTextPane exportPDFDialogPrevArea;
-    
+
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JPopupMenu.Separator jSeparator1;
@@ -2560,7 +2558,7 @@ public class GUI extends FrameView
     private javax.swing.JButton toolBarButtonVoiceSintesys;
 
     // End of variables declaration//GEN-END:variables
-    
-    
+
+
 
 }

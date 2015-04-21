@@ -8,13 +8,17 @@ import java.io.IOException;
 public class AppleTtsStrategy implements TtsStrategy {
 
     // TODO get voice name from XML configuration file
-    private String voiceName;
+    private String voiceName = "Alice";
 
     @Override
     public void play(String text) {
         try {
-            System.out.println("Apple TTS called");
-            Runtime.getRuntime().exec("say " + text);
+            StringBuilder command = new StringBuilder("say -v ");
+            command.append(voiceName);
+            command.append(" ");
+            command.append(text);
+
+            Runtime.getRuntime().exec(command.toString());
         } catch (IOException e) {
             // TODO log error message
             System.out.println(e.getMessage());
@@ -26,7 +30,4 @@ public class AppleTtsStrategy implements TtsStrategy {
         this.voiceName = voiceName;
     }
 
-    private void executeScript() {
-
-    }
 }
