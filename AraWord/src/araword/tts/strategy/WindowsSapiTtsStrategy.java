@@ -28,4 +28,7 @@ public class WindowsSapiTtsStrategy implements TtsStrategy {
 		t.start();
 	}
 
+	@Override
+	public void setCurrentVoice(String text) {}
+
 }
