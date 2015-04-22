@@ -1,38 +1,25 @@
 package araword.db;
 
-import java.awt.Image;
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.nio.channels.FileChannel;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.Statement;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
-
-import javax.swing.ImageIcon;
-import javax.swing.JOptionPane;
-import javax.swing.JProgressBar;
-import javax.swing.ProgressMonitorInputStream;
-
+import araword.G;
+import araword.configuration.TLanguage;
+import database.DB;
+import database.ImageManager;
 import org.jdom.Document;
 import org.jdom.Element;
 import org.jdom.input.SAXBuilder;
 import org.jdom.output.Format;
 import org.jdom.output.XMLOutputter;
 
-import araword.G;
-import araword.configuration.TLanguage;
-import database.DB;
-import database.ImageManager;
+import javax.swing.*;
+import java.awt.*;
+import java.io.*;
+import java.nio.channels.FileChannel;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.*;
+import java.util.List;
 
 public class DBManagement {
 
@@ -64,10 +51,10 @@ public class DBManagement {
             
                             //verb database name will be like "Castellano_verbs.db", "Ingles_verbs.db", etc.
             verbs_txt_file_name = new String(G.documentLanguage+"_verbs.txt");
-                            //the file name will be like "Castellano_verbs.txt", "Ingles_verbs.txt", etc.
-                            //the file must contain all the verbs conjugated, one verb per line, different forms separated by ",", like
-                            //to warn,warn,warned,warned,i warn,you warn, etc., etc.
-            
+            //the file name will be like "Castellano_verbs.txt", "Ingles_verbs.txt", etc.
+            //the file must contain all the verbs conjugated, one verb per line, different forms separated by ",", like
+            //to warn,warn,warned,warned,i warn,you warn, etc., etc.
+
             //In the general case, there will not be a set of conjugated verb forms for all the languages
             //Let's look if such exists, and then identify conjugated verb forms. If not, just the infinitive could be
             //used in order to look for the pictogram.

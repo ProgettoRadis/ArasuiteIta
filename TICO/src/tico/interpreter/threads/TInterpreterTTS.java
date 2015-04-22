@@ -26,11 +26,11 @@
  */
 package tico.interpreter.threads;
 
+import javax.speech.*;
+import javax.speech.synthesis.*;
 import java.util.HashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.speech.*;
-import javax.speech.synthesis.*;
 
 public class TInterpreterTTS implements Runnable {
 

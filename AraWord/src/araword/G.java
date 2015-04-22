@@ -25,22 +25,23 @@ import araword.listeners.FocusListenerImpl;
 import araword.listeners.KeyListenerImpl;
 import araword.listeners.MouseListenerImpl;
 import araword.listeners.MouseMotionListenerImpl;
+import araword.tts.strategy.TtsStrategy;
 
 public abstract class G { // Can't be instantiated
 
-	// Document variables
+    // Document variables
     public static String documentLanguage;
     public static int imagesSize; //Picto size
     public static int imagesSizePDF;  //save the picto size while prev for PDF export
-    public static int numPictosLinePDF=5; 
+    public static int numPictosLinePDF=5;
     public static boolean licensePDF=true; //add arasaac license on pdf docs
-   
+
     public static Font font;
     public static Font tempFont; // Useful for saving it while in dialogs...
     public static Color color;
     public static Color tempColor;
     public static boolean textBelowPictogram;
-      
+
     // User default variables  
     public static String defaultDocumentLanguage;
     public static int defaultImagesSize;
@@ -49,7 +50,7 @@ public abstract class G { // Can't be instantiated
     public static Color defaultColor;
     public static Color tempDefaultColor;
     public static boolean defaultTextBelowPictogram;
-    
+
     // Config variables
     public static String applicationLanguage;
     public static int maxLengthCompoundWords;
@@ -62,7 +63,7 @@ public abstract class G { // Can't be instantiated
     public static ImageIcon notFound; // Not exactly a config variable,
     // but its size depends on imagesSize, and must be
     // reloaded if that variable changes, so it's fine to keep it here.
-	
+
     // Global variables for easy use.
     public static ArrayList<AWElement> elementList = new ArrayList<AWElement>();
     public static AWElement activeElement = null;
@@ -92,29 +93,31 @@ public abstract class G { // Can't be instantiated
     public static Point lastPointDragged = new Point();
     public static boolean wereDrag = false;
     public static Point auxPointForDrag = new Point();
-    
-    
+
+
     // Event listeners, to add and remove if needed.
     public static MouseListener mouseListener = new MouseListenerImpl();
     public static MouseMotionListener mouseMotionListener = new MouseMotionListenerImpl();
     public static KeyListener keyListener = new KeyListenerImpl();
     public static FocusListener focusListener = new FocusListenerImpl();
-    
+
     // Find/replace variables.
     public static int lastPositionFound = -1;
     public static String lastStringAsked = "";
-    
+
     // Undo/redo variables.
     public static int maxUndoLevel = 5; // Increase this needs more CPU and RAM.
     public static ArrayList<String> undoList = new ArrayList<String>();
     public static ArrayList<String> redoList = new ArrayList<String>();
-    
+
     // GUI object variables needed here for easy modularization of source code.
     public static JTextPane textZone;
     public static araword.gui.GUI appWindow;
-    
+
+    public static TtsStrategy ttsStrategy;
+
     public static void giveMePrivateVariables(JTextPane one) {
-       // A trick to avoid problems with easy GUI editing.
+        // A trick to avoid problems with easy GUI editing.
         textZone = one;
     }
 
