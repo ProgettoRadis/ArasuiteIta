@@ -75,7 +75,7 @@ HELP_MENU_ABOUT=About...
 
 // Inner ones
 
-FILE_MENU_NEW_WARNING_DISCARD=Do you want to discard current document?
+FILE_MENU_WARNING_DISCARD=Do you want to discard current document?
 FILE_MENU_SAVE_UNABLE_SAVE_EMPTY_FILE=Unable to save empty file.
 FILE_MENU_EXIT_WARNING=Do you really want to exit?
 

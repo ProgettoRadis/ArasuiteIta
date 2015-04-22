@@ -71,7 +71,7 @@ HELP_MENU_ABOUT=�ber�
  
 // Inner ones
  
-FILE_MENU_NEW_WARNING_DISCARD=M�chten Sie das aktuelle Dokument abbrechen?
+FILE_MENU_WARNING_DISCARD=M�chten Sie das aktuelle Dokument abbrechen?
 FILE_MENU_SAVE_UNABLE_SAVE_EMPTY_FILE=Leeres Dokument nicht m�glich zu speichern
 FILE_MENU_EXIT_WARNING=M�chten Sie beenden?
  

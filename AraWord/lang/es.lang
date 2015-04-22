@@ -76,7 +76,7 @@ HELP_MENU_ABOUT=Acerca de...
 
 // Inner ones
 
-FILE_MENU_NEW_WARNING_DISCARD=¿Desea descartar el documento actual?
+FILE_MENU_WARNING_DISCARD=¿Desea descartar el documento actual?
 FILE_MENU_SAVE_UNABLE_SAVE_EMPTY_FILE=Imposible guardar un fichero vacío.
 FILE_MENU_EXIT_WARNING=¿Desea salir?
 
