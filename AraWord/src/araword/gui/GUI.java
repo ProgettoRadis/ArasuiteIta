@@ -51,11 +51,11 @@ import dialogs.mainFrame;
 
 public class GUI extends FrameView
     {
-
+	
     public GUI(SingleFrameApplication app) {
         super(app);
         initComponents();     
-               
+       
         try {
 			TSetup.load();
 			TLanguage.initLanguage(G.applicationLanguage);
@@ -324,9 +324,10 @@ public class GUI extends FrameView
 		}
 		
 		String textPlacement[] = new String[]{TLanguage.getString("SPINNER_TEXT_BELOW_PICTOGRAM"),TLanguage.getString("SPINNER_TEXT_ABOVE_PICTOGRAM")};
-		for (int i = 0; i < textPlacement.length; i++) {			
-			generalPreferencesDialogSpinnerTextPlacement.addItem(textPlacement[i]);
-		}
+		if(generalPreferencesDialogSpinnerTextPlacement.getItemCount() == 0)
+			for (int i = 0; i < textPlacement.length; i++) {			
+				generalPreferencesDialogSpinnerTextPlacement.addItem(textPlacement[i]);
+			}
 		
 		generalPreferencesDialogSpinnerImagesSize.setValue(G.defaultImagesSize);
 //    	generalPreferencesDialogSpinnerMaxLengthCompoundWords.setValue(G.maxLengthCompoundWords);
@@ -1735,14 +1736,18 @@ public class GUI extends FrameView
     }// </editor-fold>//GEN-END:initComponents
 
     private void menuFileNewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuFileNewActionPerformed
-    	if (JOptionPane.showConfirmDialog(getFrame(),TLanguage.getString("FILE_MENU_NEW_WARNING_DISCARD"),
+    	if (JOptionPane.showConfirmDialog(getFrame(),TLanguage.getString("FILE_MENU_WARNING_DISCARD"),
     			TLanguage.getString("WARNING"),JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
 			TextUtils.newDocument();
 		}
     }//GEN-LAST:event_menuFileNewActionPerformed
 
     private void menuFileOpenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuFileOpenActionPerformed
-    	MenuFunctions.fileOpen();
+    	if (JOptionPane.showConfirmDialog(getFrame(),TLanguage.getString("FILE_MENU_WARNING_DISCARD"),
+    			TLanguage.getString("WARNING"),JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
+    		MenuFunctions.fileOpen();
+		}
+    	
     }//GEN-LAST:event_menuFileOpenActionPerformed
 
     private void menuFileSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuFileSaveActionPerformed
@@ -2115,14 +2120,17 @@ public class GUI extends FrameView
 
 
     private void toolBarButtonFileNewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toolBarButtonFileNewActionPerformed
-    	if (JOptionPane.showConfirmDialog(getFrame(),TLanguage.getString("FILE_MENU_NEW_WARNING_DISCARD"),
+    	if (JOptionPane.showConfirmDialog(getFrame(),TLanguage.getString("FILE_MENU_WARNING_DISCARD"),
         		TLanguage.getString("WARNING"),JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
 			TextUtils.newDocument();
 		}
     }//GEN-LAST:event_toolBarButtonFileNewActionPerformed
 
     private void toolBarButtonFileOpenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toolBarButtonFileOpenActionPerformed
-        MenuFunctions.fileOpen();
+    	if (JOptionPane.showConfirmDialog(getFrame(),TLanguage.getString("FILE_MENU_WARNING_DISCARD"),
+        		TLanguage.getString("WARNING"),JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
+    		MenuFunctions.fileOpen();
+		}
     }//GEN-LAST:event_toolBarButtonFileOpenActionPerformed
 
     private void toolBarButtonFileSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toolBarButtonFileSaveActionPerformed
