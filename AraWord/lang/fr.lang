@@ -71,7 +71,7 @@ HELP_MENU_ABOUT=A propos de...
  
 // Inner ones
  
-FILE_MENU_NEW_WARNING_DISCARD=Souhaitez-vous fermer le document sans l'enregistrer?
+FILE_MENU_WARNING_DISCARD=Souhaitez-vous fermer le document sans l'enregistrer?
 FILE_MENU_SAVE_UNABLE_SAVE_EMPTY_FILE=Impossible d'enregistrer un fichier vide.
 FILE_MENU_EXIT_WARNING=Souhaitez-vous quitter?
  

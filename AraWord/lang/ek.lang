@@ -82,7 +82,7 @@ HELP_MENU_ABOUT=Programari buruz....
 
 // Inner ones
 
-FILE_MENU_NEW_WARNING_DISCARD=Uneko dokumentua baztertu nahi duzu?
+FILE_MENU_WARNING_DISCARD=Uneko dokumentua baztertu nahi duzu?
 FILE_MENU_SAVE_UNABLE_SAVE_EMPTY_FILE=Ezinezkoa da fitxategi hutsa gordetzea.
 FILE_MENU_EXIT_WARNING=Irtetea nahi?
 EDIT_MENU_UNDO_UNABLE_MORE_UNDO=Ezinezkoa da gehiago desegitea.

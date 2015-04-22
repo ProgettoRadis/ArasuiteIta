@@ -71,7 +71,7 @@ HELP_MENU_ABOUT=About...
 
 // Inner ones
 
-FILE_MENU_NEW_WARNING_DISCARD=Vuoi abbandonare il documento corrente?
+FILE_MENU_WARNING_DISCARD=Vuoi abbandonare il documento corrente?
 FILE_MENU_SAVE_UNABLE_SAVE_EMPTY_FILE=Impossibile salvare un file vuoto.
 FILE_MENU_EXIT_WARNING=Confermi l'uscita?
 
@@ -134,7 +134,7 @@ EXPORT_PDF_PAGE=*POT*Página
 EXPORT_PDF_PREVISUALIZATION=*POT*Previsualización
 EXPORT_PDF_LICENCIA=*POT*Autor Pictos: Sergio Palao. Procedencia: ARASAAC (http://catedu.es/arasaac/). Licencia: CC(BY-NC-SA)
 EXPORT_PDF_LICENCIA2=*POT*Material generado con AraWord: http://sourceforge.net/projects/arasuite/
-TOOLS_MENU_VOICE_SINTESYS=*POT*Sintesis de voz
+TOOLS_MENU_VOICE_SINTESYS=Sintesi vocale
 CUSTOM_DESEA_ADD_PICTO=*POT*¿Desea añadir este nuevo picto?
 CUSTOM_IMPORTAR=*POT*Importar
 CUSTOM_RECHAZAR=*POT*Rechazar
