@@ -51,21 +51,12 @@ import araword.utils.TextUtils;
 import dialogs.mainFrame;
 
 public class GUI extends FrameView
-<<<<<<< HEAD
-    {
-	
-    public GUI(SingleFrameApplication app) {
-        super(app);
-        initComponents();     
-       
-=======
 {
 
     public GUI(SingleFrameApplication app) {
         super(app);
         initComponents();
 
->>>>>>> 7ef3f75e850d1c147671fca6fae069f247096678
         try {
             TSetup.load();
             TLanguage.initLanguage(G.applicationLanguage);
@@ -329,7 +320,6 @@ public class GUI extends FrameView
 
 //		SpinnerModel model3 = new SpinnerListModel(G.documentLanguages);
 //		documentLanguageDialogSpinnerDocumentLanguage.setModel(model3);
-<<<<<<< HEAD
 		for (int i = 0; i < G.documentLanguages.length; i++) {
 			documentLanguageDialogComboBoxDocumentLanguage.addItem(G.documentLanguages[i]);
 		}
@@ -341,18 +331,6 @@ public class GUI extends FrameView
 			}
 		
 		generalPreferencesDialogSpinnerImagesSize.setValue(G.defaultImagesSize);
-=======
-        for (int i = 0; i < G.documentLanguages.length; i++) {
-            documentLanguageDialogComboBoxDocumentLanguage.addItem(G.documentLanguages[i]);
-        }
-
-        String textPlacement[] = new String[]{TLanguage.getString("SPINNER_TEXT_BELOW_PICTOGRAM"),TLanguage.getString("SPINNER_TEXT_ABOVE_PICTOGRAM")};
-        for (int i = 0; i < textPlacement.length; i++) {
-            generalPreferencesDialogSpinnerTextPlacement.addItem(textPlacement[i]);
-        }
-
-        generalPreferencesDialogSpinnerImagesSize.setValue(G.defaultImagesSize);
->>>>>>> 7ef3f75e850d1c147671fca6fae069f247096678
 //    	generalPreferencesDialogSpinnerMaxLengthCompoundWords.setValue(G.maxLengthCompoundWords);
 //    	generalPreferencesDialogSpinnerMaxUndoLevel.setValue(G.maxUndoLevel);
         generalPreferencesDialogSpinnerDocumentLanguage.setSelectedItem(G.defaultDocumentLanguage);
@@ -1759,7 +1737,6 @@ public class GUI extends FrameView
     }// </editor-fold>//GEN-END:initComponents
 
     private void menuFileNewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuFileNewActionPerformed
-<<<<<<< HEAD
     	if (JOptionPane.showConfirmDialog(getFrame(),TLanguage.getString("FILE_MENU_WARNING_DISCARD"),
     			TLanguage.getString("WARNING"),JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
 			TextUtils.newDocument();
@@ -1772,16 +1749,6 @@ public class GUI extends FrameView
     		MenuFunctions.fileOpen();
 		}
     	
-=======
-        if (JOptionPane.showConfirmDialog(getFrame(),TLanguage.getString("FILE_MENU_NEW_WARNING_DISCARD"),
-                TLanguage.getString("WARNING"),JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
-            TextUtils.newDocument();
-        }
-    }//GEN-LAST:event_menuFileNewActionPerformed
-
-    private void menuFileOpenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuFileOpenActionPerformed
-        MenuFunctions.fileOpen();
->>>>>>> 7ef3f75e850d1c147671fca6fae069f247096678
     }//GEN-LAST:event_menuFileOpenActionPerformed
 
     private void menuFileSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuFileSaveActionPerformed
@@ -2152,17 +2119,10 @@ public class GUI extends FrameView
 
 
     private void toolBarButtonFileNewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toolBarButtonFileNewActionPerformed
-<<<<<<< HEAD
     	if (JOptionPane.showConfirmDialog(getFrame(),TLanguage.getString("FILE_MENU_WARNING_DISCARD"),
         		TLanguage.getString("WARNING"),JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
 			TextUtils.newDocument();
 		}
-=======
-        if (JOptionPane.showConfirmDialog(getFrame(),TLanguage.getString("FILE_MENU_NEW_WARNING_DISCARD"),
-                TLanguage.getString("WARNING"),JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
-            TextUtils.newDocument();
-        }
->>>>>>> 7ef3f75e850d1c147671fca6fae069f247096678
     }//GEN-LAST:event_toolBarButtonFileNewActionPerformed
 
     private void toolBarButtonFileOpenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toolBarButtonFileOpenActionPerformed
