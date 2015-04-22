@@ -486,6 +486,7 @@ public class GUI extends FrameView
         exportPDFDialogPagSpinner = new javax.swing.JSpinner();
         exportPDFDialogArasaacLicenseCB = new javax.swing.JCheckBox();
         exportPDFDialogPagLabel = new javax.swing.JLabel();
+
         exportPDFDialogPrevLabel = new javax.swing.JLabel();
         exportPDFDialogPrevArea = new javax.swing.JTextPane();
 
