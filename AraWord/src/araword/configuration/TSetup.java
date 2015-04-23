@@ -156,9 +156,9 @@ public class TSetup {
             l = list.iterator();
             while(l.hasNext()){
                 Element element = (Element)l.next();
-                String language = element.getText();
-                if (language != null) {
-                    G.defaultTTS = language;
+                String tts = element.getText();
+                if (tts != null) {
+                    G.defaultTTS = tts;
                 }
             }
 
@@ -316,7 +316,7 @@ public class TSetup {
 
             Element showBorders = new Element("showBorders");
             //showBorders.addContent( G.showBorders);
-            // TEST
+            // TODO save value from preference dialog
             showBorders.addContent("no");
 
             preferences.addContent(showBorders);
