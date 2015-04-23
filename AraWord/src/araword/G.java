@@ -119,6 +119,9 @@ public abstract class G { // Can't be instantiated
     public static String[] ttsOptions;
     public static String defaultTTS;
 
+    // arasuite ita - show/hide borders
+    public static boolean showBorders;
+
     public static void giveMePrivateVariables(JTextPane one) {
         // A trick to avoid problems with easy GUI editing.
         textZone = one;
