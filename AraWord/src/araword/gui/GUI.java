@@ -343,7 +343,6 @@ public class GUI extends FrameView
 
             }
 
-
         generalPreferencesDialogSpinnerImagesSize.setValue(G.defaultImagesSize);
 //    	generalPreferencesDialogSpinnerMaxLengthCompoundWords.setValue(G.maxLengthCompoundWords);
 //    	generalPreferencesDialogSpinnerMaxUndoLevel.setValue(G.maxUndoLevel);

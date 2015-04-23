@@ -11,18 +11,31 @@ public class AppleTtsStrategy implements TtsStrategy {
     private String voiceName = "Alice";
 
     @Override
-    public void play(String text) {
-        try {
-            StringBuilder command = new StringBuilder("say -v ");
-            command.append(voiceName);
-            command.append(" ");
-            command.append(text);
+    public void play(final String text) {
 
-            Runtime.getRuntime().exec(command.toString());
-        } catch (IOException e) {
-            // TODO log error message
-            System.out.println(e.getMessage());
+        class CommanderTTS implements Runnable {
+
+            String textToSpeech;
+
+            CommanderTTS(String t) { this.textToSpeech = t; }
+
+            public void run() {
+                try {
+                    StringBuilder command = new StringBuilder("say -v ");
+                    command.append(voiceName);
+                    command.append(" ");
+                    command.append(this.textToSpeech);
+
+                    Runtime.getRuntime().exec(command.toString());
+                } catch (IOException e) {
+                    // TODO log error message
+                    System.out.println(e.getMessage());
+                }
+            }
         }
+
+        Thread t = new Thread(new CommanderTTS(text));
+        t.start();
     }
 
     @Override
