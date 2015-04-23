@@ -241,6 +241,7 @@ public class GUI extends FrameView
         generalPreferencesDialogTextColorLabel.setText(TLanguage.getString("GENERAL_PREFERENCES_DIALOG_TEXT_COLOR_LABEL"));
         generalPreferencesDialogChooseTextColorButton.setText(TLanguage.getString("GENERAL_PREFERENCES_DIALOG_TEXT_COLOR_CHOOSE_BUTTON"));
         generalPreferencesDialogTextPlacementLabel.setText(TLanguage.getString("GENERAL_PREFERENCES_DIALOG_TEXT_PLACEMENT_LABEL"));
+        generalPreferencesDialogTTSLabel.setText("prova"); //TODO use xml
         generalPreferencesDialogOKButton.setText(TLanguage.getString("OK"));
         generalPreferencesDialogCancelButton.setText(TLanguage.getString("CANCEL"));
 
@@ -325,10 +326,18 @@ public class GUI extends FrameView
 		}
 		
 		String textPlacement[] = new String[]{TLanguage.getString("SPINNER_TEXT_BELOW_PICTOGRAM"),TLanguage.getString("SPINNER_TEXT_ABOVE_PICTOGRAM")};
-		if(generalPreferencesDialogSpinnerTextPlacement.getItemCount() == 0)
+		if(generalPreferencesDialogSpinnerTextPlacement.getItemCount() == 0) //TODO luca baco append menu preferenze pittogramma
 			for (int i = 0; i < textPlacement.length; i++) {			
 				generalPreferencesDialogSpinnerTextPlacement.addItem(textPlacement[i]);
 			}
+		
+        SpinnerModel modeltts = new SpinnerListModel(G.ttsOptions);
+        ((DefaultComboBoxModel)generalPreferencesDialogSpinnerTTS.getModel()).removeAllElements();
+		if(generalPreferencesDialogSpinnerTTS.getItemCount() == 0)
+			for (int i = 0; i < G.ttsOptions.length; i++) {			
+				generalPreferencesDialogSpinnerTTS.addItem(G.ttsOptions[i]);
+			}
+		
 		
 		generalPreferencesDialogSpinnerImagesSize.setValue(G.defaultImagesSize);
 //    	generalPreferencesDialogSpinnerMaxLengthCompoundWords.setValue(G.maxLengthCompoundWords);
@@ -443,6 +452,8 @@ public class GUI extends FrameView
         generalPreferencesDialogChooseTextColorButton = new javax.swing.JButton();
         generalPreferencesDialogTextPlacementLabel = new javax.swing.JLabel();
         generalPreferencesDialogSpinnerTextPlacement = new javax.swing.JComboBox();
+        generalPreferencesDialogTTSLabel = new javax.swing.JLabel();
+        generalPreferencesDialogSpinnerTTS = new javax.swing.JComboBox();
         toolBar = new javax.swing.JToolBar();
         toolBarButtonFileNew = new javax.swing.JButton();
         toolBarButtonFileOpen = new javax.swing.JButton();
@@ -1231,12 +1242,14 @@ public class GUI extends FrameView
                                         .add(generalPreferencesDialogLayout.createSequentialGroup()
                                                 .add(generalPreferencesDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                                                         .add(generalPreferencesDialogOKButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 131, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                                        .add(generalPreferencesDialogTextPlacementLabel))
+                                                        .add(generalPreferencesDialogTextPlacementLabel)//)
+                                                        .add(generalPreferencesDialogTTSLabel))//
                                                 .add(18, 18, 18)
                                                 .add(generalPreferencesDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                                                         .add(org.jdesktop.layout.GroupLayout.TRAILING, generalPreferencesDialogChooseTextColorButton, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 153, Short.MAX_VALUE)
                                                         .add(org.jdesktop.layout.GroupLayout.TRAILING, generalPreferencesDialogChooseTextFontButton, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 153, Short.MAX_VALUE)
                                                         .add(org.jdesktop.layout.GroupLayout.TRAILING, generalPreferencesDialogSpinnerTextPlacement, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 153, Short.MAX_VALUE)
+                                                        .add(org.jdesktop.layout.GroupLayout.TRAILING, generalPreferencesDialogSpinnerTTS, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 153, Short.MAX_VALUE)
                                                         .add(generalPreferencesDialogCancelButton, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 153, Short.MAX_VALUE))))
                                 .addContainerGap())
         );
@@ -1282,6 +1295,10 @@ public class GUI extends FrameView
                                 .add(generalPreferencesDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                                         .add(generalPreferencesDialogTextPlacementLabel)
                                         .add(generalPreferencesDialogSpinnerTextPlacement, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                                .add(34, 34, 34)
+                                .add(generalPreferencesDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                                        .add(generalPreferencesDialogTTSLabel)
+                                        .add(generalPreferencesDialogSpinnerTTS, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                                 .add(34, 34, 34)
                                 .add(generalPreferencesDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                                         .add(generalPreferencesDialogOKButton)
@@ -2076,6 +2093,8 @@ public class GUI extends FrameView
         G.defaultFont = G.tempDefaultFont;
         G.defaultColor = G.tempDefaultColor;
         G.pictogramsPath = G.tempPictogramsPath;
+        //arasuite ita
+        G.defaultTTS = ((String)generalPreferencesDialogSpinnerTTS.getSelectedItem());
         try {
             TSetup.save();
             TLanguage.initLanguage(G.applicationLanguage);
@@ -2463,9 +2482,11 @@ public class GUI extends FrameView
     //    private javax.swing.JSpinner generalPreferencesDialogSpinnerMaxLengthCompoundWords;
 //    private javax.swing.JSpinner generalPreferencesDialogSpinnerMaxUndoLevel;
     private javax.swing.JComboBox generalPreferencesDialogSpinnerTextPlacement;
+    private javax.swing.JComboBox generalPreferencesDialogSpinnerTTS;
     private javax.swing.JLabel generalPreferencesDialogTextColorLabel;
     private javax.swing.JLabel generalPreferencesDialogTextFontLabel;
     private javax.swing.JLabel generalPreferencesDialogTextPlacementLabel;
+    private javax.swing.JLabel generalPreferencesDialogTTSLabel;
     private javax.swing.JDialog imagesSizeDialog;
     private javax.swing.JButton imagesSizeDialogCancelButton;
     private javax.swing.JLabel imagesSizeDialogImagesSizeLabel;

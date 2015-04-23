@@ -5,6 +5,7 @@ package araword;
 import java.util.EventObject;
 
 import araword.tts.strategy.AppleTtsStrategy;
+import araword.tts.strategy.LinuxTtsStrategy;
 import araword.tts.strategy.TtsStrategy;
 import org.jdesktop.application.Application;
 import org.jdesktop.application.SingleFrameApplication;
@@ -26,7 +27,7 @@ public class AraWordApp extends SingleFrameApplication {
         show(new GUI(this));
 
         //Maurizio: remove after create new option menu TTS
-        TtsStrategy tts =  new AppleTtsStrategy();
+        TtsStrategy tts =  new LinuxTtsStrategy();
         tts.setCurrentVoice("Test");
         G.ttsStrategy = tts;
 

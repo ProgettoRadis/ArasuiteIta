@@ -114,7 +114,10 @@ public abstract class G { // Can't be instantiated
     public static JTextPane textZone;
     public static araword.gui.GUI appWindow;
 
+    //arasuite ita - tts
     public static TtsStrategy ttsStrategy;
+    public static String[] ttsOptions;
+    public static String defaultTTS;
 
     public static void giveMePrivateVariables(JTextPane one) {
         // A trick to avoid problems with easy GUI editing.

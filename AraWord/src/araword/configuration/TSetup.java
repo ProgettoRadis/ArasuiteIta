@@ -18,6 +18,7 @@ import org.jdom.output.Format;
 import org.jdom.output.XMLOutputter;
 
 import araword.G;
+import araword.utils.TPropertyReader;
 
 /**
  * Static class that manages the application configuration. It allows to
@@ -53,6 +54,17 @@ public class TSetup {
 				Element e = j.next();
 				G.applicationLanguages[i] = e.getText();
 				i++;
+			}
+
+			//arasuite ita
+			List<Element> tts = root.getChild("tts_options").getChildren("tts_option");
+			Iterator<Element> jtts = tts.iterator();
+			G.ttsOptions = new String[tts.size()];
+			int k=0;
+			while (jtts.hasNext()){
+				Element e = jtts.next();
+				G.ttsOptions[k] = e.getText();
+				k++;
 			}
 
 			languages = root.getChild("documentLanguages").getChildren("language");
@@ -298,6 +310,14 @@ public class TSetup {
 			Element documentLanguage = new Element("documentLanguage");
 			documentLanguage.addContent(G.defaultDocumentLanguage);
 			preferences.addContent(documentLanguage);
+			
+			//arasuite ita
+			Element tts = new Element("ttsoption");
+			//TODO Luca fix
+			//tts.addContent((new TPropertyReader()).getPropertyValue("/conf/TTS.conf", G.defaultTTS));
+			tts.addContent( G.defaultTTS);
+			
+			preferences.addContent(tts);
 			
 			Element imagesSize = new Element("imagesSize");
 			imagesSize.addContent(Integer.toString(G.defaultImagesSize));
