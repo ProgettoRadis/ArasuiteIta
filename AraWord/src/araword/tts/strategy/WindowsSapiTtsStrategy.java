@@ -4,31 +4,31 @@ import java.io.IOException;
 
 public class WindowsSapiTtsStrategy implements TtsStrategy {
 
-	@Override
-	public void play(String text) {
+    @Override
+    public void play(String text) {
 
-		class SapiReader implements Runnable {
-			String text;
+        class SapiReader implements Runnable {
+            String text;
 
-			SapiReader(String s) {
-				this.text = s;
-			}
+            SapiReader(String s) {
+                this.text = s;
+            }
 
-			public void run() {
-				try {
-					Runtime.getRuntime().exec(".\\bin\\tts.exe \"" + this.text + "\"");
-				} catch (IOException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-			}
-		}
+            public void run() {
+                try {
+                    Runtime.getRuntime().exec(".\\bin\\tts.exe \"" + this.text + "\"");
+                } catch (IOException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                }
+            }
+        }
 
-		Thread t = new Thread(new SapiReader(text));
-		t.start();
-	}
+        Thread t = new Thread(new SapiReader(text));
+        t.start();
+    }
 
-	@Override
-	public void setCurrentVoice(String text) {}
+    @Override
+    public void setCurrentVoice(String text) {}
 
 }
