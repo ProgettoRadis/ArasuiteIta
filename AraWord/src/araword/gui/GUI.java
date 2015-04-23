@@ -241,7 +241,7 @@ public class GUI extends FrameView
         generalPreferencesDialogTextColorLabel.setText(TLanguage.getString("GENERAL_PREFERENCES_DIALOG_TEXT_COLOR_LABEL"));
         generalPreferencesDialogChooseTextColorButton.setText(TLanguage.getString("GENERAL_PREFERENCES_DIALOG_TEXT_COLOR_CHOOSE_BUTTON"));
         generalPreferencesDialogTextPlacementLabel.setText(TLanguage.getString("GENERAL_PREFERENCES_DIALOG_TEXT_PLACEMENT_LABEL"));
-        generalPreferencesDialogTTSLabel.setText("prova"); //TODO use xml
+        generalPreferencesDialogTTSLabel.setText(TLanguage.getString("GENERAL_PREFERENCES_DIALOG_TTS"));
         generalPreferencesDialogOKButton.setText(TLanguage.getString("OK"));
         generalPreferencesDialogCancelButton.setText(TLanguage.getString("CANCEL"));
 
@@ -321,25 +321,30 @@ public class GUI extends FrameView
 
 //		SpinnerModel model3 = new SpinnerListModel(G.documentLanguages);
 //		documentLanguageDialogSpinnerDocumentLanguage.setModel(model3);
-		for (int i = 0; i < G.documentLanguages.length; i++) {
-			documentLanguageDialogComboBoxDocumentLanguage.addItem(G.documentLanguages[i]);
-		}
-		
-		String textPlacement[] = new String[]{TLanguage.getString("SPINNER_TEXT_BELOW_PICTOGRAM"),TLanguage.getString("SPINNER_TEXT_ABOVE_PICTOGRAM")};
-		if(generalPreferencesDialogSpinnerTextPlacement.getItemCount() == 0) //TODO luca baco append menu preferenze pittogramma
-			for (int i = 0; i < textPlacement.length; i++) {			
-				generalPreferencesDialogSpinnerTextPlacement.addItem(textPlacement[i]);
-			}
-		
+        for (int i = 0; i < G.documentLanguages.length; i++) {
+            documentLanguageDialogComboBoxDocumentLanguage.addItem(G.documentLanguages[i]);
+        }
+
+        String textPlacement[] = new String[]{TLanguage.getString("SPINNER_TEXT_BELOW_PICTOGRAM"),TLanguage.getString("SPINNER_TEXT_ABOVE_PICTOGRAM")};
+        if(generalPreferencesDialogSpinnerTextPlacement.getItemCount() == 0) //TODO luca baco append menu preferenze pittogramma
+            for (int i = 0; i < textPlacement.length; i++) {
+                generalPreferencesDialogSpinnerTextPlacement.addItem(textPlacement[i]);
+            }
+
         SpinnerModel modeltts = new SpinnerListModel(G.ttsOptions);
         ((DefaultComboBoxModel)generalPreferencesDialogSpinnerTTS.getModel()).removeAllElements();
-		if(generalPreferencesDialogSpinnerTTS.getItemCount() == 0)
-			for (int i = 0; i < G.ttsOptions.length; i++) {			
-				generalPreferencesDialogSpinnerTTS.addItem(G.ttsOptions[i]);
-			}
-		
-		
-		generalPreferencesDialogSpinnerImagesSize.setValue(G.defaultImagesSize);
+        if(generalPreferencesDialogSpinnerTTS.getItemCount() == 0)
+            for (int i = 0; i < G.ttsOptions.length; i++) {
+                generalPreferencesDialogSpinnerTTS.addItem(G.ttsOptions[i]);
+
+                if(G.ttsOptions[i] == G.defaultTTS) {
+                    generalPreferencesDialogSpinnerTTS.setSelectedIndex(i);
+                }
+
+            }
+
+
+        generalPreferencesDialogSpinnerImagesSize.setValue(G.defaultImagesSize);
 //    	generalPreferencesDialogSpinnerMaxLengthCompoundWords.setValue(G.maxLengthCompoundWords);
 //    	generalPreferencesDialogSpinnerMaxUndoLevel.setValue(G.maxUndoLevel);
         generalPreferencesDialogSpinnerDocumentLanguage.setSelectedItem(G.defaultDocumentLanguage);
@@ -1141,8 +1146,8 @@ public class GUI extends FrameView
 
         /*String languages[] = new String[] {"Español", "English", "Français", "Deutsch", "Català"};
         for (int i = 0; i < languages.length; i++) {
-        	generalPreferencesDialogSpinnerApplicationLanguage.addItem(languages[i]);
-		}
+            generalPreferencesDialogSpinnerApplicationLanguage.addItem(languages[i]);
+        }
         generalPreferencesDialogSpinnerApplicationLanguage.setName("generalPreferencesDialogSpinnerApplicationLanguage"); // NOI18N*/
 
         generalPreferencesDialogDocumentLanguageLabel.setText(resourceMap.getString("generalPreferencesDialogDocumentLanguageLabel.text")); // NOI18N
@@ -1150,8 +1155,8 @@ public class GUI extends FrameView
 
         /*String documentLanguages[] = new String[] {"(todos)", "Español", "English", "Français", "Deutsch", "Català"};
         for (int i = 0; i < documentLanguages.length; i++) {			
-        	generalPreferencesDialogSpinnerDocumentLanguage.addItem(documentLanguages[i]);
-		}
+            generalPreferencesDialogSpinnerDocumentLanguage.addItem(documentLanguages[i]);
+        }
         generalPreferencesDialogSpinnerDocumentLanguage.setName("generalPreferencesDialogSpinnerDocumentLanguage"); // NOI18N*/
 
         generalPreferencesDialogOKButton.setText(resourceMap.getString("generalPreferencesDialogOKButton.text")); // NOI18N
@@ -1208,8 +1213,8 @@ public class GUI extends FrameView
 
         /*String textPlacement[] = new String[] {"Encima del pictograma", "Debajo del pictograma"};
         for (int i = 0; i < textPlacement.length; i++) {
-        	generalPreferencesDialogSpinnerTextPlacement.addItem(textPlacement[i]);
-		}
+            generalPreferencesDialogSpinnerTextPlacement.addItem(textPlacement[i]);
+        }
         generalPreferencesDialogSpinnerTextPlacement.setName("generalPreferencesDialogSpinnerTextPlacement"); // NOI18N*/
 
         org.jdesktop.layout.GroupLayout generalPreferencesDialogLayout = new org.jdesktop.layout.GroupLayout(generalPreferencesDialog.getContentPane());
@@ -1703,7 +1708,7 @@ public class GUI extends FrameView
         
        /*
         exportPDFDialogLayout.setHorizontalGroup(
-        		 exportPDFDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                 exportPDFDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                 .add(exportPDFDialogLayout.createSequentialGroup()
                     .addContainerGap()
                     .add(exportPDFDialogPictosLineLabel)
@@ -1712,7 +1717,7 @@ public class GUI extends FrameView
                     .addContainerGap(449, Short.MAX_VALUE))
             );
         exportPDFDialogLayout.setVerticalGroup(
-        		exportPDFDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                exportPDFDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                 .add(exportPDFDialogLayout.createSequentialGroup()
                     .add(49, 49, 49)
                     .add(exportPDFDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
@@ -1724,7 +1729,7 @@ public class GUI extends FrameView
         
         /*
         exportPDFDialogLayout.setHorizontalGroup(
-        		exportPDFDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                exportPDFDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(exportPDFDialogLayout.createSequentialGroup()
                 .addContainerGap()
                 .add(exportPDFDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
@@ -1738,7 +1743,7 @@ public class GUI extends FrameView
         );
         
         exportPDFDialogLayout.setVerticalGroup(
-        		exportPDFDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                exportPDFDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(exportPDFDialogLayout.createSequentialGroup()
                 .addContainerGap()
                 .add(exportPDFDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
@@ -1750,23 +1755,23 @@ public class GUI extends FrameView
                     .add(exportPDFDialogCancelButton))
                 .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-		*/
+        */
         setComponent(mainPanel);
     }// </editor-fold>//GEN-END:initComponents
 
     private void menuFileNewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuFileNewActionPerformed
-    	if (JOptionPane.showConfirmDialog(getFrame(),TLanguage.getString("FILE_MENU_WARNING_DISCARD"),
-    			TLanguage.getString("WARNING"),JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
-			TextUtils.newDocument();
-		}
+        if (JOptionPane.showConfirmDialog(getFrame(),TLanguage.getString("FILE_MENU_WARNING_DISCARD"),
+                TLanguage.getString("WARNING"),JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
+            TextUtils.newDocument();
+        }
     }//GEN-LAST:event_menuFileNewActionPerformed
 
     private void menuFileOpenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuFileOpenActionPerformed
-    	if (JOptionPane.showConfirmDialog(getFrame(),TLanguage.getString("FILE_MENU_WARNING_DISCARD"),
-    			TLanguage.getString("WARNING"),JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
-    		MenuFunctions.fileOpen();
-		}
-    	
+        if (JOptionPane.showConfirmDialog(getFrame(),TLanguage.getString("FILE_MENU_WARNING_DISCARD"),
+                TLanguage.getString("WARNING"),JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
+            MenuFunctions.fileOpen();
+        }
+
     }//GEN-LAST:event_menuFileOpenActionPerformed
 
     private void menuFileSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuFileSaveActionPerformed
@@ -2139,17 +2144,17 @@ public class GUI extends FrameView
 
 
     private void toolBarButtonFileNewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toolBarButtonFileNewActionPerformed
-    	if (JOptionPane.showConfirmDialog(getFrame(),TLanguage.getString("FILE_MENU_WARNING_DISCARD"),
-        		TLanguage.getString("WARNING"),JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
-			TextUtils.newDocument();
-		}
+        if (JOptionPane.showConfirmDialog(getFrame(),TLanguage.getString("FILE_MENU_WARNING_DISCARD"),
+                TLanguage.getString("WARNING"),JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
+            TextUtils.newDocument();
+        }
     }//GEN-LAST:event_toolBarButtonFileNewActionPerformed
 
     private void toolBarButtonFileOpenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toolBarButtonFileOpenActionPerformed
-    	if (JOptionPane.showConfirmDialog(getFrame(),TLanguage.getString("FILE_MENU_WARNING_DISCARD"),
-        		TLanguage.getString("WARNING"),JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
-    		MenuFunctions.fileOpen();
-		}
+        if (JOptionPane.showConfirmDialog(getFrame(),TLanguage.getString("FILE_MENU_WARNING_DISCARD"),
+                TLanguage.getString("WARNING"),JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
+            MenuFunctions.fileOpen();
+        }
     }//GEN-LAST:event_toolBarButtonFileOpenActionPerformed
 
     private void toolBarButtonFileSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toolBarButtonFileSaveActionPerformed
