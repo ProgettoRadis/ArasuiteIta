@@ -39,8 +39,8 @@ public class AppleTtsStrategy implements TtsStrategy {
     }
 
     @Override
-    public void setCurrentVoice(String voiceName) {
-        this.voiceName = voiceName;
+    public void setCurrentVoice() {
+        this.voiceName = "";
     }
 
 }

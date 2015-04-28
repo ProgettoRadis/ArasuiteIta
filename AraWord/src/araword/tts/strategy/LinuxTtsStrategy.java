@@ -1,5 +1,6 @@
 package araword.tts.strategy;
 
+import java.io.DataOutputStream;
 import java.io.IOException;
 
 import araword.G;
@@ -7,7 +8,6 @@ import araword.G;
 public class LinuxTtsStrategy implements TtsStrategy {
 
 	private String voiceName;
-	//private String text;
 	
 	@Override
 	public void play(String textToSpeech) {
@@ -18,12 +18,19 @@ public class LinuxTtsStrategy implements TtsStrategy {
 
 			public void run() {
 				String texto = textToSpeech.toLowerCase();
-				String command = "espeak -v " + voiceName + " \"" + texto + "\"";
+				String command = "pico2wave -l \"" + voiceName + "\" -w arawordttslinux.wav \"" + texto + "\" && aplay arawordttslinux.wav";
+				
 				System.out.println(command);
-				Runtime rt = Runtime.getRuntime();
-				String[] commands = {"espeak","-v", voiceName, texto};
+				
+				Runtime r;
+				Process p;
+				r = Runtime.getRuntime();
+				
 				try {
-					rt.exec(commands);
+					p = r.exec("/bin/bash");
+					DataOutputStream dos = new DataOutputStream(p.getOutputStream());
+					dos.writeBytes(command+((char)10)+((char)13));
+					dos.flush();
 				} catch (IOException e) {
 					e.printStackTrace();
 				}
@@ -35,9 +42,8 @@ public class LinuxTtsStrategy implements TtsStrategy {
 	}
 	
 	@Override
-	public void setCurrentVoice(String voiceName) {
+	public void setCurrentVoice() {
 		this.voiceName = translateLanguage();
-		//this.text = text;
 	}
 
 	private String translateLanguage() {
@@ -49,7 +55,7 @@ public class LinuxTtsStrategy implements TtsStrategy {
 		if (G.defaultDocumentLanguage.equals("Gallego")) code="es";
 		if (G.defaultDocumentLanguage.equals("Aleman")) code="de";
 		if (G.defaultDocumentLanguage.equals("Frances")) code="fr";
-		if (G.defaultDocumentLanguage.equals("Italiano")) code="it";
+		if (G.defaultDocumentLanguage.equals("Italiano")) code="it-IT";
 		if (G.defaultDocumentLanguage.equals("Portugues")) code="pt";
 		if (G.defaultDocumentLanguage.equals("Portugues Brasis")) code="pt";
 

@@ -17,12 +17,10 @@ import araword.utils.TInterpreterMp3Sound;
 public class GoogleTtsStrategy implements TtsStrategy {
 
 	private String voiceName;
-	//private String text;
 
 	@Override
-	public void setCurrentVoice(String voiceName) {
+	public void setCurrentVoice() {
 		this.voiceName = translateLanguage();
-		//this.text = text;
 	}
 
 	private String translateLanguage() {

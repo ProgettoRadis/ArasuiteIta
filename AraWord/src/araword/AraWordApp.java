@@ -28,12 +28,12 @@ public class AraWordApp extends SingleFrameApplication {
 
         try {
         	TtsStrategy tts = (TtsStrategy) Class.forName("araword.tts.strategy." + G.defaultTTS).newInstance();
-        	tts.setCurrentVoice("");
+        	tts.setCurrentVoice();
             G.ttsStrategy = tts;
             
 		} catch (InstantiationException | IllegalAccessException | ClassNotFoundException e) {
 			TtsStrategy tts = new GoogleTtsStrategy();
-        	tts.setCurrentVoice("Test");
+        	tts.setCurrentVoice();
             G.ttsStrategy = tts;
 			e.printStackTrace();
 		}
