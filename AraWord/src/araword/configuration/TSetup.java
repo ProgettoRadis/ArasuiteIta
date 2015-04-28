@@ -308,7 +308,7 @@ public class TSetup {
 
             //arasuite ita
             Element tts = new Element("ttsoption");
-            tts.addContent((new TPropertyReader()).getPropertyValue("conf","TTS.conf", G.defaultTTS));         
+            tts.addContent(TPropertyReader.getPropertyValue("conf","TTS.conf", G.defaultTTS));         
 
             preferences.addContent(tts);
 

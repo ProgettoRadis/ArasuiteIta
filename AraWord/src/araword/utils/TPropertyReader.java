@@ -10,7 +10,7 @@ import java.util.Properties;
 
 public class TPropertyReader {
 
-	public  String getPropertyValue(String propDir,String propFileName,String propertyName) throws IOException
+	public static String getPropertyValue(String propDir,String propFileName,String propertyName) throws IOException
 	{
 		// the bin/ folder is returned when getting the class loader
 		ClassLoader classLoader = TPropertyReader.class.getClassLoader();

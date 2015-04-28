@@ -26,10 +26,17 @@ public class AraWordApp extends SingleFrameApplication {
     protected void startup() {
         show(new GUI(this));
 
-        //Maurizio: remove after create new option menu TTS
-        TtsStrategy tts =  new LinuxTtsStrategy();
-        tts.setCurrentVoice("Test");
-        G.ttsStrategy = tts;
+        try {
+        	TtsStrategy tts = (TtsStrategy) Class.forName("araword.tts.strategy." + G.defaultTTS).newInstance();
+        	tts.setCurrentVoice("");
+            G.ttsStrategy = tts;
+            
+		} catch (InstantiationException | IllegalAccessException | ClassNotFoundException e) {
+			TtsStrategy tts = new GoogleTTSStrategy();
+        	tts.setCurrentVoice("Test");
+            G.ttsStrategy = tts;
+			e.printStackTrace();
+		}
 
         // Create the ExitListener
         ExitListener exitListener = new ExitListener() {
