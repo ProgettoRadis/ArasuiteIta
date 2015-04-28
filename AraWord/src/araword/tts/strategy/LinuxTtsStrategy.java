@@ -48,16 +48,16 @@ public class LinuxTtsStrategy implements TtsStrategy {
 
 	private String translateLanguage() {
 		String code="es";
-		if (G.defaultDocumentLanguage.equals("Castellano")) code="es";
-		if (G.defaultDocumentLanguage.equals("Ingles")) code="es";
-		if (G.defaultDocumentLanguage.equals("Catalan")) code="es";
-		if (G.defaultDocumentLanguage.equals("Euskera")) code="es";
-		if (G.defaultDocumentLanguage.equals("Gallego")) code="es";
-		if (G.defaultDocumentLanguage.equals("Aleman")) code="de";
-		if (G.defaultDocumentLanguage.equals("Frances")) code="fr";
+		if (G.defaultDocumentLanguage.equals("Castellano")) code="es-ES";
+		if (G.defaultDocumentLanguage.equals("Ingles")) code="en-GB";
+		if (G.defaultDocumentLanguage.equals("Catalan")) code="es-ES";
+		if (G.defaultDocumentLanguage.equals("Euskera")) code="es-ES";
+		if (G.defaultDocumentLanguage.equals("Gallego")) code="es-ES";
+		if (G.defaultDocumentLanguage.equals("Aleman")) code="de-DE";
+		if (G.defaultDocumentLanguage.equals("Frances")) code="fr-FR";
 		if (G.defaultDocumentLanguage.equals("Italiano")) code="it-IT";
-		if (G.defaultDocumentLanguage.equals("Portugues")) code="pt";
-		if (G.defaultDocumentLanguage.equals("Portugues Brasis")) code="pt";
+		if (G.defaultDocumentLanguage.equals("Portugues")) code="pt-PT";
+		if (G.defaultDocumentLanguage.equals("Portugues Brasis")) code="pt-BR";
 
 		return code;
 	}
