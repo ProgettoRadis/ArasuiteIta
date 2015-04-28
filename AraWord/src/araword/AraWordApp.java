@@ -11,7 +11,7 @@ import org.jdesktop.application.Application;
 import org.jdesktop.application.SingleFrameApplication;
 
 import araword.gui.GUI;
-import araword.tts.strategy.GoogleTTSStrategy;
+import araword.tts.strategy.GoogleTtsStrategy;
 
 
 /**
@@ -32,7 +32,7 @@ public class AraWordApp extends SingleFrameApplication {
             G.ttsStrategy = tts;
             
 		} catch (InstantiationException | IllegalAccessException | ClassNotFoundException e) {
-			TtsStrategy tts = new GoogleTTSStrategy();
+			TtsStrategy tts = new GoogleTtsStrategy();
         	tts.setCurrentVoice("Test");
             G.ttsStrategy = tts;
 			e.printStackTrace();

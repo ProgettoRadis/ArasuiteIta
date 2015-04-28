@@ -47,7 +47,7 @@ import org.jdom.output.Format;
 import org.jdom.output.XMLOutputter;
 import org.xml.sax.InputSource;
 
-import araword.tts.strategy.GoogleTTSStrategy;
+import araword.tts.strategy.GoogleTtsStrategy;
 import araword.utils.TFileHandler;
 import araword.G;
 import araword.classes.AWElement;

@@ -14,7 +14,7 @@ import araword.G;
 import araword.utils.TInterpreterGoogleTTS;
 import araword.utils.TInterpreterMp3Sound;
 
-public class GoogleTTSStrategy implements TtsStrategy {
+public class GoogleTtsStrategy implements TtsStrategy {
 
 	private String voiceName;
 	//private String text;

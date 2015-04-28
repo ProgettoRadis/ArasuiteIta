@@ -47,6 +47,7 @@ import araword.classes.AWElement;
 import araword.configuration.TLanguage;
 import araword.configuration.TSetup;
 import araword.db.DBManagement;
+import araword.utils.TPropertyReader;
 import araword.utils.TextUtils;
 import dialogs.mainFrame;
 
@@ -334,12 +335,20 @@ public class GUI extends FrameView
         SpinnerModel modeltts = new SpinnerListModel(G.ttsOptions);
         ((DefaultComboBoxModel)generalPreferencesDialogSpinnerTTS.getModel()).removeAllElements();
         if(generalPreferencesDialogSpinnerTTS.getItemCount() == 0)
-            for (int i = 0; i < G.ttsOptions.length; i++) {
+            for (int i = 0; i < G.ttsOptions.length; i++) 
+            {
                 generalPreferencesDialogSpinnerTTS.addItem(G.ttsOptions[i]);
 
-                if(G.ttsOptions[i] == G.defaultTTS) {
-                    generalPreferencesDialogSpinnerTTS.setSelectedIndex(i);
-                }
+                try 
+                {
+					if(G.ttsOptions[i].equalsIgnoreCase(  TPropertyReader.getPropertyValue("conf", "TTSreverse.conf", G.defaultTTS) ) )
+					{
+					    generalPreferencesDialogSpinnerTTS.setSelectedIndex(i);
+					}
+				} catch (IOException e) {
+					generalPreferencesDialogSpinnerTTS.setSelectedIndex(0);
+					e.printStackTrace();
+				}
 
             }
 
