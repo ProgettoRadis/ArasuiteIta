@@ -27,7 +27,7 @@ EDIT_MENU_PASTE=Incolla
 EDIT_MENU_FIND=Cerca
 EDIT_MENU_SELECT_ALL=Seleziona tutto
 
-TEXT_MENU=Text
+TEXT_MENU=Testo
 TEXT_MENU_FONT=Font
 TEXT_MENU_COLOR=Colore
 TEXT_MENU_PLACEMENT=Localizzazione
@@ -97,7 +97,6 @@ GENERAL_PREFERENCES_DIALOG_TEXT_FONT_CHOOSE_BUTTON=Scegli
 GENERAL_PREFERENCES_DIALOG_TEXT_COLOR_LABEL=Colore del testo
 GENERAL_PREFERENCES_DIALOG_TEXT_COLOR_CHOOSE_BUTTON=Scegli
 GENERAL_PREFERENCES_DIALOG_TEXT_PLACEMENT_LABEL=Posizione del Testo
-GENERAL_PREFERENCES_DIALOG_TTS=Text To Speech
 
 DOCUMENT_LANGUAGE_DIALOG_TITLE=Lingua del Documento
 DOCUMENT_LANGUAGE_DIALOG_DOCUMENT_LANGUAGE_LABEL=Lingua del Documento
@@ -123,26 +122,25 @@ TAboutDialog.ORGANIZATIONS=Organizzazioni
 TAboutDialog.YEAR=Anno
 TAboutDialog.LICENSE=Licenza
 
-
 //NEW. en otros idiomas añadir PO al comiezo del texto (pending Of Translation)
-FILE_MENU_EXPORT_IMAGE=*POT*como imagen
-FILE_MENU_EXPORT_PDF=*POT*como PDF
-EXPORT_PDF_DIALOG_TITLE=*POT*Exportar PDF
-EXPORT_PDF_BUTTON=*POT*Exportar PDF
-EXPORT_PDF_PICTOS_LINE=*POT*Nº pictos por linea
-EXPORT_PDF_ARASAAC_LICENSE=*POT*Añadir licencia de ARASAAC
-EXPORT_PDF_PAGE=*POT*Página
-EXPORT_PDF_PREVISUALIZATION=*POT*Previsualización
-EXPORT_PDF_LICENCIA=*POT*Autor Pictos: Sergio Palao. Procedencia: ARASAAC (http://catedu.es/arasaac/). Licencia: CC(BY-NC-SA)
-EXPORT_PDF_LICENCIA2=*POT*Material generado con AraWord: http://sourceforge.net/projects/arasuite/
-TOOLS_MENU_VOICE_SINTESYS=Sintesi vocale
-CUSTOM_DESEA_ADD_PICTO=*POT*¿Desea añadir este nuevo picto?
-CUSTOM_IMPORTAR=*POT*Importar
-CUSTOM_RECHAZAR=*POT*Rechazar
+FILE_MENU_EXPORT_IMAGE=Immagine
+FILE_MENU_EXPORT_PDF=PDF
+EXPORT_PDF_DIALOG_TITLE=Esporta in PDF
+EXPORT_PDF_BUTTON=Esporta PDF
+EXPORT_PDF_PICTOS_LINE=Numero immagini per linea
+EXPORT_PDF_ARASAAC_LICENSE=Aggiungi Licenza di ARASAAC
+EXPORT_PDF_PAGE=Pagina
+EXPORT_PDF_PREVISUALIZATION=Anteprima
+EXPORT_PDF_LICENCIA=Autore dei simboli: Sergio Palao. Per conto di: ARASAAC (http://catedu.es/arasaac/). Con Licenza: CC(BY-NC-SA)
+EXPORT_PDF_LICENCIA2= Materiale prodotto con AraWord: http://sourceforge.net/projects/arasuite/
+TOOLS_MENU_VOICE_SINTESYS=Sintesi Vocale
+CUSTOM_DESEA_ADD_PICTO=Desideri aggungere questo nuovo simbolo?
+CUSTOM_IMPORTAR=Importa
+CUSTOM_RECHAZAR=Abbandona
 
 //----------------------------------------------------
 //Import custom picto
 //----------------------------------------------------
-CUSTOM.DESEA_ADD_PICTO=*POT*¿Desea añadir este nuevo picto?
-CUSTOM.IMPORTAR=*POT*Importar
-CUSTOM.RECHAZAR=*POT*Rechazar
+CUSTOM.DESEA_ADD_PICTO=Desideri aggungere questo nuovo simbolo?
+CUSTOM.IMPORTAR=Importa
+CUSTOM.RECHAZAR=Abbandona
