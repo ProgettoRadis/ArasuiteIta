@@ -16,7 +16,7 @@ public class WindowsSapiTtsStrategy implements TtsStrategy {
 
             public void run() {
                 try {
-                    Runtime.getRuntime().exec(".\\bin\\tts.exe \"" + this.text + "\"");
+                    Runtime.getRuntime().exec(".\\resources\\tts\\tts.exe \"" + this.text + "\"");
                 } catch (IOException e) {
                     // TODO Auto-generated catch block
                     e.printStackTrace();
