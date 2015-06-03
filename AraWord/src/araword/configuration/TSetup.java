@@ -29,7 +29,6 @@ public class TSetup {
     private static String CONFIGURATION_SYSTEM_FILE_PATH = "." + File.separator + "conf" + File.separator + "AWSystem.conf";
     private static String CONFIGURATION_USER_FILE_PATH = "." + File.separator + "conf" + File.separator + "AWUserDefaults.conf";
 
-
     private static File CONFIGURATION_SYSTEM_FILE = new File(CONFIGURATION_SYSTEM_FILE_PATH);
     private static File CONFIGURATION_USER_FILE = new File(CONFIGURATION_USER_FILE_PATH);
 

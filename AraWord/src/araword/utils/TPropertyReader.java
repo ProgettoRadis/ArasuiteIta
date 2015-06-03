@@ -16,7 +16,8 @@ public class TPropertyReader {
 		ClassLoader classLoader = TPropertyReader.class.getClassLoader();
 		File classpathRoot = new File(classLoader.getResource("").getPath());
 		File t1 = classpathRoot.getParentFile();
-		File t = new File (t1.getAbsolutePath()+File.separator+propDir+File.separator+propFileName);
+		
+		File t = new File ("." + File.separator + propDir + File.separator + propFileName);
 
 		Properties prop = new Properties();
  
