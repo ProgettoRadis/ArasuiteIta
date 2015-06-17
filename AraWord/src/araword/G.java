@@ -55,6 +55,7 @@ public abstract class G { // Can't be instantiated
     public static String applicationLanguage;
     public static int maxLengthCompoundWords;
     public static int iconsSize; // Not to be confused with imagesSize. TOOLBAR icons.
+    public static int iconsBorderSize;
     public static boolean classicIcons; // 1, classic icons. 0, ARASAAC icons.
     // 3 = "cepillo de dientes" 1 = only simple words allowed.
     // WARNING: Increasing this number will decrease performance dramatically.

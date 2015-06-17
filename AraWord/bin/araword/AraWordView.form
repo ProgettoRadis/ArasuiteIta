@@ -725,6 +725,7 @@
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="generalPreferencesDialogSpinnerImagesSize" pref="151" max="32767" attributes="0"/>
+                              <Component id="generalPreferencesDialogSpinnerImageBorderSize" pref="151" max="32767" attributes="0"/>
                               <Component id="generalPreferencesDialogChoosePictogramsPathButton" alignment="0" pref="151" max="32767" attributes="1"/>
                               <Component id="generalPreferencesDialogSpinnerDocumentLanguage" alignment="0" pref="151" max="32767" attributes="1"/>
                               <Component id="generalPreferencesDialogSpinnerApplicationLanguage" alignment="0" pref="151" max="32767" attributes="1"/>
@@ -759,6 +760,10 @@
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="generalPreferencesDialogImagesSizeLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="generalPreferencesDialogSpinnerImagesSize" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+            	  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="generalPreferencesDialogImageBordersSizeLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="generalPreferencesDialogSpinnerImageBorderSize" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
@@ -823,6 +828,20 @@
           <Properties>
             <Property name="text" type="java.lang.String" resourceKey="generalPreferencesDialogImagesSizeLabel.text"/>
             <Property name="name" type="java.lang.String" value="generalPreferencesDialogImagesSizeLabel" noResource="true"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JSpinner" name="generalPreferencesDialogSpinnerImageBorderSize">
+          <Properties>
+            <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
+              <SpinnerModel initial="3" maximum="100" minimum="0" numberType="java.lang.Integer" stepSize="1" type="number"/>
+            </Property>
+            <Property name="name" type="java.lang.String" value="generalPreferencesDialogSpinnerImageBorderSize" noResource="true"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="generalPreferencesDialogImageBordersSizeLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" resourceKey="generalPreferencesDialogImageBordersSizeLabel.text"/>
+            <Property name="name" type="java.lang.String" value="generalPreferencesDialogImageBordersSizeLabel" noResource="true"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="generalPreferencesDialogMaxUndoLevelLabel">

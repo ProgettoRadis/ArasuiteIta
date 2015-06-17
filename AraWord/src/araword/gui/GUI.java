@@ -233,6 +233,7 @@ public class GUI extends FrameView
         generalPreferencesDialogApplicationLanguageLabel.setText(TLanguage.getString("GENERAL_PREFERENCES_DIALOG_APPLICATION_LANGUAGE_LABEL"));
         generalPreferencesDialogDocumentLanguageLabel.setText(TLanguage.getString("GENERAL_PREFERENCES_DIALOG_DOCUMENT_LANGUAGE_LABEL"));
         generalPreferencesDialogImagesSizeLabel.setText(TLanguage.getString("GENERAL_PREFERENCES_DIALOG_IMAGES_SIZE_LABEL"));
+        generalPreferencesDialogImageBordersSizeLabel.setText(TLanguage.getString("GENERAL_PREFERENCES_DIALOG_IMAGES_BORDERS_SIZE_LABEL"));
 //    	generalPreferencesDialogMaxLengthCompoundWordsLabel.setText(TLanguage.getString("GENERAL_PREFERENCES_DIALOG_MAX_LENGTH_COMPOUND_WORDS_LABEL"));
 //    	generalPreferencesDialogMaxUndoLevelLabel.setText(TLanguage.getString("GENERAL_PREFERENCES_DIALOG_MAX_UNDO_LEVEL_LABEL"));
 //    	generalPreferencesDialogPictogramsPathLabel.setText(TLanguage.getString("GENERAL_PREFERENCES_DIALOG_PICTOGRAMS_PATH_LABEL"));
@@ -326,7 +327,8 @@ public class GUI extends FrameView
             documentLanguageDialogComboBoxDocumentLanguage.addItem(G.documentLanguages[i]);
         }
 
-        String textPlacement[] = new String[]{TLanguage.getString("SPINNER_TEXT_BELOW_PICTOGRAM"),TLanguage.getString("SPINNER_TEXT_ABOVE_PICTOGRAM")};
+		String textPlacement[] = new String[] {
+				TLanguage.getString("SPINNER_TEXT_BELOW_PICTOGRAM"),TLanguage.getString("SPINNER_TEXT_ABOVE_PICTOGRAM")};
         if(generalPreferencesDialogSpinnerTextPlacement.getItemCount() == 0) //TODO luca baco append menu preferenze pittogramma
             for (int i = 0; i < textPlacement.length; i++) {
                 generalPreferencesDialogSpinnerTextPlacement.addItem(textPlacement[i]);
@@ -353,6 +355,7 @@ public class GUI extends FrameView
             }
 
         generalPreferencesDialogSpinnerImagesSize.setValue(G.defaultImagesSize);
+        generalPreferencesDialogSpinnerImageBorderSize.setValue(G.iconsBorderSize);
 //    	generalPreferencesDialogSpinnerMaxLengthCompoundWords.setValue(G.maxLengthCompoundWords);
 //    	generalPreferencesDialogSpinnerMaxUndoLevel.setValue(G.maxUndoLevel);
         generalPreferencesDialogSpinnerDocumentLanguage.setSelectedItem(G.defaultDocumentLanguage);
@@ -446,7 +449,9 @@ public class GUI extends FrameView
         findDialogExitButton = new javax.swing.JButton();
         generalPreferencesDialog = new javax.swing.JDialog();
         generalPreferencesDialogSpinnerImagesSize = new javax.swing.JSpinner();
+        generalPreferencesDialogSpinnerImageBorderSize = new javax.swing.JSpinner();
         generalPreferencesDialogImagesSizeLabel = new javax.swing.JLabel();
+        generalPreferencesDialogImageBordersSizeLabel = new javax.swing.JLabel();
 //        generalPreferencesDialogMaxUndoLevelLabel = new javax.swing.JLabel();
 //        generalPreferencesDialogSpinnerMaxUndoLevel = new javax.swing.JSpinner();
 //        generalPreferencesDialogMaxLengthCompoundWordsLabel = new javax.swing.JLabel();
@@ -1134,9 +1139,15 @@ public class GUI extends FrameView
         generalPreferencesDialogSpinnerImagesSize.setModel(new javax.swing.SpinnerNumberModel(100, 25, 500, 5));
         generalPreferencesDialogSpinnerImagesSize.setName("generalPreferencesDialogSpinnerImagesSize"); // NOI18N
 
+        generalPreferencesDialogSpinnerImageBorderSize.setModel(new javax.swing.SpinnerNumberModel(3, 0, 100, 1));
+        generalPreferencesDialogSpinnerImageBorderSize.setName("generalPreferencesDialogSpinnerImageBorderSize"); // NOI18N
+        
         generalPreferencesDialogImagesSizeLabel.setText(resourceMap.getString("generalPreferencesDialogImagesSizeLabel.text")); // NOI18N
         generalPreferencesDialogImagesSizeLabel.setName("generalPreferencesDialogImagesSizeLabel"); // NOI18N
 
+        generalPreferencesDialogImageBordersSizeLabel.setText(resourceMap.getString("generalPreferencesDialogImageBordersSizeLabel.text")); // NOI18N
+        generalPreferencesDialogImageBordersSizeLabel.setName("generalPreferencesDialogImageBordersSizeLabel"); // NOI18N
+        
 //        generalPreferencesDialogMaxUndoLevelLabel.setText(resourceMap.getString("generalPreferencesDialogMaxUndoLevelLabel.text")); // NOI18N
 //        generalPreferencesDialogMaxUndoLevelLabel.setName("generalPreferencesDialogMaxUndoLevelLabel"); // NOI18N
 
@@ -1235,6 +1246,7 @@ public class GUI extends FrameView
                                         .add(generalPreferencesDialogLayout.createSequentialGroup()
                                                 .add(generalPreferencesDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                                                                 .add(generalPreferencesDialogImagesSizeLabel)
+                                                                .add(generalPreferencesDialogImageBordersSizeLabel)
 //                            .add(generalPreferencesDialogMaxUndoLevelLabel)
                                                                 .add(generalPreferencesDialogApplicationLanguageLabel)
 //                            .add(generalPreferencesDialogPictogramsPathLabel)
@@ -1244,6 +1256,7 @@ public class GUI extends FrameView
                                                 .add(18, 18, 18)
                                                 .add(generalPreferencesDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                                                                 .add(generalPreferencesDialogSpinnerImagesSize, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 151, Short.MAX_VALUE)
+                                                                .add(generalPreferencesDialogSpinnerImageBorderSize, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 151, Short.MAX_VALUE)
 //                            .add(generalPreferencesDialogChoosePictogramsPathButton, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 151, Short.MAX_VALUE)
                                                                 .add(generalPreferencesDialogSpinnerDocumentLanguage, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 151, Short.MAX_VALUE)
                                                                 .add(generalPreferencesDialogSpinnerApplicationLanguage, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 151, Short.MAX_VALUE)
@@ -1273,6 +1286,10 @@ public class GUI extends FrameView
                                 .add(generalPreferencesDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                                         .add(generalPreferencesDialogImagesSizeLabel)
                                         .add(generalPreferencesDialogSpinnerImagesSize, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                                .add(5, 5, 5)
+                                .add(generalPreferencesDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                                        .add(generalPreferencesDialogImageBordersSizeLabel)
+                                        .add(generalPreferencesDialogSpinnerImageBorderSize, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))        
                                 .add(5, 5, 5)
                                 .add(generalPreferencesDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
 //                    .add(generalPreferencesDialogMaxUndoLevelLabel)
@@ -2098,6 +2115,7 @@ public class GUI extends FrameView
     private void generalPreferencesDialogOKButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_generalPreferencesDialogOKButtonActionPerformed
         G.defaultTextBelowPictogram = ((String)generalPreferencesDialogSpinnerTextPlacement.getSelectedItem()).equals(TLanguage.getString("SPINNER_TEXT_BELOW_PICTOGRAM"));
         G.defaultImagesSize = ((Integer)generalPreferencesDialogSpinnerImagesSize.getValue()).intValue();
+        G.iconsBorderSize = ((Integer)generalPreferencesDialogSpinnerImageBorderSize.getValue()).intValue();
 //    	G.maxLengthCompoundWords = ((Integer)generalPreferencesDialogSpinnerMaxLengthCompoundWords.getValue()).intValue();
 //    	G.maxUndoLevel = ((Integer)generalPreferencesDialogSpinnerMaxUndoLevel.getValue()).intValue();
         G.applicationLanguage = ((String)generalPreferencesDialogSpinnerApplicationLanguage.getSelectedItem());
@@ -2485,6 +2503,7 @@ public class GUI extends FrameView
     private javax.swing.JButton generalPreferencesDialogChooseTextFontButton;
     private javax.swing.JLabel generalPreferencesDialogDocumentLanguageLabel;
     private javax.swing.JLabel generalPreferencesDialogImagesSizeLabel;
+    private javax.swing.JLabel generalPreferencesDialogImageBordersSizeLabel;
     //    private javax.swing.JLabel generalPreferencesDialogMaxLengthCompoundWordsLabel;
 //    private javax.swing.JLabel generalPreferencesDialogMaxUndoLevelLabel;
     private javax.swing.JButton generalPreferencesDialogOKButton;
@@ -2492,6 +2511,7 @@ public class GUI extends FrameView
     private javax.swing.JComboBox generalPreferencesDialogSpinnerApplicationLanguage;
     private javax.swing.JComboBox generalPreferencesDialogSpinnerDocumentLanguage;
     private javax.swing.JSpinner generalPreferencesDialogSpinnerImagesSize;
+    private javax.swing.JSpinner generalPreferencesDialogSpinnerImageBorderSize;
     //    private javax.swing.JSpinner generalPreferencesDialogSpinnerMaxLengthCompoundWords;
 //    private javax.swing.JSpinner generalPreferencesDialogSpinnerMaxUndoLevel;
     private javax.swing.JComboBox generalPreferencesDialogSpinnerTextPlacement;

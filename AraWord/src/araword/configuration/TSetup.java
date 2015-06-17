@@ -6,10 +6,13 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 
 import javax.swing.BorderFactory;
+import javax.swing.border.Border;
 import javax.swing.border.CompoundBorder;
 import javax.swing.border.EmptyBorder;
+import javax.swing.border.LineBorder;
 
 import org.jdom.Document;
 import org.jdom.Element;
@@ -135,9 +138,9 @@ public class TSetup {
             l = list.iterator();
             while(l.hasNext()){
                 Element element = (Element)l.next();
-                String language = element.getText();
-                if (language != null) {
-                    G.defaultImagesSize = Integer.parseInt(language);
+                String imageSize = element.getText();
+                if (imageSize != null) {
+                    G.defaultImagesSize = Integer.parseInt(imageSize);
                 }
             }
 
@@ -181,6 +184,24 @@ public class TSetup {
                 }
             }
 
+            list = preferencesElement.getChildren("iconsBorderSize");
+            l = list.iterator();
+            while(l.hasNext()){
+                Element element = (Element)l.next();
+                String language = element.getText();
+                if (language != null) {
+                    G.iconsBorderSize = Integer.parseInt(language);
+                    if(G.borders != null)
+                    {
+                    	for (Map.Entry<String, Border> entry : G.borders.entrySet())
+                    	{
+                    		LineBorder old = (LineBorder)((CompoundBorder)(entry.getValue())).getInsideBorder();
+                    		entry.setValue(new CompoundBorder(new EmptyBorder(5,5,5,5),BorderFactory.createLineBorder(old.getLineColor(),G.iconsBorderSize)));
+                    	}
+                    }
+                }
+            }
+            
             list = preferencesElement.getChildren("maxLengthCompoundWords");
             l = list.iterator();
             while(l.hasNext()){
@@ -308,7 +329,6 @@ public class TSetup {
             //arasuite ita
             Element tts = new Element("ttsoption");
             tts.addContent(TPropertyReader.getPropertyValue("conf","TTS.conf", G.defaultTTS));         
-
             preferences.addContent(tts);
 
             Element showBorders = new Element("showBorders");
@@ -330,14 +350,17 @@ public class TSetup {
             iconsSize.addContent(Integer.toString(G.iconsSize));
             preferences.addContent(iconsSize);
 
+            //arasuite ita
+            Element iconsBorderSize = new Element("iconsBorderSize");
+            iconsBorderSize.addContent(Integer.toString(G.iconsBorderSize));
+            preferences.addContent(iconsBorderSize);
+            
             Element maxLengthCompoundWords = new Element("maxLengthCompoundWords");
             maxLengthCompoundWords.addContent(Integer.toString(G.maxLengthCompoundWords));
-
             preferences.addContent(maxLengthCompoundWords);
 
             Element maxUndoLevel = new Element("maxUndoLevel");
             maxUndoLevel.addContent(Integer.toString(G.maxUndoLevel));
-
             preferences.addContent(maxUndoLevel);
 
 //			Element pictogramsPathWindows = new Element("pictogramsPathWindows");			
