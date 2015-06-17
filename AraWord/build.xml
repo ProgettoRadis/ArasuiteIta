@@ -8,7 +8,6 @@
 		<antcall target="-clean-all" />
 		<antcall target="-init" />
 		<antcall target="-build" />
-		<antcall target="-bin-zip" />
 	</target>
 	
 	<target name="-clean-all">
@@ -18,12 +17,6 @@
 	<target name="-init">
 		<mkdir dir="${dest-path}" />
 	</target>
-	
-	<target name="-bin-zip">
-        <zip destfile="${dest-path}/araword-bin-${dist-version}.zip">
-            <fileset dir="${dest-path}" />
-        </zip>
-    </target>
 	
     <!--this file was created by Eclipse Runnable JAR Export Wizard-->
     <!--ANT 1.7 is required                                        -->
