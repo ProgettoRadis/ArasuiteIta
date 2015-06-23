@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="create_run_jar" name="Create Runnable Jar for Project TICO">
+	<property file="build.properties"/>
+	
+	<target name="create_run_jar">
+		<antcall target="-clean-all" />
+		<antcall target="-init" />
+		<antcall target="-build" />
+	</target>
+	
+	<target name="-clean-all">
+		<delete dir="${dest-path}" />
+	</target>
+	
+	<target name="-init">
+		<mkdir dir="${dest-path}" />
+	</target>
+	
+	<!--this file was created by Eclipse Runnable JAR Export Wizard-->
+    <!--ANT 1.7 is required                                        -->
+    <target name="-build">
+    	<copy todir="${dest-path}conf">
+    		<fileset dir="conf" />	
+    	</copy>
+    	<copy todir="${dest-path}controller-icons">
+    		<fileset dir="controller-icons" />	
+    	</copy>
+    	<copy todir="${dest-path}doc">
+    		<fileset dir="doc" />	
+    	</copy>
+    	<copy todir="${dest-path}environment">
+    		<fileset dir="environment" />	
+    	</copy>
+    	<copy todir="${dest-path}fonts">
+    		<fileset dir="fonts" />	
+    	</copy>
+    	<copy todir="${dest-path}images">
+    		<fileset dir="images" />	
+    	</copy>
+    	<copy todir="${dest-path}lang">
+    		<fileset dir="lang" />	
+    	</copy>
+    	<copy todir="${dest-path}libs">
+    		<fileset dir="libs" />	
+    	</copy>
+    	<copy todir="${dest-path}templates">
+    		<fileset dir="templates" />	
+    	</copy>
+        <jar destfile="${dest-path}${filename}" filesetmanifest="mergewithoutmain">
+            <manifest>
+                <attribute name="Main-Class" value="tico.TLauncher"/>
+            	<attribute name="Class-Path" value=". ${jar.classpath} ../GalleryManager/GalleryManager.jar"/>
+            </manifest>
+            <fileset dir="./bin"/>
+            <zipfileset excludes="META-INF/*.SF" src="${dest-path}libs/sound/jl1.0.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${dest-path}libs/sound/jogg-0.0.7.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${dest-path}libs/sound/jorbis-0.0.15.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${dest-path}libs/sound/tritonus_jorbis.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${dest-path}libs/sound/tritonus_share.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${dest-path}libs/jgraph.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${dest-path}libs/cgjsapi.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${dest-path}libs/jdom.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${dest-path}libs/dsj.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${dest-path}libs/sqlite/sqlitejdbc-v054.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${dest-path}libs/images/jess.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${dest-path}libs/sound/javalayer.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${dest-path}libs/images/jsr94.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${dest-path}libs/sound/tritonus_mp3.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${dest-path}libs/images/javazoom.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${dest-path}libs/images/jai_core.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${dest-path}libs/images/jai_codec.jar"/>
+        </jar>
+    	<copy todir="${dest-path}" file="LICENSE.txt" />
+    	<copy todir="${dest-path}" file="README.txt" />
+    </target>
+</project>
