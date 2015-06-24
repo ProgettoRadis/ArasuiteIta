@@ -62,11 +62,9 @@
     		<fileset dir="resources" />	
     	</copy>
     	<copy todir="${dest-path}" file="LICENSE.txt" />
+    	<copy todir="${dest-path}" file="Readme.txt" />
     	<copy todir="${dest-path}" file="AraWord.sh" />
-    	<!--
-    		<copy todir="${dest-path}" file="AraWord.exe" />
-    		copy todir="${dest-path}" file="AraWordApp" />
-    	-->
+    	<copy todir="${dest-path}" file="AraWord.exe" />
     	<copy todir="${dest-path}" file=".classpath" />
     </target>
 </project>

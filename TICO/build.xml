@@ -74,5 +74,8 @@
     	<copy todir="${dest-path}" file="README.txt" />
     	<copy todir="${dest-path}" file="TicoInterpreter.sh" />
     	<copy todir="${dest-path}" file="TicoEditor.sh" />
+    	<copy todir="${dest-path}" file="TicoInterprete.exe" />
+    	<copy todir="${dest-path}" file="TicoEditor.exe" />
+    	<copy todir="${dest-path}" file="Tico.exe" />
     </target>
 </project>
