@@ -1,3 +1,3 @@
 #!/bin/bash
 cd /opt/Arasuite/TICO/
-java -jar Tico.jar
+java -jar Tico.jar -e
