@@ -72,5 +72,6 @@
         </jar>
     	<copy todir="${dest-path}" file="LICENSE.txt" />
     	<copy todir="${dest-path}" file="README.txt" />
+    	<copy todir="${dest-path}" file="Tico.sh" />
     </target>
 </project>
