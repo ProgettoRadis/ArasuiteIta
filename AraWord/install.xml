@@ -16,7 +16,7 @@
         The meaning of the tags should be natural ...
     -->
     <info>
-        <appname>InstallationAraword</appname>
+        <appname>ArasuiteIta</appname>
         <appversion>1.0</appversion>
         <authors>
             <author name="Progetto Radis" email="progettoradis@gmail.com"/>
@@ -37,6 +37,7 @@
     <locale>
         <langpack iso3="ita"/>
         <langpack iso3="eng"/>
+		<langpack iso3="spa"/>
     </locale>
 
     <!-- 
@@ -68,11 +69,18 @@
     -->
     <packs>
         <pack name="Arasuite" required="yes">
-            <description>The base files</description>
+            <description>The base files for AraWord Project</description>
             <file src="Readme.txt" targetdir="$INSTALL_PATH"/>
             <file src="LICENSE.txt" targetdir="$INSTALL_PATH"/>
-	    <file src="release" targetdir="$INSTALL_PATH"/>
+	    <file src="AraWord" targetdir="$INSTALL_PATH"/>
 	    <file src="GalleryManager" targetdir="$INSTALL_PATH"/>
+            <!-- The file will be parsed -->
+        </pack>
+        <pack name="TICO" required="yes">
+            <description>The base files for Tico Project</description>
+            <file src="Readme.txt" targetdir="$INSTALL_PATH"/>
+            <file src="LICENSE.txt" targetdir="$INSTALL_PATH"/>
+	    <file src="TICO" targetdir="$INSTALL_PATH"/>
             <!-- The file will be parsed -->
         </pack>
     </packs>
