@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="yes" ?>
+<shortcuts>
+  <skipIfNotSupported/>
+
+  <programGroup defaultName="Arasuite"
+                location="applications"/>
+
+  <shortcut
+    name="Araword"
+    target="$INSTALL_PATH\AraWord\AraWord.exe"
+    commandLine=""
+    workingDirectory="$INSTALL_PATH"
+    description="Esegui AraWord"
+    initialState="normal"
+    programGroup="yes"
+    desktop="yes"
+    iconFile="$INSTALL_PATH/AraWord/resources/logo.ico"
+    applications="yes"
+    startMenu="no"
+    startup="no">
+  </shortcut>
+
+  <shortcut
+    name="Tico Editor"
+    target="$INSTALL_PATH\TICO\TicoEditor.exe"
+    commandLine=""
+    workingDirectory="$INSTALL_PATH"
+    description="Esegui Tico Editor"
+    initialState="normal"
+    programGroup="yes"
+    desktop="yes"
+    iconFile="$INSTALL_PATH/TICO/resources/tico.ico"
+    applications="yes"
+    startMenu="no"
+    startup="no">
+  </shortcut>
+
+  <shortcut
+    name="Tico Interprete"
+    target="$INSTALL_PATH\TICO\TicoInterprete.exe"
+    commandLine=""
+    workingDirectory="$INSTALL_PATH"
+    description="Esegui Tico Interprete"
+    initialState="normal"
+    programGroup="yes"
+    desktop="yes"
+    iconFile="$INSTALL_PATH/TICO/resources/TicoInterpreterIco.ico"
+    applications="yes"
+    startMenu="no"
+    startup="no">
+  </shortcut>
+
+  <shortcut
+    name="Uninstall"
+    target="$INSTALL_PATH/Uninstaller.exe"
+    commandLine=""
+    workingDirectory="$INSTALL_PATH"
+    description="Uninstall Arasuite"
+    initialState="normal"
+    programGroup="yes"
+    desktop="no"
+    iconFile = "$INSTALL_PATH/AraWord/resources/Arasuite-uninstaller.ico"
+    applications="no"
+    startMenu="no"
+    startup="no">
+  </shortcut>
+
+</shortcuts>

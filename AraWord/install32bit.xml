@@ -47,8 +47,9 @@
     <resources>
         <res id="LicencePanel.licence" src="LICENSE.txt"/>
         <res id="InfoPanel.info" src="Readme.txt"/>
+        <res src="Windows_shortcut_spec.xml" id="shortcutSpec.xml"/>
     </resources>
-
+	<native type="izpack" name="ShellLink.dll" />
     <!-- 
         The panels section.
         We indicate here which panels we want to use. The order will be respected.
@@ -60,6 +61,7 @@
         <panel classname="TargetPanel"/>
         <panel classname="PacksPanel"/>
         <panel classname="InstallPanel"/>
+        <panel classname="ShortcutPanel"/>
         <panel classname="FinishPanel"/>
     </panels>
 
@@ -72,8 +74,9 @@
             <description>The base files for AraWord Project</description>
             <file src="Readme.txt" targetdir="$INSTALL_PATH"/>
             <file src="LICENSE.txt" targetdir="$INSTALL_PATH"/>
-	    <file src="AraWord" targetdir="$INSTALL_PATH"/>
-	    <file src="GalleryManager" targetdir="$INSTALL_PATH"/>
+		    <file src="AraWord" targetdir="$INSTALL_PATH"/>
+		    <file src="GalleryManager" targetdir="$INSTALL_PATH"/>
+		    <file src="Uninstaller.exe" targetdir="$INSTALL_PATH"/>
             <!-- The file will be parsed -->
         </pack>
         <pack name="TICO" required="yes">
@@ -84,5 +87,5 @@
             <!-- The file will be parsed -->
         </pack>
     </packs>
-
+    
 </installation>

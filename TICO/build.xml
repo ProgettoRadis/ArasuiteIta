@@ -40,6 +40,9 @@
     	<copy todir="${dest-path}lang">
     		<fileset dir="lang" />	
     	</copy>
+    	<copy todir="${dest-path}resources">
+    		<fileset dir="resources" />	
+    	</copy>
     	<copy todir="${dest-path}libs">
     		<fileset dir="libs" />	
     	</copy>
@@ -77,5 +80,7 @@
     	<copy todir="${dest-path}" file="TicoInterprete.exe" />
     	<copy todir="${dest-path}" file="TicoEditor.exe" />
     	<copy todir="${dest-path}" file="Tico.exe" />
+    	<copy todir="${dest-path}" file="resources/tico.ico" />
+    	<copy todir="${dest-path}" file="resources/TicoInterpreterIco.ico" />
     </target>
 </project>
