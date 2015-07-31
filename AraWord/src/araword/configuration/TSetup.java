@@ -184,19 +184,35 @@ public class TSetup {
                 }
             }
 
+            //arasuite ita
+            Color iconBorderColor = null;
+            list = preferencesElement.getChildren("iconsBorderColor");
+            l = list.iterator();
+            while(l.hasNext()){
+                Element color = (Element)l.next();
+                Element r = color.getChild("r");
+                int red = Integer.parseInt(r.getText());
+                Element g = color.getChild("g");
+                int green = Integer.parseInt(g.getText());
+                Element b = color.getChild("b");
+                int blue = Integer.parseInt(b.getText());
+                
+                iconBorderColor = new Color(red,green,blue);
+            }
+            
+            //arasuite ita
             list = preferencesElement.getChildren("iconsBorderSize");
             l = list.iterator();
             while(l.hasNext()){
                 Element element = (Element)l.next();
-                String language = element.getText();
-                if (language != null) {
-                    G.iconsBorderSize = Integer.parseInt(language);
+                String borderSize = element.getText();
+                if (borderSize != null) {
+                    G.iconsBorderSize = Integer.parseInt(borderSize);
                     if(G.borders != null)
                     {
                     	for (Map.Entry<String, Border> entry : G.borders.entrySet())
                     	{
-                    		LineBorder old = (LineBorder)((CompoundBorder)(entry.getValue())).getInsideBorder();
-                    		entry.setValue(new CompoundBorder(new EmptyBorder(5,5,5,5),BorderFactory.createLineBorder(old.getLineColor(),G.iconsBorderSize)));
+                    		entry.setValue(new CompoundBorder(new EmptyBorder(5,5,5,5),BorderFactory.createLineBorder(iconBorderColor,G.iconsBorderSize)));
                     	}
                     }
                 }
@@ -350,6 +366,36 @@ public class TSetup {
             iconsSize.addContent(Integer.toString(G.iconsSize));
             preferences.addContent(iconsSize);
 
+            //arasuite ita
+            Element iconsBorderColor = new Element("iconsBorderColor");
+            Element rBorderColor = new Element("r");
+            Element gBorderColor = new Element("g");
+            Element bBorderColor = new Element("b");
+            if(G.borders != null)
+            {
+            	for (Map.Entry<String, Border> entry : G.borders.entrySet())
+            	{
+            		
+            		LineBorder border = (LineBorder)((CompoundBorder)(entry.getValue())).getInsideBorder();
+            		Color borderColor = border.getLineColor();
+                    rBorderColor.addContent(Integer.toString(borderColor.getRed()));
+                    gBorderColor.addContent(Integer.toString(borderColor.getGreen()));
+                    bBorderColor.addContent(Integer.toString(borderColor.getBlue()));
+            		//I stop at the first iteration because I assume all the colors will be the same
+            		break;
+            	}
+            }
+            else
+            {//set default color to black
+                rBorderColor.addContent("0");
+                gBorderColor.addContent("0");
+                bBorderColor.addContent("0");
+            }
+            iconsBorderColor.addContent(rBorderColor);
+            iconsBorderColor.addContent(gBorderColor);
+            iconsBorderColor.addContent(bBorderColor);
+            preferences.addContent(iconsBorderColor);
+            
             //arasuite ita
             Element iconsBorderSize = new Element("iconsBorderSize");
             iconsBorderSize.addContent(Integer.toString(G.iconsBorderSize));
