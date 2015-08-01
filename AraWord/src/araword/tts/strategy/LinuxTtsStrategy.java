@@ -1,7 +1,8 @@
 package araword.tts.strategy;
 
-import java.io.DataOutputStream;
+import java.io.BufferedWriter;
 import java.io.IOException;
+import java.io.OutputStreamWriter;
 
 import araword.G;
 
@@ -28,9 +29,11 @@ public class LinuxTtsStrategy implements TtsStrategy {
 				
 				try {
 					p = r.exec("/bin/bash");
-					DataOutputStream dos = new DataOutputStream(p.getOutputStream());
-					dos.writeBytes(command+((char)10)+((char)13));
-					dos.flush();
+					
+					BufferedWriter bw = new BufferedWriter(
+							  new OutputStreamWriter(p.getOutputStream(), "UTF-8"));
+							bw.write(command+((char)10)+((char)13));
+							bw.flush();
 				} catch (IOException e) {
 					e.printStackTrace();
 				}
