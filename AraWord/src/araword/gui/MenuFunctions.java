@@ -24,14 +24,16 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Enumeration;
-import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Random;
+import java.util.zip.ZipEntry;
+import java.util.zip.ZipFile;
+import java.util.zip.ZipOutputStream;
 
 import javax.swing.ImageIcon;
 import javax.swing.JDialog;
 import javax.swing.JFileChooser;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JProgressBar;
 import javax.swing.JScrollPane;
@@ -47,32 +49,23 @@ import org.jdom.output.Format;
 import org.jdom.output.XMLOutputter;
 import org.xml.sax.InputSource;
 
-import araword.tts.strategy.GoogleTtsStrategy;
-import araword.utils.TFileHandler;
 import araword.G;
 import araword.classes.AWElement;
 import araword.classes.AWTextField;
 import araword.configuration.TLanguage;
 import araword.db.DBManagement;
 import araword.utils.ScreenImage;
+import araword.utils.TFileHandler;
 import araword.utils.TextUtils;
 
-import com.itextpdf.text.Header;
 import com.itextpdf.text.PageSize;
-import com.itextpdf.text.Phrase;
 import com.itextpdf.text.Rectangle;
-import com.itextpdf.text.pdf.ColumnText;
 import com.itextpdf.text.pdf.PdfContentByte;
-import com.itextpdf.text.pdf.PdfPageEventHelper;
 import com.itextpdf.text.pdf.PdfWriter;
 
 import database.DB;
-import database.DBTasks;
+import dialogs.InsertWordImageFrame;
 import dialogs.mainFrame;
-
-import java.util.zip.ZipEntry;
-import java.util.zip.ZipFile;
-import java.util.zip.ZipOutputStream;
 
 public class MenuFunctions {
 	
@@ -1595,6 +1588,20 @@ public class MenuFunctions {
     		G.activeElement.setSearchImageOnBD(false);
     		G.activeElement.setWordSearchBD(G.activeElement.getTextField().getText());
     	}
+    }
+    
+    public static void pictogramNewName() {
+    	String imageName = G.activeElement.getImageName();
+    	String newTextImage = G.activeElement.getTextField().getText();
+    	JLabel image = new JLabel(G.activeElement.getImage().getIcon());
+    	
+    	if(!newTextImage.equals("") && !imageName.equals(""))
+    		G.activeElement.setWordSearchBD(newTextImage);
+    	
+    	InsertWordImageFrame f = new InsertWordImageFrame(G.applicationLanguage, image, newTextImage);
+    	f.setImageName(imageName);
+        f.setVisible(true);
+        f.pack();
     }
     
     public static void pictogramInsertImage() {

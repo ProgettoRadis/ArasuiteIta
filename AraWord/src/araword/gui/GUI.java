@@ -39,7 +39,6 @@ import javax.swing.WindowConstants;
 import javax.swing.border.Border;
 import javax.swing.border.CompoundBorder;
 import javax.swing.border.EmptyBorder;
-import javax.swing.border.LineBorder;
 import javax.swing.border.TitledBorder;
 
 import org.jdesktop.application.FrameView;
@@ -131,6 +130,12 @@ public class GUI extends FrameView {
 					new ImageIcon("resources" + File.separator + "imgToolbar"
 							+ File.separator + iconsPath + File.separator
 							+ "pictograms-change-name.png").getImage()
+							.getScaledInstance(G.iconsSize, G.iconsSize,
+									java.awt.Image.SCALE_SMOOTH)));
+			toolBarButtonPictogramsNewName.setIcon(new ImageIcon(
+					new ImageIcon("resources" + File.separator + "imgToolbar"
+							+ File.separator + iconsPath + File.separator
+							+ "pictograms-add-name.png").getImage()
 							.getScaledInstance(G.iconsSize, G.iconsSize,
 									java.awt.Image.SCALE_SMOOTH)));
 			toolBarButtonPictogramsInsertImage.setIcon(new ImageIcon(
@@ -293,6 +298,11 @@ public class GUI extends FrameView {
 				.getString("PICTOGRAMS_MENU_COMPOUND_SPLIT_WORD"));
 		menuPictogramsChangeName.setText(TLanguage
 				.getString("PICTOGRAMS_MENU_CHANGE_NAME"));
+		
+		//TODO Mauri
+		menuPictogramsNewName.setText(TLanguage
+				.getString("PICTOGRAMS_MENU_NEW_NAME"));
+		
 		menuPictogramsInsertImage.setText(TLanguage
 				.getString("TOOLS_MENU_RESOURCE_MANAGER"));
 		menuVoiceSintesys.setText(TLanguage
@@ -451,6 +461,8 @@ public class GUI extends FrameView {
 				.setToolTipText(menuPictogramsCompoundSplitWord.getText());
 		toolBarButtonPictogramsChangeName
 				.setToolTipText(menuPictogramsChangeName.getText());
+		toolBarButtonPictogramsNewName
+		.setToolTipText(menuPictogramsNewName.getText());
 		toolBarButtonPictogramsInsertImage
 				.setToolTipText(menuPictogramsInsertImage.getText());
 		toolBarButtonVoiceSintesys.setToolTipText(menuVoiceSintesys.getText());
@@ -586,6 +598,7 @@ public class GUI extends FrameView {
 		menuPictogramsNextImage = new javax.swing.JMenuItem();
 		menuPictogramsCompoundSplitWord = new javax.swing.JMenuItem();
 		menuPictogramsChangeName = new javax.swing.JMenuItem();
+		menuPictogramsNewName = new javax.swing.JMenuItem();
 		menuPictogramsInsertImage = new javax.swing.JMenuItem();
 		menuVoiceSintesys = new javax.swing.JMenuItem();
 		menuPictogramsShow = new javax.swing.JMenu();
@@ -666,6 +679,7 @@ public class GUI extends FrameView {
 		toolBarButtonPictogramsNextImage = new javax.swing.JButton();
 		toolBarButtonPictogramsCompoundSplitWord = new javax.swing.JButton();
 		toolBarButtonPictogramsChangeName = new javax.swing.JButton();
+		toolBarButtonPictogramsNewName = new javax.swing.JButton();
 		toolBarButtonPictogramsInsertImage = new javax.swing.JButton();
 		toolBarButtonVoiceSintesys = new javax.swing.JButton();
 		documentLanguageDialog = new javax.swing.JDialog();
@@ -1060,6 +1074,19 @@ public class GUI extends FrameView {
 					}
 				});
 		menuPictograms.add(menuPictogramsChangeName);
+		
+		menuPictogramsNewName.setText(resourceMap
+				//TODO Mauri
+				.getString("menuPictogramsNewName.text")); // NOI18N
+		menuPictogramsNewName.setName("menuPictogramsNewName"); // NOI18N
+		menuPictogramsNewName
+				.addActionListener(new java.awt.event.ActionListener() {
+					public void actionPerformed(java.awt.event.ActionEvent evt) {
+						menuPictogramsChangeNameActionPerformed(evt);
+					}
+				});
+		menuPictograms.add(menuPictogramsNewName);
+
 
 		menuPictogramsShow.setText(resourceMap
 				.getString("menuPictogramsShow.text")); // NOI18N
@@ -2021,9 +2048,29 @@ public class GUI extends FrameView {
 				.addActionListener(new java.awt.event.ActionListener() {
 					public void actionPerformed(java.awt.event.ActionEvent evt) {
 						toolBarButtonPictogramsChangeNameActionPerformed(evt);
+						toolBarButtonPictogramsNewName.setEnabled(true);
 					}
 				});
 		toolBar.add(toolBarButtonPictogramsChangeName);
+		
+		toolBarButtonPictogramsNewName.setText(resourceMap
+				.getString("toolBarButtonPictogramsNewName.text")); // NOI18N
+		toolBarButtonPictogramsNewName.setFocusable(false);
+		toolBarButtonPictogramsNewName
+				.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+		toolBarButtonPictogramsNewName
+				.setName("toolBarButtonPictogramsNewName"); // NOI18N
+		toolBarButtonPictogramsNewName
+				.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+		toolBarButtonPictogramsNewName
+				.addActionListener(new java.awt.event.ActionListener() {
+					public void actionPerformed(java.awt.event.ActionEvent evt) {
+						toolBarButtonPictogramsNewNameActionPerformed(evt);
+						toolBarButtonPictogramsNewName.setEnabled(false);
+					}
+				});
+		toolBarButtonPictogramsNewName.setEnabled(false);
+		toolBar.add(toolBarButtonPictogramsNewName);
 
 		toolBarButtonPictogramsInsertImage.setText(resourceMap
 				.getString("toolBarButtonPictogramsChangeName.text")); // NOI18N
@@ -3014,6 +3061,11 @@ public class GUI extends FrameView {
 		MenuFunctions.pictogramChangeName();
 	}// GEN-LAST:event_toolBarButtonPictogramsChangeNameActionPerformed
 
+	private void toolBarButtonPictogramsNewNameActionPerformed(
+			java.awt.event.ActionEvent evt) {// GEN-FIRST:event_toolBarButtonPictogramsChangeNameActionPerformed
+		MenuFunctions.pictogramNewName();
+	}
+	
 	private void toolBarButtonPictogramsInsertImageActionPerformed(
 			java.awt.event.ActionEvent evt) {// GEN-FIRST:event_toolBarButtonPictogramsInsertImageActionPerformed
 		MenuFunctions.pictogramInsertImage();
@@ -3368,6 +3420,7 @@ public class GUI extends FrameView {
 	private javax.swing.JMenuItem menuHelpShowHelp;
 	private javax.swing.JMenu menuPictograms;
 	private javax.swing.JMenuItem menuPictogramsChangeName;
+	private javax.swing.JMenuItem menuPictogramsNewName;
 	private javax.swing.JMenuItem menuPictogramsCompoundSplitWord;
 	private javax.swing.JMenuItem menuPictogramsInsertImage;
 	private javax.swing.JMenuItem menuVoiceSintesys;
@@ -3415,6 +3468,7 @@ public class GUI extends FrameView {
 	private javax.swing.JButton toolBarButtonFileOpen;
 	private javax.swing.JButton toolBarButtonFileSave;
 	private javax.swing.JButton toolBarButtonPictogramsChangeName;
+	private javax.swing.JButton toolBarButtonPictogramsNewName;
 	private javax.swing.JButton toolBarButtonPictogramsInsertImage;
 	private javax.swing.JButton toolBarButtonPictogramsCompoundSplitWord;
 	private javax.swing.JButton toolBarButtonPictogramsNextImage;
