@@ -543,7 +543,7 @@ public class DBManagement {
 					 */
 					ResultSet rs3 = conn
 							.query("select * from main where word LIKE \""
-									+ wordBBDD + "\" and idL = " + idL
+									+ wordBBDD.replace("'", "''") + "\" and idL = " + idL
 									+ " order by idT");
 					int idT = 0;
 
