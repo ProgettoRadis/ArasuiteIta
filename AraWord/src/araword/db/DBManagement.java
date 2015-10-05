@@ -543,8 +543,8 @@ public class DBManagement {
 					 * + wordBBDD + "\" and idL = " + idL + " order by idT");
 					 */
 					ResultSet rs3 = conn
-							.query("select * from main where word LIKE \""
-									+ wordBBDD.replace("'", "''") + "\" and idL = " + idL
+							.query("select * from main where word LIKE '"
+									+ wordBBDD.replace("'", "''") + "' and idL = " + idL
 									+ " order by idT");
 					int idT = 0;
 
@@ -860,7 +860,7 @@ public class DBManagement {
 				
 					// CHECK image candidates for this word
 					String query = "SELECT GROUP_CONCAT(main.word) AS terms, main.nameNN AS name FROM main WHERE main.name IN (SELECT main.name FROM main WHERE word LIKE '"
-							+ word
+							+ word.replace("'", "''")
 							+ "' AND idL = (SELECT id FROM language WHERE name LIKE '"
 							+ language + "')) GROUP BY main.name";
 					try {
