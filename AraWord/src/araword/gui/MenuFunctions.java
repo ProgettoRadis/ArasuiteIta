@@ -1411,7 +1411,7 @@ public class MenuFunctions {
     		ArrayList<String> paths = new ArrayList<String>();
 	        //Statement stat = G.conn.createStatement();   
 	        
-	        ResultSet rs = DB.getInstance().query("select * from ArawordView where word=\""+str+"\"");
+	        ResultSet rs = DB.getInstance().query("select * from ArawordView where word='"+str.replace("'", "''")+"'");
 	        while (rs.next()) {
 	            String name = rs.getString("name");
 	            paths.add(name);
@@ -1419,10 +1419,10 @@ public class MenuFunctions {
 	        if (G.documentLanguage.equals("Castellano")) {
 	        	// If it's a form of some verb, return the verb.
 	        	Statement statAux = G.connVerbsDB.createStatement();
-	        	ResultSet rsAux = statAux.executeQuery("select * from verbs where form=\""+str+"\"");
+	        	ResultSet rsAux = statAux.executeQuery("select * from verbs where form='"+str.replace("'", "''")+"'");
 		        if (rsAux.next()) {
 		        	String verb = rsAux.getString("verb");
-		        	rs = DB.getInstance().query("select * from ArawordView where word=\""+verb+"\"");
+		        	rs = DB.getInstance().query("select * from ArawordView where word='"+verb.replace("'", "''")+"'");
 		        	while (rs.next()) {
 		        		String name = rs.getString("name");
 		        		paths.add(name);

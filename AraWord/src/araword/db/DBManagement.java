@@ -152,7 +152,7 @@ public class DBManagement {
             }
 
             ArrayList<tempClass> paths = new ArrayList<tempClass>();
-            String query = "select * from ArawordView where word=\""+str+"\"";
+            String query = "select * from ArawordView where word='"+str.replace("'", "''")+"'";
             ResultSet rs = DB.getInstance().query(query);
             while (rs.next()) {
                 String name = rs.getString("name");
@@ -175,12 +175,13 @@ public class DBManagement {
 			if (dataBase.exists()) {
                 //If it's a form of some verb, return the verb.
                 Statement statAux = G.connVerbsDB.createStatement();
-                ResultSet rsAux = statAux.executeQuery("select * from verbs where form='"+str+"'");
+                statAux.setEscapeProcessing(true);
+                ResultSet rsAux = statAux.executeQuery("select * from verbs where form='"+str.replace("'", "''")+"'");
                 
                 while (rsAux.next()) {
                     String verb = rsAux.getString("verb");
                     System.out.println("VERB="+ verb);
-                    rs = DB.getInstance().query("select * from ArawordView where word=\""+verb+"\"");
+                    rs = DB.getInstance().query("select * from ArawordView where word='"+verb.replace("'", "''")+"'");
                  
                     while (rs.next()) {
                         //System.out.println("uno6");
@@ -272,7 +273,7 @@ public class DBManagement {
             }
 
             ArrayList<String> paths = new ArrayList<String>();
-            String query = "select * from ArawordView where word=\""+str+"\"";
+            String query = "select * from ArawordView where word='"+str.replace("'", "''")+"'";
             ResultSet rs = DB.getInstance().query(query);
             while (rs.next()) {
                 String name = rs.getString("name");
@@ -292,12 +293,12 @@ public class DBManagement {
 				
                 Statement statAux = G.connVerbsDB.createStatement();
                 
-                ResultSet rsAux = statAux.executeQuery("select * from verbs where form='"+str+"'");
+                ResultSet rsAux = statAux.executeQuery("select * from verbs where form='"+str.replace("'", "''")+"'");
                 
                 while (rsAux.next()) {
                     String verb = rsAux.getString("verb");
                     
-                    rs = DB.getInstance().query("select * from ArawordView where word=\""+verb+"\"");
+                    rs = DB.getInstance().query("select * from ArawordView where word='"+verb.replace("'", "''")+"'");
                  
                     while (rs.next()) {
                        
