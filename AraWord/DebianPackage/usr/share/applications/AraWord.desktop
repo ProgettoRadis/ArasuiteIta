@@ -1,0 +1,8 @@
+[Desktop Entry]
+Comment=AraWord
+Terminal=false
+Name=AraWord
+Exec=sh /opt/Arasuite/AraWord/AraWord.sh
+Categories=Education
+Type=Application
+Icon=/usr/share/icons/Arasuite/logoSmall.png

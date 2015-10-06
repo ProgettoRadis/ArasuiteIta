@@ -1,0 +1,9 @@
+[Desktop Entry]
+Comment=TICO
+Terminal=false
+Name=TICO
+Exec=sh /opt/Arasuite/TICO/TicoInterpreter.sh
+Categories=Education
+Type=Application
+Icon=/usr/share/icons/Arasuite/tico-editor-icon.png
+Name[it_IT]=Tico_Interprete
