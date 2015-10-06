@@ -1,0 +1,15 @@
+Arasuite - contains 
+	ARAWORD an application is a text processor for augmentative communication that allows writing, in automatic, text and pictograms facilitating the 		processing of materials and the adaptation of texts for people who have difficulties in communication functional
+
+	TICO an application to create and perform interactive communication
+       	boards to be used by people with severe motor disabilities.
+
+Change-log file
+
+1.0.0 06-2015 
+    * Added new Voice sinthesizer (windows, linux, Apple), with the choose in menu preference
+    * Added wildchar in selection pictogram for the export
+    * Added the ability to change the size of the box
+
+
+

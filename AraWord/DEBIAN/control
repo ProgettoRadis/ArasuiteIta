@@ -1,0 +1,10 @@
+Package: arasuiteita
+Version: 1.0
+Priority: optional
+Section: base
+Depends: libttspico0,libttspico-utils,libttspico-data
+Architecture: all
+Maintainer: Progetto Radis [progettoradis@gmail.com]
+Description: Arasuite, tool per comunicazione aumentativa
+Homepage: http://www.progettoradis.it
+Installed-size: 86016
