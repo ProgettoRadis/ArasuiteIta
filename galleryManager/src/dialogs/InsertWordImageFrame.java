@@ -71,8 +71,8 @@ public class InsertWordImageFrame extends JFrame {
 		
 		JLabel text = new JLabel();
 		this.newTextImage = textImage;
-		//TODO Mauri
-		text.setText("Sar√† inserito il termine \"" + newTextImage
+
+		text.setText("Sar‡† inserito il termine \"" + newTextImage
 				+ "\" all'immagine ");
 		panel.add(text);
 		
