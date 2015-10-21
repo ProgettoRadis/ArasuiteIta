@@ -3,7 +3,7 @@
 ArasuiteIta e' una Fork del progetto Arasuite 
 (http://www.proyectotico.com/) sviluppato dal Dipartimento di
  Informatica e Ingegneria dell'Universita' di Saragoza, in
- collaborazione con il CPEE Alborada (Colegio Público de Educación
+ collaborazione con il CPEE Alborada (Colegio Publico de Educacion
  Especial di Saragoza) e con il Centro Aragonese di Tecnologia per
  l'Educazione (CATEDU) 
 (http://www.catedu.es/arasaac/software.php?id_software=2), 
