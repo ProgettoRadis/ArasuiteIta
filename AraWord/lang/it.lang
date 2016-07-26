@@ -110,10 +110,10 @@ IMAGES_SIZE_DIALOG_TITLE=Dimensione Immagini
 IMAGES_SIZE_DIALOG_IMAGES_SIZE_LABEL=Dimensione Immagini
 
 UNABLE_DELETE_ALL_TEXT=Cancellazione di tutto il testo non consentita 
-ARAWORD_DOCUMENTS=Documents AraWord
-PDF_FILES=PDF Files
-BMP_FILES=BMP Files
-JPG_FILES=JPG Files
+ARAWORD_DOCUMENTS=Documenti AraWord
+PDF_FILES=File PDF
+BMP_FILES=File BMP
+JPG_FILES=File JPG
 
 SPINNER_TEXT_BELOW_PICTOGRAM=Sotto il pittogramma
 SPINNER_TEXT_ABOVE_PICTOGRAM=Sopra il pittogramma
@@ -142,6 +142,7 @@ TOOLS_MENU_VOICE_SINTESYS=Sintesi Vocale
 CUSTOM_DESEA_ADD_PICTO=Desideri aggungere questo nuovo simbolo?
 CUSTOM_IMPORTAR=Importa
 CUSTOM_RECHAZAR=Abbandona
+ESPERA=Attendi
 
 //----------------------------------------------------
 //Import custom picto
