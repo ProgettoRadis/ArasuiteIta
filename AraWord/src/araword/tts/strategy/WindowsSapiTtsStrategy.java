@@ -2,6 +2,10 @@ package araword.tts.strategy;
 
 import java.io.IOException;
 
+/**
+ * @author Maurizio Mazzotta
+ * @author Sebastiano Pera
+ */
 public class WindowsSapiTtsStrategy implements TtsStrategy {
 
     @Override
@@ -30,5 +34,11 @@ public class WindowsSapiTtsStrategy implements TtsStrategy {
 
     @Override
     public void setCurrentVoice() {}
+
+    @Override
+    public void setSpeechRate(final String speechRate) {
+        // TODO to be implemented
+        throw new UnsupportedOperationException();
+    }
 
 }

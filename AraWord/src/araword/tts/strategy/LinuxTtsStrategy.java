@@ -6,6 +6,10 @@ import java.io.OutputStreamWriter;
 
 import araword.G;
 
+/**
+ * @author Maurizio Mazzotta
+ * @author Sebastiano Pera
+ */
 public class LinuxTtsStrategy implements TtsStrategy {
 
 	private String voiceName;
@@ -63,6 +67,12 @@ public class LinuxTtsStrategy implements TtsStrategy {
 		if (G.defaultDocumentLanguage.equals("Portugues Brasis")) code="pt-BR";
 
 		return code;
+	}
+
+	@Override
+	public void setSpeechRate(final String speechRate) {
+		// TODO to be implemented
+		throw new UnsupportedOperationException();
 	}
 
 }

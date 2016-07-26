@@ -13,32 +13,13 @@ import java.util.logging.Logger;
 import araword.G;
 import araword.utils.TInterpreterGoogleTTS;
 import araword.utils.TInterpreterMp3Sound;
+import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 public class GoogleTtsStrategy implements TtsStrategy {
 
 	private String voiceName;
 
-	@Override
-	public void setCurrentVoice() {
-		this.voiceName = translateLanguage();
-	}
-
-	private String translateLanguage() {
-		String code="ES_ES";
-		if (G.defaultDocumentLanguage.equals("Castellano")) code="ES_ES";
-		if (G.defaultDocumentLanguage.equals("Ingles")) code="EN";
-		if (G.defaultDocumentLanguage.equals("Catalan")) code="ES";
-		if (G.defaultDocumentLanguage.equals("Euskera")) code="ES";
-		if (G.defaultDocumentLanguage.equals("Gallego")) code="ES";
-		if (G.defaultDocumentLanguage.equals("Aleman")) code="DE";
-		if (G.defaultDocumentLanguage.equals("Frances")) code="FR";
-		if (G.defaultDocumentLanguage.equals("Italiano")) code="IT";
-		if (G.defaultDocumentLanguage.equals("Portugues")) code="PT";
-		if (G.defaultDocumentLanguage.equals("Portugues Brasis")) code="PT_BR";
-
-		return code;
-	}
-
+	private String speechRate;
 
 	public void play(String textToSpeech) {
 
@@ -129,6 +110,33 @@ public class GoogleTtsStrategy implements TtsStrategy {
 
 		Thread t = new Thread(new CommanderTTS(textToSpeech));
 		t.start();
+	}
+
+	@Override
+	public void setCurrentVoice() {
+		this.voiceName = translateLanguage();
+	}
+
+	private String translateLanguage() {
+		String code="ES_ES";
+		if (G.defaultDocumentLanguage.equals("Castellano")) code="ES_ES";
+		if (G.defaultDocumentLanguage.equals("Ingles")) code="EN";
+		if (G.defaultDocumentLanguage.equals("Catalan")) code="ES";
+		if (G.defaultDocumentLanguage.equals("Euskera")) code="ES";
+		if (G.defaultDocumentLanguage.equals("Gallego")) code="ES";
+		if (G.defaultDocumentLanguage.equals("Aleman")) code="DE";
+		if (G.defaultDocumentLanguage.equals("Frances")) code="FR";
+		if (G.defaultDocumentLanguage.equals("Italiano")) code="IT";
+		if (G.defaultDocumentLanguage.equals("Portugues")) code="PT";
+		if (G.defaultDocumentLanguage.equals("Portugues Brasis")) code="PT_BR";
+
+		return code;
+	}
+
+	@Override
+	public void setSpeechRate(final String speechRate) {
+		// TODO to be implemented
+		throw new NotImplementedException();
 	}
 
 }

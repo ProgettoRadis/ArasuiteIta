@@ -1,30 +1,44 @@
 package araword.tts.strategy;
 
+import sun.reflect.generics.reflectiveObjects.NotImplementedException;
+
 import java.io.IOException;
 
 /**
- * Created by Davide Monfrecola on 17/04/15.
+ * @author Davide Monfrecola
  */
 public class AppleTtsStrategy implements TtsStrategy {
 
-    // TODO get voice name from XML configuration file
     private String voiceName = "Alice";
+
+    private String speechRate = "200";
 
     @Override
     public void play(final String text) {
 
         class CommanderTTS implements Runnable {
 
-            String textToSpeech;
+            private String textToSpeech;
 
-            CommanderTTS(String t) { this.textToSpeech = t; }
+            private String voiceName;
+
+            private String speechRate;
+
+
+            CommanderTTS(final String text, final String voiceName, final String speechRate) {
+                this.textToSpeech = text;
+                this.voiceName = voiceName;
+                this.speechRate = speechRate;
+            }
 
             public void run() {
                 try {
                     StringBuilder command = new StringBuilder("say -v ");
                     command.append(voiceName);
-                    command.append(" ");
+                    command.append(" \"");
                     command.append(this.textToSpeech);
+                    command.append("\" -r ");
+                    command.append(speechRate);
 
                     Runtime.getRuntime().exec(command.toString());
                 } catch (IOException e) {
@@ -34,13 +48,18 @@ public class AppleTtsStrategy implements TtsStrategy {
             }
         }
 
-        Thread t = new Thread(new CommanderTTS(text));
+        Thread t = new Thread(new CommanderTTS(text, voiceName, speechRate));
         t.start();
     }
 
     @Override
     public void setCurrentVoice() {
-        this.voiceName = "";
+        this.voiceName = "Alice";
+    }
+
+    @Override
+    public void setSpeechRate(final String speechRate) {
+        this.speechRate = speechRate;
     }
 
 }
