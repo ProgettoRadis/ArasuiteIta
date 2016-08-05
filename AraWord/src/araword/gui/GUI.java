@@ -380,6 +380,8 @@ public class GUI extends FrameView {
 				.getString("GENERAL_PREFERENCES_DIALOG_TEXT_PLACEMENT_LABEL"));
 		generalPreferencesDialogTTSLabel.setText(TLanguage
 				.getString("GENERAL_PREFERENCES_DIALOG_TTS"));
+		generalPreferencesDialogTTSRateLabel.setText(TLanguage
+				.getString("GENERAL_PREFERENCES_DIALOG_TTS_RATE"));
 		generalPreferencesDialogOKButton.setText(TLanguage.getString("OK"));
 		generalPreferencesDialogCancelButton.setText(TLanguage
 				.getString("CANCEL"));
@@ -510,26 +512,35 @@ public class GUI extends FrameView {
 						.addItem(textPlacement[i]);
 			}
 
-		SpinnerModel modeltts = new SpinnerListModel(G.ttsOptions);
+		
 		((DefaultComboBoxModel) generalPreferencesDialogSpinnerTTS.getModel())
 				.removeAllElements();
+		generalPreferencesDialogSpinnerTTS.removeAllItems();
+		
 		if (generalPreferencesDialogSpinnerTTS.getItemCount() == 0)
+		{
 			for (int i = 0; i < G.ttsOptions.length; i++) {
 				generalPreferencesDialogSpinnerTTS.addItem(G.ttsOptions[i]);
-
+			}
+			
+			for (int i = 0; i < G.ttsOptions.length; i++) {
 				try {
 					if (G.ttsOptions[i].equalsIgnoreCase(TPropertyReader
 							.getPropertyValue("conf", "TTSreverse.conf",
 									G.defaultTTS))) {
 						generalPreferencesDialogSpinnerTTS.setSelectedIndex(i);
+						System.out.println("gavullo");
+						break;
 					}
 				} catch (IOException e) {
-					generalPreferencesDialogSpinnerTTS.setSelectedIndex(0);
+					//generalPreferencesDialogSpinnerTTS.setSelectedIndex(0);
 					e.printStackTrace();
 				}
-
 			}
-
+			
+		}
+		generalPreferencesDialogTTSRateSlider.setValue(G.ttsRate);
+		
 		generalPreferencesDialogSpinnerImagesSize.setValue(G.defaultImagesSize);
 		generalPreferencesDialogSpinnerImageBorderSize
 				.setValue(G.iconsBorderSize);
@@ -665,6 +676,15 @@ public class GUI extends FrameView {
 		generalPreferencesDialogSpinnerTextPlacement = new javax.swing.JComboBox();
 		generalPreferencesDialogTTSLabel = new javax.swing.JLabel();
 		generalPreferencesDialogSpinnerTTS = new javax.swing.JComboBox();
+		generalPreferencesDialogTTSRateLabel = new javax.swing.JLabel();
+		generalPreferencesDialogTTSRateSlider = new javax.swing.JSlider(javax.swing.JSlider.HORIZONTAL, G.minTtsRate, G.maxTtsRate, G.minTtsRate);
+		//Turn on labels at major tick marks.
+		java.util.Hashtable labelTable = new java.util.Hashtable();
+		labelTable.put( new Integer( G.minTtsRate ), new javax.swing.JLabel("-") );
+		labelTable.put( new Integer( G.maxTtsRate ), new javax.swing.JLabel("+") );
+		generalPreferencesDialogTTSRateSlider.setLabelTable( labelTable );
+		generalPreferencesDialogTTSRateSlider.setPaintLabels(true);
+		
 		toolBar = new javax.swing.JToolBar();
 		toolBarButtonFileNew = new javax.swing.JButton();
 		toolBarButtonFileOpen = new javax.swing.JButton();
@@ -1723,9 +1743,9 @@ public class GUI extends FrameView {
 																131,
 																org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
 														.add(generalPreferencesDialogTextPlacementLabel)// )
-														.add(generalPreferencesDialogTTSLabel))
-												//
-												.add(18, 18, 18)
+														.add(generalPreferencesDialogTTSLabel)
+														.add(generalPreferencesDialogTTSRateLabel))
+												//.add(18, 18, 18)
 												.add(generalPreferencesDialogLayout
 														.createParallelGroup(
 																org.jdesktop.layout.GroupLayout.LEADING)
@@ -1751,6 +1771,11 @@ public class GUI extends FrameView {
 																Short.MAX_VALUE)
 														.add(org.jdesktop.layout.GroupLayout.TRAILING,
 																generalPreferencesDialogSpinnerTTS,
+																org.jdesktop.layout.GroupLayout.DEFAULT_SIZE,
+																153,
+																Short.MAX_VALUE)
+														.add(org.jdesktop.layout.GroupLayout.TRAILING,
+																generalPreferencesDialogTTSRateSlider,
 																org.jdesktop.layout.GroupLayout.DEFAULT_SIZE,
 																153,
 																Short.MAX_VALUE)
@@ -1860,7 +1885,10 @@ public class GUI extends FrameView {
 												org.jdesktop.layout.GroupLayout.PREFERRED_SIZE,
 												org.jdesktop.layout.GroupLayout.DEFAULT_SIZE,
 												org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-								.add(34, 34, 34)
+								
+								.addPreferredGap(
+										org.jdesktop.layout.LayoutStyle.UNRELATED)
+										
 								.add(generalPreferencesDialogLayout
 										.createParallelGroup(
 												org.jdesktop.layout.GroupLayout.BASELINE)
@@ -1869,7 +1897,22 @@ public class GUI extends FrameView {
 												org.jdesktop.layout.GroupLayout.PREFERRED_SIZE,
 												org.jdesktop.layout.GroupLayout.DEFAULT_SIZE,
 												org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-								.add(34, 34, 34)
+								
+								.addPreferredGap(
+										org.jdesktop.layout.LayoutStyle.UNRELATED)		
+												
+								.add(generalPreferencesDialogLayout
+										.createParallelGroup(
+												org.jdesktop.layout.GroupLayout.CENTER)
+										.add(generalPreferencesDialogTTSRateLabel)
+										.add(generalPreferencesDialogTTSRateSlider,
+												org.jdesktop.layout.GroupLayout.PREFERRED_SIZE,
+												org.jdesktop.layout.GroupLayout.DEFAULT_SIZE,
+												org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+								
+								.addPreferredGap(
+										org.jdesktop.layout.LayoutStyle.UNRELATED)	
+												
 								.add(generalPreferencesDialogLayout
 										.createParallelGroup(
 												org.jdesktop.layout.GroupLayout.BASELINE)
@@ -2016,6 +2059,7 @@ public class GUI extends FrameView {
 						toolBarButtonPictogramsNextImageActionPerformed(evt);
 					}
 				});
+		//toolBarButtonPictogramsNextImage.setEnabled(false);
 		toolBar.add(toolBarButtonPictogramsNextImage);
 
 		toolBarButtonPictogramsCompoundSplitWord.setText(resourceMap
@@ -2950,6 +2994,9 @@ public class GUI extends FrameView {
 		// arasuite ita
 		G.defaultTTS = ((String) generalPreferencesDialogSpinnerTTS
 				.getSelectedItem());
+		
+		G.ttsRate = generalPreferencesDialogTTSRateSlider.getValue();
+		
 		try {
 			TSetup.save();
 			TLanguage.initLanguage(G.applicationLanguage);
@@ -2959,6 +3006,9 @@ public class GUI extends FrameView {
 		} catch (Exception e) {
 			System.out.println(e);
 		}
+		
+		
+		
 		// ImageIcon image = new ImageIcon("resources/404.jpg");
 		// G.notFound = new
 		// ImageIcon(image.getImage().getScaledInstance(-1,G.imagesSize,0));
@@ -3372,6 +3422,8 @@ public class GUI extends FrameView {
 	private javax.swing.JLabel generalPreferencesDialogTextFontLabel;
 	private javax.swing.JLabel generalPreferencesDialogTextPlacementLabel;
 	private javax.swing.JLabel generalPreferencesDialogTTSLabel;
+	private javax.swing.JLabel generalPreferencesDialogTTSRateLabel;
+	private javax.swing.JSlider generalPreferencesDialogTTSRateSlider;
 	private javax.swing.JDialog imagesSizeDialog;
 	private javax.swing.JButton imagesSizeDialogCancelButton;
 	private javax.swing.JLabel imagesSizeDialogImagesSizeLabel;

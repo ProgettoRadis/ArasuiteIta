@@ -1,6 +1,5 @@
 package araword.tts.strategy;
 
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 import java.io.IOException;
 
@@ -14,7 +13,7 @@ public class AppleTtsStrategy implements TtsStrategy {
     private String speechRate = "200";
 
     @Override
-    public void play(final String text) {
+    public void play(final String text, int rate) {
 
         class CommanderTTS implements Runnable {
 
@@ -55,11 +54,6 @@ public class AppleTtsStrategy implements TtsStrategy {
     @Override
     public void setCurrentVoice() {
         this.voiceName = "Alice";
-    }
-
-    @Override
-    public void setSpeechRate(final String speechRate) {
-        this.speechRate = speechRate;
     }
 
 }

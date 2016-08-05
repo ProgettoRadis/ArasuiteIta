@@ -58,7 +58,7 @@ public class TSetup {
                 i++;
             }
 
-            //arasuite ita
+            //arasuite ita            
             List<Element> tts = root.getChild("tts_options").getChildren("tts_option");
             Iterator<Element> jtts = tts.iterator();
             G.ttsOptions = new String[tts.size()];
@@ -68,7 +68,8 @@ public class TSetup {
                 G.ttsOptions[k] = e.getText();
                 k++;
             }
-
+            //end arasuite ita
+            
             languages = root.getChild("documentLanguages").getChildren("language");
             j = languages.iterator();
             G.documentLanguages = new String[languages.size()];
@@ -103,7 +104,6 @@ public class TSetup {
         catch (Exception exc) {System.out.println(exc);}
         
         // User defaults
-        
         fileXML = CONFIGURATION_USER_FILE;
         builder = new SAXBuilder(false);
         try {
@@ -153,7 +153,14 @@ public class TSetup {
                     G.showBorders = language.equals("yes");
                 }
             }
-
+            
+            Element ttsRate = preferencesElement.getChild("ttsRate");
+            if (ttsRate != null) {
+            	String ttsRateValue = ttsRate.getText();
+            	G.ttsRate =  Integer.parseInt(ttsRateValue);
+            }
+            
+            
             list = preferencesElement.getChildren("ttsoption");
             l = list.iterator();
             while(l.hasNext()){
@@ -347,6 +354,12 @@ public class TSetup {
             tts.addContent(TPropertyReader.getPropertyValue("conf","TTS.conf", G.defaultTTS));         
             preferences.addContent(tts);
 
+            Element ttsRate = new Element("ttsRate");
+            String ttsRateValue = Integer.toString(G.ttsRate);
+            ttsRate.addContent(ttsRateValue);         
+            preferences.addContent(ttsRate);
+            //fine arasuite ita
+            
             Element showBorders = new Element("showBorders");
             //showBorders.addContent( G.showBorders);
             // TODO save value from preference dialog

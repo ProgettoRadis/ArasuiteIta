@@ -8,10 +8,7 @@ package araword.tts.strategy;
  */
 public interface TtsStrategy {
 
-	void play(String text);
-
+	void play(String text, int rate);
+	
 	void setCurrentVoice();
-
-	void setSpeechRate(String speechRate);
-
 }

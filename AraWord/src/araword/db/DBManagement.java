@@ -211,6 +211,7 @@ public class DBManagement {
                 String name = "";
                 String type = "";
                 String inf = null;
+                
                 if (numPictogram<paths.size()) {
                     name = paths.get(numPictogram).name;
                     type = paths.get(numPictogram).type;

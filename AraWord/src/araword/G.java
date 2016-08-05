@@ -119,7 +119,10 @@ public abstract class G { // Can't be instantiated
     public static TtsStrategy ttsStrategy;
     public static String[] ttsOptions;
     public static String defaultTTS;
-
+    public static int ttsRate;
+    public static int minTtsRate = 0;
+    public static int maxTtsRate = 100;
+    
     // arasuite ita - show/hide borders
     public static boolean showBorders;
 

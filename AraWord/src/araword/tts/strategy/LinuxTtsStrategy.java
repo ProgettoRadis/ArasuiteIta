@@ -15,7 +15,7 @@ public class LinuxTtsStrategy implements TtsStrategy {
 	private String voiceName;
 	
 	@Override
-	public void play(String textToSpeech) {
+	public void play(String textToSpeech, int rate) {
 		class CommanderTTS implements Runnable {
 
 			String textToSpeech;
@@ -48,6 +48,7 @@ public class LinuxTtsStrategy implements TtsStrategy {
 		t.start();
 	}
 	
+
 	@Override
 	public void setCurrentVoice() {
 		this.voiceName = translateLanguage();
@@ -68,11 +69,4 @@ public class LinuxTtsStrategy implements TtsStrategy {
 
 		return code;
 	}
-
-	@Override
-	public void setSpeechRate(final String speechRate) {
-		// TODO to be implemented
-		throw new UnsupportedOperationException();
-	}
-
 }

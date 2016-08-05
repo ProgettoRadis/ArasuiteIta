@@ -13,7 +13,6 @@ import java.util.logging.Logger;
 import araword.G;
 import araword.utils.TInterpreterGoogleTTS;
 import araword.utils.TInterpreterMp3Sound;
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 public class GoogleTtsStrategy implements TtsStrategy {
 
@@ -21,7 +20,7 @@ public class GoogleTtsStrategy implements TtsStrategy {
 
 	private String speechRate;
 
-	public void play(String textToSpeech) {
+	public void play(String textToSpeech, int rate) {
 
 		class CommanderTTS implements Runnable {
 
@@ -132,11 +131,4 @@ public class GoogleTtsStrategy implements TtsStrategy {
 
 		return code;
 	}
-
-	@Override
-	public void setSpeechRate(final String speechRate) {
-		// TODO to be implemented
-		throw new NotImplementedException();
-	}
-
 }

@@ -1611,7 +1611,7 @@ public class MenuFunctions {
     }
     
     public static void VoiceSintesys() {
-    	G.ttsStrategy.play(araword.utils.TextUtils.getText());
+    	G.ttsStrategy.play(araword.utils.TextUtils.getText(), G.ttsRate);
     	/*araword.utils.TInterpreterGoogleTTS ttsg = new araword.utils.TInterpreterGoogleTTS();
         ttsg.setCurrentVoiceAndText(araword.utils.TextUtils.getText());          
         ttsg.run();*/
