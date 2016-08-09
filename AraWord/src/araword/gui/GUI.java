@@ -515,30 +515,28 @@ public class GUI extends FrameView {
 		
 		((DefaultComboBoxModel) generalPreferencesDialogSpinnerTTS.getModel())
 				.removeAllElements();
-		generalPreferencesDialogSpinnerTTS.removeAllItems();
 		
 		if (generalPreferencesDialogSpinnerTTS.getItemCount() == 0)
 		{
 			for (int i = 0; i < G.ttsOptions.length; i++) {
 				generalPreferencesDialogSpinnerTTS.addItem(G.ttsOptions[i]);
 			}
-			
-			for (int i = 0; i < G.ttsOptions.length; i++) {
-				try {
+
+			try {
+				for (int i = 0; i < G.ttsOptions.length; i++) {
 					if (G.ttsOptions[i].equalsIgnoreCase(TPropertyReader
 							.getPropertyValue("conf", "TTSreverse.conf",
 									G.defaultTTS))) {
 						generalPreferencesDialogSpinnerTTS.setSelectedIndex(i);
-						System.out.println("gavullo");
 						break;
 					}
-				} catch (IOException e) {
+				}
+			} catch (IOException e) {
 					//generalPreferencesDialogSpinnerTTS.setSelectedIndex(0);
 					e.printStackTrace();
-				}
 			}
-			
-		}
+		}	
+		
 		generalPreferencesDialogTTSRateSlider.setValue(G.ttsRate);
 		
 		generalPreferencesDialogSpinnerImagesSize.setValue(G.defaultImagesSize);
@@ -2992,8 +2990,13 @@ public class GUI extends FrameView {
 		G.defaultColor = G.tempDefaultColor;
 		G.pictogramsPath = G.tempPictogramsPath;
 		// arasuite ita
-		G.defaultTTS = ((String) generalPreferencesDialogSpinnerTTS
-				.getSelectedItem());
+		try {
+			//conversion from TTS's short description to long description
+			G.defaultTTS = TPropertyReader.getPropertyValue("conf", "TTS.conf",
+					(String) generalPreferencesDialogSpinnerTTS.getSelectedItem());
+		} catch (IOException e1) {
+			e1.printStackTrace();
+		}
 		
 		G.ttsRate = generalPreferencesDialogTTSRateSlider.getValue();
 		
