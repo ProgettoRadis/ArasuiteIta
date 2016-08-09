@@ -16,6 +16,11 @@ public class LinuxTtsStrategy implements TtsStrategy {
 	
 	@Override
 	public void play(String textToSpeech, int rate) {
+		final float ttsRateResult;
+    	
+    	ttsRateResult = (float)rate/100 +0.5f;
+
+		
 		class CommanderTTS implements Runnable {
 
 			String textToSpeech;
@@ -23,7 +28,9 @@ public class LinuxTtsStrategy implements TtsStrategy {
 
 			public void run() {
 				String texto = textToSpeech.toLowerCase();
-				String command = "pico2wave -l \"" + voiceName + "\" -w arawordttslinux.wav \"" + texto + "\" && aplay arawordttslinux.wav";
+				String command = "pico2wave -l \"" + voiceName + "\" -w arawordttslinux.wav \"" + texto + "\"" + 
+						" && sox arawordttslinux.wav arawordttslinuxelaborated.wav speed " + ttsRateResult + 
+						" && aplay arawordttslinuxelaborated.wav";
 				
 				System.out.println(command);
 				
