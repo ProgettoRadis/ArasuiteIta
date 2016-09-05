@@ -677,10 +677,9 @@ public class DBManagement {
 			Element root = docXML.getRootElement();
 			List images = root.getChildren("image");
 			Iterator j = images.iterator();
-			// Insert languages
-			List<Element> globalLanguages = root.getChild("languages")
-					.getChildren("language");
-			Iterator<Element> langsI = globalLanguages.iterator();
+            // Retrieve languages from DB
+            List<Element> globalLanguages = getLanguagesFromDb();
+            Iterator<Element> langsI = globalLanguages.iterator();
 			HashMap<String, Integer> languageIDs = new HashMap<String, Integer>();
 			HashMap<String, Integer> typeIDs = new HashMap<String, Integer>();
 			Element e;
@@ -702,7 +701,6 @@ public class DBManagement {
 				i++;
 			}
 			conn.activateTransactions();
-			int currentImage = 0;
 			
 			/*
 			progressBar.setMinimum(currentImage);
@@ -760,7 +758,8 @@ public class DBManagement {
 						while (k.hasNext()) {
 
 							Element languageElement = (Element) k.next();
-							String language = languageElement
+                            // retrieve language from id attribute (image.xml)
+                            String language = languageElement
 									.getAttributeValue("id");
 							
 							List words = languageElement.getChildren("word");
@@ -791,8 +790,8 @@ public class DBManagement {
 									contTypes++;
 								}
 								// Insert, at last, image!!
-								
-								PreparedStatement stmt = conn
+                                conn = DB.getInstance();
+                                PreparedStatement stmt = conn
 										.prepareStatement("INSERT OR IGNORE INTO main (word, idL, idT, name, nameNN) VALUES (?,?,?,?,?)");
 								stmt.setString(1, wordElement.getText()
 										.toLowerCase());
@@ -833,7 +832,37 @@ public class DBManagement {
 			System.out.println("El tiempo total es :" + totalTiempo
 					+ " milisegundos");
 		}
-	}
+    }
+
+    /**
+     * Retrieves document langauge from language table.
+     * This list will be used to select the correct language on image import
+     *
+     * @return List of Jdom Element instances containing language name as text
+     */
+    private static List<Element> getLanguagesFromDb() {
+        List<Element> languageList = new ArrayList<Element>();
+
+        String query = "SELECT name FROM language ORDER BY id";
+
+        try {
+            DB conn = DB.getInstance();
+            ResultSet rs = conn.query(query);
+
+            while (rs.next()) {
+                String language = rs.getString("name");
+                Element element = new Element("language");
+                element.setText(language);
+                languageList.add(element);
+            }
+
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            System.out.println(e.toString());
+        }
+
+        return languageList;
+    }
 
 	// ***************************************
 	// ***************************************
